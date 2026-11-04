@@ -65,9 +65,6 @@
 
 .headlineAccent {
   color: var(--brand-blue);
-  background: linear-gradient(135deg, var(--brand-blue) 20%, #0070da 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   display: inline;
 }
 

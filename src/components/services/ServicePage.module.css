@@ -346,7 +346,7 @@
   width: 42px;
   height: 42px;
   border-radius: var(--radius-full);
-  background: linear-gradient(135deg, var(--brand-blue) 0%, #002e5d 100%);
+  background: var(--brand-blue);
   color: var(--brand-yellow);
   font-family: var(--font-family-mono);
   font-weight: var(--font-weight-bold);

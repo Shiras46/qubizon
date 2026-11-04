@@ -1,10 +1,10 @@
 :root {
   /* Brand Core Palette */
   --brand-blue: #00488e;
-  --brand-blue-hover: #00366b;
+  --brand-blue-hover: #003d79;
   --brand-blue-subtle: rgba(0, 72, 142, 0.06);
   --brand-blue-glow: rgba(0, 72, 142, 0.2);
-  --brand-cyan-glow: rgba(14, 165, 233, 0.25);
+  --brand-cyan-glow: rgba(0, 72, 142, 0.25);
   --brand-yellow: #ffbe0b;
   --brand-yellow-hover: #eab00a;
   --brand-yellow-subtle: rgba(255, 190, 11, 0.12);

@@ -44,7 +44,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--brand-blue) 0%, #002e5d 100%);
+  background: var(--brand-blue);
   color: var(--brand-yellow);
   border-radius: var(--radius-sm);
   font-weight: var(--font-weight-extrabold);
