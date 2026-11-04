@@ -27,7 +27,7 @@
 }
 
 .breadcrumb a:hover {
-  color: var(--brand-gold, #c89d5c);
+  color: var(--brand-blue);
 }
 
 .badge {
@@ -74,20 +74,20 @@
   align-items: center;
   gap: var(--space-2);
   padding: 0.85rem 1.85rem;
-  background: linear-gradient(135deg, #c89d5c 0%, #dfb775 100%);
-  color: #0b1530;
+  background-color: var(--brand-yellow);
+  color: var(--color-accent-text);
   font-weight: 700;
   font-size: 0.9375rem;
   border-radius: 9999px;
   text-decoration: none;
-  box-shadow: 0 10px 24px -6px rgba(200, 157, 92, 0.4);
+  box-shadow: 0 4px 16px rgba(255, 190, 11, 0.35);
   transition: all var(--transition-fast);
 }
 
 .primaryBtn:hover {
-  background: linear-gradient(135deg, #dfb775 0%, #c89d5c 100%);
+  background-color: var(--brand-yellow-hover);
   transform: translateY(-1px);
-  box-shadow: 0 14px 28px -6px rgba(200, 157, 92, 0.5);
+  box-shadow: 0 8px 22px rgba(255, 190, 11, 0.45);
 }
 
 .secondaryBtn {
@@ -150,7 +150,7 @@
 .serviceCard:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 32px -8px rgba(11, 21, 48, 0.08);
-  border-color: rgba(200, 157, 92, 0.5);
+  border-color: rgba(0, 72, 142, 0.35);
 }
 
 .cardIcon {
@@ -201,7 +201,7 @@
 }
 
 .serviceCard:hover .cardLink {
-  color: var(--brand-gold, #c89d5c);
+  color: var(--brand-blue);
   transform: translateX(4px);
 }
 
@@ -261,7 +261,7 @@
 }
 
 .faqItem[open] {
-  border-color: rgba(200, 157, 92, 0.5);
+  border-color: rgba(0, 72, 142, 0.35);
   box-shadow: 0 12px 28px -6px rgba(11, 21, 48, 0.07);
 }
 
@@ -290,7 +290,7 @@
 
 .faqItem[open] .faqQuestion svg {
   transform: rotate(90deg);
-  color: var(--brand-gold, #c89d5c);
+  color: var(--brand-blue);
 }
 
 .faqAnswer {

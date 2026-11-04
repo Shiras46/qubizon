@@ -46,7 +46,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--brand-yellow) 0%, #e0a700 100%);
+  background: var(--brand-yellow);
   color: var(--color-accent-text);
   border-radius: var(--radius-sm);
   font-weight: var(--font-weight-extrabold);

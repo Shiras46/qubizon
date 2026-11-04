@@ -45,10 +45,10 @@
 }
 
 .stepActive .stepNumber {
-  background-color: #0b1530;
+  background-color: var(--brand-blue);
   color: #ffffff;
-  border-color: #0b1530;
-  box-shadow: 0 0 0 4px rgba(200, 157, 92, 0.25);
+  border-color: var(--brand-blue);
+  box-shadow: 0 0 0 4px var(--brand-blue-glow);
 }
 
 .stepActive .stepLabel {
@@ -267,7 +267,7 @@
 }
 
 .editButton:hover {
-  color: var(--brand-gold, #c89d5c);
+  color: var(--brand-blue);
 }
 
 .reviewItem {
@@ -334,7 +334,7 @@
 }
 
 .privacyLink:hover {
-  color: var(--brand-gold, #c89d5c);
+  color: var(--brand-blue);
 }
 
 /* Button Navigation */
@@ -350,22 +350,22 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  background: linear-gradient(135deg, #c89d5c 0%, #dfb775 100%);
-  color: #0b1530;
+  background-color: var(--brand-yellow);
+  color: var(--color-accent-text);
   font-size: 0.9375rem;
   font-weight: 700;
   padding: 0.85rem 1.85rem;
   border-radius: 9999px;
   cursor: pointer;
   border: none;
-  box-shadow: 0 10px 24px -6px rgba(200, 157, 92, 0.4);
+  box-shadow: 0 4px 16px rgba(255, 190, 11, 0.35);
   transition: all var(--transition-fast);
 }
 
 .btnPrimary:hover:not(:disabled) {
-  background: linear-gradient(135deg, #dfb775 0%, #c89d5c 100%);
+  background-color: var(--brand-yellow-hover);
   transform: translateY(-1px);
-  box-shadow: 0 14px 28px -6px rgba(200, 157, 92, 0.5);
+  box-shadow: 0 8px 22px rgba(255, 190, 11, 0.45);
 }
 
 .btnPrimary:disabled {

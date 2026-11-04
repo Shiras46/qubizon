@@ -27,7 +27,7 @@
 }
 
 .breadcrumb a:hover {
-  color: var(--brand-gold, #c89d5c);
+  color: var(--brand-blue);
 }
 
 .badge {
@@ -83,7 +83,7 @@
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 32px -8px rgba(11, 21, 48, 0.08);
-  border-color: rgba(200, 157, 92, 0.5);
+  border-color: rgba(0, 72, 142, 0.35);
 }
 
 .cardCategory {
@@ -141,7 +141,7 @@
 }
 
 .card:hover .readMore {
-  color: var(--brand-gold, #c89d5c);
+  color: var(--brand-blue);
   transform: translateX(4px);
 }
 
@@ -152,9 +152,9 @@
 }
 
 .draftNotice {
-  background: rgba(200, 157, 92, 0.12);
-  border: 1px solid rgba(200, 157, 92, 0.35);
-  color: #78490a;
+  background: var(--brand-yellow-subtle);
+  border: 1px solid rgba(255, 190, 11, 0.35);
+  color: var(--color-accent-text);
   border-radius: 14px;
   padding: var(--space-3) var(--space-4);
   font-size: var(--font-size-xs);
@@ -250,7 +250,7 @@
   right: -20%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(200, 157, 92, 0.18) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 72, 142, 0.25) 0%, transparent 70%);
   pointer-events: none;
 }
 

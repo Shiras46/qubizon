@@ -119,7 +119,7 @@ export default function BlogIndexPage() {
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <span className={styles.cardCategory}>{post.category}</span>
                 {post.isDraft && (
-                  <span style={{ fontSize: "11px", fontWeight: 700, padding: "2px 8px", background: "rgba(255, 190, 11, 0.15)", color: "#855d00", borderRadius: "12px" }}>
+                  <span style={{ fontSize: "11px", fontWeight: 700, padding: "2px 8px", background: "var(--brand-yellow-subtle)", color: "var(--color-accent-text)", borderRadius: "12px" }}>
                     DRAFT
                   </span>
                 )}
