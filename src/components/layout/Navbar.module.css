@@ -21,7 +21,21 @@
   align-items: center;
   gap: var(--space-3);
   text-decoration: none;
-  group: pointer;
+  cursor: pointer;
+}
+
+.brandLogo {
+  height: 38px;
+  width: auto;
+  max-width: 155px;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.brand:hover .brandLogo {
+  transform: translateY(-1px) scale(1.02);
+  opacity: 0.95;
 }
 
 .cubeLogo {
@@ -224,6 +238,11 @@
 }
 
 @media (max-width: 768px) {
+  .brandLogo {
+    height: 32px;
+    max-width: 130px;
+  }
+
   .navLinks {
     display: none;
   }

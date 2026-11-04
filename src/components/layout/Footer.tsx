@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SITE_CONFIG, MAIN_NAV_ITEMS, CORE_SERVICES } from "@/lib/constants";
 import styles from "./Footer.module.css";
 
@@ -9,9 +10,16 @@ export function Footer() {
     <footer className={styles.footer} aria-label="Site Footer">
       <div className={`container ${styles.footerGrid}`}>
         <div className={styles.brandCol}>
-          <Link href="/" className={styles.brand}>
-            <div className={styles.cubeLogo} aria-hidden="true">Q</div>
-            <span className={styles.brandTitle}>{SITE_CONFIG.name}</span>
+          <Link href="/" className={styles.brand} aria-label={`${SITE_CONFIG.name} Home`}>
+            <div className={styles.brandLogoWrapper}>
+              <Image
+                src="/Logo Png-07.png"
+                alt={SITE_CONFIG.name}
+                width={135}
+                height={38}
+                className={styles.brandLogo}
+              />
+            </div>
           </Link>
           <p className={styles.slogan}>{SITE_CONFIG.slogan}</p>
           <p className={styles.description}>{SITE_CONFIG.description}</p>

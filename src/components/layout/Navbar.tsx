@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { SITE_CONFIG, MAIN_NAV_ITEMS, CORE_SERVICES } from "@/lib/constants";
 import styles from "./Navbar.module.css";
@@ -37,9 +38,15 @@ export function Navbar() {
   return (
     <header className={styles.header}>
       <div className={`container ${styles.navContainer}`}>
-        <Link href="/" className={styles.brand}>
-          <div className={styles.cubeLogo} aria-hidden="true">Q</div>
-          <span className={styles.brandName}>{SITE_CONFIG.shortName}</span>
+        <Link href="/" className={styles.brand} aria-label={`${SITE_CONFIG.name} Home`}>
+          <Image
+            src="/Logo Png-07.png"
+            alt={SITE_CONFIG.name}
+            width={140}
+            height={40}
+            priority
+            className={styles.brandLogo}
+          />
         </Link>
 
         {/* Desktop Navigation */}

@@ -32,7 +32,7 @@ export default function RootLayout({
         "@id": `${SITE_CONFIG.domain}/#organization`,
         name: SITE_CONFIG.name,
         url: SITE_CONFIG.domain,
-        logo: `${SITE_CONFIG.domain}/icon.svg`,
+        logo: `${SITE_CONFIG.domain}/Logo%20Png-07.png`,
         email: SITE_CONFIG.email,
         telephone: SITE_CONFIG.phone,
         sameAs: [
