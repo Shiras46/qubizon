@@ -44,9 +44,23 @@
  * ==============================================================================
  */
 
+function getTargetSheet() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  if (ss) {
+    return ss.getActiveSheet();
+  }
+  // Optional fallback: If you created the script standalone at script.google.com,
+  // paste your Google Sheet ID (from the sheet URL between /d/ and /edit) below:
+  var SPREADSHEET_ID = "";
+  if (SPREADSHEET_ID && SPREADSHEET_ID.trim()) {
+    return SpreadsheetApp.openById(SPREADSHEET_ID.trim()).getActiveSheet();
+  }
+  throw new Error("No active spreadsheet found. Please create this script from inside Google Sheets via Extensions > Apps Script, or set SPREADSHEET_ID.");
+}
+
 function doPost(e) {
   try {
-    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    var sheet = getTargetSheet();
     var data = JSON.parse(e.postData.contents);
 
     // Auto-create bold headers if sheet is completely empty
