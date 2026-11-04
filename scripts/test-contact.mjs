@@ -484,6 +484,44 @@ runTest("Production mode safely fails when neither MariaDB nor PostgreSQL is con
   }
 });
 
+// --- Test Suite 6: Google Sheets Direct Integration ---
+console.log("\n--- Test Suite 6: Google Sheets Direct Integration ---");
+
+runTest("getRepository() returns repository without error when DB_ENGINE='sheets'", () => {
+  const origEngine = process.env.DB_ENGINE;
+  const origUrl = process.env.DATABASE_URL;
+  const origEnv = process.env.NODE_ENV;
+  try {
+    process.env.NODE_ENV = "production";
+    delete process.env.DATABASE_URL;
+    process.env.DB_ENGINE = "sheets";
+    const repo = getRepository();
+    assert(repo, "Should return repository instance when DB_ENGINE='sheets'");
+  } finally {
+    process.env.NODE_ENV = origEnv;
+    if (origEngine) process.env.DB_ENGINE = origEngine; else delete process.env.DB_ENGINE;
+    if (origUrl) process.env.DATABASE_URL = origUrl; else delete process.env.DATABASE_URL;
+  }
+});
+
+runTest("getRepository() returns repository without error when GOOGLE_SHEETS_WEBHOOK_URL is set", () => {
+  const origUrl = process.env.GOOGLE_SHEETS_WEBHOOK_URL;
+  const origDbUrl = process.env.DATABASE_URL;
+  const origEnv = process.env.NODE_ENV;
+  try {
+    process.env.NODE_ENV = "production";
+    delete process.env.DATABASE_URL;
+    delete process.env.DB_ENGINE;
+    process.env.GOOGLE_SHEETS_WEBHOOK_URL = "https://script.google.com/macros/s/test/exec";
+    const repo = getRepository();
+    assert(repo, "Should return repository instance when GOOGLE_SHEETS_WEBHOOK_URL is configured");
+  } finally {
+    process.env.NODE_ENV = origEnv;
+    if (origUrl) process.env.GOOGLE_SHEETS_WEBHOOK_URL = origUrl; else delete process.env.GOOGLE_SHEETS_WEBHOOK_URL;
+    if (origDbUrl) process.env.DATABASE_URL = origDbUrl; else delete process.env.DATABASE_URL;
+  }
+});
+
 console.log(`\n=============================================================`);
 console.log(`TEST SUITE RESULTS: ${passedTests} / ${totalTests} TESTS PASSED`);
 console.log(`=============================================================\n`);

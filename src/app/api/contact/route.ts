@@ -3,6 +3,7 @@ import { validateContactSubmission } from "@/lib/validation/contactSchema";
 import { checkRateLimit, extractClientIp, hashIpAddress } from "@/lib/security/rateLimiter";
 import { saveEnquiry, updateNotificationStatus, getEnquiryById, ConfigurationError } from "@/lib/db";
 import { sendEnquiryNotification, categorizeEmailError, calculateNextRetry } from "@/lib/email";
+import { appendLeadToGoogleSheet } from "@/lib/sheets";
 
 // Maximum allowed payload size: 32 KB
 const MAX_PAYLOAD_BYTES = 32 * 1024;
@@ -148,9 +149,16 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // 7. Decoupled Email Notification (Outbox Reliability Pattern)
-    // Runs only after database persistence has succeeded
+    // 7. Google Sheets Lead Sync (Direct Cloud Spreadsheet Integration)
     const savedRecord = await getEnquiryById(saveResult.id);
+    if (savedRecord) {
+      // Forward lead to Google Sheet asynchronously
+      appendLeadToGoogleSheet(savedRecord).catch((sheetsErr) => {
+        console.error("[Google Sheets Sync Exception]", sheetsErr);
+      });
+    }
+
+    // 8. Decoupled Email Notification (Outbox Reliability Pattern)
     if (savedRecord) {
       try {
         const emailResult = await sendEnquiryNotification(savedRecord);

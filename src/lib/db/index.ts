@@ -409,15 +409,27 @@ export function getRepository(): EnquiryRepository {
     return new PostgresEnquiryRepository(databaseUrl ? databaseUrl.trim() : "");
   }
 
-  // 3. Fail-safe production guard: Prohibit unconfigured silent fallback
+  // 3. Google Sheets Destination (Direct cloud spreadsheet pipeline without server DB)
+  const isGoogleSheets = Boolean(
+    dbEngine === "sheets" ||
+    dbEngine === "google-sheets" ||
+    process.env.GOOGLE_SHEETS_WEBHOOK_URL ||
+    process.env.GOOGLE_SHEET_WEBHOOK_URL
+  );
+
+  if (isGoogleSheets) {
+    return MockEnquiryRepository.getInstance();
+  }
+
+  // 4. Fail-safe production guard: Prohibit unconfigured silent fallback
   if (isProduction && !allowMock) {
     throw new ConfigurationError(
       "CRITICAL: Production mode is active but DATABASE_URL is not configured (neither MariaDB nor PostgreSQL is configured). " +
-      "Set DATABASE_URL or DB_HOST/DB_NAME, or set ALLOW_MOCK_DB='true' for local testing."
+      "Set DATABASE_URL or DB_HOST/DB_NAME, configure GOOGLE_SHEETS_WEBHOOK_URL, or set ALLOW_MOCK_DB='true' for local testing."
     );
   }
 
-  // 4. Default Mock implementation for development and testing
+  // 5. Default Mock implementation for development and testing
   return MockEnquiryRepository.getInstance();
 }
 
