@@ -8,18 +8,19 @@
  * 1. Open Google Sheets (https://sheets.google.com) and create a new spreadsheet.
  *    Name it: "Qubizon Leads"
  * 
- * 2. In the top row (Row 1), add these column headers:
+ * 2. In the top row (Row 1), add these column headers (or let the script auto-create them):
  *    A1: Timestamp
  *    B1: Reference ID
  *    C1: Full Name
- *    D1: Email
- *    E1: Phone
- *    F1: Service
- *    G1: Budget
- *    H1: Timeframe
- *    I1: Project Name
- *    J1: Website URL
- *    K1: Project Summary
+ *    D1: Company Name
+ *    E1: Email
+ *    F1: Phone
+ *    G1: Service
+ *    H1: Budget
+ *    I1: Timeframe
+ *    J1: Project Name
+ *    K1: Website URL
+ *    L1: Project Summary
  * 
  * 3. In the top menu, click:
  *    Extensions > Apps Script
@@ -38,7 +39,7 @@
  * 
  * 7. On your server (/var/www/qubizon/.env.local), add:
  *    GOOGLE_SHEETS_WEBHOOK_URL="https://script.google.com/macros/s/YOUR_COPIED_URL/exec"
- *    ALLOW_MOCK_DB="true"
+ *    DB_ENGINE="sheets"
  * 
  * ==============================================================================
  */
@@ -54,6 +55,7 @@ function doPost(e) {
         "Timestamp",
         "Reference ID",
         "Full Name",
+        "Company Name",
         "Email",
         "Phone",
         "Service",
@@ -63,7 +65,7 @@ function doPost(e) {
         "Website URL",
         "Project Summary"
       ]);
-      sheet.getRange(1, 1, 1, 11).setFontWeight("bold").setBackground("#00488E").setFontColor("#FFFFFF");
+      sheet.getRange(1, 1, 1, 12).setFontWeight("bold").setBackground("#00488E").setFontColor("#FFFFFF");
     }
 
     // Append the new lead as a clean row
@@ -71,6 +73,7 @@ function doPost(e) {
       data.timestamp || new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
       data.referenceId || "N/A",
       data.fullName || "N/A",
+      data.companyName || "N/A",
       data.email || "N/A",
       data.phone || "N/A",
       data.service || "N/A",
@@ -82,7 +85,7 @@ function doPost(e) {
     ]);
 
     // Keep columns formatted cleanly
-    sheet.autoResizeColumns(1, 11);
+    sheet.autoResizeColumns(1, 12);
 
     return ContentService
       .createTextOutput(JSON.stringify({ status: "success", message: "Lead saved to Google Sheet" }))

@@ -4,6 +4,7 @@ export interface GoogleSheetsPayload {
   timestamp: string;
   referenceId: string;
   fullName: string;
+  companyName: string;
   email: string;
   phone: string;
   service: string;
@@ -13,6 +14,30 @@ export interface GoogleSheetsPayload {
   websiteUrl: string;
   projectSummary: string;
 }
+
+const SERVICE_FORMATTER: Record<string, string> = {
+  "web-development": "Website Development",
+  seo: "Search Engine Optimization (SEO)",
+  "social-media-marketing": "Social Media Marketing",
+  "paid-advertising": "Paid Advertising (PPC)",
+  "content-marketing": "Content Marketing",
+  "multiple-services": "Multiple Disciplines",
+  "not-sure": "Not Sure Yet / Consultation",
+};
+
+const BUDGET_FORMATTER: Record<string, string> = {
+  "under-5k": "Under $5,000",
+  "5k-10k": "$5,000 – $10,000",
+  "10k-25k": "$10,000 – $25,000",
+  "25k-plus": "$25,000+",
+  "not-decided": "Not decided yet",
+};
+
+const TIMEFRAME_FORMATTER: Record<string, string> = {
+  immediate: "Immediately (Within 2–4 weeks)",
+  "1-3-months": "Within 1 to 3 months",
+  flexible: "Flexible / Planning phase",
+};
 
 /**
  * Appends a verified client lead directly to a connected Google Sheet
@@ -29,6 +54,15 @@ export async function appendLeadToGoogleSheet(
     return { success: false, error: "GOOGLE_SHEETS_WEBHOOK_URL is not configured" };
   }
 
+  const formattedService =
+    SERVICE_FORMATTER[record.service] || record.service;
+  const formattedBudget = record.budget
+    ? BUDGET_FORMATTER[record.budget] || record.budget
+    : "N/A";
+  const formattedTimeframe = record.timeframe
+    ? TIMEFRAME_FORMATTER[record.timeframe] || record.timeframe
+    : "N/A";
+
   const payload: GoogleSheetsPayload = {
     timestamp: new Date(record.createdAt).toLocaleString("en-IN", {
       timeZone: "Asia/Kolkata",
@@ -37,11 +71,12 @@ export async function appendLeadToGoogleSheet(
     }),
     referenceId: record.referenceId,
     fullName: record.fullName,
+    companyName: record.companyName || "N/A",
     email: record.email,
     phone: record.phone || "N/A",
-    service: record.service,
-    budget: record.budget || "N/A",
-    timeframe: record.timeframe || "N/A",
+    service: formattedService,
+    budget: formattedBudget,
+    timeframe: formattedTimeframe,
     projectName: record.projectName || "N/A",
     websiteUrl: record.websiteUrl || "N/A",
     projectSummary: record.projectSummary,
