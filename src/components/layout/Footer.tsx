@@ -11,15 +11,13 @@ export function Footer() {
       <div className={`container ${styles.footerGrid}`}>
         <div className={styles.brandCol}>
           <Link href="/" className={styles.brand} aria-label={`${SITE_CONFIG.name} Home`}>
-            <div className={styles.brandLogoWrapper}>
-              <Image
-                src="/Logo Png-07.png"
-                alt={SITE_CONFIG.name}
-                width={135}
-                height={38}
-                className={styles.brandLogo}
-              />
-            </div>
+            <Image
+              src="/Logo Png-12.png"
+              alt={SITE_CONFIG.name}
+              width={140}
+              height={48}
+              className={styles.brandLogo}
+            />
           </Link>
           <p className={styles.slogan}>{SITE_CONFIG.slogan}</p>
           <p className={styles.description}>{SITE_CONFIG.description}</p>
