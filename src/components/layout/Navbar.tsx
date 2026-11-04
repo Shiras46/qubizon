@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import { SITE_CONFIG, MAIN_NAV_ITEMS, CORE_SERVICES } from "@/lib/constants";
 import styles from "./Navbar.module.css";
 
@@ -122,7 +122,10 @@ export function Navbar() {
 
         <div className={styles.actions}>
           <Link href="/contact" className={styles.ctaButton}>
-            Let&apos;s Talk
+            <span>Let&apos;s Talk</span>
+            <span className={styles.ctaArrowCircle} aria-hidden="true">
+              <ArrowRight size={12} />
+            </span>
           </Link>
 
           <button

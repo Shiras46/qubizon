@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import styles from "./WhyQubizon.module.css";
 
 interface Pillar {
@@ -44,11 +46,11 @@ export function WhyQubizon() {
   return (
     <section className={styles.section} aria-labelledby="why-heading">
       <div className="container">
-        {/* Editorial Introduction Header (matching Image 2 & 3) */}
+        {/* Asymmetric Section Header (matching Reference Image 2 & 3) */}
         <div className={styles.introHeader}>
           <div className={styles.badgeWrapper}>
-            <span className={styles.introDot} aria-hidden="true" />
-            <span className={styles.sectionBadge}>The Unified Model</span>
+            <span className={styles.badgeDiamond} aria-hidden="true">❖</span>
+            <span className={styles.sectionBadge}>THE UNIFIED MODEL</span>
           </div>
 
           <div className={styles.headlineWrapper}>
@@ -58,14 +60,25 @@ export function WhyQubizon() {
             <p className={styles.editorialLead}>
               Traditional digital agencies operate in isolated departments. Qubizon connects your entire web presence into one coherent, multidisciplinary machine.
             </p>
+            <div className={styles.headerCtaWrapper}>
+              <Link href="/contact" className={styles.headerCta}>
+                <span>Get in touch</span>
+                <span className={styles.ctaArrowCircle} aria-hidden="true">
+                  <ArrowRight size={14} />
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
 
-        {/* 4 Connected Framework Columns */}
+        {/* 4 Bento Architecture Cards (matching Reference Image 2 & 3) */}
         <div className={styles.pillarsGrid}>
           {PILLARS.map((pillar) => (
             <div key={pillar.number} className={styles.pillarCard}>
-              <span className={styles.pillarNumber} aria-hidden="true">{pillar.number}</span>
+              <div className={styles.cardTopRow}>
+                <span className={styles.pillarNumber} aria-hidden="true">{pillar.number}</span>
+                <span className={styles.cardDot} aria-hidden="true" />
+              </div>
               <h3 className={styles.pillarTitle}>{pillar.title}</h3>
               <p className={styles.pillarBody}>{pillar.body}</p>
             </div>
@@ -73,7 +86,7 @@ export function WhyQubizon() {
         </div>
       </div>
 
-      {/* Double Overlapping Angled Marquee Ribbons (matching Image 2 & 3) */}
+      {/* Double Overlapping Angled Marquee Ribbons */}
       <div className={styles.ribbonWrapper} aria-hidden="true">
         {/* Ribbon 1: Angled slightly negative */}
         <div className={styles.ribbonTrackOne}>

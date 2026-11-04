@@ -38,40 +38,43 @@ export function ProcessSection() {
   return (
     <section className={styles.section} aria-labelledby="process-heading">
       <div className="container">
-        {/* Asymmetrical Header matching Reference Pattern */}
-        <div className={styles.headerRow}>
-          <div className={styles.badgeWrapper}>
-            <span className={styles.badgeDot} aria-hidden="true" />
-            <p className={styles.sectionBadge}>Execution Framework</p>
-          </div>
-
-          <div className={styles.headingContent}>
-            <h2 id="process-heading" className={styles.sectionTitle}>
-              How We Partner With Your Team
-            </h2>
-            <p className={styles.sectionDescription}>
-              A structured, repeatable four-step process built to minimize friction, provide complete visibility, and ensure every deliverable hits measurable targets.
-            </p>
-          </div>
-        </div>
-
-        {/* 2-Column Grid of Sleek Rounded Pill Cards (matching Image 1 & 4) */}
-        <div className={styles.stepsGrid}>
-          {STEPS.map((step) => (
-            <div key={step.number} className={styles.stepCard}>
-              <div className={styles.stepBadge} aria-hidden="true">
-                {step.number}
-              </div>
-
-              <div className={styles.cardContent}>
-                <div className={styles.cardHeaderRow}>
-                  <h3 className={styles.stepTitle}>{step.title}</h3>
-                  <span className={styles.phaseIndicator}>{step.phase}</span>
-                </div>
-                <p className={styles.stepDescription}>{step.description}</p>
-              </div>
+        {/* Nested Rounded Canvas Container (Matching Reference Image Section 4) */}
+        <div className={styles.nestedContainer}>
+          {/* Asymmetrical Header matching Reference Pattern */}
+          <div className={styles.headerRow}>
+            <div className={styles.badgeWrapper}>
+              <span className={styles.badgeDiamond} aria-hidden="true">❖</span>
+              <p className={styles.sectionBadge}>HOW IT WORKS (STEP BY STEP)</p>
             </div>
-          ))}
+
+            <div className={styles.headingContent}>
+              <h2 id="process-heading" className={styles.sectionTitle}>
+                How We Partner With Your Team
+              </h2>
+              <p className={styles.sectionDescription}>
+                A structured, repeatable four-step process built to minimize friction, provide complete visibility, and ensure every deliverable hits measurable targets.
+              </p>
+            </div>
+          </div>
+
+          {/* 2-Column Grid of High-Radius Bento Step Cards (matching Reference Image) */}
+          <div className={styles.stepsGrid}>
+            {STEPS.map((step) => (
+              <div key={step.number} className={styles.stepCard}>
+                <div className={styles.stepBadge} aria-hidden="true">
+                  {step.number}
+                </div>
+
+                <div className={styles.cardContent}>
+                  <div className={styles.cardHeaderRow}>
+                    <h3 className={styles.stepTitle}>{step.title}</h3>
+                    <span className={styles.phaseIndicator}>{step.phase}</span>
+                  </div>
+                  <p className={styles.stepDescription}>{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

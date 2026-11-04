@@ -30,7 +30,10 @@ export function ConversionSection() {
 
           <div className={styles.innerContent}>
             <div className={styles.leftCol}>
-              <span className={styles.badge}>Start The Conversation</span>
+              <div className={styles.badgeWrapper}>
+                <span className={styles.badgeDiamond} aria-hidden="true">❖</span>
+                <span className={styles.badge}>START THE CONVERSATION</span>
+              </div>
               <h2 id="conversion-heading" className={styles.title}>
                 Ready to Unify Your Digital Strategy?
               </h2>
@@ -41,7 +44,9 @@ export function ConversionSection() {
               <div className={styles.ctaGroup}>
                 <Link href="/contact" className={styles.ctaButton}>
                   <span>Let&apos;s Talk About Your Project</span>
-                  <ArrowRight size={18} aria-hidden="true" />
+                  <span className={styles.ctaArrowCircle} aria-hidden="true">
+                    <ArrowRight size={14} />
+                  </span>
                 </Link>
                 <p className={styles.supportingText}>
                   Direct communication with senior engineers and strategists &bull; Zero sales pressure

@@ -179,7 +179,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 22px;
+  gap: var(--space-2);
+  padding: 6px 8px 6px 18px;
   background: var(--brand-yellow);
   color: var(--color-accent-text);
   font-weight: var(--font-weight-bold);
@@ -189,13 +190,30 @@
   transition: all var(--transition-fast);
   text-decoration: none;
   border: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: 0 2px 6px rgba(255, 190, 11, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 8px rgba(255, 190, 11, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.ctaArrowCircle {
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-full);
+  background-color: #0b1530;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+  margin-left: 2px;
 }
 
 .ctaButton:hover {
   background-color: var(--brand-yellow-hover);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(255, 190, 11, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 14px rgba(255, 190, 11, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+.ctaButton:hover .ctaArrowCircle {
+  transform: translateX(2px);
 }
 
 .ctaButton:active {

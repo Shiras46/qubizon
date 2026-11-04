@@ -1,16 +1,24 @@
 .section {
-  padding-top: var(--space-24);
-  padding-bottom: var(--space-24);
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
   background-color: var(--color-bg-base);
-  border-top: 1px solid var(--color-border-subtle);
   position: relative;
+}
+
+/* Nested Rounded Canvas Container (Matching Reference Image Section 4) */
+.nestedContainer {
+  background: #f1f4f8;
+  border: 1px solid rgba(11, 21, 48, 0.08);
+  border-radius: var(--radius-4xl);
+  padding: clamp(2.5rem, 5vw, 4.5rem);
+  box-shadow: 0 4px 20px rgba(11, 21, 48, 0.04);
 }
 
 .headerRow {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 260px 1fr;
   gap: var(--space-8);
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--space-12);
   align-items: flex-start;
 }
 
@@ -20,19 +28,19 @@
   gap: var(--space-2);
 }
 
-.badgeDot {
-  width: 8px;
-  height: 8px;
-  border-radius: var(--radius-full);
-  background-color: var(--brand-blue);
+.badgeDiamond {
+  color: var(--brand-blue);
+  font-size: 0.875rem;
+  line-height: 1;
 }
 
 .sectionBadge {
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-semibold);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
   color: var(--brand-blue);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-caps);
+  margin: 0;
 }
 
 .headingContent {
@@ -47,6 +55,7 @@
   color: var(--color-text-primary);
   letter-spacing: var(--letter-spacing-tight);
   line-height: var(--line-height-tight);
+  margin: 0;
 }
 
 .sectionDescription {
@@ -54,9 +63,10 @@
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
   max-width: 780px;
+  margin: 0;
 }
 
-/* 2-Column Grid of Sleek Rounded Pill Cards (matching Image 1 & 4) */
+/* 2-Column Grid of Sleek Bento Cards (matching Image 1 & 4) */
 .stepsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -65,37 +75,37 @@
 
 .stepCard {
   background-color: #ffffff;
-  border: 1px solid var(--color-border-subtle);
-  border-radius: 24px;
+  border: 1px solid rgba(11, 21, 48, 0.08);
+  border-radius: var(--radius-2xl);
   padding: var(--space-8);
   display: flex;
   align-items: flex-start;
   gap: var(--space-6);
-  box-shadow: 0 4px 18px -4px rgba(11, 21, 48, 0.05);
+  box-shadow: 0 4px 16px -4px rgba(11, 21, 48, 0.05);
   transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .stepCard:hover {
   transform: translateY(-3px);
-  border-color: rgba(0, 72, 142, 0.3);
-  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(0, 72, 142, 0.25);
+  box-shadow: var(--shadow-bento-hover);
 }
 
 .stepBadge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
   flex-shrink: 0;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-xl);
   background: var(--brand-blue);
   color: var(--brand-yellow);
   font-family: var(--font-family-mono);
   font-weight: var(--font-weight-extrabold);
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-lg);
   letter-spacing: -0.02em;
-  box-shadow: 0 4px 12px rgba(0, 72, 142, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 72, 142, 0.22);
 }
 
 .cardContent {
@@ -117,50 +127,46 @@
   font-weight: var(--font-weight-bold);
   color: var(--color-text-primary);
   letter-spacing: var(--letter-spacing-snug);
+  margin: 0;
 }
 
 .phaseIndicator {
   font-family: var(--font-family-mono);
-  font-size: var(--font-size-xs);
+  font-size: 0.6875rem;
   font-weight: var(--font-weight-bold);
-  color: #334155;
-  background: var(--color-bg-muted);
-  padding: 3px 10px;
+  color: var(--brand-blue);
+  background: rgba(0, 72, 142, 0.08);
+  padding: 4px 10px;
   border-radius: var(--radius-full);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .stepDescription {
   font-size: var(--font-size-sm);
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
+  margin: 0;
 }
 
 @media (max-width: 900px) {
+  .nestedContainer {
+    padding: var(--space-6);
+    border-radius: var(--radius-2xl);
+  }
+
   .headerRow {
     grid-template-columns: 1fr;
     gap: var(--space-4);
+    margin-bottom: var(--space-8);
   }
 
   .stepsGrid {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  .section {
-    padding-top: var(--space-16);
-    padding-bottom: var(--space-16);
+    gap: var(--space-4);
   }
 
   .stepCard {
     padding: var(--space-6);
-    flex-direction: column;
-    gap: var(--space-4);
-  }
-
-  .cardHeaderRow {
-    flex-direction: column;
-    align-items: flex-start;
   }
 }

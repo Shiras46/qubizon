@@ -1,19 +1,35 @@
 .section {
-  padding-top: var(--space-24);
-  padding-bottom: var(--space-32);
+  padding-top: clamp(4rem, 8vw, 7rem);
+  padding-bottom: clamp(5rem, 9vw, 8rem);
   background-color: var(--color-bg-dark);
   color: var(--color-text-inverse);
   position: relative;
   overflow: hidden;
 }
 
-/* Editorial Introduction Header (matching Image 2 & 3) */
+/* Subtle architectural grid backdrop */
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* Asymmetric Section Header (matching Reference Image 2 & 3) */
 .introHeader {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 240px 1fr;
   gap: var(--space-8);
-  margin-bottom: var(--space-20);
+  margin-bottom: var(--space-16);
   align-items: flex-start;
+  position: relative;
+  z-index: 2;
 }
 
 .badgeWrapper {
@@ -22,19 +38,18 @@
   gap: var(--space-2);
 }
 
-.introDot {
-  width: 8px;
-  height: 8px;
-  border-radius: var(--radius-full);
-  background-color: var(--brand-yellow);
-  box-shadow: 0 0 10px rgba(255, 190, 11, 0.7);
+.badgeDiamond {
+  color: var(--brand-yellow);
+  font-size: 0.875rem;
+  line-height: 1;
 }
 
 .sectionBadge {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-medium);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
   color: #94a3b8;
-  letter-spacing: -0.01em;
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
 }
 
 .headlineWrapper {
@@ -60,35 +75,107 @@
   font-weight: var(--font-weight-regular);
 }
 
-/* 4 Connected Framework Columns (matching Image 2 & 3 stat columns) */
+.headerCtaWrapper {
+  margin-top: var(--space-2);
+}
+
+.headerCta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 8px 10px 8px 22px;
+  background-color: #ffffff;
+  color: #0b1530;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  letter-spacing: -0.01em;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ctaArrowCircle {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background-color: #0b1530;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+  margin-left: 4px;
+}
+
+.headerCta:hover {
+  background-color: var(--brand-yellow);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 190, 11, 0.35);
+}
+
+.headerCta:hover .ctaArrowCircle {
+  transform: translateX(3px);
+}
+
+/* 4 High-Radius Bento Architecture Cards (matching Reference Image 2 & 3) */
 .pillarsGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-8);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
   margin-bottom: var(--space-20);
   position: relative;
   z-index: 2;
 }
 
 .pillarCard {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
   position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.pillarCard:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 190, 11, 0.35);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 190, 11, 0.1);
+}
+
+.cardTopRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
 }
 
 .pillarNumber {
   font-family: var(--font-family-mono);
-  font-size: clamp(2.5rem, 2rem + 1.8vw, 3.75rem);
+  font-size: clamp(2rem, 1.8rem + 1.2vw, 3rem);
   font-weight: var(--font-weight-extrabold);
   color: #ffffff;
   line-height: 1;
   letter-spacing: -0.04em;
 }
 
+.cardDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--brand-yellow);
+  box-shadow: 0 0 10px rgba(255, 190, 11, 0.7);
+}
+
 .pillarTitle {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
   color: var(--brand-yellow);
   letter-spacing: -0.01em;
@@ -97,11 +184,11 @@
 
 .pillarBody {
   font-size: var(--font-size-sm);
-  color: #94a3b8;
+  color: #cbd5e1;
   line-height: var(--line-height-relaxed);
 }
 
-/* Double Overlapping Angled Marquee Ribbons (matching Image 2 & 3) */
+/* Double Overlapping Angled Marquee Ribbons */
 .ribbonWrapper {
   position: relative;
   width: 105vw;
@@ -145,85 +232,64 @@
 .ribbonContentReverse {
   display: flex;
   white-space: nowrap;
-  animation: ribbonMarquee 28s linear infinite;
+  gap: var(--space-8);
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ribbonContent {
+  animation: scrollLinear 32s linear infinite;
+  color: #ffffff;
 }
 
 .ribbonContentReverse {
-  animation: ribbonMarqueeReverse 32s linear infinite;
+  animation: scrollLinearReverse 36s linear infinite;
+  color: #ffffff;
 }
 
 .tickerItem {
   display: inline-flex;
   align-items: center;
   gap: var(--space-3);
-  padding: 0 var(--space-6);
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-extrabold);
-  text-transform: uppercase;
-  letter-spacing: var(--letter-spacing-caps);
-  color: #ffffff;
 }
 
 .star {
   color: var(--brand-yellow);
-  font-size: 14px;
+  font-size: 0.75rem;
 }
 
-@keyframes ribbonMarquee {
+@keyframes scrollLinear {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-@keyframes ribbonMarqueeReverse {
+@keyframes scrollLinearReverse {
   0% { transform: translateX(-50%); }
   100% { transform: translateX(0); }
 }
 
-/* Reduced Motion Override */
 @media (prefers-reduced-motion: reduce) {
   .ribbonContent,
   .ribbonContentReverse {
-    animation: none !important;
+    animation: none;
   }
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .introHeader {
     grid-template-columns: 1fr;
     gap: var(--space-4);
   }
 
   .pillarsGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-8);
-  }
-}
-
-@media (max-width: 680px) {
-  .section {
-    padding-top: var(--space-16);
-    padding-bottom: var(--space-20);
-  }
-
-  .pillarsGrid {
     grid-template-columns: 1fr;
-    gap: var(--space-6);
+    gap: var(--space-4);
   }
 
-  .ribbonWrapper {
-    height: 110px;
-  }
-
-  .ribbonTrackOne {
-    padding: 10px 0;
-  }
-
-  .ribbonTrackTwo {
-    padding: 10px 0;
-  }
-
-  .tickerItem {
-    font-size: var(--font-size-sm);
+  .pillarCard {
+    padding: var(--space-6);
   }
 }

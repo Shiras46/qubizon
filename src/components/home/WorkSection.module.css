@@ -1,43 +1,62 @@
 .section {
-  padding-top: var(--space-24);
-  padding-bottom: var(--space-24);
+  padding-top: clamp(4rem, 8vw, 7rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
   background-color: var(--color-bg-base);
   border-top: 1px solid var(--color-border-subtle);
   position: relative;
 }
 
-.headerArea {
-  text-align: center;
-  max-width: 820px;
-  margin: 0 auto var(--space-12) auto;
+/* Asymmetrical Header matching Reference Image */
+.headerRow {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: var(--space-8);
+  margin-bottom: var(--space-12);
+  align-items: flex-start;
+}
+
+.badgeWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.badgeDiamond {
+  color: var(--brand-blue);
+  font-size: 0.875rem;
+  line-height: 1;
 }
 
 .sectionBadge {
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-semibold);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
   color: var(--brand-blue);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-caps);
-  margin-bottom: var(--space-3);
-  display: inline-block;
-  background: rgba(0, 72, 142, 0.06);
-  padding: 4px 14px;
-  border-radius: var(--radius-full);
+  margin: 0;
+}
+
+.headingContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
 }
 
 .sectionTitle {
-  font-size: clamp(2.5rem, 2rem + 2.5vw, 4rem);
+  font-size: clamp(2.25rem, 1.8rem + 2vw, 3.5rem);
   font-weight: var(--font-weight-extrabold);
   color: var(--color-text-primary);
   letter-spacing: var(--letter-spacing-tight);
-  margin-bottom: var(--space-4);
   line-height: var(--line-height-tight);
+  margin: 0;
 }
 
 .sectionDescription {
   font-size: var(--font-size-lg);
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
+  max-width: 780px;
+  margin: 0;
 }
 
 /* Tab selector */
@@ -159,17 +178,40 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
+  padding: 8px 10px 8px 20px;
+  background-color: var(--brand-yellow);
+  color: var(--color-accent-text);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
-  color: var(--brand-yellow);
+  border-radius: var(--radius-full);
   text-decoration: none;
-  transition: gap var(--transition-fast), color var(--transition-fast);
+  transition: all var(--transition-fast);
   margin-top: var(--space-2);
+  align-self: flex-start;
+  box-shadow: 0 4px 14px rgba(255, 190, 11, 0.3);
+}
+
+.ctaArrowCircleInspect {
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-full);
+  background-color: #0b1530;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast);
+  margin-left: 2px;
 }
 
 .inspectLink:hover {
-  gap: var(--space-3);
-  color: #ffffff;
+  background-color: var(--brand-yellow-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 190, 11, 0.45);
+}
+
+.inspectLink:hover .ctaArrowCircleInspect {
+  transform: translateX(3px);
 }
 
 /* Center Column: Phone Mockup with Lighting */
@@ -370,7 +412,7 @@
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   color: var(--color-text-primary);
-  padding: 12px 28px;
+  padding: 10px 12px 10px 24px;
   border: 1px solid var(--color-border-default);
   background: #ffffff;
   border-radius: var(--radius-full);
@@ -379,15 +421,42 @@
   box-shadow: var(--shadow-sm);
 }
 
+.ctaArrowCircleView {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background-color: rgba(0, 72, 142, 0.08);
+  color: var(--brand-blue);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+  margin-left: 4px;
+}
+
 .viewAllLink:hover {
-  background-color: var(--brand-blue-subtle);
+  background-color: #ffffff;
   border-color: var(--brand-blue);
   color: var(--brand-blue);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 6px 18px rgba(0, 72, 142, 0.1);
+}
+
+.viewAllLink:hover .ctaArrowCircleView {
+  background-color: var(--brand-blue);
+  color: #ffffff;
+  transform: translateX(3px);
 }
 
 /* Responsive Breakpoints */
+@media (max-width: 900px) {
+  .headerRow {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+  }
+}
+
 @media (max-width: 1024px) {
   .showcaseCard {
     grid-template-columns: 1fr 1fr;

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Layers, Sparkles } from "lucide-react";
+import { ArrowRight, Layers, Sparkles, CheckCircle2, Gauge } from "lucide-react";
 import { InteractiveCube } from "@/components/cube/InteractiveCube";
 import { ConsultationModal } from "@/components/common/ConsultationModal";
 import styles from "./HeroSection.module.css";
@@ -12,9 +12,15 @@ export function HeroSection() {
 
   return (
     <section className={styles.hero} aria-labelledby="hero-heading">
+      {/* Massive Architectural Brand Watermark */}
+      <div className={styles.watermark} aria-hidden="true">
+        QUBIZON
+      </div>
+
       <div className="container">
         <div className={styles.heroContent}>
           <div className={styles.pillBadge}>
+            <span className={styles.badgeDiamond} aria-hidden="true">❖</span>
             <Layers size={14} aria-hidden="true" />
             <span>Digital Marketing & Web Development • Kerala</span>
           </div>
@@ -38,18 +44,56 @@ export function HeroSection() {
             >
               <Sparkles size={18} aria-hidden="true" />
               <span>Request Discovery Call</span>
-              <ArrowRight size={18} aria-hidden="true" />
+              <span className={styles.ctaArrowCircle} aria-hidden="true">
+                <ArrowRight size={14} />
+              </span>
             </button>
 
             <Link href="/contact" className={styles.secondaryCta}>
               <span>Full Proposal Form</span>
+              <span className={styles.ctaArrowCircleSecondary} aria-hidden="true">
+                <ArrowRight size={14} />
+              </span>
             </Link>
           </div>
         </div>
 
-        {/* Signature Interactive Service Cube */}
-        <div className={styles.cubeShowcase}>
-          <InteractiveCube />
+        {/* Signature Interactive Service Cube & Floating Bento Chips */}
+        <div className={styles.showcaseWrapper}>
+          <div className={styles.cubeShowcase}>
+            <InteractiveCube />
+          </div>
+
+          {/* Floating Metric Proof Cards flanking the cube (Matching Reference Architecture) */}
+          <div className={styles.floatingCardsRow} aria-label="Key Agency Verification Standards">
+            <div className={styles.proofCard}>
+              <div className={styles.proofHeader}>
+                <span className={styles.proofMetric}>10+ YEARS</span>
+                <span className={styles.proofTag}>
+                  <CheckCircle2 size={12} aria-hidden="true" />
+                  VERIFIED
+                </span>
+              </div>
+              <p className={styles.proofLabel}>DIGITAL ENGINEERING</p>
+              <p className={styles.proofDescription}>
+                A decade of expertise delivering unified website performance and measurable search pipeline.
+              </p>
+            </div>
+
+            <div className={styles.proofCard}>
+              <div className={styles.proofHeader}>
+                <span className={styles.proofMetric}>≤ 1.2s</span>
+                <span className={styles.proofTag}>
+                  <Gauge size={12} aria-hidden="true" />
+                  SPEED
+                </span>
+              </div>
+              <p className={styles.proofLabel}>CORE WEB VITALS</p>
+              <p className={styles.proofDescription}>
+                Sub-second LCP and zero Cumulative Layout Shift built into every Next.js client deployment.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 

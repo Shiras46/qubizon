@@ -8,9 +8,9 @@
 
 .headerRow {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 260px 1fr;
   gap: var(--space-8);
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--space-12);
   align-items: flex-start;
 }
 
@@ -20,19 +20,19 @@
   gap: var(--space-2);
 }
 
-.badgeDot {
-  width: 8px;
-  height: 8px;
-  border-radius: var(--radius-full);
-  background-color: var(--brand-blue);
+.badgeDiamond {
+  color: var(--brand-blue);
+  font-size: 0.875rem;
+  line-height: 1;
 }
 
 .sectionBadge {
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-semibold);
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
   color: var(--brand-blue);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-caps);
+  margin: 0;
 }
 
 .headingContent {

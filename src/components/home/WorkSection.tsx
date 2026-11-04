@@ -65,14 +65,21 @@ export function WorkSection() {
   return (
     <section className={styles.section} aria-labelledby="work-heading">
       <div className="container">
-        <div className={styles.headerArea}>
-          <p className={styles.sectionBadge}>Proven Methodology</p>
-          <h2 id="work-heading" className={styles.sectionTitle}>
-            Recent Works
-          </h2>
-          <p className={styles.sectionDescription}>
-            Explore our architectural benchmarks and strategic frameworks. We believe in transparent engineering standards rather than unverifiable marketing claims.
-          </p>
+        {/* Asymmetrical Header matching Reference Image */}
+        <div className={styles.headerRow}>
+          <div className={styles.badgeWrapper}>
+            <span className={styles.badgeDiamond} aria-hidden="true">❖</span>
+            <p className={styles.sectionBadge}>RECENT WORKS (PROVEN BENCHMARKS)</p>
+          </div>
+
+          <div className={styles.headingContent}>
+            <h2 id="work-heading" className={styles.sectionTitle}>
+              Recent Works
+            </h2>
+            <p className={styles.sectionDescription}>
+              Explore our architectural benchmarks and strategic frameworks. We believe in transparent engineering standards rather than unverifiable marketing claims.
+            </p>
+          </div>
         </div>
 
         {/* Project Selector Tabs */}
@@ -116,7 +123,9 @@ export function WorkSection() {
               aria-label={`Inspect Methodology: ${activeStudy.title}`}
             >
               <span>Inspect Methodology</span>
-              <ArrowRight size={16} aria-hidden="true" />
+              <span className={styles.ctaArrowCircleInspect} aria-hidden="true">
+                <ArrowRight size={14} />
+              </span>
             </Link>
           </div>
 
@@ -174,7 +183,9 @@ export function WorkSection() {
         <div className={styles.ctaWrapper}>
           <Link href="/work" className={styles.viewAllLink}>
             <span>View All Architectural Case Studies</span>
-            <ArrowRight size={16} aria-hidden="true" />
+            <span className={styles.ctaArrowCircleView} aria-hidden="true">
+              <ArrowRight size={14} />
+            </span>
           </Link>
         </div>
       </div>

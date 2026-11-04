@@ -103,17 +103,29 @@ export function ServicesOverview() {
   return (
     <section id="services" className={styles.section} aria-labelledby="services-heading">
       <div className="container">
-        <div className={styles.headerArea}>
+        {/* Asymmetrical Header matching Reference Image Pattern */}
+        <div className={styles.headerRow}>
           <div className={styles.badgeWrapper}>
-            <span className={styles.badgeDot} aria-hidden="true" />
-            <p className={styles.sectionBadge}>Integrated Disciplines</p>
+            <span className={styles.badgeDiamond} aria-hidden="true">❖</span>
+            <p className={styles.sectionBadge}>INTEGRATED DISCIPLINES</p>
           </div>
-          <h2 id="services-heading" className={styles.sectionTitle}>
-            Five Disciplines. One Unified Model.
-          </h2>
-          <p className={styles.sectionDescription}>
-            Instead of stitching together disconnected freelancers and isolated agencies, Qubizon provides a single multidisciplinary team executing in tight alignment.
-          </p>
+
+          <div className={styles.headingContent}>
+            <h2 id="services-heading" className={styles.sectionTitle}>
+              Five Disciplines. One Unified Model.
+            </h2>
+            <p className={styles.sectionDescription}>
+              Instead of stitching together disconnected freelancers and isolated agencies, Qubizon provides a single multidisciplinary team executing in tight alignment.
+            </p>
+            <div className={styles.headerCtaWrapper}>
+              <Link href="/services" className={styles.headerCta}>
+                <span>Explore all services</span>
+                <span className={styles.ctaArrowCircle} aria-hidden="true">
+                  <ArrowRight size={14} />
+                </span>
+              </Link>
+            </div>
+          </div>
         </div>
 
         {/* Studio Interactive Layout (matching Image 4 design pattern) */}
@@ -180,8 +192,10 @@ export function ServicesOverview() {
                 className={styles.exploreLink}
                 aria-label={`Explore ${activeService.title}`}
               >
-                <span>Explore</span>
-                <ArrowRight size={18} aria-hidden="true" />
+                <span>Explore service</span>
+                <span className={styles.ctaArrowCircleExplore} aria-hidden="true">
+                  <ArrowRight size={14} />
+                </span>
               </Link>
             </div>
           </div>

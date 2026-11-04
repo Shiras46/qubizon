@@ -62,11 +62,11 @@ export function FaqSection() {
   return (
     <section className={styles.section} aria-labelledby="faq-heading">
       <div className="container">
-        {/* Asymmetrical Header matching Reference Image 4 */}
+        {/* Asymmetrical Header matching Reference Image */}
         <div className={styles.headerRow}>
           <div className={styles.badgeWrapper}>
-            <span className={styles.badgeDot} aria-hidden="true" />
-            <p className={styles.sectionBadge}>FAQ</p>
+            <span className={styles.badgeDiamond} aria-hidden="true">❖</span>
+            <p className={styles.sectionBadge}>FREQUENTLY ASKED QUESTIONS</p>
           </div>
 
           <div className={styles.headingContent}>
