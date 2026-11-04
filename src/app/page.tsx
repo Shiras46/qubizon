@@ -4,7 +4,6 @@ import { AboutSection } from "@/components/home/AboutSection";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { WhyQubizon } from "@/components/home/WhyQubizon";
 import { ProcessSection } from "@/components/home/ProcessSection";
-import { WorkSection } from "@/components/home/WorkSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { ConversionSection } from "@/components/home/ConversionSection";
 import { constructMetadata } from "@/lib/metadata";
@@ -43,9 +42,6 @@ export default function HomePage() {
 
       {/* Execution Process: 4-Step Customer-Centric Workflow */}
       <ProcessSection />
-
-      {/* Work & Credibility: Architectural Case Studies */}
-      <WorkSection />
 
       {/* Frequently Asked Questions: 2-Column Rounded Accordion Cards */}
       <FaqSection />
