@@ -34,8 +34,16 @@ export function constructMetadata({
       canonical: canonicalUrl,
     },
     icons: {
-      icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-      apple: [{ url: "/icon.svg", type: "image/svg+xml" }],
+      icon: [
+        { url: "/icon.png", sizes: "512x512", type: "image/png" },
+        { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+        { url: "/icon-48.png", sizes: "48x48", type: "image/png" },
+        { url: "/icon.svg", type: "image/svg+xml" },
+      ],
+      apple: [
+        { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+      ],
+      shortcut: ["/favicon.ico"],
     },
     metadataBase: new URL(SITE_CONFIG.domain),
     openGraph: {
