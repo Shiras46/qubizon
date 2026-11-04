@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/components/home/HeroSection";
+import { AboutSection } from "@/components/home/AboutSection";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { WhyQubizon } from "@/components/home/WhyQubizon";
 import { ProcessSection } from "@/components/home/ProcessSection";
@@ -28,8 +29,11 @@ export const metadata: Metadata = constructMetadata({
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section with Signature 3D Interactive Service Cube */}
+      {/* Hero Section */}
       <HeroSection />
+
+      {/* About Section: Who We Are & Proven Scale Stats */}
+      <AboutSection />
 
       {/* Services Overview: Five Disciplines */}
       <ServicesOverview />

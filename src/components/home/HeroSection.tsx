@@ -1,90 +1,91 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import { ArrowRight, Layers, Sparkles, CheckCircle2, Gauge } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { ConsultationModal } from "@/components/common/ConsultationModal";
 import styles from "./HeroSection.module.css";
+
+const TRUST_TAGS = [
+  "Next.js App Router",
+  "Technical SEO",
+  "Precision PPC Ads",
+  "Social Growth",
+  "Core Web Vitals",
+];
 
 export function HeroSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section className={styles.hero} aria-labelledby="hero-heading">
-      {/* Massive Architectural Brand Watermark */}
-      <div className={styles.watermark} aria-hidden="true">
-        QUBIZON
-      </div>
-
       <div className="container">
-        <div className={styles.heroContent}>
-          <div className={styles.pillBadge}>
-            <span className={styles.badgeDiamond} aria-hidden="true">❖</span>
-            <Layers size={14} aria-hidden="true" />
-            <span>Digital Marketing & Web Development • Kerala</span>
+        {/* Dark Cinematic Stage Card (Matching Reference Image) */}
+        <div className={styles.heroCard}>
+          <div className={styles.cardHeader}>
+            <div className={styles.brandBadge}>
+              <span className={styles.brandSymbol} aria-hidden="true">❖</span>
+              <span className={styles.brandText}>QUBIZON</span>
+            </div>
           </div>
 
-          <h1 id="hero-heading" className={styles.headline}>
-            All your digital needs in <span className={styles.headlineAccent}>one cube.</span>
-          </h1>
+          <div className={styles.heroGrid}>
+            {/* Left Column: Headline, Narrative, CTA, Scroll Down */}
+            <div className={styles.leftCol}>
+              <h1 id="hero-heading" className={styles.headline}>
+                All your digital needs in{" "}
+                <span className={styles.headlineAccent}>one cube.</span>
+              </h1>
 
-          <p className={styles.subheadline}>
-            Eliminate vendor fragmentation. Qubizon synchronizes custom Next.js website engineering,
-            technical SEO, precision paid ads, social media marketing, and authoritative content for
-            businesses in Kozhikode, Thrissur, and across Kerala.
-          </p>
+              <p className={styles.subheadline}>
+                Eliminate vendor fragmentation. Qubizon synchronizes custom Next.js website engineering,
+                technical SEO, precision paid ads, social media marketing, and authoritative content for
+                businesses in Kozhikode, Thrissur, and across Kerala.
+              </p>
 
-          <div className={styles.ctaGroup}>
-            <button
-              type="button"
-              onClick={() => setIsModalOpen(true)}
-              className={styles.primaryCta}
-              aria-haspopup="dialog"
-            >
-              <Sparkles size={18} aria-hidden="true" />
-              <span>Request Discovery Call</span>
-              <span className={styles.ctaArrowCircle} aria-hidden="true">
-                <ArrowRight size={14} />
-              </span>
-            </button>
+              <div className={styles.ctaWrapper}>
+                <button
+                  type="button"
+                  onClick={() => setIsModalOpen(true)}
+                  className={styles.pillCta}
+                  aria-haspopup="dialog"
+                >
+                  <span className={styles.ctaIconSquare} aria-hidden="true">
+                    <ArrowRight size={14} />
+                  </span>
+                  <span>GET IN TOUCH</span>
+                </button>
+              </div>
 
-            <Link href="/contact" className={styles.secondaryCta}>
-              <span>Full Proposal Form</span>
-              <span className={styles.ctaArrowCircleSecondary} aria-hidden="true">
-                <ArrowRight size={14} />
-              </span>
-            </Link>
+              <a href="#about" className={styles.scrollDown} aria-label="Scroll down to About section">
+                <span>SCROLL DOWN</span>
+                <ChevronDown size={14} aria-hidden="true" />
+              </a>
+            </div>
+
+            {/* Right Column: Directional Spotlight Team Photo */}
+            <div className={styles.rightCol}>
+              <div className={styles.imageFrame}>
+                <Image
+                  src="/hero-collaboration.jpg"
+                  alt="Qubizon digital advisory and engineering team collaborating"
+                  width={680}
+                  height={460}
+                  priority
+                  className={styles.heroImage}
+                />
+              </div>
+            </div>
           </div>
 
-          {/* Floating Metric Proof Cards (Matching Reference Architecture) */}
-          <div className={styles.floatingCardsRow} aria-label="Key Agency Verification Standards">
-            <div className={styles.proofCard}>
-              <div className={styles.proofHeader}>
-                <span className={styles.proofMetric}>10+ YEARS</span>
-                <span className={styles.proofTag}>
-                  <CheckCircle2 size={12} aria-hidden="true" />
-                  VERIFIED
-                </span>
-              </div>
-              <p className={styles.proofLabel}>DIGITAL ENGINEERING</p>
-              <p className={styles.proofDescription}>
-                A decade of expertise delivering unified website performance and measurable search pipeline.
-              </p>
-            </div>
-
-            <div className={styles.proofCard}>
-              <div className={styles.proofHeader}>
-                <span className={styles.proofMetric}>≤ 1.2s</span>
-                <span className={styles.proofTag}>
-                  <Gauge size={12} aria-hidden="true" />
-                  SPEED
-                </span>
-              </div>
-              <p className={styles.proofLabel}>CORE WEB VITALS</p>
-              <p className={styles.proofDescription}>
-                Sub-second LCP and zero Cumulative Layout Shift built into every Next.js client deployment.
-              </p>
-            </div>
+          {/* Bottom Trust Marks Bar */}
+          <div className={styles.trustBar} aria-label="Core Technical Capabilities">
+            {TRUST_TAGS.map((tag, idx) => (
+              <span key={idx} className={styles.trustItem}>
+                <span className={styles.trustDiamond} aria-hidden="true">❖</span>
+                <span>{tag}</span>
+              </span>
+            ))}
           </div>
         </div>
       </div>
