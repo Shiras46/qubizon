@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Layers, Sparkles, CheckCircle2, Gauge } from "lucide-react";
-import { InteractiveCube } from "@/components/cube/InteractiveCube";
 import { ConsultationModal } from "@/components/common/ConsultationModal";
 import styles from "./HeroSection.module.css";
 
@@ -56,15 +55,8 @@ export function HeroSection() {
               </span>
             </Link>
           </div>
-        </div>
 
-        {/* Signature Interactive Service Cube & Floating Bento Chips */}
-        <div className={styles.showcaseWrapper}>
-          <div className={styles.cubeShowcase}>
-            <InteractiveCube />
-          </div>
-
-          {/* Floating Metric Proof Cards flanking the cube (Matching Reference Architecture) */}
+          {/* Floating Metric Proof Cards (Matching Reference Architecture) */}
           <div className={styles.floatingCardsRow} aria-label="Key Agency Verification Standards">
             <div className={styles.proofCard}>
               <div className={styles.proofHeader}>
