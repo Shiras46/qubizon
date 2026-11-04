@@ -1,0 +1,113 @@
+:root {
+  /* Brand Core Palette */
+  --brand-blue: #00488e;
+  --brand-blue-hover: #00366b;
+  --brand-blue-subtle: rgba(0, 72, 142, 0.06);
+  --brand-blue-glow: rgba(0, 72, 142, 0.2);
+  --brand-cyan-glow: rgba(14, 165, 233, 0.25);
+  --brand-yellow: #ffbe0b;
+  --brand-yellow-hover: #eab00a;
+  --brand-yellow-subtle: rgba(255, 190, 11, 0.12);
+  --brand-yellow-glow: rgba(255, 190, 11, 0.35);
+
+  /* Semantic UI Tokens */
+  --color-primary: var(--brand-blue);
+  --color-accent: var(--brand-yellow);
+  --color-accent-text: #0b1530; /* WCAG AAA contrast > 9:1 on #FFBE0B */
+
+  /* Neutral Slate Palette (Bespoke Studio Ivory & Deep Navy) */
+  --color-bg-base: #f7f8fa;
+  --color-bg-surface: #ffffff;
+  --color-bg-muted: #f1f4f8;
+  --color-bg-dark: #0b1530;
+  --color-bg-dark-surface: #101c3d;
+  --color-bg-dark-elevated: #16244c;
+
+  --color-text-primary: #0b1530;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+  --color-text-inverse: #f8fafc;
+  --color-text-inverse-muted: #94a3b8;
+
+  --color-border-subtle: rgba(11, 21, 48, 0.08);
+  --color-border-default: #e2e8f0;
+  --color-border-dark: rgba(255, 255, 255, 0.09);
+  --color-border-dark-hover: rgba(255, 255, 255, 0.22);
+
+  /* Typography Scale (Fluid clamp - Studio Level) */
+  --font-family-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --font-size-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+  --font-size-sm: clamp(0.875rem, 0.84rem + 0.18vw, 0.9375rem);
+  --font-size-base: clamp(1rem, 0.96rem + 0.22vw, 1.0625rem);
+  --font-size-lg: clamp(1.125rem, 1.06rem + 0.35vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.45rem);
+  --font-size-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 1.85rem);
+  --font-size-3xl: clamp(1.875rem, 1.62rem + 1.1vw, 2.35rem);
+  --font-size-4xl: clamp(2.25rem, 1.85rem + 1.8vw, 3rem);
+  --font-size-5xl: clamp(2.85rem, 2.3rem + 3vw, 4.4rem);
+
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.25;
+  --line-height-normal: 1.55;
+  --line-height-relaxed: 1.7;
+
+  --letter-spacing-tight: -0.035em;
+  --letter-spacing-snug: -0.015em;
+  --letter-spacing-caps: 0.08em;
+
+  /* Spacing Rhythm */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px */
+  --space-6: 1.5rem;   /* 24px */
+  --space-8: 2rem;     /* 32px */
+  --space-10: 2.5rem;  /* 40px */
+  --space-12: 3rem;    /* 48px */
+  --space-16: 4rem;    /* 64px */
+  --space-20: 5rem;    /* 80px */
+  --space-24: 6.5rem;  /* 104px */
+  --space-32: 8.5rem;  /* 136px */
+
+  /* Layout Containers */
+  --container-max-width: 1240px;
+  --container-padding: clamp(1.25rem, 5vw, 2.5rem);
+
+  /* Radii - Refined, controlled geometry */
+  --radius-xs: 0.25rem; /* 4px */
+  --radius-sm: 0.375rem; /* 6px */
+  --radius-md: 0.625rem; /* 10px */
+  --radius-lg: 0.875rem; /* 14px */
+  --radius-xl: 1.25rem;  /* 20px */
+  --radius-2xl: 1.75rem; /* 28px */
+  --radius-full: 9999px;
+
+  /* Elevation Shadows (Layered Studio Depth) */
+  --shadow-subtle: 0 1px 2px rgba(11, 21, 48, 0.03);
+  --shadow-sm: 0 1px 3px rgba(11, 21, 48, 0.05), 0 1px 2px rgba(11, 21, 48, 0.03);
+  --shadow-md: 0 4px 12px -2px rgba(11, 21, 48, 0.06), 0 2px 4px -1px rgba(11, 21, 48, 0.04);
+  --shadow-lg: 0 12px 28px -6px rgba(11, 21, 48, 0.08), 0 4px 10px -3px rgba(11, 21, 48, 0.04);
+  --shadow-card-hover: 0 20px 40px -12px rgba(0, 72, 142, 0.12), 0 4px 12px -2px rgba(11, 21, 48, 0.05);
+  --shadow-dark-card: 0 12px 32px -8px rgba(0, 0, 0, 0.4);
+  --shadow-glow-blue: 0 0 35px rgba(0, 72, 142, 0.25);
+  --shadow-glow-yellow: 0 0 30px rgba(255, 190, 11, 0.35);
+
+  /* Transitions */
+  --transition-fast: 160ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 260ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-spring: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Z-indices */
+  --z-header: 50;
+  --z-modal: 100;
+  --z-toast: 150;
+}

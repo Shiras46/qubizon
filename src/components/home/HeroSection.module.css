@@ -1,0 +1,178 @@
+.hero {
+  padding-top: var(--space-24);
+  padding-bottom: var(--space-24);
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(55% 45% at 50% 18%, rgba(0, 72, 142, 0.07) 0%, rgba(247, 248, 250, 0) 100%);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(0, 72, 142, 0.12) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 940px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.pillBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 72, 142, 0.14);
+  color: var(--brand-blue);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-caps);
+  text-transform: uppercase;
+  margin-bottom: var(--space-6);
+  box-shadow: 0 2px 8px rgba(11, 21, 48, 0.04);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.pillBadge:hover {
+  border-color: rgba(0, 72, 142, 0.3);
+  transform: translateY(-1px);
+}
+
+.headline {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-text-primary);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-6);
+  max-width: 880px;
+}
+
+.headlineAccent {
+  color: var(--brand-blue);
+  background: linear-gradient(135deg, var(--brand-blue) 20%, #0070da 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline;
+}
+
+.subheadline {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  max-width: 720px;
+  margin-bottom: var(--space-10);
+  font-weight: var(--font-weight-regular);
+}
+
+.ctaGroup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-20);
+}
+
+.primaryCta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 14px 28px;
+  background-color: var(--brand-yellow);
+  color: var(--color-accent-text);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  letter-spacing: -0.01em;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(255, 190, 11, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.primaryCta:hover {
+  background-color: var(--brand-yellow-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(255, 190, 11, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.7);
+}
+
+.primaryCta:active {
+  transform: translateY(0);
+}
+
+.secondaryCta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 14px 28px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-default);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-base);
+  letter-spacing: -0.01em;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(11, 21, 48, 0.03);
+}
+
+.secondaryCta:hover {
+  border-color: var(--brand-blue);
+  color: var(--brand-blue);
+  background-color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 72, 142, 0.08);
+}
+
+.secondaryCta:active {
+  transform: translateY(0);
+}
+
+.cubeShowcase {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+  }
+
+  .subheadline {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--space-8);
+  }
+
+  .ctaGroup {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: var(--space-12);
+  }
+
+  .primaryCta, .secondaryCta {
+    width: 100%;
+    justify-content: center;
+  }
+}

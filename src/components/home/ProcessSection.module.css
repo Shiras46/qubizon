@@ -1,0 +1,166 @@
+.section {
+  padding-top: var(--space-24);
+  padding-bottom: var(--space-24);
+  background-color: var(--color-bg-base);
+  border-top: 1px solid var(--color-border-subtle);
+  position: relative;
+}
+
+.headerRow {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: var(--space-8);
+  margin-bottom: var(--space-16);
+  align-items: flex-start;
+}
+
+.badgeWrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.badgeDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--brand-blue);
+}
+
+.sectionBadge {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--brand-blue);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-caps);
+}
+
+.headingContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sectionTitle {
+  font-size: clamp(2.25rem, 1.8rem + 2vw, 3.5rem);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-text-primary);
+  letter-spacing: var(--letter-spacing-tight);
+  line-height: var(--line-height-tight);
+}
+
+.sectionDescription {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  max-width: 780px;
+}
+
+/* 2-Column Grid of Sleek Rounded Pill Cards (matching Image 1 & 4) */
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+
+.stepCard {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 24px;
+  padding: var(--space-8);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-6);
+  box-shadow: 0 4px 18px -4px rgba(11, 21, 48, 0.05);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.stepCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 72, 142, 0.3);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.stepBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, var(--brand-blue) 0%, #002e5d 100%);
+  color: var(--brand-yellow);
+  font-family: var(--font-family-mono);
+  font-weight: var(--font-weight-extrabold);
+  font-size: var(--font-size-base);
+  letter-spacing: -0.02em;
+  box-shadow: 0 4px 12px rgba(0, 72, 142, 0.25);
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex-grow: 1;
+}
+
+.cardHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.stepTitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  letter-spacing: var(--letter-spacing-snug);
+}
+
+.phaseIndicator {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: #334155;
+  background: var(--color-bg-muted);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
+}
+
+.stepDescription {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+@media (max-width: 900px) {
+  .headerRow {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+  }
+
+  .stepCard {
+    padding: var(--space-6);
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .cardHeaderRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
