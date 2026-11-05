@@ -6,7 +6,7 @@ import { SITE_CONFIG } from "@/lib/constants";
 import styles from "@/components/locations/LocationPage.module.css";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Digital Marketing & Web Development Services in Thrissur | Qubizon",
+  title: "Digital Marketing & Web Development in Thrissur | Qubizon",
   description:
     "High-performance website development, technical SEO, and conversion-focused digital marketing engineered for retail, commercial, and enterprise businesses in Thrissur, Kerala.",
   path: "/locations/thrissur",

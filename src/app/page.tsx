@@ -9,7 +9,7 @@ import { ConversionSection } from "@/components/home/ConversionSection";
 import { constructMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Digital Marketing & Web Development Company in Kerala | Qubizon",
+  title: "Digital Marketing & Web Development in Kerala | Qubizon",
   description:
     "Qubizon Digital Solutions helps businesses grow with website development, SEO, social media marketing and paid advertising in Kozhikode, Thrissur and across Kerala.",
   path: "/",

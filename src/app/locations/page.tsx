@@ -6,7 +6,7 @@ import { SITE_CONFIG } from "@/lib/constants";
 import styles from "@/components/locations/LocationPage.module.css";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Service Areas — Digital Marketing & Web Development Across Kerala | Qubizon",
+  title: "Service Areas — Digital Marketing in Kerala | Qubizon",
   description:
     "Explore Qubizon's service areas across Kerala, including dedicated regional expertise in Kozhikode and Thrissur. Unified web engineering, technical SEO, and paid advertising.",
   path: "/locations",

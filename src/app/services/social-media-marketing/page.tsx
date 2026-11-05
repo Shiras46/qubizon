@@ -3,7 +3,7 @@ import { ServicePageTemplate, type ServicePageProps } from "@/components/service
 import { constructMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Social Media Marketing & Brand Distribution Services",
+  title: "Social Media Marketing & Brand Growth Services",
   description:
     "Strategic social media marketing, executive thought leadership, and multi-channel brand storytelling built for business credibility and commercial growth.",
   path: "/services/social-media-marketing",

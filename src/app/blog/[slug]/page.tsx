@@ -30,8 +30,10 @@ export function generateMetadata({ params }: PageProps): Metadata {
     });
   }
 
+  const metaTitle = post.seoTitle || post.title;
+
   return constructMetadata({
-    title: `${post.title} | Qubizon`,
+    title: `${metaTitle} | Qubizon`,
     description: post.excerpt,
     path: `/blog/${post.slug}`,
     keywords: [
