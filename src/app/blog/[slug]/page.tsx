@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { ChevronRight, Calendar, Clock, AlertTriangle, ArrowRight, CheckCircle2 } from "lucide-react";
 import { constructMetadata } from "@/lib/metadata";
 import { SITE_CONFIG } from "@/lib/constants";
-import { BLOG_POSTS } from "../page";
+import { BLOG_POSTS } from "@/lib/blog-data";
 import styles from "@/components/blog/BlogPage.module.css";
 
 interface PageProps {

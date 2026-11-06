@@ -12,6 +12,17 @@
   --brand-yellow-subtle: rgba(255, 190, 11, 0.12);
   --brand-yellow-glow: rgba(255, 190, 11, 0.35);
 
+  /* Codecave Minimalist Color Palette */
+  --clr-background: #ffffff;
+  --clr-foreground: #0a0a0a;
+  --clr-accent: #00488E;
+  --clr-accent-yellow: #FFBE0B;
+  --clr-accent-red: #FF3B30;
+  --clr-accent-blue: #007AFF;
+  --clr-muted: #666666;
+  --clr-border: rgba(0, 0, 0, 0.1);
+  --clr-border-subtle: rgba(0, 0, 0, 0.06);
+
   /* Legacy Aliases Standardized to Brand System */
   --brand-gold: var(--brand-yellow);
   --brand-gold-hover: var(--brand-yellow-hover);
@@ -20,30 +31,44 @@
   /* Semantic UI Tokens */
   --color-primary: var(--brand-blue);
   --color-accent: var(--brand-yellow);
-  --color-accent-text: #0B1530; /* WCAG AAA contrast > 9:1 on #FFBE0B */
+  --color-accent-text: #0B1530;
 
-  /* Neutral Slate Palette (Bespoke Studio Ivory & Deep Navy) */
-  --color-bg-base: #f7f8fa;
+  /* Clean Pure White Canvas & High-Contrast Dark */
+  --color-bg-base: #ffffff;
   --color-bg-surface: #ffffff;
-  --color-bg-muted: #f1f4f8;
-  --color-bg-dark: #0b1530;
-  --color-bg-dark-surface: #101c3d;
-  --color-bg-dark-elevated: #16244c;
+  --color-bg-muted: #f8fafc;
+  --color-bg-dark: #0a0a0a;
+  --color-bg-dark-surface: #111111;
+  --color-bg-dark-elevated: #1a1a1a;
 
-  --color-text-primary: #0b1530;
+  --color-text-primary: #0a0a0a;
   --color-text-secondary: #475569;
-  --color-text-muted: #64748b;
-  --color-text-inverse: #f8fafc;
+  --color-text-muted: #666666;
+  --color-text-inverse: #ffffff;
   --color-text-inverse-muted: #94a3b8;
 
-  --color-border-subtle: rgba(11, 21, 48, 0.08);
-  --color-border-default: #e2e8f0;
-  --color-border-dark: rgba(255, 255, 255, 0.09);
-  --color-border-dark-hover: rgba(255, 255, 255, 0.22);
+  --color-border-subtle: rgba(0, 0, 0, 0.08);
+  --color-border-default: rgba(0, 0, 0, 0.12);
+  --color-border-dark: rgba(255, 255, 255, 0.12);
+  --color-border-dark-hover: rgba(255, 255, 255, 0.25);
 
-  /* Typography Scale (Fluid clamp - Studio Level) */
-  --font-family-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  /* Typography Fonts (Codecave: Outfit + Playfair Display) */
+  --font-primary: var(--font-outfit), 'Outfit', -apple-system, sans-serif;
+  --font-heading: var(--font-outfit), 'Outfit', sans-serif;
+  --font-serif: var(--font-serif), 'Playfair Display', serif;
+  --font-family-sans: var(--font-primary);
   --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Codecave Fluid Typography Clamps */
+  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+  --text-sm: clamp(0.875rem, 0.8rem + 0.38vw, 1rem);
+  --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --text-lg: clamp(1.125rem, 1rem + 0.63vw, 1.25rem);
+  --text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --text-2xl: clamp(1.35rem, 1.2rem + 1.2vw, 1.75rem);
+  --text-3xl: clamp(1.75rem, 1.5rem + 2.5vw, 2.5rem);
+  --text-huge: clamp(2.5rem, 2rem + 6vw, 4.5rem);
+  --text-giant: clamp(3.5rem, 2rem + 8vw, 6rem);
 
   --font-size-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
   --font-size-sm: clamp(0.875rem, 0.84rem + 0.18vw, 0.9375rem);

@@ -1,112 +1,113 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import styles from "./WhyQubizon.module.css";
-
-interface Pillar {
-  number: string;
-  title: string;
-  body: string;
-}
-
-const PILLARS: Pillar[] = [
-  {
-    number: "01",
-    title: "Unified Technical Architecture",
-    body: "When web developers, SEO analysts, and copywriters collaborate on the same codebase, there are no communication silos or delayed handoffs. Every feature is engineered for crawlability, performance, and conversion from day one.",
-  },
-  {
-    number: "02",
-    title: "Single Accountability Partner",
-    body: "Managing five specialized boutique vendors leads to blame games when organic traffic dips or paid conversion drop. With Qubizon, your entire digital pipeline is governed under one responsible roof.",
-  },
-  {
-    number: "03",
-    title: "Velocity Through Shared Standards",
-    body: "We don't reinvent design systems or tracking schemas on every campaign. Using shared design tokens, modular UI libraries, and cohesive analytics, we bring initiatives to market faster with fewer revisions.",
-  },
-  {
-    number: "04",
-    title: "Truth-First Telemetry",
-    body: "We focus exclusively on verifiable business metrics — qualified leads, organic keyword ownership, and measurable pipeline ROI. No fabricated case numbers, no manipulated screenshots, and no vanity metrics.",
-  },
-];
-
-const TICKER_DISCIPLINES = [
-  "Custom Website Development",
-  "Technical SEO Crawlability",
-  "Social Media Marketing",
-  "Precision Paid Advertising",
-  "Content Marketing",
-  "Next.js App Router Architecture",
-  "Zero CLS Core Web Vitals",
-  "WCAG 2.1 AA Accessibility",
-];
 
 export function WhyQubizon() {
   return (
-    <section className={styles.section} aria-labelledby="why-heading">
-      <div className="container">
-        {/* Asymmetric Section Header (matching Reference Image 2 & 3) */}
-        <div className={styles.introHeader}>
-          <div className={styles.badgeWrapper}>
-            <span className={styles.badgeDiamond} aria-hidden="true">❖</span>
-            <span className={styles.sectionBadge}>THE UNIFIED MODEL</span>
-          </div>
+    <section className={styles.whySection} id="why-us" aria-labelledby="why-heading">
+      <div className={styles.container}>
+        <div className={styles.whyIntro}>
+          <h2 id="why-heading" className={styles.headingLarge}>
+            Why Choose <span className="calligraphy">Qubizon?</span>
+          </h2>
+          <p className={styles.lead}>
+            We don&apos;t just write code or run ad campaigns; we engineer unified digital ecosystems that resonate.
+            Our approach is rooted in an uncompromising understanding of design principles, search entity architecture,
+            and sub-second technical excellence.
+          </p>
+        </div>
 
-          <div className={styles.headlineWrapper}>
-            <h2 id="why-heading" className={styles.sectionTitle}>
-              Why the Cube Structure Out-Executes Fragmented Agencies
-            </h2>
-            <p className={styles.editorialLead}>
-              Traditional digital agencies operate in isolated departments. Qubizon connects your entire web presence into one coherent, multidisciplinary machine.
+        {/* 3-Column Features Grid */}
+        <div className={styles.featuresGrid}>
+          <div className={styles.feature}>
+            <h3 className={styles.featureTitle}>
+              <span className="accent-wrapper">
+                <span className="italic-serif">Pixel-Perfect Precision</span>
+                <svg className="scribble scribble-spark" viewBox="0 0 40 40" aria-hidden="true">
+                  <path
+                    d="M20,5 L20,15 M35,20 L25,20 M20,35 L20,25 M5,20 L15,20"
+                    fill="none"
+                    stroke="#00488E"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
+            </h3>
+            <p className={styles.featureDesc}>
+              Every detail matters. We obsess over typography hierarchies, fluid micro-interactions, responsive touch targets,
+              and strict WCAG 2.1 AA accessibility so your brand conveys effortless authority.
             </p>
-            <div className={styles.headerCtaWrapper}>
-              <Link href="/contact" className={styles.headerCta}>
-                <span>Get in touch</span>
-                <span className={styles.ctaArrowCircle} aria-hidden="true">
-                  <ArrowRight size={14} />
-                </span>
-              </Link>
-            </div>
+          </div>
+
+          <div className={styles.feature}>
+            <h3 className={styles.featureTitle}>
+              <span className="accent-wrapper">
+                <span className="italic-serif">Blazing Fast Performance</span>
+                <svg className="scribble scribble-spark" viewBox="0 0 40 40" aria-hidden="true">
+                  <path
+                    d="M20,5 L20,15 M35,20 L25,20 M20,35 L20,25 M5,20 L15,20"
+                    fill="none"
+                    stroke="#FF3B30"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
+            </h3>
+            <p className={styles.featureDesc}>
+              Optimized Next.js code, edge-rendered routes, and modern image pipelines ensure your site loads under one second
+              on any mobile or desktop device, keeping bounce rates exceptionally low.
+            </p>
+          </div>
+
+          <div className={styles.feature}>
+            <h3 className={styles.featureTitle}>
+              <span className="italic-serif">Future-Proof Technology</span>
+            </h3>
+            <p className={styles.featureDesc}>
+              We build with modern App Router frameworks, modular React components, and schema entity modeling that scale
+              effortlessly as your regional presence grows across Kerala and global markets.
+            </p>
           </div>
         </div>
 
-        {/* 4 Bento Architecture Cards (matching Reference Image 2 & 3) */}
-        <div className={styles.pillarsGrid}>
-          {PILLARS.map((pillar) => (
-            <div key={pillar.number} className={styles.pillarCard}>
-              <div className={styles.cardTopRow}>
-                <span className={styles.pillarNumber} aria-hidden="true">{pillar.number}</span>
-                <span className={styles.cardDot} aria-hidden="true" />
-              </div>
-              <h3 className={styles.pillarTitle}>{pillar.title}</h3>
-              <p className={styles.pillarBody}>{pillar.body}</p>
+        {/* 4-Column Stats Grid */}
+        <div className={styles.statsGrid}>
+          <div className={styles.stat}>
+            <div className={styles.statNumber}>
+              <span className="accent-wrapper">
+                99%
+                <svg
+                  className="scribble scribble-circle"
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5,50 Q5,5 50,5 T95,50 T50,95 T5,50"
+                    fill="none"
+                    stroke="#FF3B30"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
             </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Double Overlapping Angled Marquee Ribbons */}
-      <div className={styles.ribbonWrapper} aria-hidden="true">
-        {/* Ribbon 1: Angled slightly negative */}
-        <div className={styles.ribbonTrackOne}>
-          <div className={styles.ribbonContent}>
-            {[...TICKER_DISCIPLINES, ...TICKER_DISCIPLINES].map((item, idx) => (
-              <span key={idx} className={styles.tickerItem}>
-                <span className={styles.star}>✦</span> {item}
-              </span>
-            ))}
+            <div className={styles.statLabel}>Client Satisfaction</div>
           </div>
-        </div>
 
-        {/* Ribbon 2: Angled slightly positive crossing ribbon 1 */}
-        <div className={styles.ribbonTrackTwo}>
-          <div className={styles.ribbonContentReverse}>
-            {[...TICKER_DISCIPLINES, ...TICKER_DISCIPLINES].reverse().map((item, idx) => (
-              <span key={idx} className={styles.tickerItem}>
-                <span className={styles.star}>★</span> {item}
-              </span>
-            ))}
+          <div className={styles.stat}>
+            <div className={styles.statNumber}>150+</div>
+            <div className={styles.statLabel}>Projects Delivered</div>
+          </div>
+
+          <div className={styles.stat}>
+            <div className={styles.statNumber}>24/7</div>
+            <div className={styles.statLabel}>Dedicated Support</div>
+          </div>
+
+          <div className={styles.stat}>
+            <div className={styles.statNumber}>5x</div>
+            <div className={styles.statLabel}>Faster Load Times</div>
           </div>
         </div>
       </div>

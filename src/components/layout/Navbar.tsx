@@ -39,14 +39,9 @@ export function Navbar() {
     <header className={styles.header}>
       <div className={`container ${styles.navContainer}`}>
         <Link href="/" className={styles.brand} aria-label={`${SITE_CONFIG.name} Home`}>
-          <Image
-            src="/Logo Png-07.png"
-            alt={SITE_CONFIG.name}
-            width={140}
-            height={40}
-            priority
-            className={styles.brandLogo}
-          />
+          <span className={styles.logoText}>
+            qubizon<span className={styles.dot}>.</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -122,7 +117,7 @@ export function Navbar() {
 
         <div className={styles.actions}>
           <Link href="/contact" className={styles.ctaButton}>
-            <span>Let&apos;s Talk</span>
+            <span>Start a Project</span>
             <span className={styles.ctaArrowCircle} aria-hidden="true">
               <ArrowRight size={12} />
             </span>

@@ -1,79 +1,86 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Zap, Users } from "lucide-react";
+import { SITE_CONFIG } from "@/lib/constants";
+import { ConsultationModal } from "@/components/common/ConsultationModal";
 import styles from "./ConversionSection.module.css";
 
-const CREDIBILITY_POINTS = [
-  {
-    icon: Users,
-    title: "Senior Engineering Access",
-    desc: "Direct communication with senior full-stack developers and technical SEO strategists from day one.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Zero Sales Pressure",
-    desc: "Transparent architectural audits and objective assessments rather than pushy agency sales quotas.",
-  },
-  {
-    icon: Zap,
-    title: "High-Velocity Turnaround",
-    desc: "Fast discovery-to-roadmap delivery with verifiable milestones and zero vendor fragmentation.",
-  },
-];
-
 export function ConversionSection() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <section className={styles.section} aria-labelledby="conversion-heading">
-      <div className="container">
-        {/* Massive 36px Curved Dark Stage Card (matching Image 5 Testimonial/Closing pattern) */}
-        <div className={styles.stageCard}>
-          <div className={styles.ambientGlow} aria-hidden="true" />
+    <>
+      <section className={styles.ctaSection} id="contact" aria-labelledby="cta-heading">
+        <div className={styles.container}>
+          <h2 id="cta-heading" className={styles.headingHuge}>
+            Ready to build something{" "}
+            <span className="accent-wrapper">
+              <span className="calligraphy">amazing?</span>
+              <svg
+                className="scribble scribble-underline"
+                viewBox="0 0 200 12"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M0,10 Q50,0 100,10 T200,10"
+                  fill="none"
+                  stroke="#FF3B30"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>
+          </h2>
 
-          <div className={styles.innerContent}>
-            <div className={styles.leftCol}>
-              <div className={styles.badgeWrapper}>
-                <span className={styles.badgeDiamond} aria-hidden="true">❖</span>
-                <span className={styles.badge}>START THE CONVERSATION</span>
-              </div>
-              <h2 id="conversion-heading" className={styles.title}>
-                Ready to Unify Your Digital Strategy?
-              </h2>
-              <p className={styles.description}>
-                Schedule an introductory technical consultation. We will analyze your web architecture, evaluate your organic search footprint, and map out a coordinated growth plan.
-              </p>
+          <p className={styles.lead}>
+            Let&apos;s turn your vision into a digital masterpiece. Reach out today and let&apos;s discuss
+            your next high-performance web platform, technical SEO roadmap, or synchronized ad campaign.
+          </p>
 
-              <div className={styles.ctaGroup}>
-                <Link href="/contact" className={styles.ctaButton}>
-                  <span>Let&apos;s Talk About Your Project</span>
-                  <span className={styles.ctaArrowCircle} aria-hidden="true">
-                    <ArrowRight size={14} />
-                  </span>
-                </Link>
-                <p className={styles.supportingText}>
-                  Direct communication with senior engineers and strategists &bull; Zero sales pressure
-                </p>
-              </div>
-            </div>
+          <div className={styles.actionGroup}>
+            <button
+              type="button"
+              onClick={() => setIsModalOpen(true)}
+              className={styles.btnPrimary}
+              aria-haspopup="dialog"
+            >
+              Start a Project
+            </button>
 
-            {/* Right Column: Architectural Guarantee Cards (matching Image 5 preview panel) */}
-            <div className={styles.rightCol} aria-label="Our Service Commitments">
-              {CREDIBILITY_POINTS.map((pt, idx) => {
-                const Icon = pt.icon;
-                return (
-                  <div key={idx} className={styles.credCard}>
-                    <div className={styles.credIconWrapper}>
-                      <Icon size={20} aria-hidden="true" />
-                    </div>
-                    <div>
-                      <h3 className={styles.credTitle}>{pt.title}</h3>
-                      <p className={styles.credDesc}>{pt.desc}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+            <a
+              href="https://wa.me/917902911961"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.btnOutline}
+            >
+              <span className="accent-wrapper">
+                Contact Us on WhatsApp
+                <svg
+                  className="scribble scribble-underline"
+                  viewBox="0 0 200 12"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M0,10 Q50,0 100,10 T200,10"
+                    fill="none"
+                    stroke="#00488E"
+                    strokeWidth="3.5"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <ConsultationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
+    </>
   );
 }

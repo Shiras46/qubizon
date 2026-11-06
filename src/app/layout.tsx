@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Outfit, Playfair_Display } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SITE_CONFIG } from "@/lib/constants";
@@ -7,10 +7,19 @@ import { constructMetadata } from "@/lib/metadata";
 import { AnalyticsScripts } from "@/components/analytics/AnalyticsScripts";
 import "@/styles/globals.css";
 
-const inter = Inter({
+const outfit = Outfit({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter",
+  variable: "--font-outfit",
+  weight: ["300", "400", "600", "700", "800"],
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  display: "swap",
+  style: ["normal", "italic"],
+  variable: "--font-serif",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = constructMetadata({
@@ -79,7 +88,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${outfit.variable} ${playfair.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.png" type="image/png" sizes="512x512" />
@@ -91,7 +100,7 @@ export default function RootLayout({
         />
         <AnalyticsScripts />
       </head>
-      <body>
+      <body className={outfit.className}>
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>

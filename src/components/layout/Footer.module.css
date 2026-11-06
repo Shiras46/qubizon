@@ -1,197 +1,139 @@
+/* =========================================================================
+   CODECAVE-INSPIRED FOOTER COMPONENT
+   ========================================================================= */
+
 .footer {
-  margin-top: auto;
-  background-color: var(--color-bg-dark);
-  color: var(--color-text-inverse);
-  padding-top: var(--space-20);
-  padding-bottom: var(--space-12);
-  border-top: 1px solid var(--color-border-dark);
+  background-color: #0a0a0a;
+  color: #ffffff;
+  padding: clamp(4.5rem, 8vh, 6.5rem) 5% 3rem;
   position: relative;
+  z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.footerGrid {
+.container {
+  max-width: var(--max-width, 1360px);
+  margin: 0 auto;
+}
+
+.footerTop {
   display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
-  gap: var(--space-10);
-  margin-bottom: var(--space-16);
+  grid-template-columns: 1.3fr 2fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.brandCol {
-  max-width: 420px;
-}
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  margin-bottom: var(--space-4);
-  text-decoration: none;
-}
-
-.brandLogo {
-  height: 38px;
-  width: auto;
-  max-width: 150px;
-  object-fit: contain;
-  display: block;
-  transition: transform var(--transition-fast), opacity var(--transition-fast);
-}
-
-.brand:hover .brandLogo {
-  transform: translateY(-1px) scale(1.02);
-  opacity: 0.95;
-}
-
-.cubeLogo {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--brand-yellow);
-  color: var(--color-accent-text);
-  border-radius: var(--radius-sm);
-  font-weight: var(--font-weight-extrabold);
-  font-size: var(--font-size-sm);
-  box-shadow: 0 2px 8px rgba(255, 190, 11, 0.3);
-}
-
-.brandTitle {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-bold);
-  color: #ffffff;
-  letter-spacing: -0.015em;
-}
-
-.slogan {
-  font-size: var(--font-size-sm);
-  color: var(--brand-yellow);
-  font-weight: var(--font-weight-semibold);
-  margin-bottom: var(--space-3);
-  letter-spacing: -0.01em;
-}
-
-.description {
-  font-size: var(--font-size-sm);
-  color: #94a3b8;
-  line-height: var(--line-height-relaxed);
-  margin-bottom: var(--space-6);
-}
-
-.contactBlock {
+.footerBrand {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
-  font-size: var(--font-size-xs);
-  color: #94a3b8;
-  margin-bottom: var(--space-6);
 }
 
-.contactLink {
+.logoText {
   color: #ffffff;
+  font-size: var(--text-2xl, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  font-family: var(--font-primary, "Outfit", sans-serif);
   text-decoration: none;
-  font-weight: var(--font-weight-medium);
-  transition: color var(--transition-fast);
 }
 
-.contactLink:hover {
-  color: var(--brand-yellow);
-  text-decoration: underline;
+.dot {
+  color: var(--brand-blue, #007AFF);
 }
 
-.socialList {
+.brandTagline {
+  font-family: var(--font-serif, "Playfair Display", serif);
+  font-style: italic;
+  font-size: var(--text-xl, 1.4rem);
+  color: #e0e0e0;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.brandSub {
+  font-size: var(--text-sm, 0.9375rem);
+  color: #888888;
+  line-height: 1.6;
+  max-width: 360px;
+}
+
+.footerLinks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.linkCol {
   display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  list-style: none;
+  flex-direction: column;
 }
 
-.socialLink {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #cbd5e1;
-  transition: all var(--transition-fast);
-}
-
-.socialLink:hover,
-.socialLink:focus-visible {
-  background: var(--brand-yellow);
-  color: var(--color-accent-text);
-  border-color: var(--brand-yellow);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(255, 190, 11, 0.3);
-  outline: none;
-}
-
-.colHeading {
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  color: #ffffff;
+.linkTitle {
+  font-size: var(--text-xs, 0.8125rem);
   text-transform: uppercase;
-  letter-spacing: var(--letter-spacing-caps);
-  margin-bottom: var(--space-5);
-}
-
-.linkList {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
+  letter-spacing: 0.12em;
+  margin-bottom: 1.25rem;
+  color: #ffffff;
+  font-weight: 700;
 }
 
 .footerLink {
-  font-size: var(--font-size-sm);
-  color: #94a3b8;
-  transition: color var(--transition-fast), transform var(--transition-fast);
-  display: inline-block;
+  color: #888888;
+  text-decoration: none;
+  margin-bottom: 0.75rem;
+  font-size: var(--text-sm, 0.9375rem);
+  transition: color 0.2s ease;
 }
 
-.footerLink:hover,
-.footerLink:focus-visible {
+.footerLink:hover {
   color: #ffffff;
-  transform: translateX(2px);
-  outline: none;
 }
 
-.bottomBar {
-  padding-top: var(--space-8);
-  border-top: 1px solid var(--color-border-dark);
+.footerBottom {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  font-size: var(--font-size-xs);
-  color: #94a3b8;
-  letter-spacing: 0.01em;
+  align-items: center;
+  padding-top: 2.5rem;
+  font-size: var(--text-xs, 0.8125rem);
+  color: #666666;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.legalLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.legalLink {
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.legalLink:hover {
+  color: #ffffff;
 }
 
 @media (max-width: 900px) {
-  .footerGrid {
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-8);
+  .footerTop {
+    grid-template-columns: 1fr;
   }
 
-  .brandCol {
-    grid-column: span 2;
+  .footerLinks {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 600px) {
-  .footerGrid {
+@media (max-width: 540px) {
+  .footerLinks {
     grid-template-columns: 1fr;
-    gap: var(--space-8);
+    gap: 2.5rem;
   }
 
-  .brandCol {
-    grid-column: span 1;
-  }
-
-  .bottomBar {
+  .footerBottom {
     flex-direction: column;
-    gap: var(--space-3);
-    text-align: center;
+    align-items: flex-start;
   }
 }

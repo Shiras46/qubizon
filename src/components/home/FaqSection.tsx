@@ -6,7 +6,6 @@ import styles from "./FaqSection.module.css";
 
 interface FaqItem {
   id: string;
-  number: string;
   question: string;
   answer: string;
 }
@@ -14,39 +13,39 @@ interface FaqItem {
 const FAQS: FaqItem[] = [
   {
     id: "faq-1",
-    number: "1.",
-    question: "What happens after I submit a technical enquiry?",
-    answer: "A senior Next.js engineer or technical strategist reviews your requirements and responds within one business day with an initial audit or scheduling link for an introductory technical consultation.",
+    question: "What makes Qubizon's Next.js web development different?",
+    answer:
+      "We build on the modern Next.js App Router using React Server Components, TypeScript, and edge rendering. Unlike traditional WordPress templates with plugin bloat, our platforms load in sub-second LCP, score 100/100 on Core Web Vitals, and are immune to monolithic CMS security vulnerabilities.",
   },
   {
     id: "faq-2",
-    number: "2.",
-    question: "Do you sign non-disclosure agreements (NDAs) prior to detailed discovery?",
-    answer: "Yes. We execute standard mutual non-disclosure agreements before reviewing proprietary codebases, analytics data, or confidential commercial workflows.",
+    question: "How does your Technical SEO ensure search indexation in Kerala?",
+    answer:
+      "We design deep Schema.org entity graphs, canonical hierarchies, and automated XML sitemaps that clarify topical relevance to Google and AI search engines. We target high-intent regional searches across Kozhikode, Thrissur, and Kerala with crawl-budget optimized page architecture.",
   },
   {
     id: "faq-3",
-    number: "3.",
     question: "Can we engage Qubizon for a single discipline?",
-    answer: "Yes. While our unified cube model delivers compound velocity across disciplines, clients regularly engage us specifically for Next.js App Router engineering, technical SEO crawlability, or performance marketing.",
+    answer:
+      "Yes. While our unified cube model delivers compound velocity across disciplines, clients regularly engage us specifically for Next.js App Router engineering, technical SEO crawlability, or performance PPC marketing.",
   },
   {
     id: "faq-4",
-    number: "4.",
-    question: "How do you structure client onboarding and code ownership?",
-    answer: "All custom code, design tokens, repository commits, and analytics configurations belong 100% to your organization under standard commercial licensing terms from day one.",
+    question: "How do you structure code ownership and project onboarding?",
+    answer:
+      "All custom code, design tokens, repository commits, and analytics configurations belong 100% to your organization under standard commercial licensing terms from day one. You retain full administrative control over all digital assets.",
   },
   {
     id: "faq-5",
-    number: "5.",
-    question: "What technology stack does Qubizon use for website development?",
-    answer: "We engineer exclusively on modern Next.js App Router, React Server Components, TypeScript, and high-performance vanilla CSS or modular systems targeting sub-second LCP and zero Cumulative Layout Shift.",
+    question: "How do you track PPC return on investment without vanity metrics?",
+    answer:
+      "We install server-side conversion telemetry, Google Tag Manager event tracking, and negative keyword clustering. We track qualified consultation submissions, customer acquisition costs, and verified pipeline revenue rather than vanity impressions.",
   },
   {
     id: "faq-6",
-    number: "6.",
-    question: "How long does it take to see results from technical SEO?",
-    answer: "Technical crawl and indexing improvements reflect as soon as Google re-crawls your XML sitemaps and schema graphs. Competitive organic keyword rankings typically mature within 3 to 6 months.",
+    question: "What happens after I submit a project inquiry?",
+    answer:
+      "A senior engineer or technical strategist reviews your requirements and responds within one business day with an architectural assessment and a direct link to schedule an introductory consultation.",
   },
 ];
 
@@ -60,55 +59,50 @@ export function FaqSection() {
   };
 
   return (
-    <section className={styles.section} aria-labelledby="faq-heading">
-      <div className="container">
-        {/* Asymmetrical Header matching Reference Image */}
-        <div className={styles.headerRow}>
-          <div className={styles.badgeWrapper}>
-            <span className={styles.badgeDiamond} aria-hidden="true">❖</span>
-            <p className={styles.sectionBadge}>FREQUENTLY ASKED QUESTIONS</p>
-          </div>
+    <section className={styles.faqSection} id="faq" aria-labelledby="faq-heading">
+      <div className={styles.container}>
+        <h2 id="faq-heading" className={styles.headingLarge}>
+          Frequently Asked{" "}
+          <span className="accent-wrapper">
+            Questions
+            <svg className="scribble scribble-spark" viewBox="0 0 40 40" aria-hidden="true">
+              <path
+                d="M20,5 L20,15 M35,20 L25,20 M20,35 L20,25 M5,20 L15,20"
+                fill="none"
+                stroke="#FF3B30"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>
+        </h2>
+        <p className={styles.lead}>
+          Direct, transparent answers regarding our architectural standards, technical SEO methodologies,
+          and client engagement processes.
+        </p>
 
-          <div className={styles.headingContent}>
-            <h2 id="faq-heading" className={styles.sectionTitle}>
-              Got Questions? We&apos;ve Got Answers! Frequently Asked Questions
-            </h2>
-          </div>
-        </div>
-
-        {/* 2-Column Grid of Rounded Pill Accordion Cards (matching Image 4) */}
         <div className={styles.faqGrid}>
           {FAQS.map((faq) => {
             const isOpen = openIds.includes(faq.id);
             return (
-              <div
-                key={faq.id}
-                className={`${styles.faqCard} ${isOpen ? styles.faqCardOpen : ""}`}
-              >
+              <div key={faq.id} className={styles.faqCard}>
                 <button
                   type="button"
-                  id={`faq-btn-${faq.id}`}
+                  className={styles.faqTrigger}
+                  onClick={() => toggleFaq(faq.id)}
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${faq.id}`}
-                  className={styles.faqButton}
-                  onClick={() => toggleFaq(faq.id)}
                 >
-                  <span className={styles.questionText}>
-                    <span className={styles.faqNumber}>{faq.number}</span> {faq.question}
-                  </span>
-                  <div className={`${styles.iconCircle} ${isOpen ? styles.iconCircleOpen : ""}`}>
-                    <ChevronDown size={18} aria-hidden="true" />
-                  </div>
+                  <span className={styles.faqQuestion}>{faq.question}</span>
+                  <ChevronDown
+                    size={18}
+                    className={`${styles.faqChevron} ${isOpen ? styles.faqChevronOpen : ""}`}
+                    aria-hidden="true"
+                  />
                 </button>
-
                 {isOpen && (
-                  <div
-                    id={`faq-answer-${faq.id}`}
-                    role="region"
-                    aria-labelledby={`faq-btn-${faq.id}`}
-                    className={styles.answerArea}
-                  >
-                    <p className={styles.answerText}>{faq.answer}</p>
+                  <div id={`faq-answer-${faq.id}`} className={styles.faqAnswer} role="region">
+                    <p>{faq.answer}</p>
                   </div>
                 )}
               </div>

@@ -1,217 +1,106 @@
-.section {
-  padding-top: var(--space-20);
-  padding-bottom: var(--space-24);
-  background-color: var(--color-bg-base);
+/* =========================================================================
+   CODECAVE-INSPIRED CTA COMPONENT
+   ========================================================================= */
+
+.ctaSection {
+  padding: clamp(5.5rem, 10vh, 9rem) 5%;
+  text-align: center;
+  background-color: var(--clr-background, #ffffff);
   position: relative;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-/* Massive 36px Curved Dark Stage Card (matching Image 5 reference) */
-.stageCard {
-  background: radial-gradient(ellipse at 70% 30%, #16244f 0%, #080f21 80%);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 36px;
-  padding: var(--space-12);
-  color: #ffffff;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 24px 60px -15px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.15);
-}
-
-.ambientGlow {
-  position: absolute;
-  top: -20%;
-  right: -10%;
-  width: 450px;
-  height: 450px;
-  background: radial-gradient(circle, rgba(0, 72, 142, 0.3) 0%, transparent 70%);
-  filter: blur(40px);
-  pointer-events: none;
-}
-
-.innerContent {
-  display: grid;
-  grid-template-columns: 1.25fr 1fr;
-  gap: var(--space-12);
-  align-items: center;
-  position: relative;
-  z-index: 2;
-}
-
-.leftCol {
+.container {
+  max-width: 760px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
-}
-
-.badgeWrapper {
-  display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
-  align-self: flex-start;
-  margin-bottom: var(--space-2);
 }
 
-.badgeDiamond {
-  color: var(--brand-yellow);
-  font-size: 0.875rem;
-  line-height: 1;
+.headingHuge {
+  font-size: var(--text-huge, clamp(2.4rem, 5vw, 4.4rem));
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--clr-foreground, #0a0a0a);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
 }
 
-.badge {
-  display: inline-block;
-  padding: 6px 18px;
-  background-color: rgba(255, 190, 11, 0.12);
-  color: var(--brand-yellow);
-  font-size: 0.75rem;
-  font-weight: var(--font-weight-bold);
-  letter-spacing: var(--letter-spacing-caps);
-  text-transform: uppercase;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(255, 190, 11, 0.3);
-  box-shadow: 0 0 20px rgba(255, 190, 11, 0.15);
+.lead {
+  font-size: var(--text-lg, clamp(1.05rem, 1.8vw, 1.25rem));
+  color: var(--clr-muted, #666666);
+  line-height: 1.7;
+  margin-bottom: 2.75rem;
+  max-width: 620px;
 }
 
-.title {
-  font-size: clamp(2.25rem, 1.8rem + 2vw, 3.5rem);
-  font-weight: var(--font-weight-extrabold);
-  color: #ffffff;
-  letter-spacing: var(--letter-spacing-tight);
-  line-height: var(--line-height-tight);
-}
-
-.description {
-  font-size: var(--font-size-lg);
-  color: #cbd5e1;
-  line-height: var(--line-height-relaxed);
-  margin-bottom: var(--space-4);
-}
-
-.ctaGroup {
+.actionGroup {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  align-items: flex-start;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.ctaButton {
+.btnPrimary {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
-  padding: 10px 12px 10px 28px;
-  background-color: var(--brand-yellow);
-  color: var(--color-accent-text);
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-base);
-  letter-spacing: -0.01em;
-  border-radius: var(--radius-full);
-  transition: all var(--transition-fast);
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
+  background-color: var(--clr-foreground, #0a0a0a);
+  color: #ffffff;
+  font-family: var(--font-primary, "Outfit", sans-serif);
+  font-weight: 600;
+  font-size: var(--text-sm, 0.9375rem);
+  letter-spacing: 0.04em;
   text-decoration: none;
-  box-shadow: 0 4px 20px rgba(255, 190, 11, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.6);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  border: 1px solid var(--clr-foreground, #0a0a0a);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
-.ctaArrowCircle {
-  width: 32px;
-  height: 32px;
-  border-radius: var(--radius-full);
-  background-color: #0b1530;
-  color: #ffffff;
+.btnPrimary:hover {
+  background-color: #ffffff;
+  color: var(--clr-foreground, #0a0a0a);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.btnOutline {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform var(--transition-fast);
-  margin-left: 4px;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
+  background-color: transparent;
+  color: var(--clr-foreground, #0a0a0a);
+  font-family: var(--font-primary, "Outfit", sans-serif);
+  font-weight: 600;
+  font-size: var(--text-sm, 0.9375rem);
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.ctaButton:hover {
-  background-color: var(--brand-yellow-hover);
+.btnOutline:hover {
+  border-color: var(--clr-foreground, #0a0a0a);
+  background-color: rgba(0, 0, 0, 0.03);
   transform: translateY(-2px);
-  box-shadow: 0 8px 28px rgba(255, 190, 11, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.7);
 }
 
-.ctaButton:hover .ctaArrowCircle {
-  transform: translateX(3px);
-}
-
-.ctaButton:active {
-  transform: translateY(0);
-}
-
-.supportingText {
-  font-size: var(--font-size-xs);
-  color: #94a3b8;
-  letter-spacing: 0.01em;
-}
-
-/* Right Column: Architectural Guarantee Cards */
-.rightCol {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-
-.credCard {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 20px;
-  padding: var(--space-6);
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-4);
-  transition: background var(--transition-fast), border-color var(--transition-fast);
-}
-
-.credCard:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 190, 11, 0.3);
-}
-
-.credIconWrapper {
-  width: 42px;
-  height: 42px;
-  flex-shrink: 0;
-  border-radius: var(--radius-lg);
-  background: rgba(0, 72, 142, 0.4);
-  border: 1px solid rgba(0, 72, 142, 0.6);
-  color: var(--brand-yellow);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.credTitle {
-  font-size: var(--font-size-base);
-  font-weight: var(--font-weight-bold);
-  color: #ffffff;
-  margin-bottom: 4px;
-  letter-spacing: -0.01em;
-}
-
-.credDesc {
-  font-size: var(--font-size-sm);
-  color: #94a3b8;
-  line-height: var(--line-height-normal);
-}
-
-@media (max-width: 1024px) {
-  .innerContent {
-    grid-template-columns: 1fr;
-    gap: var(--space-8);
-  }
-
-  .stageCard {
-    padding: var(--space-8);
-  }
-}
-
-@media (max-width: 600px) {
-  .stageCard {
-    padding: var(--space-6);
-    border-radius: 28px;
-  }
-
-  .ctaButton {
+@media (max-width: 540px) {
+  .actionGroup {
+    flex-direction: column;
     width: 100%;
-    justify-content: center;
+  }
+
+  .btnPrimary,
+  .btnOutline {
+    width: 100%;
   }
 }

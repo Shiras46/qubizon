@@ -1,80 +1,70 @@
 import styles from "./ProcessSection.module.css";
 
 interface Step {
-  number: string;
-  phase: string;
+  num: string;
   title: string;
   description: string;
 }
 
 const STEPS: Step[] = [
   {
-    number: "01",
-    phase: "Phase 01",
+    num: "01",
     title: "Discovery & Audit",
-    description: "We analyze your existing technical stack, organic keyword coverage, conversion bottlenecks, and competitor positioning to establish baseline realities.",
+    description:
+      "We dive deep into your brand, unit economics, market landscape, technical stack, and competitor search intent to identify high-leverage growth opportunities.",
   },
   {
-    number: "02",
-    phase: "Phase 02",
-    title: "Unified Strategy",
-    description: "We map out an interconnected plan uniting web architecture, technical SEO silos, social channels, and paid acquisition into a single calendar.",
+    num: "02",
+    title: "Architecture & Design",
+    description:
+      "Our architects map out design systems, responsive wireframes, Schema entity graphs, and conversion paths, iterating until every detail is perfectly aligned.",
   },
   {
-    number: "03",
-    phase: "Phase 03",
-    title: "High-Velocity Execution",
-    description: "Our engineers and strategists build, write, and deploy in focused sprints — maintaining design tokens, accessibility standards, and clean code.",
+    num: "03",
+    title: "Engineering & Sprints",
+    description:
+      "We bring the solutions to life with clean, type-safe Next.js code, semantic HTML, accessible micro-interactions, and high-velocity sprint execution.",
   },
   {
-    number: "04",
-    phase: "Phase 04",
-    title: "Measurement & Growth",
-    description: "We monitor Core Web Vitals, organic indexing health, and pipeline conversion rates, continuously refining campaigns based on verified telemetry.",
+    num: "04",
+    title: "Launch & Telemetry",
+    description:
+      "Rigorous pre-release testing ensures a flawless launch, followed by continuous Core Web Vitals monitoring, search indexing velocity, and ROI optimization.",
   },
 ];
 
 export function ProcessSection() {
   return (
-    <section className={styles.section} aria-labelledby="process-heading">
-      <div className="container">
-        {/* Nested Rounded Canvas Container (Matching Reference Image Section 4) */}
-        <div className={styles.nestedContainer}>
-          {/* Asymmetrical Header matching Reference Pattern */}
-          <div className={styles.headerRow}>
-            <div className={styles.badgeWrapper}>
-              <span className={styles.badgeDiamond} aria-hidden="true">❖</span>
-              <p className={styles.sectionBadge}>HOW IT WORKS (STEP BY STEP)</p>
+    <section className={styles.processSection} id="process" aria-labelledby="process-heading">
+      <div className={styles.container}>
+        <h2 id="process-heading" className={styles.headingLarge}>
+          Our{" "}
+          <span className="accent-wrapper">
+            Process
+            <svg className="scribble scribble-spark" viewBox="0 0 40 40" aria-hidden="true">
+              <path
+                d="M20,5 L20,15 M35,20 L25,20 M20,35 L20,25 M5,20 L15,20 M30,10 L23,17 M30,30 L23,23 M10,30 L17,23 M10,10 L17,17"
+                fill="none"
+                stroke="#00488E"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+            </svg>
+          </span>
+        </h2>
+        <p className={styles.lead}>
+          A streamlined 4-step workflow engineered for maximum operational efficiency, technical precision,
+          and verifiable business outcomes.
+        </p>
+
+        <div className={styles.processSteps}>
+          {STEPS.map((step) => (
+            <div key={step.num} className={styles.processStep}>
+              <div className={styles.stepNum}>{step.num}</div>
+              <h3 className={styles.stepTitle}>{step.title}</h3>
+              <p className={styles.stepDesc}>{step.description}</p>
             </div>
-
-            <div className={styles.headingContent}>
-              <h2 id="process-heading" className={styles.sectionTitle}>
-                How We Partner With Your Team
-              </h2>
-              <p className={styles.sectionDescription}>
-                A structured, repeatable four-step process built to minimize friction, provide complete visibility, and ensure every deliverable hits measurable targets.
-              </p>
-            </div>
-          </div>
-
-          {/* 2-Column Grid of High-Radius Bento Step Cards (matching Reference Image) */}
-          <div className={styles.stepsGrid}>
-            {STEPS.map((step) => (
-              <div key={step.number} className={styles.stepCard}>
-                <div className={styles.stepBadge} aria-hidden="true">
-                  {step.number}
-                </div>
-
-                <div className={styles.cardContent}>
-                  <div className={styles.cardHeaderRow}>
-                    <h3 className={styles.stepTitle}>{step.title}</h3>
-                    <span className={styles.phaseIndicator}>{step.phase}</span>
-                  </div>
-                  <p className={styles.stepDescription}>{step.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>

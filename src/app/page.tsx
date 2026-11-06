@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/components/home/HeroSection";
-import { AboutSection } from "@/components/home/AboutSection";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { WhyQubizon } from "@/components/home/WhyQubizon";
 import { ProcessSection } from "@/components/home/ProcessSection";
+import { ShowcaseSection } from "@/components/home/ShowcaseSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { ConversionSection } from "@/components/home/ConversionSection";
 import { constructMetadata } from "@/lib/metadata";
@@ -28,25 +28,25 @@ export const metadata: Metadata = constructMetadata({
 export default function HomePage() {
   return (
     <>
-      {/* Hero Section */}
+      {/* Codecave-Inspired Hero with Vector Schematic Blueprint & Marquee */}
       <HeroSection />
 
-      {/* About Section: Who We Are & Proven Scale Stats */}
-      <AboutSection />
-
-      {/* Services Overview: Five Disciplines */}
+      {/* Services Overview: Line-Separated Editorial Disciplines */}
       <ServicesOverview />
 
-      {/* Why Qubizon: The Unified Cube Model Advantage & Angled Tickers */}
+      {/* Why Choose Qubizon: Features & 4-Column Metric Stats */}
       <WhyQubizon />
 
-      {/* Execution Process: 4-Step Customer-Centric Workflow */}
+      {/* Execution Process: 4-Step Workflow with Ghost Numbers */}
       <ProcessSection />
 
-      {/* Frequently Asked Questions: 2-Column Rounded Accordion Cards */}
+      {/* The Showcase: Featured Case Study & Project Rows */}
+      <ShowcaseSection />
+
+      {/* Frequently Asked Questions */}
       <FaqSection />
 
-      {/* Closing High-Conversion Call to Action */}
+      {/* Closing Call to Action */}
       <ConversionSection />
     </>
   );

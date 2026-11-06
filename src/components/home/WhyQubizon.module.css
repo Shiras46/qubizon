@@ -1,295 +1,109 @@
-.section {
-  padding-top: clamp(4rem, 8vw, 7rem);
-  padding-bottom: clamp(5rem, 9vw, 8rem);
-  background-color: var(--color-bg-dark);
-  color: var(--color-text-inverse);
+/* =========================================================================
+   CODECAVE-INSPIRED WHY CHOOSE US COMPONENT
+   ========================================================================= */
+
+.whySection {
+  padding: clamp(4.5rem, 8vh, 7.5rem) 5%;
+  background-color: var(--clr-background, #ffffff);
   position: relative;
-  overflow: hidden;
 }
 
-/* Subtle architectural grid backdrop */
-.section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 32px 32px;
-  pointer-events: none;
-  opacity: 0.4;
+.container {
+  max-width: var(--max-width, 1360px);
+  margin: 0 auto;
 }
 
-/* Asymmetric Section Header (matching Reference Image 2 & 3) */
-.introHeader {
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: var(--space-8);
-  margin-bottom: var(--space-16);
-  align-items: flex-start;
-  position: relative;
-  z-index: 2;
+.whyIntro {
+  max-width: 680px;
 }
 
-.badgeWrapper {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-}
-
-.badgeDiamond {
-  color: var(--brand-yellow);
-  font-size: 0.875rem;
-  line-height: 1;
-}
-
-.sectionBadge {
-  font-size: 0.75rem;
-  font-weight: var(--font-weight-bold);
-  color: #94a3b8;
-  letter-spacing: var(--letter-spacing-caps);
-  text-transform: uppercase;
-}
-
-.headlineWrapper {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
-}
-
-.sectionTitle {
-  font-size: clamp(2.25rem, 1.8rem + 2vw, 3.5rem);
-  font-weight: var(--font-weight-extrabold);
-  color: #ffffff;
-  letter-spacing: var(--letter-spacing-tight);
-  line-height: var(--line-height-tight);
-  max-width: 900px;
-}
-
-.editorialLead {
-  font-size: var(--font-size-xl);
-  color: #cbd5e1;
-  line-height: var(--line-height-relaxed);
-  max-width: 820px;
-  font-weight: var(--font-weight-regular);
-}
-
-.headerCtaWrapper {
-  margin-top: var(--space-2);
-}
-
-.headerCta {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: 8px 10px 8px 22px;
-  background-color: #ffffff;
-  color: #0b1530;
-  font-weight: var(--font-weight-bold);
-  font-size: var(--font-size-sm);
-  letter-spacing: -0.01em;
-  border-radius: var(--radius-full);
-  transition: all var(--transition-fast);
-  text-decoration: none;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-}
-
-.ctaArrowCircle {
-  width: 28px;
-  height: 28px;
-  border-radius: var(--radius-full);
-  background-color: #0b1530;
-  color: #ffffff;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform var(--transition-fast);
-  margin-left: 4px;
-}
-
-.headerCta:hover {
-  background-color: var(--brand-yellow);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 190, 11, 0.35);
-}
-
-.headerCta:hover .ctaArrowCircle {
-  transform: translateX(3px);
-}
-
-/* 4 High-Radius Bento Architecture Cards (matching Reference Image 2 & 3) */
-.pillarsGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-6);
-  margin-bottom: var(--space-20);
-  position: relative;
-  z-index: 2;
-}
-
-.pillarCard {
-  background: rgba(255, 255, 255, 0.035);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius-2xl);
-  padding: var(--space-8);
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-3);
-  position: relative;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  transition: transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.pillarCard:hover {
-  transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 190, 11, 0.35);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3), 0 0 25px rgba(255, 190, 11, 0.1);
-}
-
-.cardTopRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: var(--space-2);
-}
-
-.pillarNumber {
-  font-family: var(--font-family-mono);
-  font-size: clamp(2rem, 1.8rem + 1.2vw, 3rem);
-  font-weight: var(--font-weight-extrabold);
-  color: #ffffff;
-  line-height: 1;
+.headingLarge {
+  font-size: var(--text-huge, clamp(2.2rem, 4.5vw, 3.8rem));
+  font-weight: 800;
   letter-spacing: -0.04em;
+  color: var(--clr-foreground, #0a0a0a);
+  margin-bottom: 1.25rem;
 }
 
-.cardDot {
-  width: 8px;
-  height: 8px;
-  border-radius: var(--radius-full);
-  background-color: var(--brand-yellow);
-  box-shadow: 0 0 10px rgba(255, 190, 11, 0.7);
+.lead {
+  font-size: var(--text-base, 1.0625rem);
+  color: var(--clr-muted, #666666);
+  line-height: 1.7;
 }
 
-.pillarTitle {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-bold);
-  color: var(--brand-yellow);
-  letter-spacing: -0.01em;
-  line-height: var(--line-height-snug);
+/* 3-Column Features Grid */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: clamp(2rem, 4vw, 3.5rem);
+  margin-top: 3.5rem;
 }
 
-.pillarBody {
-  font-size: var(--font-size-sm);
-  color: #cbd5e1;
-  line-height: var(--line-height-relaxed);
-}
-
-/* Double Overlapping Angled Marquee Ribbons */
-.ribbonWrapper {
-  position: relative;
-  width: 105vw;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 140px;
-  margin-top: var(--space-12);
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.ribbonTrackOne {
-  position: absolute;
-  top: 15px;
-  left: -5%;
-  width: 110%;
-  transform: rotate(-2.2deg);
-  background: #000000;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 14px 0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-
-.ribbonTrackTwo {
-  position: absolute;
-  top: 45px;
-  left: -5%;
-  width: 110%;
-  transform: rotate(2deg);
-  background: #00488e;
-  border-top: 1px solid rgba(255, 190, 11, 0.3);
-  border-bottom: 1px solid rgba(255, 190, 11, 0.3);
-  padding: 14px 0;
-  box-shadow: 0 10px 35px rgba(0, 72, 142, 0.5);
-  z-index: 2;
-}
-
-.ribbonContent,
-.ribbonContentReverse {
+.feature {
   display: flex;
-  white-space: nowrap;
-  gap: var(--space-8);
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: 0.05em;
+  flex-direction: column;
+}
+
+.featureTitle {
+  font-size: var(--text-xl, clamp(1.3rem, 2vw, 1.65rem));
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--clr-foreground, #0a0a0a);
+  margin-bottom: 1rem;
+}
+
+.featureDesc {
+  font-size: var(--text-base, 1rem);
+  color: var(--clr-muted, #666666);
+  line-height: 1.7;
+}
+
+/* 4-Column Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 5rem;
+  padding-top: 4rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.stat {
+  text-align: center;
+}
+
+.statNumber {
+  font-size: var(--text-3xl, clamp(2.5rem, 4vw, 3.5rem));
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  color: var(--clr-foreground, #0a0a0a);
+}
+
+.statLabel {
+  font-size: var(--text-xs, 0.8125rem);
+  color: var(--clr-muted, #666666);
   text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
 }
 
-.ribbonContent {
-  animation: scrollLinear 32s linear infinite;
-  color: #ffffff;
-}
-
-.ribbonContentReverse {
-  animation: scrollLinearReverse 36s linear infinite;
-  color: #ffffff;
-}
-
-.tickerItem {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-3);
-}
-
-.star {
-  color: var(--brand-yellow);
-  font-size: 0.75rem;
-}
-
-@keyframes scrollLinear {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-@keyframes scrollLinearReverse {
-  0% { transform: translateX(-50%); }
-  100% { transform: translateX(0); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ribbonContent,
-  .ribbonContentReverse {
-    animation: none;
+/* Responsive */
+@media (max-width: 820px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 1.5rem;
   }
 }
 
-@media (max-width: 900px) {
-  .introHeader {
+@media (max-width: 540px) {
+  .featuresGrid {
     grid-template-columns: 1fr;
-    gap: var(--space-4);
+    text-align: center;
   }
 
-  .pillarsGrid {
+  .statsGrid {
     grid-template-columns: 1fr;
-    gap: var(--space-4);
-  }
-
-  .pillarCard {
-    padding: var(--space-6);
+    gap: 2.5rem;
   }
 }
