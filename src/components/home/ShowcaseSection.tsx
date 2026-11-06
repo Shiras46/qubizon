@@ -1,50 +1,51 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import styles from "./ShowcaseSection.module.css";
 
 interface ProjectItem {
   id: string;
-  category: string;
   name: string;
   summary: string;
+  disciplines: string[];
+  location: string;
   href: string;
 }
 
 const PROJECTS: ProjectItem[] = [
   {
-    id: "logistics",
-    category: "Enterprise Web Architecture",
-    name: "Kerala Maritime & Logistics Portal",
-    summary: "High-concurrency Next.js platform automating freight tracking with sub-second LCP.",
+    id: "maritime",
+    name: "Kerala Maritime & Logistics",
+    summary:
+      "Turned a complex regional supply chain and freight management portal into an ultra-fast Next.js platform with automated tracking and sub-second mobile LCP.",
+    disciplines: ["NEXT.JS WEB DEV", "TECHNICAL SEO", "UI/UX DESIGN"],
+    location: "KOZHIKODE, INDIA",
     href: "/work",
   },
   {
-    id: "wealth",
-    category: "Technical SEO & Schema Entity",
+    id: "asterion",
     name: "Asterion Financial Intelligence",
-    summary: "Capturing high-intent regional search queries with deep Schema.org entity modeling.",
+    summary:
+      "Engineered deep Schema.org entity modeling and search-intent architecture, capturing high-intent commercial queries across regional wealth advisory markets.",
+    disciplines: ["TECHNICAL SEO", "SCHEMA MODELING", "CONTENT STRATEGY"],
+    location: "THRISSUR, INDIA",
     href: "/work",
   },
   {
-    id: "retail",
-    category: "Paid Advertising & Telemetry",
+    id: "malabar-retail",
     name: "Malabar Retail Network",
-    summary: "Reduced cost-per-acquisition by 34% via negative clustering and server-side tracking.",
+    summary:
+      "Eliminated 34% of PPC budget waste by deploying negative keyword clustering, server-side conversion API telemetry, and engineered landing funnels.",
+    disciplines: ["PAID ADVERTISING", "CONVERSION TRACKING", "PERFORMANCE CRO"],
+    location: "KERALA, INDIA",
     href: "/work",
   },
   {
-    id: "hospitality",
-    category: "Social Media & Brand Narrative",
+    id: "vythiri",
     name: "Vythiri Luxury Retreats",
-    summary: "Cinematic storytelling and executive branding driving direct resort reservations.",
-    href: "/work",
-  },
-  {
-    id: "industrial",
-    category: "Full-Spectrum Architecture",
-    name: "Kozhikode Industrial Supplies",
-    summary: "Synchronized web application and localized technical search dominance.",
+    summary:
+      "Repositioned an eco-luxury hospitality brand through synchronized executive storytelling, multi-channel social distribution, and direct booking engines.",
+    disciplines: ["SOCIAL MEDIA", "BRAND STORYTELLING", "CONTENT MARKETING"],
+    location: "WAYANAD, INDIA",
     href: "/work",
   },
 ];
@@ -53,112 +54,56 @@ export function ShowcaseSection() {
   return (
     <section className={styles.showcaseSection} id="portfolio" aria-labelledby="showcase-heading">
       <div className={styles.container}>
-        <h2 id="showcase-heading" className={styles.headingHuge}>
-          <span className="accent-wrapper">
-            The Showcase
-            <svg
-              className="scribble scribble-underline"
-              viewBox="0 0 200 12"
-              preserveAspectRatio="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M0,10 Q50,0 100,10 T200,10"
-                fill="none"
-                stroke="#00488E"
-                strokeWidth="4"
-                strokeLinecap="round"
-              />
-            </svg>
-          </span>
-        </h2>
-        <p className={styles.lead}>
-          A glimpse into recent digital engineering, technical search optimizations, and conversion-focused systems
-          delivered for ambitious regional and global brands.
-        </p>
-
-        {/* Featured Project */}
-        <div className={styles.featuredProject}>
-          <div className={styles.featuredContent}>
-            <p className={styles.featuredBadge}>
-              <span className="accent-wrapper">
-                Featured Case Study
-                <svg className="scribble scribble-spark" viewBox="0 0 40 40" aria-hidden="true">
-                  <path
-                    d="M20,5 L20,15 M35,20 L25,20 M20,35 L20,25 M5,20 L15,20"
-                    fill="none"
-                    stroke="#FF3B30"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </span>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionBadge}>• SELECTED RECENT WORKS /</p>
+          <div className={styles.titleRow}>
+            <h2 id="showcase-heading" className={styles.headingHuge}>
+              Work engineered for <span className="calligraphy">market authority</span>.
+            </h2>
+            <p className={styles.lead}>
+              Explore verifiable architectures and disciplined digital systems delivered
+              for ambitious regional and enterprise clients.
             </p>
-            <h3 className={styles.featuredTitle}>Enterprise Healthcare & Diagnostics Portal</h3>
-            <p className={styles.featuredDesc}>
-              We engineered a mission-critical web application for a premier hospital group across Kozhikode and Thrissur.
-              Built on Next.js App Router with real-time slot scheduling, Schema.org medical entities, and sub-second
-              Core Web Vitals, resulting in a 140% surge in qualified online consultations.
-            </p>
-            <div className={styles.tags}>
-              <span className={styles.tag}>Next.js App Router</span>
-              <span className={styles.tag}>Schema.org Medical Graph</span>
-              <span className={styles.tag}>
-                <span className="accent-wrapper">
-                  Sub-Second LCP
-                  <svg
-                    className="scribble scribble-underline"
-                    viewBox="0 0 200 12"
-                    preserveAspectRatio="none"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M0,10 Q50,0 100,10 T200,10"
-                      fill="none"
-                      stroke="#FF3B30"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </span>
-              </span>
-            </div>
-          </div>
-
-          <div className={styles.featuredImageWrapper}>
-            <Image
-              src="/hero-collaboration.jpg"
-              alt="Qubizon Enterprise Case Study - System Architecture"
-              fill
-              sizes="(max-width: 820px) 100vw, 50vw"
-              className={styles.featuredImage}
-            />
           </div>
         </div>
 
-        {/* Project List */}
+        {/* Project List (Matching Image 1 Reference Model) */}
         <div className={styles.projectList}>
           {PROJECTS.map((project) => (
             <Link key={project.id} href={project.href} className={styles.projectRow}>
-              <div>
-                <p className={styles.projectCategory}>{project.category}</p>
-                <h4 className={styles.projectName}>{project.name}</h4>
+              {/* Left Column: Project Name */}
+              <div className={styles.colTitle}>
+                <h3 className={styles.projectName}>{project.name}</h3>
+              </div>
+
+              {/* Middle Column: Project Summary */}
+              <div className={styles.colSummary}>
                 <p className={styles.projectSummary}>{project.summary}</p>
               </div>
-              <span className={styles.projectLink}>
-                View Project <ArrowRight size={14} aria-hidden="true" />
-              </span>
+
+              {/* Right Column: Disciplines & Location */}
+              <div className={styles.colMeta}>
+                <div className={styles.disciplineList}>
+                  {project.disciplines.map((d, idx) => (
+                    <span key={idx} className={styles.disciplineTag}>
+                      {d}
+                    </span>
+                  ))}
+                </div>
+                <span className={styles.locationTag}>{project.location}</span>
+              </div>
             </Link>
           ))}
         </div>
 
+        {/* View All Benchmarks Pill CTA */}
         <div className={styles.viewAll}>
           <Link href="/work" className={styles.btnOutline}>
-            View All Projects & Benchmarks
+            <span>View All Architectural Benchmarks</span>
+            <ArrowRight size={16} aria-hidden="true" />
           </Link>
         </div>
       </div>
     </section>
   );
 }
-

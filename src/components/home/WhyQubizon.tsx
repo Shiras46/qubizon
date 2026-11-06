@@ -5,14 +5,66 @@ export function WhyQubizon() {
     <section className={styles.whySection} id="why-us" aria-labelledby="why-heading">
       <div className={styles.container}>
         <div className={styles.whyIntro}>
+          <p className={styles.sectionBadge}>• PERFORMANCE BENCHMARKS &amp; RECOGNITIONS /</p>
           <h2 id="why-heading" className={styles.headingLarge}>
-            Why Choose <span className="calligraphy">Qubizon?</span>
+            Good is easier to claim, <span className="calligraphy">performance</span> is harder to fake.
           </h2>
           <p className={styles.lead}>
-            We don&apos;t just write code or run ad campaigns; we engineer unified digital ecosystems that resonate.
-            Our approach is rooted in an uncompromising understanding of design principles, search entity architecture,
-            and sub-second technical excellence.
+            We don&apos;t rely on vanity percentages or fabricated client case studies. We engineer verifiable digital systems with sub-second speeds, clean Core Web Vitals, and measurable organic search authority.
           </p>
+        </div>
+
+        {/* 4-Column Metric Stats Grid (Inspired by Image 2 Reference) */}
+        <div className={styles.statsGrid}>
+          <div className={styles.statCard}>
+            <div className={styles.statNumber}>
+              <span className="accent-wrapper">
+                99.4%
+                <svg
+                  className="scribble scribble-circle"
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5,50 Q5,5 50,5 T95,50 T50,95 T5,50"
+                    fill="none"
+                    stroke="#FF3B30"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
+            </div>
+            <div className={styles.statTitle}>Lighthouse Performance Target</div>
+            <p className={styles.statDesc}>
+              Sub-second mobile LCP, 100% SEO audit compliance, and instantaneous asset loading on edge hosting.
+            </p>
+          </div>
+
+          <div className={styles.statCard}>
+            <div className={styles.statNumber}>0.00</div>
+            <div className={styles.statTitle}>Cumulative Layout Shift</div>
+            <p className={styles.statDesc}>
+              Engineered with modern CSS grid and next/font zero-layout-shift pipelines for visual stability.
+            </p>
+          </div>
+
+          <div className={styles.statCard}>
+            <div className={styles.statNumber}>5x</div>
+            <div className={styles.statTitle}>Integrated Disciplines</div>
+            <p className={styles.statDesc}>
+              Web, SEO, Social, Paid Advertising, and Content strategy unified under one accountable agency team.
+            </p>
+          </div>
+
+          <div className={styles.statCard}>
+            <div className={styles.statNumber}>100%</div>
+            <div className={styles.statTitle}>Client Code &amp; Asset Ownership</div>
+            <p className={styles.statDesc}>
+              Direct Git commits, complete data rights, and zero vendor lock-in from day one of engagement.
+            </p>
+          </div>
         </div>
 
         {/* 3-Column Features Grid */}
@@ -67,47 +119,6 @@ export function WhyQubizon() {
               We build with modern App Router frameworks, modular React components, and schema entity modeling that scale
               effortlessly as your regional presence grows across Kerala and global markets.
             </p>
-          </div>
-        </div>
-
-        {/* 4-Column Stats Grid */}
-        <div className={styles.statsGrid}>
-          <div className={styles.stat}>
-            <div className={styles.statNumber}>
-              <span className="accent-wrapper">
-                99%
-                <svg
-                  className="scribble scribble-circle"
-                  viewBox="0 0 100 100"
-                  preserveAspectRatio="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M5,50 Q5,5 50,5 T95,50 T50,95 T5,50"
-                    fill="none"
-                    stroke="#FF3B30"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </span>
-            </div>
-            <div className={styles.statLabel}>Client Satisfaction</div>
-          </div>
-
-          <div className={styles.stat}>
-            <div className={styles.statNumber}>150+</div>
-            <div className={styles.statLabel}>Projects Delivered</div>
-          </div>
-
-          <div className={styles.stat}>
-            <div className={styles.statNumber}>24/7</div>
-            <div className={styles.statLabel}>Dedicated Support</div>
-          </div>
-
-          <div className={styles.stat}>
-            <div className={styles.statNumber}>5x</div>
-            <div className={styles.statLabel}>Faster Load Times</div>
           </div>
         </div>
       </div>

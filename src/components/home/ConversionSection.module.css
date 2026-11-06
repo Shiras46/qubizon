@@ -1,17 +1,18 @@
 /* =========================================================================
-   CODECAVE-INSPIRED CTA COMPONENT
+   CODECAVE-INSPIRED CTA COMPONENT (DARK / BLACK SECTION)
    ========================================================================= */
 
 .ctaSection {
   padding: clamp(5.5rem, 10vh, 9rem) 5%;
   text-align: center;
-  background-color: transparent;
+  background-color: #0a0a0a;
+  color: #ffffff;
   position: relative;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .container {
-  max-width: 760px;
+  max-width: 780px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -22,14 +23,14 @@
   font-size: var(--text-huge, clamp(2.4rem, 5vw, 4.4rem));
   font-weight: 800;
   letter-spacing: -0.04em;
-  color: var(--clr-foreground, #0a0a0a);
+  color: #ffffff;
   line-height: 1.1;
   margin-bottom: 1.5rem;
 }
 
 .lead {
   font-size: var(--text-lg, clamp(1.05rem, 1.8vw, 1.25rem));
-  color: var(--clr-muted, #666666);
+  color: rgba(255, 255, 255, 0.68);
   line-height: 1.7;
   margin-bottom: 2.75rem;
   max-width: 620px;
@@ -49,24 +50,25 @@
   justify-content: center;
   padding: 1rem 2.5rem;
   border-radius: 9999px;
-  background-color: var(--clr-foreground, #0a0a0a);
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #0a0a0a !important;
   font-family: var(--font-primary, "Outfit", sans-serif);
   font-weight: 600;
   font-size: var(--text-sm, 0.9375rem);
   letter-spacing: 0.04em;
+  text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  border: 1px solid var(--clr-foreground, #0a0a0a);
+  border: 1px solid #ffffff;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 18px rgba(255, 255, 255, 0.15);
 }
 
 .btnPrimary:hover {
-  background-color: #ffffff;
-  color: var(--clr-foreground, #0a0a0a);
+  background-color: transparent;
+  color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
 }
 
 .btnOutline {
@@ -76,20 +78,21 @@
   padding: 1rem 2.5rem;
   border-radius: 9999px;
   background-color: transparent;
-  color: var(--clr-foreground, #0a0a0a);
+  color: #ffffff !important;
   font-family: var(--font-primary, "Outfit", sans-serif);
   font-weight: 600;
   font-size: var(--text-sm, 0.9375rem);
   letter-spacing: 0.04em;
+  text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btnOutline:hover {
-  border-color: var(--clr-foreground, #0a0a0a);
-  background-color: rgba(0, 0, 0, 0.03);
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.08);
   transform: translateY(-2px);
 }
 

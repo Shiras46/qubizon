@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/components/home/HeroSection";
+import { AboutSection } from "@/components/home/AboutSection";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
+import { ShowcaseSection } from "@/components/home/ShowcaseSection";
 import { WhyQubizon } from "@/components/home/WhyQubizon";
 import { ProcessSection } from "@/components/home/ProcessSection";
-import { ShowcaseSection } from "@/components/home/ShowcaseSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { ConversionSection } from "@/components/home/ConversionSection";
 import { constructMetadata } from "@/lib/metadata";
@@ -28,25 +29,28 @@ export const metadata: Metadata = constructMetadata({
 export default function HomePage() {
   return (
     <>
-      {/* Codecave-Inspired Hero with Vector Schematic Blueprint & Marquee */}
+      {/* 1. Hero: WHITE (Vector Schematic Blueprint & Infinite Marquee Ticker) */}
       <HeroSection />
 
-      {/* Services Overview: Line-Separated Editorial Disciplines */}
+      {/* 2. About: BLACK (Left Image + Right Content Model matching Reference Image 3) */}
+      <AboutSection />
+
+      {/* 3. Services Overview: WHITE (Line-Separated Editorial Disciplines) */}
       <ServicesOverview />
 
-      {/* Why Choose Qubizon: Features & 4-Column Metric Stats */}
-      <WhyQubizon />
-
-      {/* Execution Process: 4-Step Workflow with Ghost Numbers */}
-      <ProcessSection />
-
-      {/* The Showcase: Featured Case Study & Project Rows */}
+      {/* 4. Showcase: BLACK (Clean 3-Column Project List matching Reference Image 1) */}
       <ShowcaseSection />
 
-      {/* Frequently Asked Questions */}
+      {/* 5. Performance Benchmarks: WHITE (Metric Stats & Features matching Reference Image 2) */}
+      <WhyQubizon />
+
+      {/* 6. Execution Process: BLACK (4-Step Workflow with Ghost Calligraphy Numbers) */}
+      <ProcessSection />
+
+      {/* 7. Frequently Asked Questions: WHITE (Frosted Interactive Accordion Cards) */}
       <FaqSection />
 
-      {/* Closing Call to Action */}
+      {/* 8. Closing Call to Action: BLACK (High-Contrast Radial Stage with Pill CTAs) */}
       <ConversionSection />
     </>
   );
