@@ -34,9 +34,9 @@
   --color-accent-text: #0B1530;
 
   /* Clean Pure White Canvas & High-Contrast Dark */
-  --color-bg-base: #ffffff;
-  --color-bg-surface: #ffffff;
-  --color-bg-muted: #f8fafc;
+  --color-bg-base: transparent;
+  --color-bg-surface: rgba(255, 255, 255, 0.85);
+  --color-bg-muted: rgba(248, 250, 252, 0.65);
   --color-bg-dark: #0a0a0a;
   --color-bg-dark-surface: #111111;
   --color-bg-dark-elevated: #1a1a1a;

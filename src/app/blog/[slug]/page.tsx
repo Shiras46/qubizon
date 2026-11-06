@@ -177,17 +177,13 @@ export default function BlogPostTemplate({ params }: PageProps) {
             </p>
             <Link
               href="/contact"
+              className="btn-primary"
               style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "8px",
-                padding: "12px 24px",
-                background: "var(--brand-blue)",
-                color: "#ffffff",
-                fontWeight: 700,
-                borderRadius: "6px",
-                textDecoration: "none",
+                background: "#ffffff",
+                color: "#0a0a0a",
+                borderColor: "#ffffff",
                 width: "fit-content",
+                marginTop: "16px",
               }}
             >
               <span>Schedule Technical Discovery</span>

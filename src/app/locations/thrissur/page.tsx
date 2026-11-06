@@ -91,7 +91,7 @@ export default function ThrissurLocationPage() {
           <span>Regional Service Area • Central Kerala</span>
         </div>
         <h1 className={styles.title}>
-          Digital Marketing & Web Development Services in Thrissur
+          Digital Marketing & Web Development <span className="calligraphy">in Thrissur</span>
         </h1>
         <p className={styles.lead}>
           Empowering Thrissur’s business leaders with modern web architecture, technical search engine

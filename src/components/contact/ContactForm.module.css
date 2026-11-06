@@ -1,9 +1,11 @@
 .formContainer {
-  background-color: #ffffff;
-  border: 1px solid rgba(11, 21, 48, 0.08);
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 28px;
   padding: clamp(1.75rem, 4vw, 3rem);
-  box-shadow: 0 20px 48px -12px rgba(11, 21, 48, 0.06), 0 1px 3px rgba(11, 21, 48, 0.04);
+  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
   margin-bottom: var(--space-12);
   transition: box-shadow var(--transition-normal);
 }
@@ -350,26 +352,29 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  background-color: var(--brand-yellow);
-  color: var(--color-accent-text);
-  font-size: 0.9375rem;
-  font-weight: 700;
-  padding: 0.85rem 1.85rem;
+  background-color: var(--clr-foreground, #0a0a0a);
+  color: #ffffff !important;
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 12px 28px;
   border-radius: 9999px;
   cursor: pointer;
-  border: none;
-  box-shadow: 0 4px 16px rgba(255, 190, 11, 0.35);
-  transition: all var(--transition-fast);
+  border: 1px solid var(--clr-foreground, #0a0a0a);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
 .btnPrimary:hover:not(:disabled) {
-  background-color: var(--brand-yellow-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 8px 22px rgba(255, 190, 11, 0.45);
+  background-color: transparent;
+  color: var(--clr-foreground, #0a0a0a) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 }
 
 .btnPrimary:disabled {
-  opacity: 0.6;
+  opacity: 0.5;
   cursor: not-allowed;
   transform: none;
 }
@@ -379,20 +384,21 @@
   align-items: center;
   gap: var(--space-2);
   background-color: transparent;
-  color: #334155;
-  border: 1px solid rgba(11, 21, 48, 0.15);
-  font-size: 0.9375rem;
+  color: var(--clr-foreground, #0a0a0a);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: var(--text-sm, 0.875rem);
   font-weight: 600;
-  padding: 0.85rem 1.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 12px 28px;
   border-radius: 9999px;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all 0.3s ease;
 }
 
 .btnSecondary:hover {
-  background-color: #f1f4f8;
-  color: #0b1530;
-  border-color: rgba(11, 21, 48, 0.3);
+  background-color: var(--clr-foreground, #0a0a0a);
+  color: #ffffff;
 }
 
 /* Honeypot field (hidden visually and from screen readers) */

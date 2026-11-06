@@ -1,0 +1,289 @@
+.mainContainer {
+  padding-bottom: var(--space-24);
+  background-color: transparent;
+}
+
+/* Breadcrumbs */
+.breadcrumbNav {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-4);
+}
+
+.breadcrumbList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  list-style: none;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.breadcrumbItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.breadcrumbLink {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.breadcrumbLink:hover {
+  color: var(--brand-blue);
+  text-decoration: underline;
+}
+
+.breadcrumbSeparator {
+  color: var(--color-text-muted);
+}
+
+.breadcrumbCurrent {
+  color: var(--brand-blue);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Hero Section */
+.heroSection {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-20);
+  border-bottom: 1px solid var(--color-border-subtle);
+  background: transparent;
+}
+
+.heroContent {
+  max-width: 920px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 6px 16px;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--brand-blue);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-caps);
+  margin-bottom: var(--space-6);
+  border: 1px solid rgba(0, 72, 142, 0.14);
+  box-shadow: 0 2px 8px rgba(11, 21, 48, 0.04);
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 2rem + 2.5vw, 4.2rem);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-text-primary);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  margin-bottom: var(--space-6);
+}
+
+.heroLead {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  max-width: 800px;
+}
+
+/* Services Grid */
+.servicesSection {
+  padding-top: var(--space-20);
+  padding-bottom: var(--space-20);
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: var(--space-8);
+}
+
+.serviceCard {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 72, 142, 0.35);
+  box-shadow: 0 16px 36px rgba(0, 72, 142, 0.08);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.disciplineNumber {
+  font-family: var(--font-family-mono);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--brand-blue);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.faceTag {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 3px 10px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.cardTitle {
+  font-size: clamp(1.4rem, 1.2rem + 0.6vw, 1.8rem);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-3);
+  line-height: 1.25;
+}
+
+.cardDescription {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-6);
+  flex-grow: 1;
+}
+
+.cardFooter {
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.exploreLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand-blue);
+  text-decoration: none;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.serviceCard:hover .exploreLink {
+  gap: var(--space-3);
+  color: var(--brand-blue-hover);
+}
+
+/* Call to Action Banner */
+.ctaBanner {
+  background: radial-gradient(ellipse at 70% 30%, #16244f 0%, #080f21 80%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 36px;
+  padding: var(--space-16) var(--space-8);
+  color: #ffffff;
+  text-align: center;
+  margin-top: var(--space-16);
+  box-shadow: 0 24px 60px -15px rgba(0, 0, 0, 0.45);
+}
+
+.ctaTitle {
+  font-size: clamp(2rem, 1.6rem + 1.8vw, 3.25rem);
+  font-weight: var(--font-weight-extrabold);
+  color: #ffffff;
+  margin-bottom: var(--space-4);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.ctaDescription {
+  font-size: var(--font-size-base);
+  color: #cbd5e1;
+  max-width: 640px;
+  margin: 0 auto var(--space-8) auto;
+  line-height: var(--line-height-relaxed);
+}
+
+.ctaActions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background-color: #ffffff;
+  color: #0a0a0a !important;
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  letter-spacing: 0.04em;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: 1px solid #ffffff;
+}
+
+.primaryBtn:hover {
+  background-color: transparent;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+}
+
+.secondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background-color: transparent;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  letter-spacing: 0.04em;
+  padding: 12px 28px;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+  .ctaBanner {
+    border-radius: 28px;
+    padding: var(--space-8) var(--space-6);
+  }
+}
+

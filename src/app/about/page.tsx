@@ -196,7 +196,7 @@ export default function AboutPage() {
               Unified Agency Architecture
             </span>
             <h1 id="about-hero-heading" className={styles.heroTitle}>
-              A Unified Digital Discipline Engineered to Eliminate Agency Fragmentation
+              A Unified Digital Discipline Engineered to Eliminate <span className="calligraphy">Agency Fragmentation</span>
             </h1>
             <p className={styles.heroLead}>
               {SITE_CONFIG.name} was established around a simple observation: modern businesses waste

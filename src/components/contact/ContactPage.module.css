@@ -1,6 +1,6 @@
 .mainContainer {
   padding-bottom: var(--space-24);
-  background-color: var(--color-bg-base);
+  background-color: transparent;
 }
 
 /* Breadcrumb Navigation */
@@ -51,7 +51,7 @@
   padding-bottom: var(--space-16);
   border-bottom: 1px solid var(--color-border-subtle);
   margin-bottom: var(--space-16);
-  background: radial-gradient(circle at 70% 20%, rgba(0, 72, 142, 0.07) 0%, rgba(247, 248, 250, 0) 70%);
+  background: transparent;
 }
 
 .heroContent {
@@ -109,11 +109,13 @@
 }
 
 .sidebarCard {
-  background-color: #ffffff;
-  border: 1px solid var(--color-border-subtle);
+  background-color: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 24px;
   padding: var(--space-8);
-  box-shadow: 0 4px 18px -4px rgba(11, 21, 48, 0.05);
+  box-shadow: 0 4px 18px -4px rgba(0, 0, 0, 0.05);
 }
 
 .sidebarBadge {
@@ -201,17 +203,19 @@
 }
 
 .faqItem {
-  background-color: #ffffff;
-  border: 1px solid var(--color-border-subtle);
+  background-color: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   overflow: hidden;
   transition: all var(--transition-fast);
-  box-shadow: 0 2px 10px rgba(11, 21, 48, 0.03);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
 }
 
 .faqItem:hover {
-  border-color: rgba(0, 72, 142, 0.3);
-  box-shadow: 0 4px 16px rgba(0, 72, 142, 0.06);
+  border-color: rgba(0, 72, 142, 0.35);
+  box-shadow: 0 8px 20px rgba(0, 72, 142, 0.06);
 }
 
 .faqSummary {

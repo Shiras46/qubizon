@@ -73,41 +73,48 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  padding: 0.85rem 1.85rem;
-  background-color: var(--brand-yellow);
-  color: var(--color-accent-text);
-  font-weight: 700;
-  font-size: 0.9375rem;
+  padding: 12px 28px;
+  background-color: var(--clr-foreground, #0a0a0a);
+  color: #ffffff !important;
+  font-weight: 600;
+  font-size: var(--text-sm, 0.875rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   border-radius: 9999px;
   text-decoration: none;
-  box-shadow: 0 4px 16px rgba(255, 190, 11, 0.35);
-  transition: all var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border: 1px solid var(--clr-foreground, #0a0a0a);
 }
 
 .primaryBtn:hover {
-  background-color: var(--brand-yellow-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 8px 22px rgba(255, 190, 11, 0.45);
+  background-color: transparent;
+  color: var(--clr-foreground, #0a0a0a) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 }
 
 .secondaryBtn {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  padding: 0.85rem 1.65rem;
+  padding: 12px 28px;
   background: transparent;
-  color: #0b1530;
-  border: 1px solid rgba(11, 21, 48, 0.15);
+  color: var(--clr-foreground, #0a0a0a) !important;
+  border: 1px solid rgba(0, 0, 0, 0.2);
   font-weight: 600;
-  font-size: 0.9375rem;
+  font-size: var(--text-sm, 0.875rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   border-radius: 9999px;
   text-decoration: none;
-  transition: all var(--transition-fast);
+  transition: all 0.3s ease;
 }
 
 .secondaryBtn:hover {
-  background: #f1f4f8;
-  border-color: rgba(11, 21, 48, 0.3);
+  border-color: var(--clr-foreground, #0a0a0a);
+  background-color: rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
 }
 
 .section {
@@ -137,19 +144,21 @@
 }
 
 .serviceCard {
-  background: #ffffff;
-  border: 1px solid rgba(11, 21, 48, 0.08);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 24px;
   padding: clamp(1.75rem, 3vw, 2.25rem);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 16px -2px rgba(11, 21, 48, 0.04);
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.04);
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
 }
 
 .serviceCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 32px -8px rgba(11, 21, 48, 0.08);
+  box-shadow: 0 20px 32px -8px rgba(0, 72, 142, 0.08);
   border-color: rgba(0, 72, 142, 0.35);
 }
 
@@ -206,11 +215,13 @@
 }
 
 .deliveryCard {
-  background: #ffffff;
-  border: 1px solid rgba(11, 21, 48, 0.08);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 28px;
   padding: clamp(2rem, 5vw, 3.5rem);
-  box-shadow: 0 20px 48px -12px rgba(11, 21, 48, 0.05);
+  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.05);
   margin-bottom: clamp(3.5rem, 6vw, 5.5rem);
 }
 
@@ -225,10 +236,12 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
-  background: #f8fafc;
+  background: rgba(248, 250, 252, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   padding: clamp(1.5rem, 2.5vw, 2rem);
   border-radius: 20px;
-  border: 1px solid rgba(11, 21, 48, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .deliveryItem h4 {
@@ -252,17 +265,19 @@
 }
 
 .faqItem {
-  background: #ffffff;
-  border: 1px solid rgba(11, 21, 48, 0.08);
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 4px 14px -2px rgba(11, 21, 48, 0.03);
+  box-shadow: 0 4px 14px -2px rgba(0, 0, 0, 0.03);
   transition: all var(--transition-fast);
 }
 
 .faqItem[open] {
   border-color: rgba(0, 72, 142, 0.35);
-  box-shadow: 0 12px 28px -6px rgba(11, 21, 48, 0.07);
+  box-shadow: 0 12px 28px -6px rgba(0, 72, 142, 0.07);
 }
 
 .faqQuestion {

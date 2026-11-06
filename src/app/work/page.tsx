@@ -86,7 +86,7 @@ export default function WorkPage() {
               Verified Engineering Standards
             </span>
             <h1 id="work-hero-heading" className={styles.heroTitle}>
-              Architectural Benchmarks & Methodology Proof
+              Architectural Benchmarks & <span className="calligraphy">Methodology Proof</span>
             </h1>
             <p className={styles.heroLead}>
               We hold our engineering, search strategy, and advertising execution to verifiable,

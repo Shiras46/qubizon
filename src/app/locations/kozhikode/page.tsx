@@ -91,7 +91,7 @@ export default function KozhikodeLocationPage() {
           <span>Regional Service Area • Malabar, Kerala</span>
         </div>
         <h1 className={styles.title}>
-          Digital Marketing & Web Development Services in Kozhikode
+          Digital Marketing & Web Development <span className="calligraphy">in Kozhikode</span>
         </h1>
         <p className={styles.lead}>
           Powering Kozhikode’s commercial brands, retail innovators, healthcare providers, and export enterprises

@@ -54,7 +54,7 @@ export default function LocationsIndexPage() {
           <span>Regional Coverage • Kerala, India</span>
         </div>
         <h1 className={styles.title}>
-          Kerala Regional Service Areas
+          Kerala Regional <span className="calligraphy">Service Areas</span>
         </h1>
         <p className={styles.lead}>
           Qubizon provides high-performance web development, technical SEO, and conversion-optimized marketing

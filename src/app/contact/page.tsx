@@ -129,7 +129,7 @@ export default function ContactPage() {
               Confidential Discovery & Consultation
             </span>
             <h1 id="contact-hero-heading" className={styles.heroTitle}>
-              Let&apos;s Build a High-Performance Digital Engine
+              Let&apos;s Build a <span className="calligraphy">High-Performance</span> Digital Engine
             </h1>
             <p className={styles.heroLead}>
               We partner with organizations seeking a unified, disciplined agency partner across

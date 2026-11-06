@@ -13,10 +13,12 @@
 }
 
 .modal {
-  background: #ffffff;
-  border: 1px solid rgba(11, 21, 48, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 28px;
-  box-shadow: 0 25px 60px -15px rgba(11, 21, 48, 0.35);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.25);
   width: 100%;
   max-width: 580px;
   max-height: 90vh;
@@ -171,26 +173,29 @@
 
 .submitBtn {
   margin-top: var(--space-3);
-  padding: 0.85rem 1.85rem;
-  background-color: var(--brand-yellow);
-  color: var(--color-accent-text);
-  font-size: 0.9375rem;
-  font-weight: 700;
-  border: none;
+  padding: 12px 28px;
+  background-color: var(--clr-foreground, #0a0a0a);
+  color: #ffffff !important;
+  border: 1px solid var(--clr-foreground, #0a0a0a);
+  font-size: var(--text-sm, 0.875rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   border-radius: 9999px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--space-2);
-  box-shadow: 0 4px 16px rgba(255, 190, 11, 0.35);
-  transition: all var(--transition-fast);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
 .submitBtn:hover:not(:disabled) {
-  background-color: var(--brand-yellow-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 8px 22px rgba(255, 190, 11, 0.45);
+  background-color: transparent;
+  color: var(--clr-foreground, #0a0a0a) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
 }
 
 .submitBtn:disabled {

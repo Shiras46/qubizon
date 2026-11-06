@@ -63,7 +63,7 @@ export default function BlogIndexPage() {
           <span>Engineering & Strategy Library</span>
         </div>
         <h1 className={styles.title}>
-          Technical Insights & Growth Methodologies
+          Technical Insights & <span className="calligraphy">Growth Methodologies</span>
         </h1>
         <p className={styles.lead}>
           In-depth technical guides, search engine optimization frameworks, and architectural case analyses
