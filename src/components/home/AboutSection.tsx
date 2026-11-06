@@ -6,16 +6,69 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import styles from "./AboutSection.module.css";
 
+const P1_WORDS = [
+  "The", "market", "has", "evolved,", "the", "ambition", "has", "grown,",
+  "and", "you", "understand", "the", "business", "differently", "than",
+  "you", "did", "two", "years", "ago."
+];
+
+const P2_WORDS = [
+  "At", "some", "point,", "fragmented", "agencies,", "unvetted", "freelancers,",
+  "and", "legacy", "platforms", "stop", "keeping", "up", "and", "start",
+  "telling", "an", "older", "version", "of", "your", "story."
+];
+
+const P3_WORDS = [
+  "That's", "the", "moment", "when", "it's", "time", "to", "build", "with"
+];
+
+function updateWordsOpacity(
+  words: (HTMLSpanElement | null)[],
+  rect: DOMRect,
+  vh: number,
+  triggerStartRatio: number,
+  triggerEndRatio: number,
+  minOpacity = 0.22
+) {
+  const triggerStart = vh * triggerStartRatio;
+  const triggerEnd = vh * triggerEndRatio;
+
+  let progress = (triggerStart - rect.top) / (triggerStart - triggerEnd);
+  progress = Math.max(0, Math.min(1, progress));
+
+  const totalWords = words.length;
+  if (totalWords === 0) return;
+
+  const step = 1 / totalWords;
+  const wordDuration = Math.min(0.25, step * 2.2);
+
+  for (let i = 0; i < totalWords; i++) {
+    const span = words[i];
+    if (!span) continue;
+
+    const wordStart = (i / totalWords) * (1 - wordDuration);
+    let wordProgress = (progress - wordStart) / wordDuration;
+    wordProgress = Math.max(0, Math.min(1, wordProgress));
+
+    const opacity = minOpacity + wordProgress * (1 - minOpacity);
+    span.style.opacity = opacity.toFixed(3);
+  }
+}
+
 export function AboutSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const p1Ref = useRef<HTMLHeadingElement>(null);
   const p2Ref = useRef<HTMLParagraphElement>(null);
   const p3Ref = useRef<HTMLParagraphElement>(null);
 
+  const p1WordRefs = useRef<(HTMLSpanElement | null)[]>([]);
+  const p2WordRefs = useRef<(HTMLSpanElement | null)[]>([]);
+  const p3WordRefs = useRef<(HTMLSpanElement | null)[]>([]);
+
   useEffect(() => {
     if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      [p1Ref, p2Ref, p3Ref].forEach((r) => {
-        r.current?.style.setProperty("--p-opacity", "1");
+      [...p1WordRefs.current, ...p2WordRefs.current, ...p3WordRefs.current].forEach((span) => {
+        if (span) span.style.opacity = "1";
       });
       return;
     }
@@ -24,32 +77,21 @@ export function AboutSection() {
 
     const updateScrollReveal = () => {
       const vh = window.innerHeight;
-      const paragraphs = [
-        { ref: p1Ref, minOpacity: 0.35 },
-        { ref: p2Ref, minOpacity: 0.22 },
-        { ref: p3Ref, minOpacity: 0.15 },
-      ];
 
-      paragraphs.forEach(({ ref, minOpacity }, index) => {
-        const el = ref.current;
-        if (!el) return;
+      if (p1Ref.current) {
+        const rect1 = p1Ref.current.getBoundingClientRect();
+        updateWordsOpacity(p1WordRefs.current, rect1, vh, 0.88, 0.48, 0.28);
+      }
 
-        const rect = el.getBoundingClientRect();
+      if (p2Ref.current) {
+        const rect2 = p2Ref.current.getBoundingClientRect();
+        updateWordsOpacity(p2WordRefs.current, rect2, vh, 0.82, 0.44, 0.20);
+      }
 
-        // The active reading window: starts fading in at 82% of viewport,
-        // reaches peak 100% illumination when at 48% of viewport.
-        const triggerStart = vh * 0.82;
-        const triggerEnd = vh * 0.48;
-
-        let progress = (triggerStart - rect.top) / (triggerStart - triggerEnd);
-        progress = Math.max(0, Math.min(1, progress));
-
-        // For the very first paragraph, ensure it starts well visible if section is near top
-        const effectiveMin = index === 0 ? Math.max(minOpacity, 0.45) : minOpacity;
-        const opacity = effectiveMin + progress * (1 - effectiveMin);
-
-        el.style.setProperty("--p-opacity", opacity.toFixed(3));
-      });
+      if (p3Ref.current) {
+        const rect3 = p3Ref.current.getBoundingClientRect();
+        updateWordsOpacity(p3WordRefs.current, rect3, vh, 0.78, 0.40, 0.18);
+      }
 
       ticking = false;
     };
@@ -101,39 +143,74 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* Right Column: Scroll-Revealing Narrative Content */}
+          {/* Right Column: Progressive Word-by-Word Scroll Reveal */}
           <div className={styles.contentColumn}>
             <p className={styles.categoryTag}>
               • BRAND &amp; WEBSITES FOR HIGH-GROWTH ENTERPRISES /
             </p>
 
             <div className={styles.narrativeBlock}>
-              {/* Paragraph 1: Illuminates first */}
+              {/* Paragraph 1: Word-by-word reveal */}
               <h2
                 ref={p1Ref}
                 id="about-heading"
                 className={`${styles.narrativeItem} ${styles.narrativePrimary}`}
               >
-                The market has evolved, the ambition has grown, and you understand the business
-                differently than you did two years ago.
+                {P1_WORDS.map((word, i) => (
+                  <span
+                    key={`p1-${i}`}
+                    ref={(el) => {
+                      p1WordRefs.current[i] = el;
+                    }}
+                    className={styles.word}
+                  >
+                    {word}
+                  </span>
+                ))}
               </h2>
 
-              {/* Paragraph 2: Illuminates as user scrolls */}
+              {/* Paragraph 2: Word-by-word reveal */}
               <p
                 ref={p2Ref}
                 className={`${styles.narrativeItem} ${styles.narrativeSecondary}`}
               >
-                At some point, fragmented agencies, unvetted freelancers, and legacy platforms
-                stop keeping up and start telling an older version of your story.
+                {P2_WORDS.map((word, i) => (
+                  <span
+                    key={`p2-${i}`}
+                    ref={(el) => {
+                      p2WordRefs.current[i] = el;
+                    }}
+                    className={styles.word}
+                  >
+                    {word}
+                  </span>
+                ))}
               </p>
 
-              {/* Paragraph 3: Illuminates with punchline & gold accent */}
+              {/* Paragraph 3: Word-by-word reveal concluding in glowing brand gold */}
               <p
                 ref={p3Ref}
                 className={`${styles.narrativeItem} ${styles.narrativeHighlight}`}
               >
-                That&apos;s the moment when it&apos;s time to build with{" "}
-                <span className={styles.brandCalligraphy}>Qubizon</span>.
+                {P3_WORDS.map((word, i) => (
+                  <span
+                    key={`p3-${i}`}
+                    ref={(el) => {
+                      p3WordRefs.current[i] = el;
+                    }}
+                    className={styles.word}
+                  >
+                    {word}
+                  </span>
+                ))}
+                <span
+                  ref={(el) => {
+                    p3WordRefs.current[P3_WORDS.length] = el;
+                  }}
+                  className={`${styles.word} ${styles.brandCalligraphy}`}
+                >
+                  Qubizon.
+                </span>
               </p>
             </div>
 

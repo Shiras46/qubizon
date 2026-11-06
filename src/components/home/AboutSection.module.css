@@ -122,12 +122,10 @@
 
 /* Base Scroll-Reveal Paragraph Styling */
 .narrativeItem {
-  color: rgba(255, 255, 255, var(--p-opacity, 0.35));
   font-size: clamp(1.45rem, 2.3vw, 2.35rem);
   line-height: 1.35;
   letter-spacing: -0.025em;
-  transition: color 0.12s ease-out;
-  will-change: color;
+  color: #ffffff;
 }
 
 .narrativePrimary {
@@ -142,15 +140,23 @@
   font-weight: 600;
 }
 
+/* Individual Word for Word-by-Word Scroll Reveal */
+.word {
+  display: inline-block;
+  margin-right: 0.28em;
+  color: #ffffff;
+  opacity: 0.22;
+  transition: opacity 0.14s ease-out;
+  will-change: opacity;
+}
+
 /* Glowing Brand Calligraphy Accent */
 .brandCalligraphy {
   font-family: var(--font-serif, "Playfair Display", serif);
   font-style: italic;
   font-weight: 500;
-  color: rgba(255, 190, 11, var(--p-opacity, 0.4));
-  text-shadow: 0 0 24px rgba(255, 190, 11, calc(var(--p-opacity, 0.4) * 0.5));
-  transition: color 0.12s ease-out, text-shadow 0.12s ease-out;
-  display: inline-block;
+  color: var(--brand-yellow, #ffbe0b);
+  text-shadow: 0 0 24px rgba(255, 190, 11, 0.45);
   letter-spacing: -0.01em;
 }
 
@@ -267,6 +273,10 @@
 
 /* Reduced Motion Support (WCAG 2.1 AA) */
 @media (prefers-reduced-motion: reduce) {
+  .word {
+    opacity: 1 !important;
+    transition: none !important;
+  }
   .narrativeItem {
     color: #ffffff !important;
     transition: none !important;
