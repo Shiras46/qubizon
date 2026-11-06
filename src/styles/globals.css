@@ -260,11 +260,20 @@ a {
   text-decoration: none;
 }
 
+ul, ol {
+  list-style: none;
+}
+
 button {
   font: inherit;
   cursor: pointer;
   border: none;
   background: none;
+}
+
+main#main-content {
+  padding-top: 74px;
+  flex: 1;
 }
 
 img, svg {

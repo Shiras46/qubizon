@@ -79,6 +79,7 @@
 }
 
 .footerLink {
+  display: block;
   color: #888888;
   text-decoration: none;
   margin-bottom: 0.75rem;

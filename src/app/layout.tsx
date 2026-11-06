@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { SITE_CONFIG } from "@/lib/constants";
 import { constructMetadata } from "@/lib/metadata";
 import { AnalyticsScripts } from "@/components/analytics/AnalyticsScripts";
+import "@/styles/tokens.css";
 import "@/styles/globals.css";
 
 const outfit = Outfit({

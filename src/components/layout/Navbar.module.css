@@ -58,15 +58,19 @@
 }
 
 /* Desktop Nav */
-.nav {
+.nav,
+.navLinks {
   display: flex;
   align-items: center;
   gap: 2.25rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 @media (max-width: 920px) {
-  .nav {
+  .nav,
+  .navLinks {
     display: none;
   }
 }
@@ -193,7 +197,44 @@
 }
 
 .ctaButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.6rem;
+  border-radius: 9999px;
+  background-color: var(--clr-foreground, #0a0a0a);
+  color: #ffffff !important;
+  font-family: var(--font-primary, "Outfit", sans-serif);
+  font-weight: 600;
+  font-size: var(--text-xs, 0.8125rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid var(--clr-foreground, #0a0a0a);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
   margin-left: 1.5rem;
+  white-space: nowrap;
+}
+
+.ctaButton:hover {
+  background-color: #ffffff;
+  color: var(--clr-foreground, #0a0a0a) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.ctaArrowCircle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.ctaButton:hover .ctaArrowCircle {
+  transform: translateX(3px);
 }
 
 @media (max-width: 920px) {
