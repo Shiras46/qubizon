@@ -169,6 +169,16 @@
   width: 100%;
 }
 
+.dropdownChevron {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
 .dropdownMenu {
   position: absolute;
   top: calc(100% + 14px);
@@ -184,6 +194,17 @@
   flex-direction: column;
   gap: 0.25rem;
   z-index: 1010;
+}
+
+/* Invisible hover bridge: prevents mouseleave when moving from nav link into dropdown */
+.dropdownMenu::before {
+  content: '';
+  position: absolute;
+  top: -18px;
+  left: 0;
+  right: 0;
+  height: 18px;
+  background: transparent;
 }
 
 .dropdownItem {

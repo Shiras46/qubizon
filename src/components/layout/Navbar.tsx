@@ -11,6 +11,32 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLLIElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setIsServicesOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsServicesOpen(false);
+    }, 180);
+  };
+
+  const handleServicesClick = (e: React.MouseEvent) => {
+    // If closed (e.g., touch device or first interaction), open dropdown
+    // If already open (e.g., on hover or second click), allow navigation to /services
+    if (!isServicesOpen) {
+      e.preventDefault();
+      setIsServicesOpen(true);
+    } else {
+      setIsServicesOpen(false);
+    }
+  };
 
   // Close menus on ESC key press
   useEffect(() => {
@@ -23,6 +49,13 @@ export function Navbar() {
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, isServicesOpen]);
+
+  // Clean up any lingering close timeouts
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
 
   // Close dropdown on outside click
   useEffect(() => {
@@ -59,13 +92,13 @@ export function Navbar() {
                     key={item.href}
                     ref={dropdownRef}
                     className={styles.dropdownWrapper}
-                    onMouseEnter={() => setIsServicesOpen(true)}
-                    onMouseLeave={() => setIsServicesOpen(false)}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
                   >
-                    <button
-                      type="button"
+                    <Link
+                      href="/services"
                       className={styles.dropdownToggle}
-                      onClick={() => setIsServicesOpen((prev) => !prev)}
+                      onClick={handleServicesClick}
                       aria-expanded={isServicesOpen}
                       aria-haspopup="true"
                     >
@@ -73,15 +106,20 @@ export function Navbar() {
                       <ChevronDown
                         size={14}
                         aria-hidden="true"
-                        style={{
-                          transform: isServicesOpen ? "rotate(180deg)" : "none",
-                          transition: "transform 0.2s ease",
-                        }}
+                        className={`${styles.dropdownChevron} ${
+                          isServicesOpen ? styles.chevronOpen : ""
+                        }`}
                       />
-                    </button>
+                    </Link>
 
                     {isServicesOpen && (
-                      <div className={styles.dropdownMenu} role="menu" aria-label="Services Submenu">
+                      <div
+                        className={styles.dropdownMenu}
+                        role="menu"
+                        aria-label="Services Submenu"
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                      >
                         <Link
                           href="/services"
                           className={styles.dropdownItem}
