@@ -39,9 +39,14 @@ export function Navbar() {
     <header className={styles.header}>
       <div className={`container ${styles.navContainer}`}>
         <Link href="/" className={styles.brand} aria-label={`${SITE_CONFIG.name} Home`}>
-          <span className={styles.logoText}>
-            qubizon<span className={styles.dot}>.</span>
-          </span>
+          <Image
+            src="/Logo Png-07.png"
+            alt={SITE_CONFIG.name}
+            width={145}
+            height={42}
+            priority
+            className={styles.brandLogo}
+          />
         </Link>
 
         {/* Desktop Navigation */}

@@ -29,6 +29,24 @@
   flex-direction: column;
 }
 
+.brand {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+}
+
+.brandLogo {
+  height: 42px;
+  width: auto;
+  max-width: 165px;
+  object-fit: contain;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.brand:hover .brandLogo {
+  opacity: 0.9;
+}
+
 .logoText {
   color: #ffffff;
   font-size: var(--text-2xl, 2rem);

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { SITE_CONFIG, CORE_SERVICES } from "@/lib/constants";
 import styles from "./Footer.module.css";
 
@@ -10,8 +11,14 @@ export function Footer() {
       <div className={styles.container}>
         <div className={styles.footerTop}>
           <div className={styles.footerBrand}>
-            <Link href="/" className={styles.logoText} aria-label={`${SITE_CONFIG.name} Home`}>
-              qubizon<span className={styles.dot}>.</span>
+            <Link href="/" className={styles.brand} aria-label={`${SITE_CONFIG.name} Home`}>
+              <Image
+                src="/Logo Png-12.png"
+                alt={SITE_CONFIG.name}
+                width={150}
+                height={46}
+                className={styles.brandLogo}
+              />
             </Link>
             <p className={styles.brandTagline}>Creativity + Engineering.</p>
             <p className={styles.brandSub}>
