@@ -18,23 +18,8 @@ export function WhyQubizon() {
         <div className={styles.statsGrid}>
           <div className={styles.statCard}>
             <div className={styles.statNumber}>
-              <span className="accent-wrapper">
-                99.4%
-                <svg
-                  className="scribble scribble-circle"
-                  viewBox="0 0 100 100"
-                  preserveAspectRatio="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M5,50 Q5,5 50,5 T95,50 T50,95 T5,50"
-                    fill="none"
-                    stroke="#FF3B30"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </span>
+              <span>99.4</span>
+              <span className={styles.statUnit}>%</span>
             </div>
             <div className={styles.statTitle}>Lighthouse Performance Target</div>
             <p className={styles.statDesc}>
@@ -43,7 +28,9 @@ export function WhyQubizon() {
           </div>
 
           <div className={styles.statCard}>
-            <div className={styles.statNumber}>0.00</div>
+            <div className={styles.statNumber}>
+              <span>0.00</span>
+            </div>
             <div className={styles.statTitle}>Cumulative Layout Shift</div>
             <p className={styles.statDesc}>
               Engineered with modern CSS grid and next/font zero-layout-shift pipelines for visual stability.
@@ -51,7 +38,10 @@ export function WhyQubizon() {
           </div>
 
           <div className={styles.statCard}>
-            <div className={styles.statNumber}>5x</div>
+            <div className={styles.statNumber}>
+              <span>5</span>
+              <span className={styles.statUnit}>x</span>
+            </div>
             <div className={styles.statTitle}>Integrated Disciplines</div>
             <p className={styles.statDesc}>
               Web, SEO, Social, Paid Advertising, and Content strategy unified under one accountable agency team.
@@ -59,7 +49,10 @@ export function WhyQubizon() {
           </div>
 
           <div className={styles.statCard}>
-            <div className={styles.statNumber}>100%</div>
+            <div className={styles.statNumber}>
+              <span>100</span>
+              <span className={styles.statUnit}>%</span>
+            </div>
             <div className={styles.statTitle}>Client Code &amp; Asset Ownership</div>
             <p className={styles.statDesc}>
               Direct Git commits, complete data rights, and zero vendor lock-in from day one of engagement.
@@ -70,19 +63,9 @@ export function WhyQubizon() {
         {/* 3-Column Features Grid */}
         <div className={styles.featuresGrid}>
           <div className={styles.feature}>
+            <div className={styles.featurePill}>01 // CRAFTSMANSHIP</div>
             <h3 className={styles.featureTitle}>
-              <span className="accent-wrapper">
-                <span className="italic-serif">Pixel-Perfect Precision</span>
-                <svg className="scribble scribble-spark" viewBox="0 0 40 40" aria-hidden="true">
-                  <path
-                    d="M20,5 L20,15 M35,20 L25,20 M20,35 L20,25 M5,20 L15,20"
-                    fill="none"
-                    stroke="#00488E"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </span>
+              Pixel-Perfect Precision
             </h3>
             <p className={styles.featureDesc}>
               Every detail matters. We obsess over typography hierarchies, fluid micro-interactions, responsive touch targets,
@@ -91,19 +74,9 @@ export function WhyQubizon() {
           </div>
 
           <div className={styles.feature}>
+            <div className={styles.featurePill}>02 // SPEED</div>
             <h3 className={styles.featureTitle}>
-              <span className="accent-wrapper">
-                <span className="italic-serif">Blazing Fast Performance</span>
-                <svg className="scribble scribble-spark" viewBox="0 0 40 40" aria-hidden="true">
-                  <path
-                    d="M20,5 L20,15 M35,20 L25,20 M20,35 L20,25 M5,20 L15,20"
-                    fill="none"
-                    stroke="#FF3B30"
-                    strokeWidth="3"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </span>
+              Blazing Fast Performance
             </h3>
             <p className={styles.featureDesc}>
               Optimized Next.js code, edge-rendered routes, and modern image pipelines ensure your site loads under one second
@@ -112,8 +85,9 @@ export function WhyQubizon() {
           </div>
 
           <div className={styles.feature}>
+            <div className={styles.featurePill}>03 // LONGEVITY</div>
             <h3 className={styles.featureTitle}>
-              <span className="italic-serif">Future-Proof Technology</span>
+              Future-Proof Technology
             </h3>
             <p className={styles.featureDesc}>
               We build with modern App Router frameworks, modular React components, and schema entity modeling that scale

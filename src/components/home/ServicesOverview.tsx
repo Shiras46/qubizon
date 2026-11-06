@@ -11,7 +11,6 @@ interface ServiceItem {
   description: string;
   href: string;
   tags: string[];
-  strokeColor: string;
 }
 
 const SERVICES_LIST: ServiceItem[] = [
@@ -23,7 +22,6 @@ const SERVICES_LIST: ServiceItem[] = [
       "From ultra-fast Next.js web applications to custom CRM integrations, we build the robust technical backbone of your digital presence with strict sub-second performance.",
     href: "/services/web-development",
     tags: ["Next.js App Router", "Sub-Second LCP", "WCAG 2.1 AA"],
-    strokeColor: "#00488E",
   },
   {
     id: "seo",
@@ -33,7 +31,6 @@ const SERVICES_LIST: ServiceItem[] = [
       "Enterprise crawl optimization, structured data entity graphs, and search-intent architecture that secure top-tier organic visibility and lower customer acquisition costs.",
     href: "/services/seo",
     tags: ["Schema.org Graphs", "Crawl Budget Engineering", "Topical Authority"],
-    strokeColor: "#FF3B30",
   },
   {
     id: "social-media",
@@ -43,7 +40,6 @@ const SERVICES_LIST: ServiceItem[] = [
       "Strategic narrative building, executive thought leadership, and visual asset production that converts passive attention into qualified business pipeline.",
     href: "/services/social-media-marketing",
     tags: ["Narrative Design", "Brand Authority", "Multi-Channel Distribution"],
-    strokeColor: "#00488E",
   },
   {
     id: "paid-ads",
@@ -53,7 +49,6 @@ const SERVICES_LIST: ServiceItem[] = [
       "Precision Google Search and Meta Ads campaigns backed by negative keyword clustering, server-side conversion tracking, and rigorous return on ad spend (ROAS).",
     href: "/services/paid-advertising",
     tags: ["Google Ads", "Server-Side Telemetry", "Negative Clustering"],
-    strokeColor: "#FFBE0B",
   },
   {
     id: "content-marketing",
@@ -63,7 +58,6 @@ const SERVICES_LIST: ServiceItem[] = [
       "Search-aligned whitepapers, case studies, and authoritative pillar content designed to educate decision-makers and dominate competitive regional search queries.",
     href: "/services/content-marketing",
     tags: ["Topical Pillars", "B2B Technical Copy", "Lead Magnets"],
-    strokeColor: "#00488E",
   },
 ];
 
@@ -71,17 +65,18 @@ export function ServicesOverview() {
   return (
     <section className={styles.servicesSection} id="services" aria-labelledby="services-heading">
       <div className={styles.container}>
-        <h2 id="services-heading" className={styles.headingLarge}>
-          Our Services
-        </h2>
-
-        <div className={styles.servicesIntro}>
-          <p className={styles.brandSymbolLead}>Qubizon Disciplines</p>
-          <h3 className={styles.headingMedium}>What We Do</h3>
-          <p className={styles.lead}>
-            Comprehensive digital solutions engineered to elevate your brand, streamline acquisition,
-            and establish defensible market leadership across Kerala and beyond.
-          </p>
+        <div className={styles.sectionHeader}>
+          <p className={styles.sectionBadge}>• QUBIZON DIGITAL DISCIPLINES /</p>
+          <div className={styles.titleRow}>
+            <h2 id="services-heading" className={styles.headingLarge}>
+              Engineered digital systems that drive{" "}
+              <span className="calligraphy">defensible growth</span>.
+            </h2>
+            <p className={styles.lead}>
+              Comprehensive digital capabilities engineered to elevate your brand, streamline customer acquisition,
+              and establish unquestioned market leadership across Kerala and beyond.
+            </p>
+          </div>
         </div>
 
         <div className={styles.serviceList}>
@@ -94,37 +89,24 @@ export function ServicesOverview() {
             >
               <div className={styles.serviceTitleCol}>
                 <span className={styles.serviceIndex}>{service.number} / SERVICE</span>
-                <h4 className={styles.serviceTitle}>
-                  <span className="accent-wrapper">
-                    {service.title}
-                    <svg
-                      className="scribble scribble-underline"
-                      viewBox="0 0 200 12"
-                      preserveAspectRatio="none"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M0,10 Q50,0 100,10 T200,10"
-                        fill="none"
-                        stroke={service.strokeColor}
-                        strokeWidth="3.5"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </span>
-                </h4>
+                <h3 className={styles.serviceTitle}>{service.title}</h3>
               </div>
 
               <div className={styles.serviceBodyCol}>
                 <p className={styles.serviceDesc}>{service.description}</p>
                 <div className={styles.serviceMeta}>
-                  {service.tags.map((tag, idx) => (
-                    <span key={idx} className={styles.serviceTag}>
-                      {tag}
-                    </span>
-                  ))}
+                  <div className={styles.tagGroup}>
+                    {service.tags.map((tag, idx) => (
+                      <span key={idx} className={styles.serviceTag}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                   <span className={styles.serviceLink}>
-                    Explore Service <ArrowRight size={14} aria-hidden="true" />
+                    <span>Explore Discipline</span>
+                    <span className={styles.arrowCircle} aria-hidden="true">
+                      <ArrowRight size={12} />
+                    </span>
                   </span>
                 </div>
               </div>

@@ -1,6 +1,6 @@
 .showcaseSection {
-  padding-top: clamp(4.5rem, 9vw, 7.5rem);
-  padding-bottom: clamp(4.5rem, 9vw, 7.5rem);
+  padding-top: clamp(5rem, 9vw, 8rem);
+  padding-bottom: clamp(5rem, 9vw, 8rem);
   background-color: #0a0a0a;
   color: #ffffff;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
@@ -26,7 +26,7 @@
   font-family: var(--font-family-mono, monospace);
   font-size: clamp(0.6875rem, 0.65rem + 0.2vw, 0.8125rem);
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--brand-yellow, #ffbe0b);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
@@ -40,6 +40,12 @@
   flex-wrap: wrap;
 }
 
+.titleCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
 .headingHuge {
   font-size: clamp(2.2rem, 4vw, 3.75rem);
   font-weight: 800;
@@ -51,16 +57,199 @@
 
 .lead {
   font-size: var(--text-base, 1.0625rem);
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.65);
   line-height: 1.65;
-  max-width: 480px;
+  max-width: 540px;
 }
 
-/* Project List (Matching Image 1 Reference Model) */
+/* Pill CTA Button (Matching DNOIN Reference) */
+.btnPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.75rem 0.85rem 2.2rem;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  color: #0a0a0a !important;
+  font-family: var(--font-primary, "Outfit", sans-serif);
+  font-weight: 600;
+  font-size: var(--text-sm, 0.875rem);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(255, 255, 255, 0.12);
+  white-space: nowrap;
+}
+
+.btnPill:hover {
+  background-color: transparent;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.25);
+}
+
+.arrowCircle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  transition: transform 0.25s ease;
+}
+
+.btnPill:hover .arrowCircle {
+  transform: translateX(3px);
+  background-color: #ffffff;
+  color: #0a0a0a;
+}
+
+/* 3-Column Visual Project Grid (Matching Section 3 of Reference) */
+.visualGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  margin-bottom: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+.visualCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  group: card;
+}
+
+.cardVisualFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3.4;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.visualCard:hover .cardVisualFrame {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 24px 50px -12px rgba(0, 72, 142, 0.35);
+}
+
+.cardGridPattern {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+}
+
+.cardBadgeRow {
+  position: relative;
+  z-index: 2;
+}
+
+.cardPill {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-family: var(--font-family-mono, monospace);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+
+.cardMetricRow {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.metricVal {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.metricLabel {
+  font-family: var(--font-family-mono, monospace);
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: var(--brand-yellow, #ffbe0b);
+  margin-top: 4px;
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cardLocation {
+  font-family: var(--font-family-mono, monospace);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+.visualCard:hover .cardTitle {
+  color: var(--brand-yellow, #ffbe0b);
+}
+
+.cardDisciplines {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Directory Header */
+.directoryHeader {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  margin-bottom: 0.5rem;
+}
+
+.directoryBadge {
+  font-family: var(--font-family-mono, monospace);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+}
+
+/* Project List (Matching Section 4 Directory) */
 .projectList {
   display: flex;
   flex-direction: column;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .projectRow {
@@ -83,14 +272,13 @@
   border-bottom-color: rgba(255, 255, 255, 0.25);
 }
 
-/* Column 1: Project Name */
 .colTitle {
   display: flex;
   flex-direction: column;
 }
 
 .projectName {
-  font-size: clamp(1.4rem, 1.8vw, 2.1rem);
+  font-size: clamp(1.35rem, 1.8vw, 2rem);
   font-weight: 700;
   letter-spacing: -0.025em;
   color: #ffffff;
@@ -102,7 +290,6 @@
   color: var(--brand-yellow, #ffbe0b);
 }
 
-/* Column 2: Compelling Story */
 .colSummary {
   display: flex;
 }
@@ -114,82 +301,84 @@
   max-width: 540px;
 }
 
-/* Column 3: Disciplines & Location */
 .colMeta {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 0.75rem;
-  align-items: flex-start;
+  text-align: right;
 }
 
 .disciplineList {
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-end;
 }
 
 .disciplineTag {
-  font-size: 11px;
   font-family: var(--font-family-mono, monospace);
+  font-size: 10px;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.55);
-  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  letter-spacing: 0.04em;
 }
 
 .locationTag {
-  font-size: 11px;
   font-family: var(--font-family-mono, monospace);
-  font-weight: 700;
-  letter-spacing: 0.1em;
+  font-size: 11px;
   color: var(--brand-yellow, #ffbe0b);
-  text-transform: uppercase;
-}
-
-/* Pill Outline CTA Button */
-.viewAll {
-  margin-top: clamp(2.5rem, 5vw, 4rem);
-  text-align: center;
-}
-
-.btnOutline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 13px 32px;
-  border-radius: 9999px;
-  background-color: transparent;
-  color: #ffffff !important;
-  font-size: var(--text-sm, 0.875rem);
-  font-weight: 600;
-  text-transform: uppercase;
   letter-spacing: 0.06em;
-  text-decoration: none;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.btnOutline:hover {
-  background-color: #ffffff;
-  color: #0a0a0a !important;
-  border-color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.2);
 }
 
 /* Responsive */
-@media (max-width: 960px) {
+@media (max-width: 1024px) {
+  .visualGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .projectRow {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .colMeta {
+    grid-column: span 2;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .disciplineList {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .visualGrid {
+    grid-template-columns: 1fr;
+  }
+
   .projectRow {
     grid-template-columns: 1fr;
     gap: 1.25rem;
   }
 
+  .colMeta {
+    grid-column: span 1;
+    align-items: flex-start;
+  }
+
   .titleRow {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+  }
+
+  .btnPill {
+    width: 100%;
+    justify-content: center;
   }
 }

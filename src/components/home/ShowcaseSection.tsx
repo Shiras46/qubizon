@@ -11,6 +11,50 @@ interface ProjectItem {
   href: string;
 }
 
+interface FeaturedCard {
+  id: string;
+  name: string;
+  location: string;
+  disciplines: string[];
+  metric: string;
+  badge: string;
+  gradient: string;
+  href: string;
+}
+
+const FEATURED_CARDS: FeaturedCard[] = [
+  {
+    id: "maritime-vis",
+    name: "Kerala Maritime & Logistics",
+    location: "Kozhikode, India",
+    disciplines: ["Next.js App Router", "Technical SEO", "UI/UX"],
+    metric: "0.62s Mobile LCP",
+    badge: "ENTERPRISE PORTAL",
+    gradient: "linear-gradient(135deg, #0d1b2a 0%, #1b263b 60%, #00488e 100%)",
+    href: "/work",
+  },
+  {
+    id: "asterion-vis",
+    name: "Asterion Financial Intelligence",
+    location: "Thrissur, India",
+    disciplines: ["Schema.org Modeling", "Search Intent", "Analytics"],
+    metric: "Top 3 Organic Share",
+    badge: "FINANCIAL ADVISORY",
+    gradient: "linear-gradient(135deg, #141416 0%, #202025 60%, #ffbe0b22 100%)",
+    href: "/work",
+  },
+  {
+    id: "vythiri-vis",
+    name: "Vythiri Luxury Retreats",
+    location: "Wayanad, India",
+    disciplines: ["Direct Booking Engine", "Narrative Design", "PPC"],
+    metric: "4.8x Return on Ad Spend",
+    badge: "LUXURY HOSPITALITY",
+    gradient: "linear-gradient(135deg, #0a1128 0%, #001f54 60%, #00488e 100%)",
+    href: "/work",
+  },
+];
+
 const PROJECTS: ProjectItem[] = [
   {
     id: "maritime",
@@ -54,20 +98,56 @@ export function ShowcaseSection() {
   return (
     <section className={styles.showcaseSection} id="portfolio" aria-labelledby="showcase-heading">
       <div className={styles.container}>
+        {/* Section Header: Matching DNOIN Reference Section 3 */}
         <div className={styles.sectionHeader}>
           <p className={styles.sectionBadge}>• SELECTED RECENT WORKS /</p>
           <div className={styles.titleRow}>
-            <h2 id="showcase-heading" className={styles.headingHuge}>
-              Work engineered for <span className="calligraphy">market authority</span>.
-            </h2>
-            <p className={styles.lead}>
-              Explore verifiable architectures and disciplined digital systems delivered
-              for ambitious regional and enterprise clients.
-            </p>
+            <div className={styles.titleCol}>
+              <h2 id="showcase-heading" className={styles.headingHuge}>
+                Recent <span className="calligraphy">Projects</span>.
+              </h2>
+              <p className={styles.lead}>
+                Disciplined Next.js web applications, high-intent technical SEO graphs, and synchronized digital ecosystems.
+              </p>
+            </div>
+            <Link href="/work" className={styles.btnPill}>
+              <span>View All Projects</span>
+              <span className={styles.arrowCircle} aria-hidden="true">
+                <ArrowRight size={13} />
+              </span>
+            </Link>
           </div>
         </div>
 
-        {/* Project List (Matching Image 1 Reference Model) */}
+        {/* 3-Column Visual Project Cards: Matching Reference Image Section 3 */}
+        <div className={styles.visualGrid}>
+          {FEATURED_CARDS.map((card) => (
+            <Link key={card.id} href={card.href} className={styles.visualCard}>
+              <div className={styles.cardVisualFrame} style={{ background: card.gradient }}>
+                <div className={styles.cardGridPattern} />
+                <div className={styles.cardBadgeRow}>
+                  <span className={styles.cardPill}>{card.badge}</span>
+                </div>
+                <div className={styles.cardMetricRow}>
+                  <span className={styles.metricVal}>{card.metric}</span>
+                  <span className={styles.metricLabel}>VERIFIED BENCHMARK</span>
+                </div>
+              </div>
+              <div className={styles.cardMeta}>
+                <span className={styles.cardLocation}>• {card.location}</span>
+                <h3 className={styles.cardTitle}>{card.name}</h3>
+                <span className={styles.cardDisciplines}>{card.disciplines.join(" • ")}</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {/* Directory Breakdown Header: Matching Reference Image Section 4 */}
+        <div className={styles.directoryHeader}>
+          <p className={styles.directoryBadge}>• DETAILED ARCHITECTURAL ENGAGEMENTS /</p>
+        </div>
+
+        {/* Project Detailed Rows */}
         <div className={styles.projectList}>
           {PROJECTS.map((project) => (
             <Link key={project.id} href={project.href} className={styles.projectRow}>
@@ -94,14 +174,6 @@ export function ShowcaseSection() {
               </div>
             </Link>
           ))}
-        </div>
-
-        {/* View All Benchmarks Pill CTA */}
-        <div className={styles.viewAll}>
-          <Link href="/work" className={styles.btnOutline}>
-            <span>View All Architectural Benchmarks</span>
-            <ArrowRight size={16} aria-hidden="true" />
-          </Link>
         </div>
       </div>
     </section>

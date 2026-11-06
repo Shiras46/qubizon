@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { ConsultationModal } from "@/components/common/ConsultationModal";
 import styles from "./HeroSection.module.css";
 
@@ -24,41 +25,13 @@ export function HeroSection() {
     <>
       <section className={styles.hero} id="hero" aria-labelledby="hero-heading">
         <div className={styles.heroContent}>
-          <p className={styles.tagline}>
-            Welcome to the{" "}
-            <span className="accent-wrapper">
-              Qubizon Experience
-              <svg className="scribble scribble-spark" viewBox="0 0 40 40" aria-hidden="true">
-                <path
-                  d="M20,5 L20,15 M35,20 L25,20 M20,35 L20,25 M5,20 L15,20"
-                  fill="none"
-                  stroke="#FF3B30"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>
+          <p className={styles.categoryTag}>
+            • DIGITAL ARCHITECTURE &amp; ENGINEERING FOR HIGH-GROWTH ENTERPRISES /
           </p>
 
           <h1 id="hero-heading" className={styles.headingHuge}>
             Transforming Vision into <br />
-            <span className="accent-wrapper">
-              <span className="italic-serif">Digital Reality</span>
-              <svg
-                className="scribble scribble-underline"
-                viewBox="0 0 200 12"
-                preserveAspectRatio="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="M0,10 Q50,0 100,10 T200,10"
-                  fill="none"
-                  stroke="#00488E"
-                  strokeWidth="4"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </span>
+            <span className={styles.heroCalligraphy}>Digital Reality</span>.
           </h1>
 
           <p className={styles.lead}>
@@ -75,16 +48,60 @@ export function HeroSection() {
               className={styles.btnPrimary}
               aria-haspopup="dialog"
             >
-              Start a Project
+              <span>Start a Project</span>
+              <span className={styles.arrowCircle} aria-hidden="true">
+                <ArrowRight size={13} />
+              </span>
             </button>
             <a href="#services" className={styles.btnOutline}>
-              Explore Capabilities
+              <span>Explore Capabilities</span>
+              <span className={styles.arrowCircle} aria-hidden="true">
+                <ArrowRight size={13} />
+              </span>
             </a>
+          </div>
+
+          {/* Quick Architecture Trust Chips */}
+          <div className={styles.trustBadges}>
+            <span className={styles.trustBadge}>
+              <span className={styles.trustDot} />
+              <span>Next.js 14 App Router</span>
+            </span>
+            <span className={styles.trustBadge}>
+              <span className={styles.trustDot} />
+              <span>Sub-Second LCP</span>
+            </span>
+            <span className={styles.trustBadge}>
+              <span className={styles.trustDot} />
+              <span>Zero Monolithic Bloat</span>
+            </span>
           </div>
         </div>
 
-        {/* Aesthetic Overlay: Codecave Vector Schematic Blueprint */}
+        {/* Architectural Visual Stage & Vector Schematic */}
         <div className={styles.heroAestheticOverlay} aria-hidden="true">
+          {/* Glass Telemetry HUD Card */}
+          <div className={styles.glassHudCard}>
+            <div className={styles.hudHeader}>
+              <div className={styles.hudStatusDot} />
+              <span className={styles.hudTitle}>SYSTEM_TELEMETRY // KERALA_NODE</span>
+            </div>
+            <div className={styles.hudGrid}>
+              <div className={styles.hudMetric}>
+                <span className={styles.hudValue}>99.4%</span>
+                <span className={styles.hudLabel}>LIGHTHOUSE SCORE</span>
+              </div>
+              <div className={styles.hudMetric}>
+                <span className={styles.hudValue}>0.00</span>
+                <span className={styles.hudLabel}>LAYOUT SHIFT</span>
+              </div>
+            </div>
+            <div className={styles.hudFooter}>
+              <span>LAT: 11.2588° N</span>
+              <span>LON: 75.7804° E</span>
+              <span>KOZHIKODE • THRISSUR</span>
+            </div>
+          </div>
           <svg viewBox="0 0 800 800" className={styles.schematicSvg}>
             <defs>
               <linearGradient id="blueprint-grad" x1="0%" y1="0%" x2="0%" y2="100%">

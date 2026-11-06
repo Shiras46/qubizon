@@ -61,20 +61,9 @@ export function FaqSection() {
   return (
     <section className={styles.faqSection} id="faq" aria-labelledby="faq-heading">
       <div className={styles.container}>
+        <p className={styles.sectionBadge}>• CLIENT INTELLIGENCE &amp; CLARITY /</p>
         <h2 id="faq-heading" className={styles.headingLarge}>
-          Frequently Asked{" "}
-          <span className="accent-wrapper">
-            Questions
-            <svg className="scribble scribble-spark" viewBox="0 0 40 40" aria-hidden="true">
-              <path
-                d="M20,5 L20,15 M35,20 L25,20 M20,35 L20,25 M5,20 L15,20"
-                fill="none"
-                stroke="#FF3B30"
-                strokeWidth="3"
-                strokeLinecap="round"
-              />
-            </svg>
-          </span>
+          Frequently Asked <span className="calligraphy">Questions</span>.
         </h2>
         <p className={styles.lead}>
           Direct, transparent answers regarding our architectural standards, technical SEO methodologies,

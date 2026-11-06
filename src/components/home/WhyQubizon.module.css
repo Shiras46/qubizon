@@ -65,6 +65,23 @@
   letter-spacing: -0.04em;
   margin-bottom: 1rem;
   color: var(--clr-foreground, #0a0a0a);
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.statUnit {
+  color: var(--brand-blue, #00488e);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.featurePill {
+  font-family: var(--font-family-mono, monospace);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--brand-blue, #00488e);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
 }
 
 .statTitle {
