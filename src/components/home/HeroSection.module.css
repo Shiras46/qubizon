@@ -10,7 +10,7 @@
   position: relative;
   padding: clamp(3.5rem, 7vh, 6rem) 5% clamp(2.5rem, 5vh, 4rem);
   overflow: hidden;
-  background-color: var(--clr-background, #ffffff);
+  background-color: transparent;
 }
 
 .heroContent {
@@ -173,7 +173,7 @@
 .marqueeSection {
   border-top: 1px solid rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  background-color: #ffffff;
+  background-color: transparent;
   padding: 2.25rem 0 2rem;
   overflow: hidden;
   position: relative;

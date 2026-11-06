@@ -26,9 +26,10 @@ body {
   overflow-x: hidden;
   /* Codecave Signature Line Effect: Technical Architectural Grid */
   background-image: 
-      linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+      linear-gradient(to right, rgba(0, 0, 0, 0.12) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.12) 1px, transparent 1px);
   background-size: 60px 60px;
+  background-position: center top;
 }
 
 /* =========================================================================
