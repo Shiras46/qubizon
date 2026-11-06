@@ -1,8 +1,8 @@
 .aboutSection {
   background-color: #0a0a0a;
   color: #ffffff;
-  padding-top: clamp(4.5rem, 9vw, 7.5rem);
-  padding-bottom: clamp(4.5rem, 9vw, 7.5rem);
+  padding-top: clamp(5.5rem, 10vw, 8.5rem);
+  padding-bottom: clamp(5.5rem, 10vw, 8.5rem);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   position: relative;
@@ -22,13 +22,21 @@
   display: grid;
   grid-template-columns: 42% 58%;
   gap: clamp(2.5rem, 5vw, 5rem);
-  align-items: center;
+  align-items: start;
 }
 
-/* Left Column: Image Frame */
+/* Left Column: Sticky Editorial Image Frame */
 .imageColumn {
   position: relative;
   width: 100%;
+}
+
+@media (min-width: 961px) {
+  .imageColumn {
+    position: sticky;
+    top: 110px;
+    align-self: start;
+  }
 }
 
 .imageFrame {
@@ -89,7 +97,7 @@
   flex-shrink: 0;
 }
 
-/* Right Column: Narrative Content */
+/* Right Column: Progressive Scroll-Revealing Narrative Content */
 .contentColumn {
   display: flex;
   flex-direction: column;
@@ -108,34 +116,45 @@
 .narrativeBlock {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
+  gap: clamp(2rem, 3.5vw, 3rem);
+  margin-bottom: 3rem;
+}
+
+/* Base Scroll-Reveal Paragraph Styling */
+.narrativeItem {
+  color: rgba(255, 255, 255, var(--p-opacity, 0.35));
+  font-size: clamp(1.45rem, 2.3vw, 2.35rem);
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+  transition: color 0.12s ease-out;
+  will-change: color;
 }
 
 .narrativePrimary {
-  font-size: clamp(1.45rem, 2.2vw, 2.25rem);
-  font-weight: 700;
-  line-height: 1.32;
-  letter-spacing: -0.025em;
-  color: #ffffff;
+  font-weight: 600;
 }
 
 .narrativeSecondary {
-  font-size: clamp(1.3rem, 1.9vw, 1.95rem);
   font-weight: 500;
-  line-height: 1.38;
-  letter-spacing: -0.02em;
-  color: rgba(255, 255, 255, 0.62);
 }
 
 .narrativeHighlight {
-  font-size: clamp(1.3rem, 1.9vw, 1.95rem);
   font-weight: 600;
-  line-height: 1.38;
-  letter-spacing: -0.02em;
-  color: #ffffff;
 }
 
+/* Glowing Brand Calligraphy Accent */
+.brandCalligraphy {
+  font-family: var(--font-serif, "Playfair Display", serif);
+  font-style: italic;
+  font-weight: 500;
+  color: rgba(255, 190, 11, var(--p-opacity, 0.4));
+  text-shadow: 0 0 24px rgba(255, 190, 11, calc(var(--p-opacity, 0.4) * 0.5));
+  transition: color 0.12s ease-out, text-shadow 0.12s ease-out;
+  display: inline-block;
+  letter-spacing: -0.01em;
+}
+
+/* Proof Badges */
 .badgeRow {
   display: flex;
   flex-wrap: wrap;
@@ -164,6 +183,7 @@
   letter-spacing: 0.04em;
 }
 
+/* Action Buttons */
 .actionRow {
   display: flex;
   align-items: center;
@@ -242,5 +262,18 @@
   .btnPrimary {
     width: 100%;
     justify-content: center;
+  }
+}
+
+/* Reduced Motion Support (WCAG 2.1 AA) */
+@media (prefers-reduced-motion: reduce) {
+  .narrativeItem {
+    color: #ffffff !important;
+    transition: none !important;
+  }
+  .brandCalligraphy {
+    color: var(--brand-yellow, #ffbe0b) !important;
+    text-shadow: none !important;
+    transition: none !important;
   }
 }

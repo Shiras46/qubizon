@@ -39,7 +39,7 @@ body {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 400;
-  color: var(--clr-foreground);
+  color: inherit;
   letter-spacing: 0;
   text-transform: none;
 }
