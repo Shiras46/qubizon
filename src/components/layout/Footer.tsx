@@ -1,8 +1,35 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MessageCircle, MapPin, ExternalLink, ArrowRight } from "lucide-react";
-import { SITE_CONFIG, CORE_SERVICES } from "@/lib/constants";
+import { Phone, Mail, MessageCircle, MapPin, ArrowRight } from "lucide-react";
+import { SITE_CONFIG } from "@/lib/constants";
 import styles from "./Footer.module.css";
+
+const GLOBAL_COUNTRIES = [
+  { name: "UAE", flag: "🇦🇪", href: "/locations/uae" },
+  { name: "Saudi Arabia", flag: "🇸🇦", href: "/locations/saudi-arabia" },
+  { name: "Qatar", flag: "🇶🇦", href: "/locations/qatar" },
+  { name: "Kuwait", flag: "🇰🇼", href: "/locations/kuwait" },
+  { name: "Bahrain", flag: "🇧🇭", href: "/locations/bahrain" },
+  { name: "Oman", flag: "🇴🇲", href: "/locations/oman" },
+  { name: "India", flag: "🇮🇳", href: "/locations" },
+  { name: "United States", flag: "🇺🇸", href: "/locations" },
+  { name: "United Kingdom", flag: "🇬🇧", href: "/locations" },
+  { name: "Australia", flag: "🇦🇺", href: "/locations" },
+  { name: "Singapore", flag: "🇸🇬", href: "/locations" },
+  { name: "Canada", flag: "🇨🇦", href: "/locations" },
+  { name: "Germany", flag: "🇩🇪", href: "/locations" },
+  { name: "France", flag: "🇫🇷", href: "/locations" },
+  { name: "Netherlands", flag: "🇳🇱", href: "/locations" },
+  { name: "Spain", flag: "🇪🇸", href: "/locations" },
+  { name: "New Zealand", flag: "🇳🇿", href: "/locations" },
+  { name: "Malaysia", flag: "🇲🇾", href: "/locations" },
+  { name: "Philippines", flag: "🇵🇭", href: "/locations" },
+  { name: "Indonesia", flag: "🇮🇩", href: "/locations" },
+  { name: "Thailand", flag: "🇹🇭", href: "/locations" },
+  { name: "South Africa", flag: "🇿🇦", href: "/locations" },
+  { name: "Nigeria", flag: "🇳🇬", href: "/locations" },
+  { name: "Kenya", flag: "🇰🇪", href: "/locations" },
+];
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,7 +51,7 @@ export function Footer() {
             </Link>
             <p className={styles.brandTagline}>Creativity + Engineering.</p>
             <p className={styles.brandSub}>
-              Qubizon Digital Solutions is an enterprise software engineering and digital growth collective. We architect high-performance Next.js 15 web applications, technical SEO knowledge graphs, high-intent PPC advertising campaigns, and automated CRM pipelines for ambitious commercial brands across Kozhikode, Thrissur, the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, and Oman.
+              Qubizon Digital Solutions is an enterprise software engineering and digital growth collective. We architect high-performance Next.js 15 web applications, technical SEO knowledge graphs, high-intent PPC advertising campaigns, and automated CRM pipelines for ambitious commercial brands across Kozhikode, Thrissur, the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman, and international commercial corridors.
             </p>
           </div>
 
@@ -69,8 +96,8 @@ export function Footer() {
                 <MapPin size={18} aria-hidden="true" />
               </div>
               <div className={styles.contactCardText}>
-                <span className={styles.contactCardLabel}>Commercial Corridors</span>
-                <span className={styles.contactCardValue}>Kerala (HQ) &bull; UAE &bull; GCC</span>
+                <span className={styles.contactCardLabel}>Global Corridors</span>
+                <span className={styles.contactCardValue}>Kerala (HQ) &bull; GCC &bull; International</span>
               </div>
             </div>
           </div>
@@ -107,61 +134,76 @@ export function Footer() {
             </Link>
           </div>
 
-          {/* Col 2: CRM & Connected Suite */}
+          {/* Col 2: AI & Development Solutions */}
           <div className={styles.linkCol}>
-            <h4 className={styles.linkTitle}>CRM &amp; Business Suite</h4>
-            <Link href="/services/crm#lead-management" className={styles.footerLink}>
-              Automated Lead Capture
+            <h4 className={styles.linkTitle}>AI &amp; Solutions</h4>
+            <Link href="/solutions" className={styles.footerLink}>
+              AI Chatbot Development
             </Link>
-            <Link href="/services/crm#pipeline" className={styles.footerLink}>
-              Visual Sales Pipeline
+            <Link href="/solutions" className={styles.footerLink}>
+              AI Agent &amp; Workflows
             </Link>
-            <Link href="/services/crm#booking" className={styles.footerLink}>
-              Live Booking &amp; Calendar Sync
-            </Link>
-            <Link href="/services/crm#automation" className={styles.footerLink}>
-              Workflow &amp; SLA Automation
-            </Link>
-            <Link href="/services/crm#client-management" className={styles.footerLink}>
-              Client Management Portal
-            </Link>
-            <Link href="/services/crm#whatsapp" className={styles.footerLink}>
+            <Link href="/solutions" className={styles.footerLink}>
               WhatsApp Business API Hub
             </Link>
-            <Link href="/services/crm" className={styles.footerLink} style={{ color: "#ffbe0b", fontWeight: 600 }}>
-              Explore CRM Solutions &rarr;
+            <Link href="/solutions" className={styles.footerLink}>
+              Subscription &amp; Billing API
+            </Link>
+            <Link href="/solutions" className={styles.footerLink}>
+              GDPR Compliance Software
+            </Link>
+            <Link href="/solutions" className={styles.footerLink}>
+              Digital Lease Management
+            </Link>
+            <Link href="/solutions" className={styles.footerLink}>
+              WhatsApp Marketing Engine
+            </Link>
+            <Link href="/solutions" className={styles.footerLink} style={{ color: "#ffbe0b", fontWeight: 600 }}>
+              All AI &amp; Solutions &rarr;
             </Link>
           </div>
 
-          {/* Col 3: Solutions by Industry */}
+          {/* Col 3: Software by Industry */}
           <div className={styles.linkCol}>
             <h4 className={styles.linkTitle}>Solutions by Industry</h4>
-            <Link href="/work#real-estate" className={styles.footerLink}>
-              Real Estate &amp; Property
-            </Link>
-            <Link href="/work#healthcare" className={styles.footerLink}>
-              Healthcare &amp; Hospitals
-            </Link>
-            <Link href="/work#retail" className={styles.footerLink}>
+            <Link href="/industries" className={styles.footerLink}>
               Retail &amp; E-Commerce
             </Link>
-            <Link href="/work#manufacturing" className={styles.footerLink}>
+            <Link href="/industries" className={styles.footerLink}>
+              Healthcare &amp; Hospitals
+            </Link>
+            <Link href="/industries" className={styles.footerLink}>
               Manufacturing &amp; Export
             </Link>
-            <Link href="/work#hospitality" className={styles.footerLink}>
-              Hospitality &amp; Dining
+            <Link href="/industries" className={styles.footerLink}>
+              Hospitality &amp; Luxury Resorts
             </Link>
-            <Link href="/work#fintech" className={styles.footerLink}>
+            <Link href="/industries" className={styles.footerLink}>
+              Real Estate &amp; Rentals
+            </Link>
+            <Link href="/industries" className={styles.footerLink}>
+              Education &amp; EdTech
+            </Link>
+            <Link href="/industries" className={styles.footerLink}>
               Fintech &amp; Banking
             </Link>
-            <Link href="/work#logistics" className={styles.footerLink}>
+            <Link href="/industries" className={styles.footerLink}>
               Logistics &amp; Transport
+            </Link>
+            <Link href="/industries" className={styles.footerLink}>
+              Salons, Spas &amp; Wellness
+            </Link>
+            <Link href="/industries" className={styles.footerLink}>
+              Automobile Workshops
+            </Link>
+            <Link href="/industries" className={styles.footerLink} style={{ color: "#ffbe0b", fontWeight: 600 }}>
+              All 10 Industries &rarr;
             </Link>
           </div>
 
           {/* Col 4: GCC & Regional Hubs */}
           <div className={styles.linkCol}>
-            <h4 className={styles.linkTitle}>GCC &amp; Regional Hubs</h4>
+            <h4 className={styles.linkTitle}>GCC Country Hubs</h4>
             <Link href="/locations/uae" className={styles.footerLink}>
               <span className={styles.countryFlag}>🇦🇪</span> United Arab Emirates
             </Link>
@@ -178,10 +220,10 @@ export function Footer() {
               <span className={styles.countryFlag}>🇧🇭</span> Bahrain
             </Link>
             <Link href="/locations/oman" className={styles.footerLink}>
-              <span className={styles.countryFlag}>🇴🇲</span> Oman
+              <span className={styles.countryFlag}>🇴🇲</span> Sultanate of Oman
             </Link>
             <Link href="/locations" className={styles.footerLink} style={{ color: "#ffbe0b", fontWeight: 600 }}>
-              <span className={styles.countryFlag}>🇮🇳</span> Kerala (Kozhikode &bull; Thrissur) &rarr;
+              <span className={styles.countryFlag}>🇮🇳</span> India (Kozhikode &bull; Thrissur) &rarr;
             </Link>
           </div>
 
@@ -204,7 +246,7 @@ export function Footer() {
               🇸🇦 ZATCA Phase 2 E-Invoicing
             </Link>
             <Link href="/locations/uae#e-invoicing" className={styles.footerLink}>
-              🇦🇪 UAE FTA Compliance
+              🇦🇪 UAE FTA Tax Compliance
             </Link>
             <Link href="/contact" className={styles.footerLink} style={{ color: "#ffbe0b", fontWeight: 600 }}>
               Schedule Technical Discovery &rarr;
@@ -212,13 +254,40 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Global 24-Country Corridors Bar (Dictode-style) */}
+        <div style={{ padding: "1.75rem 0", borderBottom: "1px solid rgba(255, 255, 255, 0.08)" }}>
+          <span style={{ fontSize: "0.74rem", textTransform: "uppercase", letterSpacing: "0.14em", color: "#94a3b8", display: "block", marginBottom: "0.85rem", fontWeight: 700 }}>
+            Global Software Development &amp; Marketing Corridors:
+          </span>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px 16px", alignItems: "center" }}>
+            {GLOBAL_COUNTRIES.map((country, index) => (
+              <Link
+                key={index}
+                href={country.href}
+                style={{
+                  color: "rgba(255, 255, 255, 0.7)",
+                  textDecoration: "none",
+                  fontSize: "0.8rem",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "5px",
+                  transition: "color 0.15s ease",
+                }}
+              >
+                <span>{country.flag}</span>
+                <span>{country.name}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
         {/* Engineering Standards Strip */}
         <div className={styles.assuranceStrip}>
           <div className={styles.assuranceItem}>
-            <strong>Sub-Second Speed:</strong> Median LCP &lt; 1.0s across GCC &amp; Indian CDNs
+            <strong>Sub-Second Speed:</strong> Median LCP &lt; 1.0s across GCC, Indian &amp; Global CDNs
           </div>
           <div className={styles.assuranceItem}>
-            <strong>Enterprise Security:</strong> Strict HSTS, A+ SSL &amp; DPDP / GDPR Governance
+            <strong>Enterprise Security:</strong> Strict HSTS, A+ SSL, SOC2 Readiness &amp; GDPR Governance
           </div>
           <div className={styles.assuranceItem}>
             <strong>Full IP Ownership:</strong> 100% legal rights to Git code, ad accounts &amp; analytics

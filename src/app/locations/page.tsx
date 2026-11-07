@@ -1,44 +1,70 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ChevronRight, MapPin, ArrowRight, Building2, Compass, CheckCircle2, ShieldCheck, Sparkles, Globe2 } from "lucide-react";
+import { ChevronRight, MapPin, ArrowRight, Building2, Compass, CheckCircle2, ShieldCheck, Sparkles, Globe2, Plane, Clock, Shield } from "lucide-react";
 import { constructMetadata } from "@/lib/metadata";
 import { SITE_CONFIG } from "@/lib/constants";
 import styles from "@/components/locations/LocationPage.module.css";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Service Areas — Digital Marketing in Kerala | Qubizon",
+  title: "Global Service Areas & Regional Hubs | Qubizon",
   description:
-    "Explore Qubizon's service areas across Kerala, including dedicated regional expertise in Kozhikode and Thrissur. Unified web engineering, technical SEO, and paid advertising.",
+    "Explore Qubizon's service areas across the UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman, India, and our international delivery corridors in the USA, UK, and APAC.",
   path: "/locations",
   keywords: [
+    "Digital Marketing Company UAE",
+    "Web Development Company Saudi Arabia",
+    "Digital Marketing Qatar",
+    "Web Engineering Kuwait",
+    "Digital Agency Bahrain",
+    "Web Development Oman",
     "Digital Marketing Agency Kerala",
-    "Web Development Kerala",
-    "SEO Services Kozhikode",
-    "Digital Marketing Thrissur",
-    "Web Architecture Kerala",
+    "Global Software Development Corridors",
   ],
 });
 
+const GLOBAL_COUNTRIES = [
+  { code: "AE", name: "United Arab Emirates", flag: "🇦🇪", href: "/locations/uae", tag: "Enterprise Hub (Dubai & Abu Dhabi)" },
+  { code: "SA", name: "Saudi Arabia", flag: "🇸🇦", href: "/locations/saudi-arabia", tag: "Vision 2030 (Riyadh & Jeddah)" },
+  { code: "QA", name: "Qatar", flag: "🇶🇦", href: "/locations/qatar", tag: "Commercial Corridor (Doha)" },
+  { code: "KW", name: "Kuwait", flag: "🇰🇼", href: "/locations/kuwait", tag: "Retail & KNET (Kuwait City)" },
+  { code: "BH", name: "Bahrain", flag: "🇧🇭", href: "/locations/bahrain", tag: "Fintech & Logistics (Manama)" },
+  { code: "OM", name: "Oman", flag: "🇴🇲", href: "/locations/oman", tag: "Vision 2040 (Muscat & Sohar)" },
+  { code: "IN", name: "India (Kerala HQ)", flag: "🇮🇳", href: "/locations", tag: "Senior Engineering Center (Kozhikode & Thrissur)" },
+  { code: "US", name: "United States", flag: "🇺🇸", href: "/contact?region=usa", tag: "Cross-Border SaaS (NY & CA)" },
+  { code: "GB", name: "United Kingdom", flag: "🇬🇧", href: "/contact?region=uk", tag: "Fintech & B2B Corridors (London)" },
+  { code: "AU", name: "Australia", flag: "🇦🇺", href: "/contact?region=australia", tag: "Growth Marketing (Sydney & Melbourne)" },
+  { code: "SG", name: "Singapore", flag: "🇸🇬", href: "/contact?region=singapore", tag: "APAC Commercial Hub" },
+  { code: "CA", name: "Canada", flag: "🇨🇦", href: "/contact?region=canada", tag: "Tech Innovation (Toronto & Vancouver)" },
+  { code: "DE", name: "Germany", flag: "🇩🇪", href: "/contact?region=germany", tag: "DACH Engineering & GDPR Compliance" },
+  { code: "FR", name: "France", flag: "🇫🇷", href: "/contact?region=france", tag: "European Luxury & Retail" },
+  { code: "NL", name: "Netherlands", flag: "🇳🇱", href: "/contact?region=netherlands", tag: "Logistics & High-Tech Corridor" },
+  { code: "ES", name: "Spain", flag: "🇪🇸", href: "/contact?region=spain", tag: "Southern European Hub" },
+  { code: "NZ", name: "New Zealand", flag: "🇳🇿", href: "/contact?region=new-zealand", tag: "Oceania Business Corridor" },
+  { code: "MY", name: "Malaysia", flag: "🇲🇾", href: "/contact?region=malaysia", tag: "ASEAN Trade & Cloud" },
+  { code: "PH", name: "Philippines", flag: "🇵🇭", href: "/contact?region=philippines", tag: "Digital Services Corridor" },
+  { code: "ID", name: "Indonesia", flag: "🇮🇩", href: "/contact?region=indonesia", tag: "SEA E-Commerce Scale" },
+  { code: "TH", name: "Thailand", flag: "🇹🇭", href: "/contact?region=thailand", tag: "Hospitality & Digital Commerce" },
+  { code: "ZA", name: "South Africa", flag: "🇿🇦", href: "/contact?region=south-africa", tag: "African Financial & Tech Hub" },
+  { code: "NG", name: "Nigeria", flag: "🇳🇬", href: "/contact?region=nigeria", tag: "West African Enterprise Corridor" },
+  { code: "KE", name: "Kenya", flag: "🇰🇪", href: "/contact?region=kenya", tag: "East African Innovation Corridor" },
+];
+
 const LOCATION_FAQS = [
   {
-    q: "How does Qubizon deliver digital services across Kerala?",
-    a: "We operate a unified delivery model combining regional strategic consulting with high-speed remote engineering. Whether your headquarters are in Kozhikode, Thrissur, Kochi, or Trivandrum, you receive direct senior practitioner collaboration, bi-weekly sprint reviews, and production deployment transparency without physical friction.",
+    q: "How does Qubizon deliver software engineering and digital marketing across 24+ countries?",
+    a: "We operate a high-velocity cross-border delivery model. Our senior engineering collective is centralized in Kerala, India—providing world-class technical talent, high sprint velocity, and cost advantages—while maintaining dedicated time-zone alignment with GCC clients (UTC+3, UTC+4), European teams (GMT/CET), and US commercial stakeholders.",
   },
   {
-    q: "Why is custom Next.js development preferred for Kerala businesses?",
-    a: "Commercial enterprises in Kerala face increasingly mobile-first user traffic. Custom Next.js web applications eliminate plugin bloat, load in sub-second LCP on 4G/5G mobile devices, and score 100/100 on Google Core Web Vitals, providing decisive competitive advantages over legacy WordPress sites.",
+    q: "What makes your GCC delivery corridor (UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman) so effective?",
+    a: "Our proximity to the Gulf (1.5 to 2.5 hours time difference and daily direct flights) enables live agile standups, same-day executive communication, native bilingual Arabic/English UX engineering, and localized tax/invoice compliance (ZATCA Phase 2, UAE FTA VAT, KNET).",
   },
   {
-    q: "Can businesses outside Kozhikode and Thrissur partner with Qubizon?",
-    a: "Yes. While Kozhikode and Thrissur represent our core practitioner hubs, we actively engineer digital platforms and manage high-intent search campaigns for enterprise clients across Kerala, Bangalore, Dubai, and the broader GCC region.",
+    q: "How do you handle IP ownership and legal contracts for international clients?",
+    a: "All international clients retain 100% legal ownership of code repositories, Git branches, ad accounts, and analytics data from the first sprint. We sign binding mutual Non-Disclosure Agreements (NDAs) prior to scoping any proprietary workflows.",
   },
   {
-    q: "How does Qubizon optimize local Google Business Profiles and regional search rankings?",
-    a: "We implement code-level geo-coordinates, LocalBusiness schema entities, localized landing page silos, and citation consistency that establish dominant map pack visibility across targeted regional municipalities.",
-  },
-  {
-    q: "Do you offer in-person technical scoping workshops in Kerala?",
-    a: "Yes. For enterprise clients requiring executive stakeholder alignment or detailed ERP/CRM systems discovery, our engineering leads conduct on-site discovery workshops across Kozhikode, Thrissur, and Kochi.",
+    q: "Do you offer in-person consultations for enterprise clients outside India?",
+    a: "Yes. Our practice leads frequently travel to Dubai, Riyadh, Doha, and regional GCC commercial centers for in-person architectural discovery sessions, ERP integration workshops, and executive quarterly reviews.",
   },
 ];
 
@@ -68,220 +94,326 @@ export default function LocationsIndexPage() {
   };
 
   return (
-    <div className={`container ${styles.pageContainer}`}>
+    <div className={styles.container}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <nav aria-label="Breadcrumb">
-        <ul className={styles.breadcrumb}>
-          <li><Link href="/">Home</Link></li>
-          <ChevronRight size={12} aria-hidden="true" />
-          <li aria-current="page">Service Areas</li>
-        </ul>
+      {/* Breadcrumb Navigation */}
+      <nav aria-label="Breadcrumb" className={styles.breadcrumbs}>
+        <ol>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li aria-current="page">
+            <ChevronRight size={14} aria-hidden="true" />
+            <span>Global Service Areas &amp; Hubs</span>
+          </li>
+        </ol>
       </nav>
 
-      <header className={styles.hero}>
-        <div className={styles.badge}>
-          <Globe2 size={14} aria-hidden="true" />
-          <span>Regional &amp; GCC Coverage • Kerala &amp; UAE</span>
+      {/* Header */}
+      <header className={styles.header}>
+        <div className={styles.regionBadge}>
+          <Globe2 size={15} aria-hidden="true" />
+          <span>CROSS-BORDER DIGITAL ENGINEERING &bull; GCC &bull; GLOBAL CORRIDORS</span>
         </div>
         <h1 className={styles.title}>
-          Regional &amp; International <span className="calligraphy">Service Hubs</span>
+          Global Service Areas &amp; Delivery Corridors
         </h1>
-        <p className={styles.lead}>
-          Qubizon provides high-performance Next.js web development, technical SEO, and conversion-optimized marketing
-          for enterprises throughout Kerala and the GCC (Dubai, Abu Dhabi, Sharjah). We combine deep regional market insights with world-class engineering standards.
+        <p className={styles.subtitle}>
+          Qubizon delivers unified Next.js 15 web engineering, technical SEO knowledge graphs, and automated growth funnels to high-growth enterprises across the GCC, India, and key international markets across North America, Europe, and the Asia-Pacific region.
         </p>
+
+        <div className={styles.statsStrip}>
+          <div className={styles.statCard}>
+            <span className={styles.statValue}>24+</span>
+            <span className={styles.statLabel}>Commercial Country Corridors</span>
+          </div>
+          <div className={styles.statCard}>
+            <span className={styles.statValue}>100%</span>
+            <span className={styles.statLabel}>Client IP &amp; Git Code Ownership</span>
+          </div>
+          <div className={styles.statCard}>
+            <span className={styles.statValue}>Sub-Second</span>
+            <span className={styles.statLabel}>LCP on Global CloudFlare/AWS Edge</span>
+          </div>
+          <div className={styles.statCard}>
+            <span className={styles.statValue}>Real-Time</span>
+            <span className={styles.statLabel}>Same-Time-Zone Standup Alignment</span>
+          </div>
+        </div>
       </header>
 
-      {/* Priority Regional & International Hubs */}
-      <section className={styles.section} aria-labelledby="priority-markets">
-        <h2 id="priority-markets" className={styles.sectionTitle}>
-          Priority Regional &amp; International Hubs
+      {/* Primary GCC Hubs Grid */}
+      <section style={{ marginTop: "3.5rem" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • PRIMARY GCC HUBS /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.75rem, 3vw, 2.25rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1.25rem" }}>
+          Dedicated Gulf Country Commercial Corridors
         </h2>
-        <div className={styles.servicesGrid}>
-          {/* UAE & GCC Hub */}
-          <div className={styles.serviceCard} style={{ border: "2px solid rgba(0, 72, 142, 0.2)", background: "rgba(255, 255, 255, 0.95)" }}>
-            <div className={styles.cardIcon}><Globe2 size={22} aria-hidden="true" style={{ color: "var(--brand-blue, #00488e)" }} /></div>
-            <h3 className={styles.cardTitle}>UAE &amp; GCC Hub (Dubai &amp; Abu Dhabi)</h3>
-            <p className={styles.cardDesc}>
-              Partnering with commercial leaders and luxury enterprises across Dubai, Abu Dhabi, Sharjah, and the GCC with sub-second Next.js architecture, Google.ae search authority, and WhatsApp lead automation.
-            </p>
-            <Link href="/locations/uae" className={styles.cardLink} style={{ fontWeight: 700, color: "var(--brand-blue, #00488e)" }}>
-              Explore UAE &amp; GCC Services <ChevronRight size={14} aria-hidden="true" />
-            </Link>
-          </div>
-
-          {/* Kozhikode Hub */}
-          <div className={styles.serviceCard}>
-            <div className={styles.cardIcon}><Building2 size={22} aria-hidden="true" /></div>
-            <h3 className={styles.cardTitle}>Kozhikode (Calicut)</h3>
-            <p className={styles.cardDesc}>
-              Serving Kozhikode&apos;s dynamic trade, retail, healthcare, and export businesses with custom Next.js
-              platforms, localized search visibility, and performance marketing.
-            </p>
-            <Link href="/locations/kozhikode" className={styles.cardLink}>
-              View Kozhikode Services <ChevronRight size={14} aria-hidden="true" />
-            </Link>
-          </div>
-
-          {/* Thrissur Hub */}
-          <div className={styles.serviceCard}>
-            <div className={styles.cardIcon}><Building2 size={22} aria-hidden="true" /></div>
-            <h3 className={styles.cardTitle}>Thrissur (Trichur)</h3>
-            <p className={styles.cardDesc}>
-              Supporting Thrissur&apos;s commercial institutions, retail leaders, and manufacturing innovators with
-              sub-second web engineering and targeted customer acquisition campaigns.
-            </p>
-            <Link href="/locations/thrissur" className={styles.cardLink}>
-              View Thrissur Services <ChevronRight size={14} aria-hidden="true" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Statewide Industry Solutions */}
-      <section className={styles.section} aria-labelledby="regional-solutions" style={{ marginTop: "3rem" }}>
-        <h2 id="regional-solutions" className={styles.sectionTitle}>
-          Disciplined Capabilities Across Kerala&apos;s High-Growth Sectors
-        </h2>
-        <p className={styles.sectionSubtitle} style={{ marginBottom: "2rem", maxWidth: "800px" }}>
-          Modern regional businesses require synchronized digital execution rather than fragmented freelancer handoffs.
-          Our integrated cube model delivers compound growth across multiple verticals:
+        <p style={{ fontSize: "1.05rem", lineHeight: 1.7, color: "#4a5568", maxWidth: "880px", marginBottom: "2rem" }}>
+          Explore our dedicated country landing pages with localized market context, statutory e-invoicing compliance, and Arabic/English bi-directional web architecture.
         </p>
 
-        <div className={styles.servicesGrid}>
-          <div className={styles.serviceCard}>
-            <h3 className={styles.cardTitle}>Retail, Wholesale &amp; E-Commerce</h3>
-            <p className={styles.cardDesc}>
-              Fast, resilient Next.js storefronts engineered with sub-second catalog navigation and automated local search visibility to capture regional shoppers in Malabar and Central Kerala.
-            </p>
-            <Link href="/services/web-development" className={styles.cardLink}>
-              Explore Web Architecture <ChevronRight size={14} aria-hidden="true" />
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "1.5rem" }}>
+          {/* UAE */}
+          <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "16px", padding: "2rem", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+            <div>
+              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "0.75rem" }}>
+                <span style={{ fontSize: "1.75rem" }}>🇦🇪</span>
+                <h3 style={{ fontSize: "1.3rem", fontWeight: 700, color: "#0a0a0a", margin: 0 }}>United Arab Emirates</h3>
+              </div>
+              <p style={{ fontSize: "0.92rem", lineHeight: 1.6, color: "#64748b", marginBottom: "1rem" }}>
+                Dubai &amp; Abu Dhabi enterprise corridor. High-velocity Next.js web applications, UAE FTA e-invoicing compliance, and luxury real estate PPC advertising.
+              </p>
+            </div>
+            <Link href="/locations/uae" style={{ color: "#00488e", fontWeight: 700, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+              <span>Explore UAE Enterprise Hub</span>
+              <ArrowRight size={16} aria-hidden="true" />
             </Link>
           </div>
 
-          <div className={styles.serviceCard}>
-            <h3 className={styles.cardTitle}>Healthcare, Diagnostics &amp; Wellness</h3>
-            <p className={styles.cardDesc}>
-              HIPAA/data-compliant patient inquiry funnels, verified Google Business Profile entity optimization, and zero-leakage search advertising for leading Kerala hospitals and clinics.
-            </p>
-            <Link href="/services/seo" className={styles.cardLink}>
-              Explore Technical SEO <ChevronRight size={14} aria-hidden="true" />
+          {/* Saudi Arabia */}
+          <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "16px", padding: "2rem", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+            <div>
+              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "0.75rem" }}>
+                <span style={{ fontSize: "1.75rem" }}>🇸🇦</span>
+                <h3 style={{ fontSize: "1.3rem", fontWeight: 700, color: "#0a0a0a", margin: 0 }}>Saudi Arabia</h3>
+              </div>
+              <p style={{ fontSize: "0.92rem", lineHeight: 1.6, color: "#64748b", marginBottom: "1rem" }}>
+                Riyadh &amp; Jeddah market acceleration under Saudi Vision 2030. ZATCA Phase 2 e-invoicing integration, native Arabic RTL UX, and B2B industrial funnels.
+              </p>
+            </div>
+            <Link href="/locations/saudi-arabia" style={{ color: "#00488e", fontWeight: 700, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+              <span>Explore Saudi Arabia Hub</span>
+              <ArrowRight size={16} aria-hidden="true" />
             </Link>
           </div>
 
-          <div className={styles.serviceCard}>
-            <h3 className={styles.cardTitle}>Real Estate &amp; Commercial Development</h3>
-            <p className={styles.cardDesc}>
-              High-intent Google Ads funnels and immersive project showcase portals built to capture qualified property investors and NRI buyers across the GCC and tier-one Indian metros.
-            </p>
-            <Link href="/services/paid-advertising" className={styles.cardLink}>
-              Explore Paid Advertising <ChevronRight size={14} aria-hidden="true" />
+          {/* Qatar */}
+          <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "16px", padding: "2rem", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+            <div>
+              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "0.75rem" }}>
+                <span style={{ fontSize: "1.75rem" }}>🇶🇦</span>
+                <h3 style={{ fontSize: "1.3rem", fontWeight: 700, color: "#0a0a0a", margin: 0 }}>Qatar</h3>
+              </div>
+              <p style={{ fontSize: "0.92rem", lineHeight: 1.6, color: "#64748b", marginBottom: "1rem" }}>
+                Doha &amp; Lusail commercial growth. Google.com.qa search dominance, luxury hospitality booking systems, and executive LinkedIn demand generation.
+              </p>
+            </div>
+            <Link href="/locations/qatar" style={{ color: "#00488e", fontWeight: 700, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+              <span>Explore Qatar Hub</span>
+              <ArrowRight size={16} aria-hidden="true" />
             </Link>
           </div>
 
-          <div className={styles.serviceCard}>
-            <h3 className={styles.cardTitle}>Manufacturing &amp; Export Enterprises</h3>
-            <p className={styles.cardDesc}>
-              B2B lead pipelines, global organic search authority, and automated CRM workflows that connect spice, textile, marine, and industrial exporters to international corporate buyers.
-            </p>
-            <Link href="/services/crm" className={styles.cardLink}>
-              Explore CRM &amp; Automation <ChevronRight size={14} aria-hidden="true" />
+          {/* Kuwait */}
+          <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "16px", padding: "2rem", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+            <div>
+              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "0.75rem" }}>
+                <span style={{ fontSize: "1.75rem" }}>🇰🇼</span>
+                <h3 style={{ fontSize: "1.3rem", fontWeight: 700, color: "#0a0a0a", margin: 0 }}>Kuwait</h3>
+              </div>
+              <p style={{ fontSize: "0.92rem", lineHeight: 1.6, color: "#64748b", marginBottom: "1rem" }}>
+                Kuwait City retail &amp; commercial expansion. KNET payment gateway integration, headless e-commerce, and automated WhatsApp sales pipelines.
+              </p>
+            </div>
+            <Link href="/locations/kuwait" style={{ color: "#00488e", fontWeight: 700, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+              <span>Explore Kuwait Hub</span>
+              <ArrowRight size={16} aria-hidden="true" />
+            </Link>
+          </div>
+
+          {/* Bahrain */}
+          <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "16px", padding: "2rem", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+            <div>
+              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "0.75rem" }}>
+                <span style={{ fontSize: "1.75rem" }}>🇧🇭</span>
+                <h3 style={{ fontSize: "1.3rem", fontWeight: 700, color: "#0a0a0a", margin: 0 }}>Bahrain</h3>
+              </div>
+              <p style={{ fontSize: "0.92rem", lineHeight: 1.6, color: "#64748b", marginBottom: "1rem" }}>
+                Manama financial and logistics corridor. Central Bank of Bahrain (CBB) regulatory compliance, fintech portals, and port logistics solutions.
+              </p>
+            </div>
+            <Link href="/locations/bahrain" style={{ color: "#00488e", fontWeight: 700, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+              <span>Explore Bahrain Hub</span>
+              <ArrowRight size={16} aria-hidden="true" />
+            </Link>
+          </div>
+
+          {/* Oman */}
+          <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "16px", padding: "2rem", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+            <div>
+              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "0.75rem" }}>
+                <span style={{ fontSize: "1.75rem" }}>🇴🇲</span>
+                <h3 style={{ fontSize: "1.3rem", fontWeight: 700, color: "#0a0a0a", margin: 0 }}>Sultanate of Oman</h3>
+              </div>
+              <p style={{ fontSize: "0.92rem", lineHeight: 1.6, color: "#64748b", marginBottom: "1rem" }}>
+                Muscat &amp; Sohar industrial growth under Oman Vision 2040. B2B export portals, tourism booking engines, and bilingual Arabic search optimization.
+              </p>
+            </div>
+            <Link href="/locations/oman" style={{ color: "#00488e", fontWeight: 700, textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "6px" }}>
+              <span>Explore Oman Hub</span>
+              <ArrowRight size={16} aria-hidden="true" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Kerala Digital Economy Growth Corridors */}
-      <section style={{ marginTop: "3rem", background: "rgba(255, 255, 255, 0.85)", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "20px", padding: "clamp(2rem, 4vw, 3rem)" }}>
-        <h2 className={styles.sectionTitle} style={{ textAlign: "center", marginBottom: "1rem" }}>
-          Kerala&apos;s Digital Transformation Corridors
+      {/* India Regional Engineering Center */}
+      <section style={{ marginTop: "4rem", background: "#f8fafc", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • ENGINEERING HEADQUARTERS &bull; KERALA /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.6rem, 2.5vw, 2rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+          India Regional Delivery Hubs
         </h2>
-        <p className={styles.sectionSubtitle} style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 2.5rem auto" }}>
-          Kerala is undergoing rapid economic and digital modernisation, driven by national highway upgrades, growing IT corridors, and expanding international trade:
+        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "820px", marginBottom: "2rem" }}>
+          Our senior software architects and digital strategists are anchored in Kerala&apos;s fastest-growing enterprise technology corridors.
         </p>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
-          <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
-            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
-              Malabar Commercial Corridor (NH-66)
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <Building2 size={22} style={{ color: "#00488e", marginBottom: "0.75rem" }} aria-hidden="true" />
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Kozhikode (Calicut) Regional Hub
             </h3>
-            <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
-              Connecting Kozhikode, Kannur, and Kasaragod, this northern corridor represents Kerala&apos;s fastest-growing retail and healthcare hub, demanding sub-second mobile digital experiences and localized search dominance.
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", marginBottom: "1rem" }}>
+              High-growth retail, healthcare, real estate, and B2B export engineering across the Malabar commercial center.
             </p>
+            <Link href="/locations/kozhikode" style={{ color: "#00488e", fontWeight: 700, fontSize: "0.88rem", textDecoration: "none" }}>
+              View Kozhikode Hub &rarr;
+            </Link>
           </div>
 
-          <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
-            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
-              Central Kerala Financial &amp; NRI Belt
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <Building2 size={22} style={{ color: "#00488e", marginBottom: "0.75rem" }} aria-hidden="true" />
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Thrissur Regional Hub
             </h3>
-            <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
-              Centred in Thrissur, Ernakulam, and Palakkad, this region commands substantial private wealth and remittances. We help financial institutions and luxury brands establish authoritative, high-converting digital footprints.
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", marginBottom: "1rem" }}>
+              Jewelry, finance, textile manufacturing, and healthcare digital transformation across Central Kerala.
             </p>
-          </div>
-
-          <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
-            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
-              Cross-Border GCC Commercial Linkages
-            </h3>
-            <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
-              With deep business ties between Kerala and Dubai, Riyadh, Doha, and Muscat, our technical marketing funnels are engineered to engage high-net-worth Gulf NRI audiences seamlessly.
-            </p>
+            <Link href="/locations/thrissur" style={{ color: "#00488e", fontWeight: 700, fontSize: "0.88rem", textDecoration: "none" }}>
+              View Thrissur Hub &rarr;
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Frequently Asked Questions */}
-      <section className={styles.section} aria-labelledby="regional-faqs" style={{ marginTop: "3rem" }}>
-        <h2 id="regional-faqs" className={styles.sectionTitle}>
-          Regional Service Delivery Questions
+      {/* Global 24-Country Directory Matrix (Dictode-aligned) */}
+      <section style={{ marginTop: "4rem" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • GLOBAL DELIVERY NETWORK /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.6rem, 2.5vw, 2rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+          Software Development &amp; Marketing by Country
         </h2>
-        <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginTop: "1.5rem" }}>
-          {LOCATION_FAQS.map((faq, i) => (
-            <div
-              key={i}
+        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "820px", marginBottom: "2rem" }}>
+          Partner with our senior engineering collective from any global commercial center. We provide seamless cross-border collaboration, dedicated regional legal compliance, and sub-second global CDN delivery.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: "1rem" }}>
+          {GLOBAL_COUNTRIES.map((country) => (
+            <Link
+              key={country.code}
+              href={country.href}
               style={{
-                background: "rgba(255, 255, 255, 0.9)",
-                border: "1px solid rgba(0, 0, 0, 0.08)",
-                borderRadius: "16px",
-                padding: "1.5rem",
-                boxShadow: "0 2px 10px rgba(0, 0, 0, 0.03)",
+                background: "#ffffff",
+                border: "1px solid #e2e8f0",
+                borderRadius: "12px",
+                padding: "1rem 1.25rem",
+                textDecoration: "none",
+                display: "flex",
+                flexDirection: "column",
+                transition: "all 0.2s ease",
               }}
             >
-              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--clr-foreground, #0a0a0a)", marginBottom: "0.5rem" }}>
-                {faq.q}
-              </h3>
-              <p style={{ fontSize: "0.95rem", color: "var(--color-text-secondary, #64748b)", lineHeight: "1.6" }}>
-                {faq.a}
-              </p>
-            </div>
+              <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "4px" }}>
+                <span style={{ fontSize: "1.25rem" }}>{country.flag}</span>
+                <span style={{ fontWeight: 700, color: "#0a0a0a", fontSize: "0.95rem" }}>{country.name}</span>
+              </div>
+              <span style={{ fontSize: "0.78rem", color: "#64748b" }}>{country.tag}</span>
+            </Link>
           ))}
         </div>
       </section>
 
-      {/* Statewide & Remote Delivery */}
-      <section className={styles.deliveryCard} aria-labelledby="statewide-delivery" style={{ marginTop: "3.5rem" }}>
-        <div className={styles.badge}>
-          <MapPin size={14} aria-hidden="true" />
-          <span>Statewide &amp; Global Remote Engagement</span>
-        </div>
-        <h2 id="statewide-delivery" className={styles.sectionTitle}>
-          Serving Growth Businesses Statewide &amp; Beyond
+      {/* Frequently Asked Questions */}
+      <section style={{ marginTop: "4rem" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • GLOBAL INQUIRIES /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.6rem, 2.5vw, 2rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "2rem" }}>
+          Frequently Asked Questions on Cross-Border Collaboration
         </h2>
-        <p className={styles.sectionSubtitle}>
-          Whether your company is located in Kochi, Thiruvananthapuram, Kannur, or targeting international customers
-          in the GCC, our disciplined digital model operates without physical geographical friction. Discover how custom web engineering and technical SEO can accelerate your pipeline.
+        <div className={styles.faqList}>
+          {LOCATION_FAQS.map((faq, index) => (
+            <details key={index} className={styles.faqItem}>
+              <summary className={styles.faqQuestion}>
+                <span>{faq.q}</span>
+                <ChevronRight size={18} aria-hidden="true" />
+              </summary>
+              <div className={styles.faqAnswer}>
+                <p>{faq.a}</p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA Card */}
+      <section style={{ marginTop: "4rem", background: "linear-gradient(135deg, #0b1530 0%, #00488e 100%)", borderRadius: "24px", padding: "clamp(2.5rem, 5vw, 4rem)", color: "#ffffff", textAlign: "center" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#ffbe0b", display: "block", marginBottom: "0.75rem" }}>
+          • CONNECT ACROSS ANY GLOBAL CORRIDOR /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.75rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#ffffff", marginBottom: "1rem" }}>
+          Ready to Scale Your Business Internationally?
+        </h2>
+        <p style={{ fontSize: "1rem", color: "rgba(255, 255, 255, 0.8)", maxWidth: "720px", margin: "0 auto 2rem auto", lineHeight: 1.65 }}>
+          Schedule a technical discovery session with our senior architects to discuss your international growth objectives and receive a tailored implementation proposal.
         </p>
-        <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "1.5rem" }}>
-          <Link href="/contact" className={styles.primaryBtn}>
-            <span>Schedule a Strategy Discovery</span>
+        <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
+          <Link
+            href="/contact"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "14px 32px",
+              background: "#ffbe0b",
+              color: "#0a0a0a",
+              fontWeight: 700,
+              fontSize: "14px",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              textTransform: "uppercase",
+              letterSpacing: "0.04em",
+            }}
+          >
+            <span>Book a Technical Discovery Call</span>
             <ArrowRight size={16} aria-hidden="true" />
           </Link>
-          <Link href="/blog/why-nextjs-outperforms-wordpress-kerala-enterprises" className={styles.secondaryBtn}>
-            <span>Read Next.js Case Study &rarr;</span>
+          <Link
+            href="/work"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "14px 28px",
+              background: "transparent",
+              color: "#ffffff",
+              border: "1px solid rgba(255, 255, 255, 0.3)",
+              fontWeight: 600,
+              fontSize: "14px",
+              borderRadius: "9999px",
+              textDecoration: "none",
+            }}
+          >
+            <span>Inspect Our Benchmarks</span>
           </Link>
         </div>
       </section>

@@ -151,6 +151,24 @@ export function Navbar() {
                           <span className={styles.dropdownDesc}>Automated lead capture, booking engine &amp; pipeline management</span>
                         </Link>
                         <Link
+                          href="/solutions"
+                          className={styles.dropdownItem}
+                          role="menuitem"
+                          onClick={() => setIsServicesOpen(false)}
+                        >
+                          <span className={styles.dropdownTitle}>AI &amp; Enterprise Solutions</span>
+                          <span className={styles.dropdownDesc}>AI chatbots, agentic workflows &amp; WhatsApp Business API</span>
+                        </Link>
+                        <Link
+                          href="/industries"
+                          className={styles.dropdownItem}
+                          role="menuitem"
+                          onClick={() => setIsServicesOpen(false)}
+                        >
+                          <span className={styles.dropdownTitle}>Software by Industry</span>
+                          <span className={styles.dropdownDesc}>Tailored architectures for Real Estate, Healthcare, Retail &amp; B2B</span>
+                        </Link>
+                        <Link
                           href="/locations/uae"
                           className={styles.dropdownItem}
                           role="menuitem"
@@ -230,6 +248,20 @@ export function Navbar() {
                         onClick={() => setIsOpen(false)}
                       >
                         • CRM &amp; Workflow Automation
+                      </Link>
+                      <Link
+                        href="/solutions"
+                        className={styles.mobileSubLink}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        • AI &amp; Enterprise Solutions
+                      </Link>
+                      <Link
+                        href="/industries"
+                        className={styles.mobileSubLink}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        • Solutions by Industry
                       </Link>
                       <Link
                         href="/locations/uae"

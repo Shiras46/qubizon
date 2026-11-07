@@ -27,6 +27,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.9,
     },
+    {
+      url: `${SITE_CONFIG.domain}/solutions`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.95,
+    },
+    {
+      url: `${SITE_CONFIG.domain}/industries`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.95,
+    },
   ];
 
   // 3. Regional & International Service Area routes (Kerala & GCC Hubs)
