@@ -3,7 +3,7 @@ import { ServicePageTemplate, type ServicePageProps } from "@/components/service
 import { constructMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Paid Advertising & Performance Marketing Services",
+  title: "Paid Advertising & PPC Growth Marketing | Qubizon",
   description:
     "Data-backed PPC, paid search, and conversion-optimized ad campaigns engineered for measurable return on ad spend and low acquisition costs.",
   path: "/services/paid-advertising",
@@ -120,6 +120,13 @@ const PAID_ADS_DATA: ServicePageProps = {
       href: "/services/content-marketing",
     },
   ],
+  featuredArticle: {
+    title: "Performance PPC: Eliminating Budget Waste in Google Ads & Paid Social",
+    href: "/blog/performance-ppc-budget-waste-reduction",
+    excerpt:
+      "Stop burning ad spend on broad match traps and broken attribution. Uncover how high-intent search segmentation, negative keyword hygiene, and server-side tracking protect your acquisition budget.",
+    readTime: "8 min read",
+  },
   faqs: [
     {
       question: "What minimum ad budget is recommended to get started?",

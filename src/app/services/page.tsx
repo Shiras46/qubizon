@@ -7,9 +7,9 @@ import { ServicesPageClient } from "@/components/services/ServicesPageClient";
 import styles from "@/components/services/ServicesIndex.module.css";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Services & Capabilities — Full-Stack Digital Disciplines & CRM Systems",
+  title: "Digital Marketing & Web Development Services | Qubizon",
   description:
-    "Explore Qubizon's digital engineering and growth capabilities: Mobile Apps, Web Development, SEO, Cloud Services, SMM, Design, Offshore Resources, and End-to-End CRM & Workflow Automation.",
+    "Explore Qubizon's digital capabilities: Mobile Apps, Next.js Web Development, Technical SEO, Cloud Hosting, SMM, and End-to-End CRM Automation in Kerala.",
   path: "/services",
   keywords: [
     "Digital Services Kerala",

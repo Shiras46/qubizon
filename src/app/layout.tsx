@@ -25,7 +25,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = constructMetadata({
-  title: `${SITE_CONFIG.name} — ${SITE_CONFIG.slogan}`,
+  title: "Qubizon — Digital Marketing & Web Development Kerala",
   description: SITE_CONFIG.description,
   path: "/",
 });

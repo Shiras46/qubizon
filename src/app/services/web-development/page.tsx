@@ -3,7 +3,7 @@ import { ServicePageTemplate, type ServicePageProps } from "@/components/service
 import { constructMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Website Development & Web Architecture Services",
+  title: "Website Development & Web Architecture | Qubizon",
   description:
     "Custom Next.js App Router web development engineered for sub-second speeds, zero layout shift, strict WCAG 2.1 AA accessibility, and high conversion rates.",
   path: "/services/web-development",
@@ -120,6 +120,13 @@ const WEB_DEV_DATA: ServicePageProps = {
       href: "/services/content-marketing",
     },
   ],
+  featuredArticle: {
+    title: "Why Next.js Outperforms WordPress for Kerala Enterprises",
+    href: "/blog/why-nextjs-outperforms-wordpress-kerala-enterprises",
+    excerpt:
+      "Discover why forward-thinking enterprises in Kerala and the Middle East are migrating from monolithic CMS platforms to Next.js App Router for sub-second speeds, zero-plugin security, and superior Google Core Web Vitals.",
+    readTime: "7 min read",
+  },
   faqs: [
     {
       question: "What technology stack does Qubizon use for website development?",

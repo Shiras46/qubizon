@@ -3,7 +3,7 @@ import { ServicePageTemplate, type ServicePageProps } from "@/components/service
 import { constructMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Content Marketing & Authority Editorial Services",
+  title: "Content Marketing & Editorial Authority | Qubizon",
   description:
     "Authoritative B2B content marketing, search-aligned editorial, and technical copywriting engineered to build market credibility and convert decision-makers.",
   path: "/services/content-marketing",
@@ -125,6 +125,13 @@ const CONTENT_MARKETING_DATA: ServicePageProps = {
       href: "/services/web-development",
     },
   ],
+  featuredArticle: {
+    title: "Technical SEO & Crawl Budget Optimization: Enterprise Architectural Guide",
+    href: "/blog/technical-seo-crawl-budget-optimization-guide",
+    excerpt:
+      "Explore how search engines evaluate topical authority clusters, entity disambiguation, and structured editorial content to drive sustainable organic rankings.",
+    readTime: "9 min read",
+  },
   faqs: [
     {
       question: "How do you handle highly technical or niche industry topics?",

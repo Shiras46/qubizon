@@ -120,6 +120,13 @@ const SOCIAL_MEDIA_DATA: ServicePageProps = {
       href: "/services/paid-advertising",
     },
   ],
+  featuredArticle: {
+    title: "Performance PPC: Eliminating Budget Waste in Google Ads & Paid Social",
+    href: "/blog/performance-ppc-budget-waste-reduction",
+    excerpt:
+      "Learn how organic social engagement metrics and executive storytelling feed high-converting paid social distribution engines without burning ad budget.",
+    readTime: "8 min read",
+  },
   faqs: [
     {
       question: "Which social media platforms does Qubizon manage?",

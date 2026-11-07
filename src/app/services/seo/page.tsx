@@ -120,6 +120,13 @@ const SEO_DATA: ServicePageProps = {
       href: "/services/paid-advertising",
     },
   ],
+  featuredArticle: {
+    title: "Technical SEO & Crawl Budget Optimization: Enterprise Architectural Guide",
+    href: "/blog/technical-seo-crawl-budget-optimization-guide",
+    excerpt:
+      "Learn how search engine bots crawl large-scale web applications, how JavaScript hydration impacts indexing efficiency, and how to configure robots.txt and XML sitemaps to protect crawl budget.",
+    readTime: "9 min read",
+  },
   faqs: [
     {
       question: "How long does it take to see results from technical SEO?",

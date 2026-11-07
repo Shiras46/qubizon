@@ -19,7 +19,7 @@ export const BLOG_POSTS: BlogPostSummary[] = [
       "A technical comparison analyzing sub-second Core Web Vitals, security overhead, crawl efficiency, and long-term TCO between monolithic CMS platforms and custom Next.js App Router applications.",
     date: "2026-10-18",
     readTime: "6 min read",
-    isDraft: true,
+    isDraft: false,
   },
   {
     slug: "technical-seo-crawl-budget-optimization-guide",
@@ -30,7 +30,7 @@ export const BLOG_POSTS: BlogPostSummary[] = [
       "How enterprise businesses in Kozhikode and Thrissur can leverage Schema.org entity graphs, canonical hierarchy, and robots.txt directives to maximize search engine indexing velocity.",
     date: "2026-10-12",
     readTime: "8 min read",
-    isDraft: true,
+    isDraft: false,
   },
   {
     slug: "performance-ppc-budget-waste-reduction",
@@ -41,7 +41,7 @@ export const BLOG_POSTS: BlogPostSummary[] = [
       "A practical blueprint for commercial businesses looking to reduce cost-per-acquisition by eliminating untargeted search queries and establishing high-intent landing page parity.",
     date: "2026-10-05",
     readTime: "5 min read",
-    isDraft: true,
+    isDraft: false,
   },
 ];
 

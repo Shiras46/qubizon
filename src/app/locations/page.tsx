@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ChevronRight, MapPin, ArrowRight, Building2, Compass } from "lucide-react";
+import { ChevronRight, MapPin, ArrowRight, Building2, Compass, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react";
 import { constructMetadata } from "@/lib/metadata";
 import { SITE_CONFIG } from "@/lib/constants";
 import styles from "@/components/locations/LocationPage.module.css";
@@ -19,16 +19,42 @@ export const metadata: Metadata = constructMetadata({
   ],
 });
 
+const LOCATION_FAQS = [
+  {
+    q: "How does Qubizon deliver digital services across Kerala?",
+    a: "We operate a unified delivery model combining regional strategic consulting with high-speed remote engineering. Whether your headquarters are in Kozhikode, Thrissur, Kochi, or Trivandrum, you receive direct senior practitioner collaboration, bi-weekly sprint reviews, and production deployment transparency without physical friction.",
+  },
+  {
+    q: "Why is custom Next.js development preferred for Kerala businesses?",
+    a: "Commercial enterprises in Kerala face increasingly mobile-first user traffic. Custom Next.js web applications eliminate plugin bloat, load in sub-second LCP on 4G/5G mobile devices, and score 100/100 on Google Core Web Vitals, providing decisive competitive advantages over legacy WordPress sites.",
+  },
+  {
+    q: "Can businesses outside Kozhikode and Thrissur partner with Qubizon?",
+    a: "Yes. While Kozhikode and Thrissur represent our core practitioner hubs, we actively engineer digital platforms and manage high-intent search campaigns for enterprise clients across Kerala, Bangalore, Dubai, and the broader GCC region.",
+  },
+];
+
 export default function LocationsIndexPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": SITE_CONFIG.domain },
-          { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": `${SITE_CONFIG.domain}/locations` },
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE_CONFIG.domain },
+          { "@type": "ListItem", position: 2, name: "Service Areas", item: `${SITE_CONFIG.domain}/locations` },
         ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: LOCATION_FAQS.map((faq) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.a,
+          },
+        })),
       },
     ],
   };
@@ -62,6 +88,7 @@ export default function LocationsIndexPage() {
         </p>
       </header>
 
+      {/* Priority Regional Hubs */}
       <section className={styles.section} aria-labelledby="priority-markets">
         <h2 id="priority-markets" className={styles.sectionTitle}>
           Priority Regional Hubs
@@ -95,23 +122,109 @@ export default function LocationsIndexPage() {
         </div>
       </section>
 
+      {/* Statewide Industry Solutions */}
+      <section className={styles.section} aria-labelledby="regional-solutions" style={{ marginTop: "3rem" }}>
+        <h2 id="regional-solutions" className={styles.sectionTitle}>
+          Disciplined Capabilities Across Kerala&apos;s High-Growth Sectors
+        </h2>
+        <p className={styles.sectionSubtitle} style={{ marginBottom: "2rem", maxWidth: "800px" }}>
+          Modern regional businesses require synchronized digital execution rather than fragmented freelancer handoffs.
+          Our integrated cube model delivers compound growth across multiple verticals:
+        </p>
+
+        <div className={styles.servicesGrid}>
+          <div className={styles.serviceCard}>
+            <h3 className={styles.cardTitle}>Retail, Wholesale &amp; E-Commerce</h3>
+            <p className={styles.cardDesc}>
+              Fast, resilient Next.js storefronts engineered with sub-second catalog navigation and automated local search visibility to capture regional shoppers in Malabar and Central Kerala.
+            </p>
+            <Link href="/services/web-development" className={styles.cardLink}>
+              Explore Web Architecture <ChevronRight size={14} aria-hidden="true" />
+            </Link>
+          </div>
+
+          <div className={styles.serviceCard}>
+            <h3 className={styles.cardTitle}>Healthcare, Diagnostics &amp; Wellness</h3>
+            <p className={styles.cardDesc}>
+              HIPAA/data-compliant patient inquiry funnels, verified Google Business Profile entity optimization, and zero-leakage search advertising for leading Kerala hospitals and clinics.
+            </p>
+            <Link href="/services/seo" className={styles.cardLink}>
+              Explore Technical SEO <ChevronRight size={14} aria-hidden="true" />
+            </Link>
+          </div>
+
+          <div className={styles.serviceCard}>
+            <h3 className={styles.cardTitle}>Real Estate &amp; Commercial Development</h3>
+            <p className={styles.cardDesc}>
+              High-intent Google Ads funnels and immersive project showcase portals built to capture qualified property investors and NRI buyers across the GCC and tier-one Indian metros.
+            </p>
+            <Link href="/services/paid-advertising" className={styles.cardLink}>
+              Explore Paid Advertising <ChevronRight size={14} aria-hidden="true" />
+            </Link>
+          </div>
+
+          <div className={styles.serviceCard}>
+            <h3 className={styles.cardTitle}>Manufacturing &amp; Export Enterprises</h3>
+            <p className={styles.cardDesc}>
+              B2B lead pipelines, global organic search authority, and automated CRM workflows that connect spice, textile, marine, and industrial exporters to international corporate buyers.
+            </p>
+            <Link href="/services/crm" className={styles.cardLink}>
+              Explore CRM &amp; Automation <ChevronRight size={14} aria-hidden="true" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Frequently Asked Questions */}
+      <section className={styles.section} aria-labelledby="regional-faqs" style={{ marginTop: "3rem" }}>
+        <h2 id="regional-faqs" className={styles.sectionTitle}>
+          Regional Service Delivery Questions
+        </h2>
+        <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginTop: "1.5rem" }}>
+          {LOCATION_FAQS.map((faq, i) => (
+            <div
+              key={i}
+              style={{
+                background: "rgba(255, 255, 255, 0.9)",
+                border: "1px solid rgba(0, 0, 0, 0.08)",
+                borderRadius: "16px",
+                padding: "1.5rem",
+                boxShadow: "0 2px 10px rgba(0, 0, 0, 0.03)",
+              }}
+            >
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--clr-foreground, #0a0a0a)", marginBottom: "0.5rem" }}>
+                {faq.q}
+              </h3>
+              <p style={{ fontSize: "0.95rem", color: "var(--color-text-secondary, #64748b)", lineHeight: "1.6" }}>
+                {faq.a}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Statewide & Remote Delivery */}
-      <section className={styles.deliveryCard} aria-labelledby="statewide-delivery">
+      <section className={styles.deliveryCard} aria-labelledby="statewide-delivery" style={{ marginTop: "3.5rem" }}>
         <div className={styles.badge}>
           <MapPin size={14} aria-hidden="true" />
-          <span>Statewide & Global Remote Engagement</span>
+          <span>Statewide &amp; Global Remote Engagement</span>
         </div>
         <h2 id="statewide-delivery" className={styles.sectionTitle}>
-          Serving Growth Businesses Statewide & Beyond
+          Serving Growth Businesses Statewide &amp; Beyond
         </h2>
         <p className={styles.sectionSubtitle}>
           Whether your company is located in Kochi, Thiruvananthapuram, Kannur, or targeting international customers
-          in the GCC, our disciplined digital model operates without physical geographical friction.
+          in the GCC, our disciplined digital model operates without physical geographical friction. Discover how custom web engineering and technical SEO can accelerate your pipeline.
         </p>
-        <Link href="/contact" className={styles.primaryBtn}>
-          <span>Schedule a Strategy Discovery</span>
-          <ArrowRight size={16} aria-hidden="true" />
-        </Link>
+        <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "1.5rem" }}>
+          <Link href="/contact" className={styles.primaryBtn}>
+            <span>Schedule a Strategy Discovery</span>
+            <ArrowRight size={16} aria-hidden="true" />
+          </Link>
+          <Link href="/blog/why-nextjs-outperforms-wordpress-kerala-enterprises" className={styles.secondaryBtn}>
+            <span>Read Next.js Case Study &rarr;</span>
+          </Link>
+        </div>
       </section>
     </div>
   );

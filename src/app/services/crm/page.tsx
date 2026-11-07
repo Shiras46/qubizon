@@ -7,9 +7,9 @@ import { CrmPageClient } from "@/components/services/CrmPageClient";
 import styles from "@/components/services/ServicesIndex.module.css";
 
 export const metadata: Metadata = constructMetadata({
-  title: "CRM & Workflow Automation Platform | Qubizon Digital Solutions",
+  title: "CRM & Workflow Automation Platform | Qubizon",
   description:
-    "Unified sales CRM, automated lead routing, live booking calendars, and connected client portals engineered to eliminate manual administrative bottlenecks for growing enterprises.",
+    "Unified sales CRM, automated lead routing, live booking calendars, and connected client portals engineered to eliminate manual bottlenecks for modern enterprises.",
   path: "/services/crm",
   keywords: [
     "CRM Development Kerala",
@@ -20,6 +20,25 @@ export const metadata: Metadata = constructMetadata({
     "Enterprise Operations Automation",
   ],
 });
+
+const CRM_FAQS = [
+  {
+    q: "How does Qubizon's CRM connect marketing channels to sales follow-up?",
+    a: "Every lead captured through Google Search Ads, Meta campaigns, and on-site contact forms feeds directly into a centralized sales pipeline via encrypted webhook endpoints. Prospects are automatically categorized by service discipline, assigned a lead score based on intent, and routed to your sales team with automated email/SMS notifications.",
+  },
+  {
+    q: "Can this CRM platform integrate with existing software and accounting tools?",
+    a: "Yes. Our systems engineers build native API connectors and webhook listeners for major email marketing providers, payment gateways (Razorpay, Stripe), calendar engines (Google Calendar, Outlook), and enterprise communication channels (WhatsApp Business API, Slack).",
+  },
+  {
+    q: "How does the automated booking engine eliminate no-shows and scheduling friction?",
+    a: "The booking calendar synchronizes real-time availability across team schedules with custom buffers and time-zone intelligence. Prospects receive automated appointment confirmations and reminder sequences via WhatsApp and SMS, reducing client no-shows by up to 60%.",
+  },
+  {
+    q: "How is client and project data secured under this operational architecture?",
+    a: "We implement role-based access control (RBAC), end-to-end TLS 1.3 encryption, and strict database isolation. Client records, project deliverables, and consultation communications are stored in secure cloud environments with full client administrative ownership and zero vendor lock-in.",
+  },
+];
 
 export default function CrmPage() {
   const jsonLd = {
@@ -60,6 +79,17 @@ export default function CrmPage() {
           name: SITE_CONFIG.name,
           url: SITE_CONFIG.domain,
         },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: CRM_FAQS.map((faq) => ({
+          "@type": "Question",
+          name: faq.q,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.a,
+          },
+        })),
       },
     ],
   };
@@ -117,6 +147,31 @@ export default function CrmPage() {
       {/* CRM Interactive Suite (Displayed Right at Top of Content) */}
       <CrmPageClient />
 
+      {/* Architectural FAQs Section */}
+      <div className="container" style={{ marginTop: "4rem", marginBottom: "3rem" }}>
+        <div style={{ background: "rgba(255, 255, 255, 0.85)", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "24px", padding: "clamp(2rem, 4vw, 3.5rem)" }}>
+          <h2 style={{ fontSize: "clamp(1.6rem, 2.4vw, 2.5rem)", fontWeight: 800, color: "var(--clr-foreground, #0a0a0a)", marginBottom: "1rem", letterSpacing: "-0.02em" }}>
+            Frequently Asked Questions on CRM &amp; Automation
+          </h2>
+          <p style={{ fontSize: "1rem", color: "var(--color-text-secondary, #64748b)", lineHeight: "1.6", maxWidth: "800px", marginBottom: "2rem" }}>
+            Review key architectural considerations for connecting your customer acquisition funnels directly to internal sales and project fulfillment workflows:
+          </p>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "1.5rem" }}>
+            {CRM_FAQS.map((faq, idx) => (
+              <div key={idx} style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "16px", padding: "1.5rem" }}>
+                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--clr-foreground, #0a0a0a)", marginBottom: "0.5rem", lineHeight: "1.4" }}>
+                  {faq.q}
+                </h3>
+                <p style={{ fontSize: "0.9rem", color: "var(--color-text-secondary, #64748b)", lineHeight: "1.55" }}>
+                  {faq.a}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* Call to Action Banner */}
       <div className="container">
         <div className={styles.ctaBanner}>
@@ -140,4 +195,3 @@ export default function CrmPage() {
     </main>
   );
 }
-

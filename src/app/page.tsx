@@ -11,9 +11,9 @@ import { constructMetadata } from "@/lib/metadata";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Qubizon — Premier Web Development & Digital Marketing Agency in Kerala",
+  title: "Qubizon — Digital Marketing & Web Development Kerala",
   description:
-    "Leading B2B digital agency in Kerala specializing in custom Next.js web applications, technical SEO, precision PPC advertising, and conversion rate optimization for enterprises in Kozhikode and Thrissur.",
+    "Leading B2B digital agency in Kerala specializing in Next.js web development, technical SEO, precision PPC advertising, and CRM systems in Kozhikode & Thrissur.",
   path: "/",
   keywords: [
     "Digital Marketing Company in Kerala",

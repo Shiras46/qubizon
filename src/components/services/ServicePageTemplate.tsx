@@ -59,6 +59,12 @@ export interface ServicePageProps {
   cubeConnectionHeading: string;
   cubeConnectionSummary: string;
   disciplineConnections: DisciplineConnection[];
+  featuredArticle?: {
+    title: string;
+    href: string;
+    excerpt: string;
+    readTime: string;
+  };
   faqs: FAQItem[];
   ctaHeadline: string;
   ctaSummary: string;
@@ -320,6 +326,31 @@ export function ServicePageTemplate(props: ServicePageProps) {
           </div>
         </div>
       </section>
+
+      {/* Featured Engineering Insight (Rich Internal Linking) */}
+      {props.featuredArticle && (
+        <section className={styles.connectionSection} aria-labelledby="featured-insight-heading">
+          <div className="container">
+            <div style={{ background: "rgba(255, 255, 255, 0.85)", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "24px", padding: "clamp(2rem, 3.5vw, 3rem)" }}>
+              <span className={styles.sectionBadge}>Practitioner Case Analysis</span>
+              <h2 id="featured-insight-heading" style={{ fontSize: "clamp(1.5rem, 2.2vw, 2.2rem)", fontWeight: 800, color: "var(--clr-foreground, #0a0a0a)", marginTop: "0.5rem", marginBottom: "0.75rem" }}>
+                {props.featuredArticle.title}
+              </h2>
+              <p style={{ fontSize: "1rem", color: "var(--color-text-secondary, #64748b)", lineHeight: "1.6", maxWidth: "800px", marginBottom: "1.5rem" }}>
+                {props.featuredArticle.excerpt}
+              </p>
+              <Link
+                href={props.featuredArticle.href}
+                className={styles.primaryBtn}
+                style={{ display: "inline-flex", alignItems: "center", gap: "8px", textDecoration: "none" }}
+              >
+                <span>Read Full Engineering Blueprint ({props.featuredArticle.readTime})</span>
+                <ArrowRight size={15} aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Structured FAQ Section */}
       <section className={styles.faqSection} aria-labelledby="faq-heading">

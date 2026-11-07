@@ -34,6 +34,9 @@ export function Footer() {
                   {service.title}
                 </Link>
               ))}
+              <Link href="/services/crm" className={styles.footerLink}>
+                CRM &amp; Automation
+              </Link>
             </div>
 
             <div className={styles.linkCol}>
@@ -45,7 +48,7 @@ export function Footer() {
                 All Services
               </Link>
               <Link href="/work" className={styles.footerLink}>
-                Showcase & Work
+                Showcase &amp; Benchmarks
               </Link>
               <Link href="/blog" className={styles.footerLink}>
                 Engineering Insights
@@ -54,10 +57,26 @@ export function Footer() {
                 Service Areas (Kerala)
               </Link>
               <Link href="/locations/kozhikode" className={styles.footerLink}>
-                Kozhikode Agency
+                Kozhikode Hub
               </Link>
               <Link href="/locations/thrissur" className={styles.footerLink}>
-                Thrissur Agency
+                Thrissur Hub
+              </Link>
+            </div>
+
+            <div className={styles.linkCol}>
+              <h4 className={styles.linkTitle}>Insights &amp; Case Studies</h4>
+              <Link href="/blog/why-nextjs-outperforms-wordpress-kerala-enterprises" className={styles.footerLink}>
+                Next.js vs WordPress Analysis
+              </Link>
+              <Link href="/blog/technical-seo-crawl-budget-optimization-guide" className={styles.footerLink}>
+                Technical SEO &amp; Schema Guide
+              </Link>
+              <Link href="/blog/performance-ppc-budget-waste-reduction" className={styles.footerLink}>
+                PPC Budget Waste Blueprint
+              </Link>
+              <Link href="/privacy" className={styles.footerLink}>
+                Privacy &amp; Data Governance
               </Link>
             </div>
 

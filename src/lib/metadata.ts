@@ -22,9 +22,10 @@ export function constructMetadata({
 }: PageMetadataParams): Metadata {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
   const canonicalUrl = `${SITE_CONFIG.domain}${normalizedPath === "/" ? "" : normalizedPath}`;
-  const formattedTitle = title.includes(SITE_CONFIG.shortName)
-    ? title
-    : `${title} | ${SITE_CONFIG.shortName}`;
+  const formattedTitle =
+    title.includes(SITE_CONFIG.shortName) || `${title} | ${SITE_CONFIG.shortName}`.length > 65
+      ? title
+      : `${title} | ${SITE_CONFIG.shortName}`;
 
   return {
     title: formattedTitle,
