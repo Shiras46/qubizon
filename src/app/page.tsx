@@ -57,6 +57,9 @@ export default function HomePage() {
           longitude: 75.7804,
         },
         areaServed: [
+          { "@type": "Country", name: "United Arab Emirates" },
+          { "@type": "City", name: "Dubai" },
+          { "@type": "City", name: "Abu Dhabi" },
           { "@type": "City", name: "Kozhikode" },
           { "@type": "City", name: "Thrissur" },
           { "@type": "City", name: "Kochi" },

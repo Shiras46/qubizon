@@ -43,6 +43,21 @@ const CONTACT_FAQS = [
     answer:
       "You retain 100% ownership of all code repositories, database schemas, ad accounts, and creative assets from day one. We commit directly to your Git repositories with clean documentation and zero proprietary vendor lock-in.",
   },
+  {
+    question: "What is your typical project kickoff timeline once scope is approved?",
+    answer:
+      "Following statement of work (SOW) confirmation and mutual access setup (repository, analytics, ad manager), our sprint zero begins within three to five business days. We operate in clear two-week agile development cycles with measurable deliverables submitted at each milestone.",
+  },
+  {
+    question: "Do you offer post-launch technical maintenance and SLA support?",
+    answer:
+      "Yes. Every production web application we engineer includes a post-launch warranty period followed by optional continuous SLA retainers covering Core Web Vitals monitoring, security dependency patches, Next.js framework upgrades, and proactive SEO crawl maintenance.",
+  },
+  {
+    question: "How do you handle communications and sprint reviews with distributed teams?",
+    answer:
+      "We provide direct practitioner access through shared dedicated Slack or WhatsApp workspaces, weekly video standups, and bi-weekly sprint demonstration calls with shared Git commit logs—ensuring complete transparency without bureaucratic account coordination.",
+  },
 ];
 
 export default function ContactPage() {
@@ -236,6 +251,55 @@ export default function ContactPage() {
             </div>
           </aside>
         </div>
+
+        {/* Architectural Discovery & Project Evaluation Roadmap */}
+        <section style={{ marginTop: "4rem", marginBottom: "3rem", background: "rgba(255, 255, 255, 0.85)", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "24px", padding: "clamp(2rem, 4vw, 3.5rem)" }}>
+          <div style={{ textAlign: "center", maxWidth: "780px", margin: "0 auto 2.5rem auto" }}>
+            <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--brand-blue, #00488e)", display: "block", marginBottom: "0.5rem" }}>
+              • ENGAGEMENT PROTOCOL /
+            </span>
+            <h2 style={{ fontSize: "clamp(1.6rem, 2.6vw, 2.3rem)", fontWeight: 800, color: "var(--clr-foreground, #0a0a0a)", letterSpacing: "-0.02em", marginBottom: "1rem" }}>
+              What Happens During Your Discovery Session
+            </h2>
+            <p style={{ fontSize: "0.975rem", color: "var(--color-text-secondary, #64748b)", lineHeight: 1.65 }}>
+              We do not believe in superficial sales pitches or high-pressure commitments. Every consultation is conducted by senior software engineers and growth marketing leads focused on technical viability.
+            </p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "16px", padding: "1.5rem" }}>
+              <span style={{ fontSize: "12px", fontWeight: 800, color: "var(--brand-blue, #00488e)", display: "block", marginBottom: "0.5rem" }}>PHASE 01</span>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, marginBottom: "0.5rem", color: "#0a0a0a" }}>Infrastructure Review</h3>
+              <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+                We inspect your existing domain architecture, Core Web Vitals profiling, mobile Largest Contentful Paint (LCP), and current CMS dependencies.
+              </p>
+            </div>
+
+            <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "16px", padding: "1.5rem" }}>
+              <span style={{ fontSize: "12px", fontWeight: 800, color: "var(--brand-blue, #00488e)", display: "block", marginBottom: "0.5rem" }}>PHASE 02</span>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, marginBottom: "0.5rem", color: "#0a0a0a" }}>Crawl &amp; Schema Audit</h3>
+              <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+                We assess your Google Search Console indexation health, XML sitemap configuration, canonical integrity, and regional keyword competition in Kerala and GCC markets.
+              </p>
+            </div>
+
+            <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "16px", padding: "1.5rem" }}>
+              <span style={{ fontSize: "12px", fontWeight: 800, color: "var(--brand-blue, #00488e)", display: "block", marginBottom: "0.5rem" }}>PHASE 03</span>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, marginBottom: "0.5rem", color: "#0a0a0a" }}>Funnel &amp; CRM Diagnosis</h3>
+              <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+                We evaluate paid traffic bounce rates, lead capture form friction, server-side tracking integrity, and operational CRM follow-up latency.
+              </p>
+            </div>
+
+            <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "16px", padding: "1.5rem" }}>
+              <span style={{ fontSize: "12px", fontWeight: 800, color: "var(--brand-blue, #00488e)", display: "block", marginBottom: "0.5rem" }}>PHASE 04</span>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, marginBottom: "0.5rem", color: "#0a0a0a" }}>Architectural Blueprint</h3>
+              <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+                You receive a documented implementation roadmap with milestone definitions, transparent engineering timelines, and clear commercial pricing.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Consultation FAQs */}
         <section className={styles.faqSection} aria-labelledby="contact-faq-heading">

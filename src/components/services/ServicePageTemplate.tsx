@@ -352,6 +352,83 @@ export function ServicePageTemplate(props: ServicePageProps) {
         </section>
       )}
 
+      {/* Engineering Assurance & Service Quality Benchmarks */}
+      <section className={styles.section} aria-labelledby="standards-heading" style={{ background: "rgba(255, 255, 255, 0.75)", borderTop: "1px solid rgba(0, 0, 0, 0.06)", borderBottom: "1px solid rgba(0, 0, 0, 0.06)", padding: "clamp(2.5rem, 5vw, 4.5rem) 0" }}>
+        <div className="container">
+          <div className={styles.sectionHeader}>
+            <p className={styles.sectionBadge}>Practitioner Quality Assurance</p>
+            <h2 id="standards-heading" className={styles.sectionTitle}>
+              Engineering Assurance &amp; SLA Standards
+            </h2>
+            <p className={styles.sectionLead}>
+              Every deliverable within our {props.title} discipline is governed by quantifiable engineering criteria, strict technical debt minimization, and transparent performance verification.
+            </p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.75rem", marginTop: "2rem" }}>
+            <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "16px", padding: "1.75rem" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "0.75rem" }}>
+                <CheckCircle2 size={20} style={{ color: "var(--brand-blue, #00488e)" }} aria-hidden="true" />
+                <h3 style={{ fontSize: "1.15rem", fontWeight: 700, margin: 0, color: "var(--clr-foreground, #0a0a0a)" }}>Performance &amp; Core Web Vitals SLA</h3>
+              </div>
+              <p style={{ fontSize: "0.925rem", color: "var(--color-text-secondary, #475569)", lineHeight: 1.6, margin: 0 }}>
+                We engineer all code for sub-second Largest Contentful Paint (LCP &lt; 1.2s), zero layout shifts (CLS = 0.00), and rapid Interaction to Next Paint (INP &lt; 200ms). Web applications load instantaneously across low-latency 4G and 5G connections without bloated third-party dependencies.
+              </p>
+            </div>
+
+            <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "16px", padding: "1.75rem" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "0.75rem" }}>
+                <CheckCircle2 size={20} style={{ color: "var(--brand-blue, #00488e)" }} aria-hidden="true" />
+                <h3 style={{ fontSize: "1.15rem", fontWeight: 700, margin: 0, color: "var(--clr-foreground, #0a0a0a)" }}>WCAG 2.1 AA Accessibility Conformance</h3>
+              </div>
+              <p style={{ fontSize: "0.925rem", color: "var(--color-text-secondary, #475569)", lineHeight: 1.6, margin: 0 }}>
+                Every digital touchpoint is tested against strict WCAG 2.1 AA benchmarks. We implement semantic HTML landmarks, high-contrast color ratios, visible focus indicators, and comprehensive keyboard tab sequences to ensure universal usability for all user cohorts.
+              </p>
+            </div>
+
+            <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "16px", padding: "1.75rem" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "0.75rem" }}>
+                <CheckCircle2 size={20} style={{ color: "var(--brand-blue, #00488e)" }} aria-hidden="true" />
+                <h3 style={{ fontSize: "1.15rem", fontWeight: 700, margin: 0, color: "var(--clr-foreground, #0a0a0a)" }}>100% Client IP &amp; Code Ownership</h3>
+              </div>
+              <p style={{ fontSize: "0.925rem", color: "var(--color-text-secondary, #475569)", lineHeight: 1.6, margin: 0 }}>
+                You retain complete, unencumbered ownership of all git repositories, analytics datasets, media assets, and advertising accounts from project inception. We build with open standard web technologies—zero proprietary lock-in or licensing gates.
+              </p>
+            </div>
+
+            <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "16px", padding: "1.75rem" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "0.75rem" }}>
+                <CheckCircle2 size={20} style={{ color: "var(--brand-blue, #00488e)" }} aria-hidden="true" />
+                <h3 style={{ fontSize: "1.15rem", fontWeight: 700, margin: 0, color: "var(--clr-foreground, #0a0a0a)" }}>Verified Pre-Release Protocol</h3>
+              </div>
+              <p style={{ fontSize: "0.925rem", color: "var(--color-text-secondary, #475569)", lineHeight: 1.6, margin: 0 }}>
+                Prior to production deployment, our multi-stage quality gate validates TypeScript type safety, ESLint compliance, crawl schema validation in Google Search Console test suites, and cross-browser visual fidelity across mobile, tablet, and desktop viewport dimensions.
+              </p>
+            </div>
+
+            <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "16px", padding: "1.75rem" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "0.75rem" }}>
+                <CheckCircle2 size={20} style={{ color: "var(--brand-blue, #00488e)" }} aria-hidden="true" />
+                <h3 style={{ fontSize: "1.15rem", fontWeight: 700, margin: 0, color: "var(--clr-foreground, #0a0a0a)" }}>Transport Security &amp; HSTS Enforcement</h3>
+              </div>
+              <p style={{ fontSize: "0.925rem", color: "var(--color-text-secondary, #475569)", lineHeight: 1.6, margin: 0 }}>
+                All client interactions and form endpoints are protected by HTTP Strict Transport Security (HSTS), TLS 1.3 protocol mandates, and strict defensive headers (nosniff, sameorigin) to safeguard data integrity against interception or unencrypted downgrade attacks.
+              </p>
+            </div>
+
+            <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "16px", padding: "1.75rem" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "0.75rem" }}>
+                <CheckCircle2 size={20} style={{ color: "var(--brand-blue, #00488e)" }} aria-hidden="true" />
+                <h3 style={{ fontSize: "1.15rem", fontWeight: 700, margin: 0, color: "var(--clr-foreground, #0a0a0a)" }}>Semantic Knowledge Graph Integration</h3>
+              </div>
+              <p style={{ fontSize: "0.925rem", color: "var(--color-text-secondary, #475569)", lineHeight: 1.6, margin: 0 }}>
+                Every capability deliverable is programmatically mapped into Schema.org Service, Organization, and BreadcrumbList JSON-LD graphs, ensuring rapid indexing velocity and definitive snippet eligibility across search engines and AI answer engines.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Structured FAQ Section */}
       <section className={styles.faqSection} aria-labelledby="faq-heading">
         <div className="container">

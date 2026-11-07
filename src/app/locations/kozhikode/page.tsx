@@ -194,6 +194,45 @@ export default function KozhikodeLocationPage() {
         </div>
       </section>
 
+      {/* Key Economic Sectors in Kozhikode */}
+      <section style={{ marginTop: "3rem", marginBottom: "3rem", background: "rgba(255, 255, 255, 0.8)", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "20px", padding: "clamp(2rem, 4vw, 3rem)" }}>
+        <h2 className={styles.sectionTitle} style={{ textAlign: "center", marginBottom: "1rem" }}>
+          Specialized Digital Solutions for Kozhikode Industries
+        </h2>
+        <p className={styles.sectionSubtitle} style={{ textAlign: "center", maxWidth: "750px", margin: "0 auto 2.5rem auto" }}>
+          From the vibrant commercial hubs of SM Street and Mavoor Road to Cyberpark and Malabar export corridors, we architect tailored digital platforms for regional market leaders:
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+          <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+              Healthcare &amp; Hospital Networks
+            </h3>
+            <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+              Custom patient appointment portals, doctor directory schemas, and medical tourism landing pages optimized for Gulf NRI and international travelers seeking premier Calicut healthcare facilities.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+              Retail &amp; Direct-to-Consumer Brands
+            </h3>
+            <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+              High-converting Next.js digital storefronts engineered with zero layout shift and instant search filtering, powering Calicut jewelers, textile houses, and food exporters.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+              Malabar Export &amp; Spices Enterprises
+            </h3>
+            <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+              B2B catalog portals, international Google Ads search funnels, and enterprise multilingual websites connecting Kozhikode manufacturers with importers across the GCC and Europe.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQs */}
       <section className={styles.section} aria-labelledby="kozhikode-faqs">
         <h2 id="kozhikode-faqs" className={styles.sectionTitle}>

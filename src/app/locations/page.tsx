@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ChevronRight, MapPin, ArrowRight, Building2, Compass, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react";
+import { ChevronRight, MapPin, ArrowRight, Building2, Compass, CheckCircle2, ShieldCheck, Sparkles, Globe2 } from "lucide-react";
 import { constructMetadata } from "@/lib/metadata";
 import { SITE_CONFIG } from "@/lib/constants";
 import styles from "@/components/locations/LocationPage.module.css";
@@ -31,6 +31,14 @@ const LOCATION_FAQS = [
   {
     q: "Can businesses outside Kozhikode and Thrissur partner with Qubizon?",
     a: "Yes. While Kozhikode and Thrissur represent our core practitioner hubs, we actively engineer digital platforms and manage high-intent search campaigns for enterprise clients across Kerala, Bangalore, Dubai, and the broader GCC region.",
+  },
+  {
+    q: "How does Qubizon optimize local Google Business Profiles and regional search rankings?",
+    a: "We implement code-level geo-coordinates, LocalBusiness schema entities, localized landing page silos, and citation consistency that establish dominant map pack visibility across targeted regional municipalities.",
+  },
+  {
+    q: "Do you offer in-person technical scoping workshops in Kerala?",
+    a: "Yes. For enterprise clients requiring executive stakeholder alignment or detailed ERP/CRM systems discovery, our engineering leads conduct on-site discovery workshops across Kozhikode, Thrissur, and Kochi.",
   },
 ];
 
@@ -76,24 +84,36 @@ export default function LocationsIndexPage() {
 
       <header className={styles.hero}>
         <div className={styles.badge}>
-          <Compass size={14} aria-hidden="true" />
-          <span>Regional Coverage • Kerala, India</span>
+          <Globe2 size={14} aria-hidden="true" />
+          <span>Regional &amp; GCC Coverage • Kerala &amp; UAE</span>
         </div>
         <h1 className={styles.title}>
-          Kerala Regional <span className="calligraphy">Service Areas</span>
+          Regional &amp; International <span className="calligraphy">Service Hubs</span>
         </h1>
         <p className={styles.lead}>
-          Qubizon provides high-performance web development, technical SEO, and conversion-optimized marketing
-          for businesses throughout Kerala. We combine regional market insights with world-class engineering standards.
+          Qubizon provides high-performance Next.js web development, technical SEO, and conversion-optimized marketing
+          for enterprises throughout Kerala and the GCC (Dubai, Abu Dhabi, Sharjah). We combine deep regional market insights with world-class engineering standards.
         </p>
       </header>
 
-      {/* Priority Regional Hubs */}
+      {/* Priority Regional & International Hubs */}
       <section className={styles.section} aria-labelledby="priority-markets">
         <h2 id="priority-markets" className={styles.sectionTitle}>
-          Priority Regional Hubs
+          Priority Regional &amp; International Hubs
         </h2>
         <div className={styles.servicesGrid}>
+          {/* UAE & GCC Hub */}
+          <div className={styles.serviceCard} style={{ border: "2px solid rgba(0, 72, 142, 0.2)", background: "rgba(255, 255, 255, 0.95)" }}>
+            <div className={styles.cardIcon}><Globe2 size={22} aria-hidden="true" style={{ color: "var(--brand-blue, #00488e)" }} /></div>
+            <h3 className={styles.cardTitle}>UAE &amp; GCC Hub (Dubai &amp; Abu Dhabi)</h3>
+            <p className={styles.cardDesc}>
+              Partnering with commercial leaders and luxury enterprises across Dubai, Abu Dhabi, Sharjah, and the GCC with sub-second Next.js architecture, Google.ae search authority, and WhatsApp lead automation.
+            </p>
+            <Link href="/locations/uae" className={styles.cardLink} style={{ fontWeight: 700, color: "var(--brand-blue, #00488e)" }}>
+              Explore UAE &amp; GCC Services <ChevronRight size={14} aria-hidden="true" />
+            </Link>
+          </div>
+
           {/* Kozhikode Hub */}
           <div className={styles.serviceCard}>
             <div className={styles.cardIcon}><Building2 size={22} aria-hidden="true" /></div>
@@ -171,6 +191,45 @@ export default function LocationsIndexPage() {
             <Link href="/services/crm" className={styles.cardLink}>
               Explore CRM &amp; Automation <ChevronRight size={14} aria-hidden="true" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Kerala Digital Economy Growth Corridors */}
+      <section style={{ marginTop: "3rem", background: "rgba(255, 255, 255, 0.85)", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "20px", padding: "clamp(2rem, 4vw, 3rem)" }}>
+        <h2 className={styles.sectionTitle} style={{ textAlign: "center", marginBottom: "1rem" }}>
+          Kerala&apos;s Digital Transformation Corridors
+        </h2>
+        <p className={styles.sectionSubtitle} style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 2.5rem auto" }}>
+          Kerala is undergoing rapid economic and digital modernisation, driven by national highway upgrades, growing IT corridors, and expanding international trade:
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+          <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+              Malabar Commercial Corridor (NH-66)
+            </h3>
+            <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+              Connecting Kozhikode, Kannur, and Kasaragod, this northern corridor represents Kerala&apos;s fastest-growing retail and healthcare hub, demanding sub-second mobile digital experiences and localized search dominance.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+              Central Kerala Financial &amp; NRI Belt
+            </h3>
+            <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+              Centred in Thrissur, Ernakulam, and Palakkad, this region commands substantial private wealth and remittances. We help financial institutions and luxury brands establish authoritative, high-converting digital footprints.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+              Cross-Border GCC Commercial Linkages
+            </h3>
+            <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+              With deep business ties between Kerala and Dubai, Riyadh, Doha, and Muscat, our technical marketing funnels are engineered to engage high-net-worth Gulf NRI audiences seamlessly.
+            </p>
           </div>
         </div>
       </section>

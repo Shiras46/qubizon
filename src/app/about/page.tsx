@@ -448,6 +448,56 @@ export default function AboutPage() {
             })}
           </div>
 
+          {/* About Qubizon Agency FAQs */}
+          <div style={{ marginTop: "4rem", marginBottom: "3rem", background: "rgba(255, 255, 255, 0.9)", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "20px", padding: "clamp(2rem, 4vw, 3rem)" }}>
+            <div style={{ textAlign: "center", marginBottom: "2rem" }}>
+              <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--brand-blue, #00488e)", display: "block", marginBottom: "0.5rem" }}>
+                • AGENCY INTEGRATION FAQS /
+              </span>
+              <h2 style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.2rem)", fontWeight: 800, color: "var(--clr-foreground, #0a0a0a)", letterSpacing: "-0.02em" }}>
+                Common Questions About Partnering With Qubizon
+              </h2>
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.5rem" }}>
+              <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
+                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+                  How does Qubizon differ from a traditional digital marketing agency?
+                </h3>
+                <p style={{ fontSize: "0.925rem", color: "var(--color-text-secondary, #64748b)", lineHeight: 1.6, margin: 0 }}>
+                  Traditional digital marketing agencies treat web design, SEO, and paid advertising as disconnected silos managed by outsourced freelancers. Qubizon operates as an integrated software and growth collective. Our software engineers build high-performance Next.js architectures that directly empower our technical SEO strategists, while paid campaigns feed real-time CRM pipelines.
+                </p>
+              </div>
+
+              <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
+                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+                  Where are Qubizon’s engineering and strategy teams located?
+                </h3>
+                <p style={{ fontSize: "0.925rem", color: "var(--color-text-secondary, #64748b)", lineHeight: 1.6, margin: 0 }}>
+                  We are based in Kerala, India, with active regional service hubs across Kozhikode (Calicut) and Thrissur. We partner with fast-growing regional enterprises, healthcare systems, retail chains, and international commercial brands operating across the GCC (UAE, Saudi Arabia, Qatar) and global markets.
+                </p>
+              </div>
+
+              <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
+                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+                  What is Qubizon’s policy on intellectual property and code ownership?
+                </h3>
+                <p style={{ fontSize: "0.925rem", color: "var(--color-text-secondary, #64748b)", lineHeight: 1.6, margin: 0 }}>
+                  You retain 100% legal ownership of all source code, git repositories, advertising accounts, domain registrations, and analytics data from day one. We never enforce proprietary vendor lock-in or hostage retainer agreements; every system we engineer is built on documented, open-standard technologies.
+                </p>
+              </div>
+
+              <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
+                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+                  How do sprint cycles and communication work during active projects?
+                </h3>
+                <p style={{ fontSize: "0.925rem", color: "var(--color-text-secondary, #64748b)", lineHeight: 1.6, margin: 0 }}>
+                  We operate in bi-weekly agile delivery sprints with direct practitioner Slack/WhatsApp channels and scheduled review demonstrations. You communicate directly with the software engineers and growth leads executing your project—ensuring rapid iteration without intermediary account management bureaucracy.
+                </p>
+              </div>
+            </div>
+          </div>
+
           {/* Call to Action Banner */}
           <div className={styles.ctaBanner}>
             <h2 className={styles.ctaTitle}>

@@ -29,13 +29,49 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // 3. Regional Service Area routes (Priority Kerala Hubs)
+  // 3. Regional & International Service Area routes (Kerala & GCC Hubs)
   const locationRoutes: MetadataRoute.Sitemap = [
     {
       url: `${SITE_CONFIG.domain}/locations`,
       lastModified: currentDate,
       changeFrequency: "monthly",
       priority: 0.8,
+    },
+    {
+      url: `${SITE_CONFIG.domain}/locations/uae`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${SITE_CONFIG.domain}/locations/saudi-arabia`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${SITE_CONFIG.domain}/locations/qatar`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_CONFIG.domain}/locations/kuwait`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_CONFIG.domain}/locations/bahrain`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${SITE_CONFIG.domain}/locations/oman`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.9,
     },
     {
       url: `${SITE_CONFIG.domain}/locations/kozhikode`,

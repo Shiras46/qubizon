@@ -141,6 +141,25 @@ export function Navbar() {
                             <span className={styles.dropdownDesc}>{service.shortDescription}</span>
                           </Link>
                         ))}
+                        <Link
+                          href="/services/crm"
+                          className={styles.dropdownItem}
+                          role="menuitem"
+                          onClick={() => setIsServicesOpen(false)}
+                        >
+                          <span className={styles.dropdownTitle}>CRM &amp; Workflow Automation</span>
+                          <span className={styles.dropdownDesc}>Automated lead capture, booking engine &amp; pipeline management</span>
+                        </Link>
+                        <Link
+                          href="/locations/uae"
+                          className={styles.dropdownItem}
+                          role="menuitem"
+                          onClick={() => setIsServicesOpen(false)}
+                          style={{ borderTop: "1px solid rgba(0, 72, 142, 0.1)", background: "rgba(0, 72, 142, 0.03)" }}
+                        >
+                          <span className={styles.dropdownTitle} style={{ color: "var(--brand-blue)" }}>UAE &amp; GCC Enterprise Hub ➔</span>
+                          <span className={styles.dropdownDesc}>Custom Next.js &amp; digital growth across Dubai, Abu Dhabi &amp; GCC</span>
+                        </Link>
                       </div>
                     )}
                   </li>
@@ -205,6 +224,21 @@ export function Navbar() {
                           • {service.title}
                         </Link>
                       ))}
+                      <Link
+                        href="/services/crm"
+                        className={styles.mobileSubLink}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        • CRM &amp; Workflow Automation
+                      </Link>
+                      <Link
+                        href="/locations/uae"
+                        className={styles.mobileSubLink}
+                        onClick={() => setIsOpen(false)}
+                        style={{ color: "var(--brand-blue)", fontWeight: 700 }}
+                      >
+                        ➔ UAE &amp; GCC Hub (Dubai)
+                      </Link>
                     </div>
                   </li>
                 );

@@ -94,6 +94,39 @@ export function WhyQubizon() {
               effortlessly as your regional presence grows across Kerala and global markets.
             </p>
           </div>
+
+          <div className={styles.feature}>
+            <div className={styles.featurePill}>04 // CONVERSION</div>
+            <h3 className={styles.featureTitle}>
+              Frictionless Funnel Engineering
+            </h3>
+            <p className={styles.featureDesc}>
+              We design intuitive inquiry pathways, instant consultation modals, and clear visual hierarchies that turn casual
+              search traffic into qualified commercial discovery opportunities for your sales team.
+            </p>
+          </div>
+
+          <div className={styles.feature}>
+            <div className={styles.featurePill}>05 // INDEXATION</div>
+            <h3 className={styles.featureTitle}>
+              Topical Authority &amp; SEO
+            </h3>
+            <p className={styles.featureDesc}>
+              Every route is statically pre-rendered with structured Schema.org entity graphs, canonical hierarchies, and automated
+              sitemaps that maximize crawl efficiency on Google, Bing, and AI search engines.
+            </p>
+          </div>
+
+          <div className={styles.feature}>
+            <div className={styles.featurePill}>06 // TELEMETRY</div>
+            <h3 className={styles.featureTitle}>
+              Server-Side Measurement
+            </h3>
+            <p className={styles.featureDesc}>
+              We deploy server-side Google Tag Manager and Conversions API (CAPI) with SHA-256 data hashing, preserving 100% accurate
+              conversion tracking against modern ad-blockers and Safari ITP restrictions.
+            </p>
+          </div>
         </div>
       </div>
     </section>

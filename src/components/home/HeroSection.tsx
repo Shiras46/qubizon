@@ -12,6 +12,8 @@ const MARQUEE_ITEMS = [
   "Schema Entity Graphs",
   "High-Intent PPC Ads",
   "Sub-Second Core Web Vitals",
+  "UAE & GCC Growth Hub",
+  "Dubai Enterprise Web",
   "Social Media Strategy",
   "Content Authority",
   "Conversion Rate Optimization",
@@ -38,7 +40,7 @@ export function HeroSection() {
             Qubizon is a premier digital agency specializing in custom Next.js web architecture,
             technical search engine optimization, precision paid advertising, and high-impact brand
             storytelling. We combine engineering precision with creative vision to build high-performance
-            digital systems for ambitious enterprises in Kozhikode, Thrissur, and across Kerala.
+            digital systems for ambitious enterprises in Kerala and across the UAE &amp; GCC (Dubai, Abu Dhabi, Sharjah).
           </p>
 
           <div className={styles.actionGroup}>

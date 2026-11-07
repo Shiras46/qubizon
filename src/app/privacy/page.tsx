@@ -144,9 +144,42 @@ export default function PrivacyPage() {
           </p>
         </section>
 
+        <section style={{ marginBottom: "var(--space-10)" }}>
+          <h2 style={{ fontSize: "var(--font-size-xl)", fontWeight: 700, color: "var(--color-text-primary)", letterSpacing: "-0.01em", marginBottom: "var(--space-3)" }}>
+            5. Indian DPDP Act &amp; International Data Governance Standards
+          </h2>
+          <p style={{ fontSize: "var(--font-size-sm)", color: "var(--color-text-secondary)", lineHeight: "var(--line-height-relaxed)", marginBottom: "var(--space-4)" }}>
+            Qubizon complies with the principles of the Digital Personal Data Protection (DPDP) Act of India and international benchmarks including GDPR. We collect only personal data necessary for legitimate business inquiry evaluation, operate with complete transparency, and enforce strict purpose-limitation controls.
+          </p>
+          <p style={{ fontSize: "var(--font-size-sm)", color: "var(--color-text-secondary)", lineHeight: "var(--line-height-relaxed)" }}>
+            For corporate clients and cross-border partners in the GCC, Europe, and North America, we execute data processing agreements (DPAs) upon engagement kick-off, establishing explicit data residency, processing scopes, and confidential breach notification protocols.
+          </p>
+        </section>
+
+        <section style={{ marginBottom: "var(--space-10)" }}>
+          <h2 style={{ fontSize: "var(--font-size-xl)", fontWeight: 700, color: "var(--color-text-primary)", letterSpacing: "-0.01em", marginBottom: "var(--space-3)" }}>
+            6. Cookie Governance &amp; Local Telemetry
+          </h2>
+          <p style={{ fontSize: "var(--font-size-sm)", color: "var(--color-text-secondary)", lineHeight: "var(--line-height-relaxed)", marginBottom: "var(--space-4)" }}>
+            Our web platform uses minimal, strictly essential session indicators and anonymized aggregate analytics. We do not set persistent cross-site tracking cookies or sell behavioral telemetry to programmatic advertising networks.
+          </p>
+          <p style={{ fontSize: "var(--font-size-sm)", color: "var(--color-text-secondary)", lineHeight: "var(--line-height-relaxed)" }}>
+            Where first-party measurement tools (such as Google Analytics 4) are configured, client IP addresses are masked and anonymized at the edge before storage.
+          </p>
+        </section>
+
+        <section style={{ marginBottom: "var(--space-10)" }}>
+          <h2 style={{ fontSize: "var(--font-size-xl)", fontWeight: 700, color: "var(--color-text-primary)", letterSpacing: "-0.01em", marginBottom: "var(--space-3)" }}>
+            7. Technical Safeguards &amp; Transport Layer Security (HSTS)
+          </h2>
+          <p style={{ fontSize: "var(--font-size-sm)", color: "var(--color-text-secondary)", lineHeight: "var(--line-height-relaxed)", marginBottom: "var(--space-4)" }}>
+            All web traffic between client browsers and Qubizon infrastructure is strictly governed by HTTP Strict Transport Security (HSTS), enforcing TLS 1.3 encryption across all root domains and subdomains. We configure defensive HTTP response headers including X-Content-Type-Options: nosniff, strict Referrer-Policy, and restricted Permissions-Policy.
+          </p>
+        </section>
+
         <section>
           <h2 style={{ fontSize: "var(--font-size-xl)", fontWeight: 700, color: "var(--color-text-primary)", letterSpacing: "-0.01em", marginBottom: "var(--space-3)" }}>
-            5. Your Privacy Rights & Contact Method
+            8. Your Privacy Rights &amp; Contact Method
           </h2>
           <p style={{ fontSize: "var(--font-size-sm)", color: "var(--color-text-secondary)", lineHeight: "var(--line-height-relaxed)", marginBottom: "var(--space-4)" }}>
             You have the right to request access to the information you submitted, request corrections, or request complete deletion of your enquiry record from our systems.

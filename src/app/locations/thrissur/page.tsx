@@ -194,6 +194,45 @@ export default function ThrissurLocationPage() {
         </div>
       </section>
 
+      {/* Key Economic Sectors in Thrissur */}
+      <section style={{ marginTop: "3rem", marginBottom: "3rem", background: "rgba(255, 255, 255, 0.8)", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "20px", padding: "clamp(2rem, 4vw, 3rem)" }}>
+        <h2 className={styles.sectionTitle} style={{ textAlign: "center", marginBottom: "1rem" }}>
+          Specialized Digital Solutions for Thrissur Enterprises
+        </h2>
+        <p className={styles.sectionSubtitle} style={{ textAlign: "center", maxWidth: "750px", margin: "0 auto 2.5rem auto" }}>
+          Known as the cultural and financial capital of Kerala, Thrissur is home to leading banking institutions, jewellery conglomerates, and manufacturing hubs that demand high-trust digital platforms:
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+          <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+              Banking, NBFC &amp; Financial Services
+            </h3>
+            <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+              Rigorous, accessible web interfaces engineered with strict CSP security headers, encrypted API endpoints, and financial trust signals for Thrissur&apos;s established banking and chit-fund ecosystems.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+              Gold, Jewellery &amp; Luxury Retail
+            </h3>
+            <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+              Omnichannel digital product showcases with live gold-rate integration, high-resolution visual rendering, and targeted NRI paid campaigns across Dubai, Abu Dhabi, and Doha.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+              Ayurveda, Wellness &amp; Hospitality
+            </h3>
+            <p style={{ fontSize: "0.9rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+              Consultation booking engines, multilingual global search architecture, and authentic brand storytelling connecting traditional Ayurvedic health resorts with international wellness travelers.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* FAQs */}
       <section className={styles.section} aria-labelledby="thrissur-faqs">
         <h2 id="thrissur-faqs" className={styles.sectionTitle}>

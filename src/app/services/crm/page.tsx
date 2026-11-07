@@ -147,6 +147,61 @@ export default function CrmPage() {
       {/* CRM Interactive Suite (Displayed Right at Top of Content) */}
       <CrmPageClient />
 
+      {/* Enterprise Data Governance & API Integration Standards */}
+      <section style={{ padding: "clamp(2.5rem, 5vw, 4rem) 0", background: "rgba(255, 255, 255, 0.75)", borderTop: "1px solid rgba(0, 0, 0, 0.06)", borderBottom: "1px solid rgba(0, 0, 0, 0.06)", marginTop: "3rem" }}>
+        <div className="container">
+          <div style={{ textAlign: "center", maxWidth: "800px", margin: "0 auto 2.5rem auto" }}>
+            <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--brand-blue, #00488e)", display: "block", marginBottom: "0.5rem" }}>
+              • ENTERPRISE INTEGRATION ARCHITECTURE /
+            </span>
+            <h2 style={{ fontSize: "clamp(1.75rem, 3vw, 2.35rem)", fontWeight: 800, color: "var(--clr-foreground, #0a0a0a)", letterSpacing: "-0.02em", marginBottom: "1rem" }}>
+              Secure Lead Ingestion &amp; Automated Lifecycle Governance
+            </h2>
+            <p style={{ fontSize: "0.975rem", color: "var(--color-text-secondary, #64748b)", lineHeight: 1.65 }}>
+              Our CRM and automation platform bridges front-end marketing channels to backend fulfillment systems with zero data leakage, encrypted transmission, and deterministic business rules.
+            </p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "16px", padding: "1.75rem" }}>
+              <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+                Multi-Channel Ingestion &amp; Webhooks
+              </h3>
+              <p style={{ fontSize: "0.925rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+                Every inquiry from Next.js server actions, Google Ads lead extensions, Meta instant forms, and WhatsApp webhooks routes into a unified inbox with UTM attribution and automated geographic tagging.
+              </p>
+            </div>
+
+            <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "16px", padding: "1.75rem" }}>
+              <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+                Role-Based Access Control (RBAC)
+              </h3>
+              <p style={{ fontSize: "0.925rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+                Granular permission controls protect customer contact information. Sales reps access assigned deals, project managers coordinate active deliverables, and leadership monitors aggregated gross margin and pipeline velocity.
+              </p>
+            </div>
+
+            <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "16px", padding: "1.75rem" }}>
+              <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+                Calendar Sync &amp; Real-Time Availability
+              </h3>
+              <p style={{ fontSize: "0.925rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+                Eliminate back-and-forth appointment scheduling. Live bi-directional synchronization with Google Calendar and Outlook ensures prospects book consultations only during verified open practitioner availability.
+              </p>
+            </div>
+
+            <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "16px", padding: "1.75rem" }}>
+              <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+                Automated Service SLA Enforcement
+              </h3>
+              <p style={{ fontSize: "0.925rem", color: "#64748b", lineHeight: 1.6, margin: 0 }}>
+                Automatic alerts notify managers if inbound high-intent leads remain unanswered after 15 minutes. Ensure immediate response velocity when prospects are evaluating your agency against competitors.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Architectural FAQs Section */}
       <div className="container" style={{ marginTop: "4rem", marginBottom: "3rem" }}>
         <div style={{ background: "rgba(255, 255, 255, 0.85)", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "24px", padding: "clamp(2rem, 4vw, 3.5rem)" }}>

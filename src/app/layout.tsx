@@ -44,6 +44,7 @@ export default function RootLayout({
         name: SITE_CONFIG.name,
         url: SITE_CONFIG.domain,
         logo: `${SITE_CONFIG.domain}/Logo%20Png-07.png`,
+        image: `${SITE_CONFIG.domain}/icon.png`,
         email: SITE_CONFIG.email,
         telephone: SITE_CONFIG.phone,
         sameAs: [
@@ -53,6 +54,21 @@ export default function RootLayout({
         slogan: SITE_CONFIG.slogan,
         description: SITE_CONFIG.description,
         areaServed: [
+          {
+            "@type": "Country",
+            name: "United Arab Emirates",
+            alternateName: "UAE",
+          },
+          {
+            "@type": "City",
+            name: "Dubai",
+            containedInPlace: { "@type": "Country", name: "United Arab Emirates" },
+          },
+          {
+            "@type": "City",
+            name: "Abu Dhabi",
+            containedInPlace: { "@type": "Country", name: "United Arab Emirates" },
+          },
           {
             "@type": "City",
             name: "Kozhikode",
@@ -92,10 +108,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${outfit.variable} ${playfair.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.png" type="image/png" sizes="512x512" />
-        <link rel="icon" href="/icon-48.png" type="image/png" sizes="48x48" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" sizes="180x180" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
