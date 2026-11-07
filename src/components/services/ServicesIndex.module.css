@@ -47,9 +47,9 @@
 
 /* Hero Section */
 .heroSection {
-  padding-top: var(--space-16);
-  padding-bottom: var(--space-20);
-  border-bottom: 1px solid var(--color-border-subtle);
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-12);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   background: transparent;
 }
 
@@ -62,127 +62,230 @@
   align-items: center;
   gap: var(--space-2);
   padding: 6px 16px;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: var(--brand-blue);
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-semibold);
+  font-weight: 700;
   border-radius: var(--radius-full);
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-caps);
   margin-bottom: var(--space-6);
-  border: 1px solid rgba(0, 72, 142, 0.14);
+  border: 1px solid rgba(0, 72, 142, 0.16);
   box-shadow: 0 2px 8px rgba(11, 21, 48, 0.04);
 }
 
 .heroTitle {
-  font-size: clamp(2.5rem, 2rem + 2.5vw, 4.2rem);
+  font-size: clamp(2.4rem, 2rem + 2vw, 4rem);
   font-weight: var(--font-weight-extrabold);
   color: var(--color-text-primary);
-  line-height: var(--line-height-tight);
-  letter-spacing: var(--letter-spacing-tight);
-  margin-bottom: var(--space-6);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  margin-bottom: var(--space-4);
 }
 
 .heroLead {
-  font-size: var(--font-size-lg);
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.15rem);
   color: var(--color-text-secondary);
   line-height: var(--line-height-relaxed);
-  max-width: 800px;
+  max-width: 820px;
 }
 
-/* Services Grid */
-.servicesSection {
-  padding-top: var(--space-20);
-  padding-bottom: var(--space-20);
+/* =========================================================================
+   VIEW SWITCHER TAB BAR (Pro-Level Quick Switch)
+   ========================================================================= */
+.tabBarSection {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-4);
 }
 
-.servicesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: var(--space-8);
-}
-
-.serviceCard {
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+.tabBarWrapper {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 6px;
+  border-radius: 9999px;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 24px;
-  padding: var(--space-8);
+  box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.06);
+  gap: 6px;
+}
+
+.tabBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tabBtn:hover {
+  color: var(--clr-foreground, #0a0a0a);
+}
+
+.tabBtnActive {
+  background: #0a0a0a;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.tabIcon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.tabBadge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--color-text-secondary);
+}
+
+.tabBtnActive .tabBadge {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.tabBadgePulse {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  background: var(--brand-blue);
+  color: #ffffff;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* =========================================================================
+   SECTION 1: ALL SERVICES GRID (Image 1 Model)
+   ========================================================================= */
+.servicesSection {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-16);
+}
+
+.sectionHeader {
+  margin-bottom: var(--space-10);
+  max-width: 820px;
+}
+
+.sectionCategory {
+  display: block;
+  font-family: var(--font-family-mono, monospace);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--brand-blue);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.sectionHeading {
+  font-size: clamp(1.8rem, 1.5rem + 1.2vw, 2.75rem);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-3);
+}
+
+.sectionDescription {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* Minimal Icon Grid */
+.minimalCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.minimalCard {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 2rem 1.75rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
   position: relative;
-  overflow: hidden;
+  text-align: left;
 }
 
-.serviceCard:hover {
+.minimalCard:hover {
   transform: translateY(-4px);
-  border-color: rgba(0, 72, 142, 0.35);
-  box-shadow: 0 16px 36px rgba(0, 72, 142, 0.08);
+  border-color: rgba(0, 72, 142, 0.3);
+  box-shadow: 0 16px 36px -4px rgba(0, 72, 142, 0.12);
 }
 
-.cardHeader {
+.cardIconWrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: var(--space-6);
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
 }
 
-.disciplineNumber {
-  font-family: var(--font-family-mono);
-  font-size: var(--font-size-xs);
+.iconCircle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+
+.minimalCard:hover .iconCircle {
+  transform: scale(1.08);
+}
+
+.minimalCardTitle {
+  font-size: 1.25rem;
   font-weight: 700;
-  color: var(--brand-blue);
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.faceTag {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--color-text-muted);
-  background: rgba(0, 0, 0, 0.05);
-  padding: 3px 10px;
-  border-radius: 9999px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.cardTitle {
-  font-size: clamp(1.4rem, 1.2rem + 0.6vw, 1.8rem);
-  font-weight: var(--font-weight-extrabold);
   color: var(--color-text-primary);
-  letter-spacing: -0.02em;
-  margin-bottom: var(--space-3);
-  line-height: 1.25;
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.015em;
 }
 
-.cardDescription {
-  font-size: var(--font-size-sm);
+.minimalCardDesc {
+  font-size: 0.925rem;
   color: var(--color-text-secondary);
-  line-height: var(--line-height-relaxed);
-  margin-bottom: var(--space-6);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
   flex-grow: 1;
 }
 
-.cardFooter {
-  padding-top: var(--space-6);
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+.minimalCardFooter {
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.exploreLink {
+.cardActionLink {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
-  font-size: var(--font-size-xs);
+  gap: 6px;
+  font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -191,12 +294,420 @@
   transition: gap 0.2s ease, color 0.2s ease;
 }
 
-.serviceCard:hover .exploreLink {
-  gap: var(--space-3);
+.cardActionLink:hover {
+  gap: 9px;
   color: var(--brand-blue-hover);
 }
 
-/* Call to Action Banner */
+.cardActionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-secondary);
+  transition: color 0.2s ease;
+  padding: 0;
+}
+
+.cardActionBtn:hover {
+  color: var(--brand-blue);
+}
+
+/* CRM Trigger Card (Special Interactive Styling) */
+.crmTriggerCard {
+  background: linear-gradient(180deg, #ffffff 0%, rgba(0, 72, 142, 0.03) 100%);
+  border: 1.5px solid rgba(0, 72, 142, 0.25);
+  cursor: pointer;
+  width: 100%;
+}
+
+.crmTriggerCard:hover {
+  border-color: var(--brand-blue);
+  box-shadow: 0 16px 40px -4px rgba(0, 72, 142, 0.2);
+}
+
+.crmInteractivePill {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: rgba(0, 72, 142, 0.1);
+  color: var(--brand-blue);
+  letter-spacing: 0.04em;
+}
+
+.crmLinkText {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand-blue);
+  transition: gap 0.2s ease;
+}
+
+.crmTriggerCard:hover .crmLinkText {
+  gap: 9px;
+}
+
+/* =========================================================================
+   SECTION 2: CRM MODULAR SUITE (Image 2 Reference)
+   ========================================================================= */
+.crmSuiteSection {
+  padding-top: var(--space-12);
+  padding-bottom: var(--space-20);
+  scroll-margin-top: 100px;
+}
+
+.crmHeaderBanner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: var(--space-12);
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.crmHeaderLeft {
+  max-width: 760px;
+}
+
+.crmBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-family-mono, monospace);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--brand-blue);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.crmHeading {
+  font-size: clamp(2rem, 1.6rem + 1.4vw, 3rem);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.crmLead {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+.switchBackBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--clr-foreground, #0a0a0a);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.switchBackBtn:hover {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+/* 6 CRM Modules Grid */
+.crmModulesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 4rem;
+}
+
+.crmModuleCard {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 4px solid;
+  border-radius: 18px;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.crmModuleCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -4px rgba(0, 0, 0, 0.08);
+}
+
+.crmCardHead {
+  margin-bottom: 1.25rem;
+}
+
+.crmCategoryTag {
+  display: block;
+  font-family: var(--font-family-mono, monospace);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.crmCardTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.crmCardDescription {
+  font-size: 0.925rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.crmBulletList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex-grow: 1;
+}
+
+.crmBulletItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+}
+
+.checkIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgba(0, 72, 142, 0.08);
+  color: var(--brand-blue);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.crmCardAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transition: gap 0.2s ease;
+  align-self: flex-start;
+}
+
+.crmCardAction:hover {
+  gap: 10px;
+}
+
+/* =========================================================================
+   SECTION 3: ONE CONNECTED WEB PIPELINE (Image 3 Reference)
+   ========================================================================= */
+.connectedPipelineStage {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.09);
+  border-radius: 28px;
+  padding: clamp(2rem, 4vw, 3.5rem);
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.06);
+}
+
+.pipelineIntro {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 3rem auto;
+}
+
+.pipelineTitle {
+  font-size: clamp(2rem, 1.8rem + 1.4vw, 3.25rem);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin-bottom: 1rem;
+}
+
+.pipelineAccent {
+  color: var(--brand-blue, #00488e);
+}
+
+.pipelineSubtitle {
+  font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.1rem);
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+/* Timeline Pipeline Track */
+.pipelineTrackContainer {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+/* Desktop Horizontal Connector Line */
+.pipelineConnectorLine {
+  position: absolute;
+  top: 19px;
+  left: 3%;
+  right: 3%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    #00488e 0%,
+    #0284c7 35%,
+    #d97706 60%,
+    #16a34a 100%
+  );
+  z-index: 1;
+}
+
+.pipelineStepsList {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.pipelineStepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.stepNodeBadge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--brand-blue, #00488e);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-mono, monospace);
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(0, 72, 142, 0.3);
+  margin-bottom: 1.25rem;
+  border: 3px solid #ffffff;
+}
+
+.stepCardContent {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 1.25rem 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.stepCategoryTag {
+  display: block;
+  font-family: var(--font-family-mono, monospace);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--brand-blue);
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.stepTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.stepTagline {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--clr-foreground, #0a0a0a);
+  margin-bottom: 0.5rem;
+}
+
+.stepDetails {
+  font-size: 0.775rem;
+  color: var(--color-text-secondary);
+  line-height: 1.45;
+  margin-top: auto;
+}
+
+.pipelineFooterCta {
+  text-align: center;
+  padding-top: 1.5rem;
+}
+
+.pipelineActionBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 9999px;
+  background: #0a0a0a;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  border: 1px solid #0a0a0a;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pipelineActionBtn:hover {
+  background: transparent;
+  color: #0a0a0a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================================================================
+   BOTTOM CALL TO ACTION BANNER
+   ========================================================================= */
 .ctaBanner {
   background: radial-gradient(ellipse at 70% 30%, #16244f 0%, #080f21 80%);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -277,13 +788,105 @@
   transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
-  .servicesGrid {
-    grid-template-columns: 1fr;
-  }
-  .ctaBanner {
-    border-radius: 28px;
-    padding: var(--space-8) var(--space-6);
+/* =========================================================================
+   RESPONSIVE DESIGN (PRO-LEVEL MOBILE ARCHITECTURE)
+   ========================================================================= */
+
+/* Tablets (1024px and below) */
+@media (max-width: 1024px) {
+  .crmModulesGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Mobile & Small Tablets (960px and below) */
+@media (max-width: 960px) {
+  .pipelineConnectorLine {
+    display: none;
+  }
+
+  .pipelineStepsList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  /* Vertical Guide Line on Mobile */
+  .pipelineStepsList::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 17px;
+    width: 2px;
+    background: linear-gradient(
+      180deg,
+      #00488e 0%,
+      #0284c7 35%,
+      #d97706 60%,
+      #16a34a 100%
+    );
+  }
+
+  .pipelineStepItem {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.25rem;
+    position: relative;
+  }
+
+  .stepNodeBadge {
+    margin-bottom: 0;
+    margin-left: -2rem;
+    flex-shrink: 0;
+    z-index: 2;
+  }
+
+  .stepCardContent {
+    flex: 1;
+  }
+}
+
+/* Mobile Phones (768px and below) */
+@media (max-width: 768px) {
+  .minimalCardsGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .crmModulesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .tabBarWrapper {
+    width: 100%;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 4px;
+  }
+
+  .tabBtn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+  .connectedPipelineStage {
+    border-radius: 20px;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .ctaBanner {
+    border-radius: 24px;
+    padding: var(--space-10) var(--space-4);
+  }
+
+  .pipelineActionBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

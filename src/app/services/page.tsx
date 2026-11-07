@@ -1,32 +1,26 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ChevronRight, ArrowRight, Layers, Box, CheckCircle2 } from "lucide-react";
+import { ChevronRight, ArrowRight, Box } from "lucide-react";
 import { constructMetadata } from "@/lib/metadata";
-import { CORE_SERVICES, SITE_CONFIG } from "@/lib/constants";
+import { SITE_CONFIG } from "@/lib/constants";
+import { ServicesPageClient } from "@/components/services/ServicesPageClient";
 import styles from "@/components/services/ServicesIndex.module.css";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Services & Capabilities",
+  title: "Services & Capabilities — Full-Stack Digital Disciplines & CRM Systems",
   description:
-    "Explore Qubizon's five integrated digital disciplines: Website Development, Technical SEO, Social Media Marketing, Paid Advertising, and Content Marketing.",
+    "Explore Qubizon's digital engineering and growth capabilities: Mobile Apps, Web Development, SEO, Cloud Services, SMM, Design, Offshore Resources, and End-to-End CRM & Workflow Automation.",
   path: "/services",
+  keywords: [
+    "Digital Services Kerala",
+    "Mobile App Development Kozhikode",
+    "Next.js Web Development Kerala",
+    "Technical SEO Agency",
+    "Cloud Services AWS Kerala",
+    "CRM Workflow Automation",
+    "Social Media Marketing",
+  ],
 });
-
-const DISCIPLINE_NUMBERS: Record<string, string> = {
-  "web-dev": "01 / WEB",
-  "seo": "02 / SEARCH",
-  "social-media": "03 / SOCIAL",
-  "paid-ads": "04 / ADS",
-  "content": "05 / CONTENT",
-};
-
-const DISCIPLINE_HIGHLIGHTS: Record<string, string[]> = {
-  "web-dev": ["Next.js App Router Architecture", "Sub-second LCP & 0.00 CLS", "WCAG 2.1 AA Accessibility"],
-  "seo": ["Technical Crawl Budget Engineering", "Semantic Schema Graph Modeling", "Search-Intent Clustering"],
-  "social-media": ["Executive Thought Leadership", "Multi-Channel Distribution", "Active Community Engagement"],
-  "paid-ads": ["Negative Keyword Clustering", "Server-Side Conversion Tracking", "Engineered Ad Funnels"],
-  "content": ["Search-Aligned Editorial Guides", "Topical Authority Silos", "High-Converting Sales Collateral"],
-};
 
 export default function ServicesPage() {
   const jsonLd = {
@@ -53,9 +47,9 @@ export default function ServicesPage() {
         "@type": "CollectionPage",
         "@id": `${SITE_CONFIG.domain}/services#webpage`,
         url: `${SITE_CONFIG.domain}/services`,
-        name: "Services & Capabilities | Qubizon",
+        name: "Services & Capabilities | Qubizon Digital Solutions",
         description:
-          "Explore Qubizon's five integrated disciplines: Web Development, SEO, Social Media, Paid Ads, and Content Marketing.",
+          "Comprehensive digital capabilities spanning mobile apps, Next.js architecture, technical SEO, cloud hosting, and integrated CRM automation platforms.",
         isPartOf: {
           "@type": "WebSite",
           "@id": `${SITE_CONFIG.domain}/#website`,
@@ -101,78 +95,39 @@ export default function ServicesPage() {
               Unified Discipline Architecture
             </span>
             <h1 id="services-hero-heading" className={styles.heroTitle}>
-              Five Disciplines. <span className="calligraphy">Unified Execution.</span>
+              Digital Engineering &amp; <span className="calligraphy">Connected Operations</span>.
             </h1>
             <p className={styles.heroLead}>
-              {SITE_CONFIG.slogan} We eliminate agency fragmentation by integrating software engineering,
-              technical search architecture, precision paid advertising, social presence, and authoritative
-              editorial content into a single synchronized growth engine.
+              {SITE_CONFIG.slogan} We combine specialized engineering disciplines with integrated CRM platforms. From sub-second Next.js web applications to automated lead nurturing, booking calendars, and centralized operations.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Services Grid Section */}
-      <section className={styles.servicesSection} aria-labelledby="core-services-heading">
-        <div className="container">
-          <div className={styles.servicesGrid}>
-            {CORE_SERVICES.map((service) => {
-              const numLabel = DISCIPLINE_NUMBERS[service.id] || "01 / SERVICE";
-              const highlights = DISCIPLINE_HIGHLIGHTS[service.id] || [];
+      {/* Interactive Services & CRM Suite */}
+      <ServicesPageClient />
 
-              return (
-                <article key={service.id} className={styles.serviceCard}>
-                  <div>
-                    <div className={styles.cardHeader}>
-                      <span className={styles.disciplineNumber}>{numLabel}</span>
-                      <span className={styles.faceTag}>{service.cubeFace} Face</span>
-                    </div>
-
-                    <h2 className={styles.cardTitle}>{service.title}</h2>
-                    <p className={styles.cardDescription}>{service.shortDescription}</p>
-
-                    <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "8px", marginBottom: "24px" }}>
-                      {highlights.map((h, i) => (
-                        <li key={i} style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "13px", color: "var(--color-text-secondary)" }}>
-                          <CheckCircle2 size={14} color="var(--brand-blue)" aria-hidden="true" />
-                          <span>{h}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className={styles.cardFooter}>
-                    <Link href={service.href} className={styles.exploreLink}>
-                      <span>Explore Discipline</span>
-                      <ArrowRight size={14} aria-hidden="true" />
-                    </Link>
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-
-          {/* Call to Action Banner */}
-          <div className={styles.ctaBanner}>
-            <h2 className={styles.ctaTitle}>
-              Ready for a Unified Digital Platform?
-            </h2>
-            <p className={styles.ctaDescription}>
-              Schedule a technical discovery session. We will audit your current web performance,
-              organic search visibility, and conversion funnels to map out an integrated roadmap.
-            </p>
-            <div className={styles.ctaActions}>
-              <Link href="/contact" className={styles.primaryBtn}>
-                <span>Schedule a Discovery Call</span>
-                <ArrowRight size={16} aria-hidden="true" />
-              </Link>
-              <Link href="/work" className={styles.secondaryBtn}>
-                <span>Inspect Our Benchmarks</span>
-              </Link>
-            </div>
+      {/* Call to Action Banner */}
+      <div className="container">
+        <div className={styles.ctaBanner}>
+          <h2 className={styles.ctaTitle}>
+            Ready for a Unified Digital Platform?
+          </h2>
+          <p className={styles.ctaDescription}>
+            Schedule a technical discovery session. We will audit your current web performance,
+            lead funnels, and business operations to engineer an integrated roadmap.
+          </p>
+          <div className={styles.ctaActions}>
+            <Link href="/contact" className={styles.primaryBtn}>
+              <span>Schedule a Discovery Call</span>
+              <ArrowRight size={16} aria-hidden="true" />
+            </Link>
+            <Link href="/work" className={styles.secondaryBtn}>
+              <span>Inspect Our Benchmarks</span>
+            </Link>
           </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 }

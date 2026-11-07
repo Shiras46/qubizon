@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit, Playfair_Display } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { MobileQuickActions } from "@/components/layout/MobileQuickActions";
 import { SITE_CONFIG } from "@/lib/constants";
 import { constructMetadata } from "@/lib/metadata";
 import { AnalyticsScripts } from "@/components/analytics/AnalyticsScripts";
@@ -110,6 +111,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <MobileQuickActions />
       </body>
     </html>
   );

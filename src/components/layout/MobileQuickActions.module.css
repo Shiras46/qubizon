@@ -1,0 +1,85 @@
+/* Fixed Vertical Quick Action Dock for Mobile Devices */
+.quickActionsDock {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 990;
+  display: flex;
+  flex-direction: column;
+  background-color: #0a0a0a;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-right: none;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  box-shadow: -6px 10px 30px rgba(0, 0, 0, 0.5), 0 0 1px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Hide on desktop viewports where full header & footer contact links are active */
+@media (min-width: 921px) {
+  .quickActionsDock {
+    display: none;
+  }
+}
+
+/* Action Button */
+.actionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  color: #ffffff;
+  background-color: #0a0a0a;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.actionBtn:last-child {
+  border-bottom: none;
+}
+
+.actionIcon {
+  display: block;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+}
+
+/* Tactile Active & Hover Feedback */
+.actionBtn:hover,
+.actionBtn:active {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.actionBtn:hover .actionIcon,
+.actionBtn:active .actionIcon {
+  transform: scale(1.12);
+}
+
+/* Accessible focus ring for keyboard & screen reader navigation */
+.actionBtn:focus-visible {
+  outline: 2px solid var(--brand-blue, #00488e);
+  outline-offset: -2px;
+  z-index: 2;
+}
+
+/* Compact phones */
+@media (max-width: 380px) {
+  .actionBtn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .actionBtn svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
