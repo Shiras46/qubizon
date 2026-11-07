@@ -14,7 +14,7 @@ import Script from "next/script";
  * 3. Client IP anonymization is enforced by default.
  */
 export function AnalyticsScripts() {
-  const rawGa = process.env.NEXT_PUBLIC_GA_ID?.trim();
+  const rawGa = (process.env.NEXT_PUBLIC_GA_ID || "G-RJHL55RYT1")?.trim();
   const rawGtm = process.env.NEXT_PUBLIC_GTM_ID?.trim();
   const rawClarity = process.env.NEXT_PUBLIC_CLARITY_ID?.trim();
 
