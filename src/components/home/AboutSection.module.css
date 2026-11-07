@@ -1,21 +1,29 @@
 .aboutSection {
-  background-color: #0a0a0a;
-  color: #ffffff;
-  padding-top: clamp(5.5rem, 10vw, 8.5rem);
-  padding-bottom: clamp(5.5rem, 10vw, 8.5rem);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: transparent;
+  padding-top: clamp(3.5rem, 6vw, 5.5rem);
+  padding-bottom: clamp(3.5rem, 6vw, 5.5rem);
   position: relative;
-  overflow: hidden;
 }
 
 .container {
   width: 100%;
-  max-width: var(--container-max-width, 1240px);
+  max-width: var(--container-max-width, 1320px);
   margin-left: auto;
   margin-right: auto;
   padding-left: var(--container-padding, 1.5rem);
   padding-right: var(--container-padding, 1.5rem);
+}
+
+/* Framed Architectural Dark Stage (Eliminates full-bleed zebra cuts) */
+.aboutStage {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.4);
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.75rem, 4vw, 4rem);
+  position: relative;
+  overflow: hidden;
 }
 
 .aboutGrid {

@@ -123,119 +123,121 @@ export function AboutSection() {
       aria-labelledby="about-heading"
     >
       <div className={styles.container}>
-        <div className={styles.aboutGrid}>
-          {/* Left Column: Sticky Editorial Image Frame */}
-          <div className={styles.imageColumn}>
-            <div className={styles.imageFrame}>
-              <Image
-                src="/hero-collaboration.jpg"
-                alt="Qubizon Digital Solutions - Unified Agency Team Collaborating"
-                fill
-                sizes="(max-width: 960px) 100vw, 45vw"
-                className={styles.aboutImage}
-                priority={false}
-              />
-              <div className={styles.imageOverlay} />
-              <div className={styles.imageCaption}>
-                <span className={styles.captionDot} aria-hidden="true" />
-                <span>Unified Agency Architecture • Kerala, India</span>
+        <div className={styles.aboutStage}>
+          <div className={styles.aboutGrid}>
+            {/* Left Column: Sticky Editorial Image Frame */}
+            <div className={styles.imageColumn}>
+              <div className={styles.imageFrame}>
+                <Image
+                  src="/hero-collaboration.jpg"
+                  alt="Qubizon Digital Solutions - Unified Agency Team Collaborating"
+                  fill
+                  sizes="(max-width: 960px) 100vw, 45vw"
+                  className={styles.aboutImage}
+                  priority={false}
+                />
+                <div className={styles.imageOverlay} />
+                <div className={styles.imageCaption}>
+                  <span className={styles.captionDot} aria-hidden="true" />
+                  <span>Unified Agency Architecture • Kerala, India</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Right Column: Progressive Word-by-Word Scroll Reveal */}
-          <div className={styles.contentColumn}>
-            <p className={styles.categoryTag}>
-              • BRAND &amp; WEBSITES FOR HIGH-GROWTH ENTERPRISES /
-            </p>
-
-            <div className={styles.narrativeBlock}>
-              {/* Paragraph 1: Word-by-word reveal */}
-              <h2
-                ref={p1Ref}
-                id="about-heading"
-                className={`${styles.narrativeItem} ${styles.narrativePrimary}`}
-              >
-                {P1_WORDS.map((word, i) => (
-                  <span
-                    key={`p1-${i}`}
-                    ref={(el) => {
-                      p1WordRefs.current[i] = el;
-                    }}
-                    className={styles.word}
-                  >
-                    {word}
-                  </span>
-                ))}
-              </h2>
-
-              {/* Paragraph 2: Word-by-word reveal */}
-              <p
-                ref={p2Ref}
-                className={`${styles.narrativeItem} ${styles.narrativeSecondary}`}
-              >
-                {P2_WORDS.map((word, i) => (
-                  <span
-                    key={`p2-${i}`}
-                    ref={(el) => {
-                      p2WordRefs.current[i] = el;
-                    }}
-                    className={styles.word}
-                  >
-                    {word}
-                  </span>
-                ))}
+            {/* Right Column: Progressive Word-by-Word Scroll Reveal */}
+            <div className={styles.contentColumn}>
+              <p className={styles.categoryTag}>
+                • BRAND &amp; WEBSITES FOR HIGH-GROWTH ENTERPRISES /
               </p>
 
-              {/* Paragraph 3: Word-by-word reveal concluding in glowing brand gold */}
-              <p
-                ref={p3Ref}
-                className={`${styles.narrativeItem} ${styles.narrativeHighlight}`}
-              >
-                {P3_WORDS.map((word, i) => (
-                  <span
-                    key={`p3-${i}`}
-                    ref={(el) => {
-                      p3WordRefs.current[i] = el;
-                    }}
-                    className={styles.word}
-                  >
-                    {word}
-                  </span>
-                ))}
-                <span
-                  ref={(el) => {
-                    p3WordRefs.current[P3_WORDS.length] = el;
-                  }}
-                  className={`${styles.word} ${styles.brandCalligraphy}`}
+              <div className={styles.narrativeBlock}>
+                {/* Paragraph 1: Word-by-word reveal */}
+                <h2
+                  ref={p1Ref}
+                  id="about-heading"
+                  className={`${styles.narrativeItem} ${styles.narrativePrimary}`}
                 >
-                  Qubizon.
+                  {P1_WORDS.map((word, i) => (
+                    <span
+                      key={`p1-${i}`}
+                      ref={(el) => {
+                        p1WordRefs.current[i] = el;
+                      }}
+                      className={styles.word}
+                    >
+                      {word}
+                    </span>
+                  ))}
+                </h2>
+
+                {/* Paragraph 2: Word-by-word reveal */}
+                <p
+                  ref={p2Ref}
+                  className={`${styles.narrativeItem} ${styles.narrativeSecondary}`}
+                >
+                  {P2_WORDS.map((word, i) => (
+                    <span
+                      key={`p2-${i}`}
+                      ref={(el) => {
+                        p2WordRefs.current[i] = el;
+                      }}
+                      className={styles.word}
+                    >
+                      {word}
+                    </span>
+                  ))}
+                </p>
+
+                {/* Paragraph 3: Word-by-word reveal concluding in glowing brand gold */}
+                <p
+                  ref={p3Ref}
+                  className={`${styles.narrativeItem} ${styles.narrativeHighlight}`}
+                >
+                  {P3_WORDS.map((word, i) => (
+                    <span
+                      key={`p3-${i}`}
+                      ref={(el) => {
+                        p3WordRefs.current[i] = el;
+                      }}
+                      className={styles.word}
+                    >
+                      {word}
+                    </span>
+                  ))}
+                  <span
+                    ref={(el) => {
+                      p3WordRefs.current[P3_WORDS.length] = el;
+                    }}
+                    className={`${styles.word} ${styles.brandCalligraphy}`}
+                  >
+                    Qubizon.
+                  </span>
+                </p>
+              </div>
+
+              {/* Proof Badges */}
+              <div className={styles.badgeRow}>
+                <span className={styles.proofBadge}>
+                  <span className={styles.monoNumber}>01</span> Unified Team
                 </span>
-              </p>
-            </div>
+                <span className={styles.proofBadge}>
+                  <span className={styles.monoNumber}>05</span> Core Disciplines
+                </span>
+                <span className={styles.proofBadge}>
+                  <span className={styles.monoNumber}>100%</span> Code &amp; Asset Ownership
+                </span>
+              </div>
 
-            {/* Proof Badges */}
-            <div className={styles.badgeRow}>
-              <span className={styles.proofBadge}>
-                <span className={styles.monoNumber}>01</span> Unified Team
-              </span>
-              <span className={styles.proofBadge}>
-                <span className={styles.monoNumber}>05</span> Core Disciplines
-              </span>
-              <span className={styles.proofBadge}>
-                <span className={styles.monoNumber}>100%</span> Code &amp; Asset Ownership
-              </span>
-            </div>
-
-            {/* Action Buttons */}
-            <div className={styles.actionRow}>
-              <Link href="/about" className={styles.btnPrimary}>
-                <span>Discover Our Model</span>
-                <ArrowRight size={16} aria-hidden="true" />
-              </Link>
-              <Link href="/services" className={styles.btnText}>
-                <span>Explore All Five Disciplines &rarr;</span>
-              </Link>
+              {/* Action Buttons */}
+              <div className={styles.actionRow}>
+                <Link href="/about" className={styles.btnPrimary}>
+                  <span>Discover Our Model</span>
+                  <ArrowRight size={16} aria-hidden="true" />
+                </Link>
+                <Link href="/services" className={styles.btnText}>
+                  <span>Explore All Five Disciplines &rarr;</span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

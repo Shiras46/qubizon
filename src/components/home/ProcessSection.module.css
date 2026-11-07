@@ -1,21 +1,18 @@
 /* =========================================================================
-   CODECAVE-INSPIRED PROCESS COMPONENT (DARK / BLACK SECTION)
+   CODECAVE-INSPIRED PROCESS COMPONENT (ARCHITECTURAL CANVAS)
    ========================================================================= */
 
 .processSection {
-  padding-top: clamp(4.5rem, 9vw, 7.5rem);
-  padding-bottom: clamp(4.5rem, 9vw, 7.5rem);
-  background-color: #0a0a0a;
-  color: #ffffff;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: clamp(5rem, 8vw, 7.5rem);
+  padding-bottom: clamp(5rem, 8vw, 7.5rem);
+  background-color: transparent;
+  color: var(--clr-foreground, #0a0a0a);
   position: relative;
-  overflow: hidden;
 }
 
 .container {
   width: 100%;
-  max-width: var(--container-max-width, 1360px);
+  max-width: var(--container-max-width, 1320px);
   margin: 0 auto;
   padding-left: var(--container-padding, 1.5rem);
   padding-right: var(--container-padding, 1.5rem);
@@ -25,7 +22,7 @@
   font-family: var(--font-family-mono, monospace);
   font-size: clamp(0.6875rem, 0.65rem + 0.2vw, 0.8125rem);
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--brand-blue, #00488e);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
@@ -35,65 +32,85 @@
   font-size: var(--text-huge, clamp(2.2rem, 4.5vw, 3.8rem));
   font-weight: 800;
   letter-spacing: -0.04em;
-  color: #ffffff;
+  color: var(--clr-foreground, #0a0a0a);
   margin-bottom: 1rem;
   line-height: 1.1;
+  max-width: 680px;
 }
 
 .lead {
   font-size: var(--text-base, 1.0625rem);
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--clr-muted, #666666);
   line-height: 1.7;
   max-width: 600px;
 }
 
 .processSteps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: clamp(2.5rem, 4vw, 4rem);
-  margin-top: 4.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1.5rem, 2.5vw, 2.25rem);
+  margin-top: 4rem;
 }
 
 .processStep {
   position: relative;
-  padding-top: 1.5rem;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  padding: 2.25rem 1.75rem;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.processStep:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 72, 142, 0.25);
+  box-shadow: 0 16px 40px -10px rgba(0, 72, 142, 0.12);
 }
 
 .stepNum {
-  font-size: clamp(4.5rem, 7vw, 6.5rem);
-  color: rgba(255, 255, 255, 0.08);
+  font-size: clamp(3.5rem, 5vw, 4.5rem);
+  color: rgba(0, 72, 142, 0.08);
   position: absolute;
-  top: -2.2rem;
-  left: -0.75rem;
-  z-index: 0;
-  pointer-events: none;
+  top: 0.5rem;
+  right: 1.25rem;
   font-family: var(--font-serif, "Playfair Display", serif);
   font-style: italic;
   font-weight: 700;
   line-height: 1;
+  pointer-events: none;
 }
 
 .stepTitle {
-  font-size: var(--text-xl, clamp(1.3rem, 2vw, 1.65rem));
+  font-size: var(--text-xl, clamp(1.2rem, 1.6vw, 1.45rem));
   font-weight: 700;
   letter-spacing: -0.02em;
-  color: #ffffff;
-  margin-bottom: 1rem;
+  color: var(--clr-foreground, #0a0a0a);
+  margin-bottom: 0.85rem;
   position: relative;
   z-index: 1;
 }
 
 .stepDesc {
-  font-size: var(--text-base, 0.98rem);
-  color: rgba(255, 255, 255, 0.65);
-  line-height: 1.7;
+  font-size: 0.9375rem;
+  color: var(--clr-muted, #666666);
+  line-height: 1.65;
   position: relative;
   z-index: 1;
+}
+
+@media (max-width: 1024px) {
+  .processSteps {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
   .processSteps {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 1.5rem;
   }
 }
