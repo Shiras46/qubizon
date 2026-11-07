@@ -14,12 +14,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // 2. Core service pillar routes
-  const serviceRoutes: MetadataRoute.Sitemap = CORE_SERVICES.map((service) => ({
-    url: `${SITE_CONFIG.domain}${service.href}`,
-    lastModified: currentDate,
-    changeFrequency: "monthly",
-    priority: 0.9,
-  }));
+  const serviceRoutes: MetadataRoute.Sitemap = [
+    ...CORE_SERVICES.map((service) => ({
+      url: `${SITE_CONFIG.domain}${service.href}`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    })),
+    {
+      url: `${SITE_CONFIG.domain}/services/crm`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
+    },
+  ];
 
   // 3. Regional Service Area routes (Priority Kerala Hubs)
   const locationRoutes: MetadataRoute.Sitemap = [
