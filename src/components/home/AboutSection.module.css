@@ -14,187 +14,146 @@
   padding-right: var(--container-padding, 1.5rem);
 }
 
-/* Framed Architectural Dark Stage (Eliminates full-bleed zebra cuts) */
+/* Pro-Level White Boxed Stage (Image 2 Reference Standard) */
 .aboutStage {
-  background-color: #0a0a0a;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: var(--clr-foreground, #0a0a0a);
   border-radius: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.4);
-  padding: clamp(3rem, 6vw, 5rem) clamp(1.75rem, 4vw, 4rem);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.02);
+  padding: clamp(3.5rem, 6vw, 5.5rem) clamp(1.75rem, 5vw, 4.5rem);
   position: relative;
   overflow: hidden;
 }
 
-.aboutGrid {
-  display: grid;
-  grid-template-columns: 42% 58%;
-  gap: clamp(2.5rem, 5vw, 5rem);
-  align-items: start;
-}
-
-/* Left Column: Sticky Editorial Image Frame */
-.imageColumn {
-  position: relative;
-  width: 100%;
-}
-
-@media (min-width: 961px) {
-  .imageColumn {
-    position: sticky;
-    top: 110px;
-    align-self: start;
-  }
-}
-
-.imageFrame {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  border-radius: 28px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 24px 60px -15px rgba(0, 0, 0, 0.6);
-  background-color: #141416;
-}
-
-.aboutImage {
-  object-fit: cover;
-  object-position: center;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.imageFrame:hover .aboutImage {
-  transform: scale(1.03);
-}
-
-.imageOverlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(10, 10, 10, 0) 55%, rgba(10, 10, 10, 0.8) 100%);
-  pointer-events: none;
-}
-
-.imageCaption {
-  position: absolute;
-  bottom: 1.25rem;
-  left: 1.25rem;
-  right: 1.25rem;
+/* Category Tag: ❖ WHO WE ARE */
+.whoWeAreTag {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 8px 16px;
-  background: rgba(10, 10, 10, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: 9999px;
-  font-size: 11px;
+  gap: 8px;
   font-family: var(--font-family-mono, monospace);
-  color: rgba(255, 255, 255, 0.85);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.captionDot {
-  width: 7px;
-  height: 7px;
-  border-radius: 9999px;
-  background-color: #10b981;
-  box-shadow: 0 0 8px rgba(16, 185, 129, 0.7);
-  flex-shrink: 0;
-}
-
-/* Right Column: Progressive Scroll-Revealing Narrative Content */
-.contentColumn {
-  display: flex;
-  flex-direction: column;
-}
-
-.categoryTag {
-  font-family: var(--font-family-mono, monospace);
-  font-size: clamp(0.6875rem, 0.65rem + 0.2vw, 0.8125rem);
+  font-size: 12px;
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.55);
+  color: var(--brand-blue, #00488e);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
 
+.tagIcon {
+  display: inline-block;
+  color: var(--brand-blue, #00488e);
+}
+
+/* Progressive Scroll-Revealing Narrative Block */
 .narrativeBlock {
   display: flex;
   flex-direction: column;
-  gap: clamp(2rem, 3.5vw, 3rem);
-  margin-bottom: 3rem;
+  gap: clamp(1.75rem, 3vw, 2.5rem);
+  max-width: 1050px;
 }
 
-/* Base Scroll-Reveal Paragraph Styling */
+/* Base Scroll-Reveal Paragraph Typography (Deep Black on White) */
 .narrativeItem {
-  font-size: clamp(1.45rem, 2.3vw, 2.35rem);
-  line-height: 1.35;
+  font-size: clamp(1.65rem, 2.6vw, 2.75rem);
+  line-height: 1.3;
   letter-spacing: -0.025em;
-  color: #ffffff;
+  color: var(--clr-foreground, #0a0a0a);
 }
 
 .narrativePrimary {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .narrativeSecondary {
   font-weight: 500;
+  font-size: clamp(1.4rem, 2.1vw, 2.1rem);
+  line-height: 1.38;
 }
 
 .narrativeHighlight {
-  font-weight: 600;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2.3vw, 2.35rem);
 }
 
 /* Individual Word for Word-by-Word Scroll Reveal */
 .word {
   display: inline-block;
   margin-right: 0.28em;
-  color: #ffffff;
-  opacity: 0.22;
+  color: #0a0a0a;
+  opacity: 0.2;
   transition: opacity 0.14s ease-out;
   will-change: opacity;
 }
 
-/* Glowing Brand Calligraphy Accent */
+/* High-Contrast Brand Calligraphy Accent */
 .brandCalligraphy {
   font-family: var(--font-serif, "Playfair Display", serif);
   font-style: italic;
-  font-weight: 500;
-  color: var(--brand-yellow, #ffbe0b);
-  text-shadow: 0 0 24px rgba(255, 190, 11, 0.45);
+  font-weight: 700;
+  color: var(--brand-blue, #00488e);
   letter-spacing: -0.01em;
 }
 
-/* Proof Badges */
-.badgeRow {
+/* =========================================================================
+   3 WHITE BOXED STAT CARDS (Image 2 Reference)
+   ========================================================================= */
+.statCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+  margin-top: clamp(3rem, 5vw, 4.5rem);
+  margin-bottom: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.statCard {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 22px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.04);
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 2.75rem;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
 }
 
-.proofBadge {
-  display: inline-flex;
+.statCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 72, 142, 0.25);
+  box-shadow: 0 16px 36px -4px rgba(0, 72, 142, 0.1);
+}
+
+.iconBadge {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(0, 72, 142, 0.07);
+  color: var(--brand-blue, #00488e);
+  display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 8px 18px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 9999px;
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.85);
-  letter-spacing: 0.01em;
+  justify-content: center;
+  margin-bottom: 1.75rem;
+  transition: transform 0.2s ease;
 }
 
-.monoNumber {
-  font-family: var(--font-family-mono, monospace);
-  font-weight: 700;
-  color: var(--brand-yellow, #ffbe0b);
-  letter-spacing: 0.04em;
+.statCard:hover .iconBadge {
+  transform: scale(1.08);
+}
+
+.statNumber {
+  font-size: clamp(2.75rem, 3.8vw, 4.2rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  color: var(--clr-foreground, #0a0a0a);
+  line-height: 1;
+  margin-bottom: 0.85rem;
+}
+
+.statLabel {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary, #64748b);
+  line-height: 1.6;
 }
 
 /* Action Buttons */
@@ -203,38 +162,39 @@
   align-items: center;
   gap: 1.5rem;
   flex-wrap: wrap;
+  padding-top: 1rem;
 }
 
 .btnPrimary {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #ffffff;
-  color: #0a0a0a !important;
+  background-color: #0a0a0a;
+  color: #ffffff !important;
   font-size: var(--text-sm, 0.875rem);
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   padding: 13px 30px;
   border-radius: 9999px;
-  border: 1px solid #ffffff;
+  border: 1px solid #0a0a0a;
   text-decoration: none;
-  box-shadow: 0 4px 18px rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
 }
 
 .btnPrimary:hover {
   background-color: transparent;
-  color: #ffffff !important;
+  color: #0a0a0a !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
 }
 
 .btnText {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--brand-blue, #00488e);
   font-size: var(--text-xs, 0.8125rem);
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   text-decoration: none;
@@ -244,27 +204,27 @@
 }
 
 .btnText:hover {
-  color: var(--brand-yellow, #ffbe0b);
+  color: var(--brand-blue-hover, #003366);
   letter-spacing: 0.11em;
 }
 
-/* Responsive */
-@media (max-width: 960px) {
-  .aboutGrid {
+/* =========================================================================
+   RESPONSIVE DESIGN (PRO-LEVEL MOBILE ARCHITECTURE)
+   ========================================================================= */
+@media (max-width: 860px) {
+  .statCardsGrid {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 1.25rem;
   }
 
-  .imageFrame {
-    aspect-ratio: 16 / 10;
-    max-height: 420px;
+  .aboutStage {
+    border-radius: 24px;
+    padding: 2.75rem 1.5rem;
   }
-}
 
-@media (max-width: 640px) {
-  .imageFrame {
-    aspect-ratio: 4 / 3;
-    border-radius: 20px;
+  .narrativeItem {
+    font-size: clamp(1.4rem, 5vw, 1.9rem);
+    line-height: 1.35;
   }
 
   .actionRow {
@@ -286,12 +246,11 @@
     transition: none !important;
   }
   .narrativeItem {
-    color: #ffffff !important;
+    color: #0a0a0a !important;
     transition: none !important;
   }
   .brandCalligraphy {
-    color: var(--brand-yellow, #ffbe0b) !important;
-    text-shadow: none !important;
+    color: var(--brand-blue, #00488e) !important;
     transition: none !important;
   }
 }

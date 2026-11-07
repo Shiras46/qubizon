@@ -2,14 +2,13 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Layers, Users, Clock, Sparkles } from "lucide-react";
 import styles from "./AboutSection.module.css";
 
 const P1_WORDS = [
-  "The", "market", "has", "evolved,", "the", "ambition", "has", "grown,",
-  "and", "you", "understand", "the", "business", "differently", "than",
-  "you", "did", "two", "years", "ago."
+  "We", "work", "with", "founders,", "executives,", "and", "leadership",
+  "teams", "who", "are", "navigating", "market", "evolution,",
+  "operational", "complexity,", "or", "critical", "strategic", "decisions."
 ];
 
 const P2_WORDS = [
@@ -22,13 +21,31 @@ const P3_WORDS = [
   "That's", "the", "moment", "when", "it's", "time", "to", "build", "with"
 ];
 
+const STAT_CARDS = [
+  {
+    icon: Layers,
+    stat: "150+",
+    label: "Consulting Engagements & Deployments across web architecture, technical SEO, and conversion systems.",
+  },
+  {
+    icon: Users,
+    stat: "90%+",
+    label: "Client retention rate through rigorous and long-term advisory work for sustainable business scale.",
+  },
+  {
+    icon: Clock,
+    stat: "10+",
+    label: "Years of combined technical leadership supporting business founders and management teams for success.",
+  },
+];
+
 function updateWordsOpacity(
   words: (HTMLSpanElement | null)[],
   rect: DOMRect,
   vh: number,
   triggerStartRatio: number,
   triggerEndRatio: number,
-  minOpacity = 0.22
+  minOpacity = 0.2
 ) {
   const triggerStart = vh * triggerStartRatio;
   const triggerEnd = vh * triggerEndRatio;
@@ -80,17 +97,17 @@ export function AboutSection() {
 
       if (p1Ref.current) {
         const rect1 = p1Ref.current.getBoundingClientRect();
-        updateWordsOpacity(p1WordRefs.current, rect1, vh, 0.88, 0.48, 0.28);
+        updateWordsOpacity(p1WordRefs.current, rect1, vh, 0.88, 0.48, 0.24);
       }
 
       if (p2Ref.current) {
         const rect2 = p2Ref.current.getBoundingClientRect();
-        updateWordsOpacity(p2WordRefs.current, rect2, vh, 0.82, 0.44, 0.20);
+        updateWordsOpacity(p2WordRefs.current, rect2, vh, 0.82, 0.44, 0.18);
       }
 
       if (p3Ref.current) {
         const rect3 = p3Ref.current.getBoundingClientRect();
-        updateWordsOpacity(p3WordRefs.current, rect3, vh, 0.78, 0.40, 0.18);
+        updateWordsOpacity(p3WordRefs.current, rect3, vh, 0.78, 0.40, 0.16);
       }
 
       ticking = false;
@@ -124,121 +141,103 @@ export function AboutSection() {
     >
       <div className={styles.container}>
         <div className={styles.aboutStage}>
-          <div className={styles.aboutGrid}>
-            {/* Left Column: Sticky Editorial Image Frame */}
-            <div className={styles.imageColumn}>
-              <div className={styles.imageFrame}>
-                <Image
-                  src="/hero-collaboration.jpg"
-                  alt="Qubizon Digital Solutions - Unified Agency Team Collaborating"
-                  fill
-                  sizes="(max-width: 960px) 100vw, 45vw"
-                  className={styles.aboutImage}
-                  priority={false}
-                />
-                <div className={styles.imageOverlay} />
-                <div className={styles.imageCaption}>
-                  <span className={styles.captionDot} aria-hidden="true" />
-                  <span>Unified Agency Architecture • Kerala, India</span>
-                </div>
-              </div>
-            </div>
+          {/* Top Tag: ❖ WHO WE ARE (Image 2 Reference) */}
+          <div className={styles.whoWeAreTag}>
+            <Sparkles size={13} className={styles.tagIcon} aria-hidden="true" />
+            <span>WHO WE ARE</span>
+          </div>
 
-            {/* Right Column: Progressive Word-by-Word Scroll Reveal */}
-            <div className={styles.contentColumn}>
-              <p className={styles.categoryTag}>
-                • BRAND &amp; WEBSITES FOR HIGH-GROWTH ENTERPRISES /
-              </p>
-
-              <div className={styles.narrativeBlock}>
-                {/* Paragraph 1: Word-by-word reveal */}
-                <h2
-                  ref={p1Ref}
-                  id="about-heading"
-                  className={`${styles.narrativeItem} ${styles.narrativePrimary}`}
+          {/* Progressive Word-by-Word Scroll Reveal Narrative Block */}
+          <div className={styles.narrativeBlock}>
+            {/* Paragraph 1: Word-by-word reveal */}
+            <h2
+              ref={p1Ref}
+              id="about-heading"
+              className={`${styles.narrativeItem} ${styles.narrativePrimary}`}
+            >
+              {P1_WORDS.map((word, i) => (
+                <span
+                  key={`p1-${i}`}
+                  ref={(el) => {
+                    p1WordRefs.current[i] = el;
+                  }}
+                  className={styles.word}
                 >
-                  {P1_WORDS.map((word, i) => (
-                    <span
-                      key={`p1-${i}`}
-                      ref={(el) => {
-                        p1WordRefs.current[i] = el;
-                      }}
-                      className={styles.word}
-                    >
-                      {word}
-                    </span>
-                  ))}
-                </h2>
+                  {word}
+                </span>
+              ))}
+            </h2>
 
-                {/* Paragraph 2: Word-by-word reveal */}
-                <p
-                  ref={p2Ref}
-                  className={`${styles.narrativeItem} ${styles.narrativeSecondary}`}
+            {/* Paragraph 2: Word-by-word reveal */}
+            <p
+              ref={p2Ref}
+              className={`${styles.narrativeItem} ${styles.narrativeSecondary}`}
+            >
+              {P2_WORDS.map((word, i) => (
+                <span
+                  key={`p2-${i}`}
+                  ref={(el) => {
+                    p2WordRefs.current[i] = el;
+                  }}
+                  className={styles.word}
                 >
-                  {P2_WORDS.map((word, i) => (
-                    <span
-                      key={`p2-${i}`}
-                      ref={(el) => {
-                        p2WordRefs.current[i] = el;
-                      }}
-                      className={styles.word}
-                    >
-                      {word}
-                    </span>
-                  ))}
-                </p>
+                  {word}
+                </span>
+              ))}
+            </p>
 
-                {/* Paragraph 3: Word-by-word reveal concluding in glowing brand gold */}
-                <p
-                  ref={p3Ref}
-                  className={`${styles.narrativeItem} ${styles.narrativeHighlight}`}
+            {/* Paragraph 3: Word-by-word reveal concluding in brand accent */}
+            <p
+              ref={p3Ref}
+              className={`${styles.narrativeItem} ${styles.narrativeHighlight}`}
+            >
+              {P3_WORDS.map((word, i) => (
+                <span
+                  key={`p3-${i}`}
+                  ref={(el) => {
+                    p3WordRefs.current[i] = el;
+                  }}
+                  className={styles.word}
                 >
-                  {P3_WORDS.map((word, i) => (
-                    <span
-                      key={`p3-${i}`}
-                      ref={(el) => {
-                        p3WordRefs.current[i] = el;
-                      }}
-                      className={styles.word}
-                    >
-                      {word}
-                    </span>
-                  ))}
-                  <span
-                    ref={(el) => {
-                      p3WordRefs.current[P3_WORDS.length] = el;
-                    }}
-                    className={`${styles.word} ${styles.brandCalligraphy}`}
-                  >
-                    Qubizon.
-                  </span>
-                </p>
-              </div>
+                  {word}
+                </span>
+              ))}
+              <span
+                ref={(el) => {
+                  p3WordRefs.current[P3_WORDS.length] = el;
+                }}
+                className={`${styles.word} ${styles.brandCalligraphy}`}
+              >
+                Qubizon.
+              </span>
+            </p>
+          </div>
 
-              {/* Proof Badges */}
-              <div className={styles.badgeRow}>
-                <span className={styles.proofBadge}>
-                  <span className={styles.monoNumber}>01</span> Unified Team
-                </span>
-                <span className={styles.proofBadge}>
-                  <span className={styles.monoNumber}>05</span> Core Disciplines
-                </span>
-                <span className={styles.proofBadge}>
-                  <span className={styles.monoNumber}>100%</span> Code &amp; Asset Ownership
-                </span>
-              </div>
+          {/* Bottom 3 White Boxed Stat Cards (Image 2 Reference) */}
+          <div className={styles.statCardsGrid}>
+            {STAT_CARDS.map((item, idx) => {
+              const IconComp = item.icon;
+              return (
+                <article key={idx} className={styles.statCard}>
+                  <div className={styles.iconBadge}>
+                    <IconComp size={20} aria-hidden="true" />
+                  </div>
+                  <div className={styles.statNumber}>{item.stat}</div>
+                  <p className={styles.statLabel}>{item.label}</p>
+                </article>
+              );
+            })}
+          </div>
 
-              {/* Action Buttons */}
-              <div className={styles.actionRow}>
-                <Link href="/about" className={styles.btnPrimary}>
-                  <span>Discover Our Model</span>
-                  <ArrowRight size={16} aria-hidden="true" />
-                </Link>
-                <Link href="/services" className={styles.btnText}>
-                  <span>Explore All Five Disciplines &rarr;</span>
-                </Link>
-              </div>
-            </div>
+          {/* Action Links */}
+          <div className={styles.actionRow}>
+            <Link href="/about" className={styles.btnPrimary}>
+              <span>Discover Our Model</span>
+              <ArrowRight size={16} aria-hidden="true" />
+            </Link>
+            <Link href="/services" className={styles.btnText}>
+              <span>Explore All Capabilities &rarr;</span>
+            </Link>
           </div>
         </div>
       </div>
