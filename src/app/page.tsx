@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { HeroSection } from "@/components/home/HeroSection";
 import { AboutSection } from "@/components/home/AboutSection";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
-import { ShowcaseSection } from "@/components/home/ShowcaseSection";
 import { ProcessSection } from "@/components/home/ProcessSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { ConversionSection } from "@/components/home/ConversionSection";
@@ -190,10 +189,7 @@ export default function HomePage() {
       {/* 3. Services: Line-Separated Editorial Disciplines on Architectural Canvas */}
       <ServicesOverview />
 
-      {/* 4. Showcase: 3-Column Visual Project Cards & Detailed Directory */}
-      <ShowcaseSection />
-
-      {/* 5. Execution Process: 4-Step Frosted Methodology Cards */}
+      {/* 4. Execution Process: 4-Step Frosted Methodology Cards */}
       <ProcessSection />
 
       {/* 7. Frequently Asked Questions: Interactive Accordion with FAQPage Rich Snippet */}
