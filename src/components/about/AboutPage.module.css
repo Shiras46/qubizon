@@ -242,6 +242,39 @@
   box-shadow: 0 12px 28px -6px rgba(28, 28, 27, 0.06);
 }
 
+.heroStatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.statIconBadge {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: #1c1c1b;
+  color: #f9efe7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(28, 28, 27, 0.12);
+  transition: transform 0.2s ease;
+}
+
+.heroStatCard:hover .statIconBadge {
+  transform: scale(1.08);
+}
+
+.statEyebrow {
+  font-family: var(--font-family-mono, monospace);
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-muted, #5a5a58);
+}
+
 .statValue {
   font-size: clamp(2rem, 3vw, 2.75rem);
   font-weight: 800;
@@ -376,11 +409,54 @@
   margin-top: 3px;
 }
 
-/* The Five Disciplines Grid (Image 4 "Explore Services" Inspiration) */
+.comparisonFooter {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(28, 28, 27, 0.08);
+}
+
+.learnMoreLink {
+  font-family: var(--font-family-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1c1c1b;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.learnMoreLink:hover {
+  opacity: 0.7;
+  transform: translateX(3px);
+}
+
+.warningNote {
+  font-size: 11.5px;
+  color: var(--clr-muted, #5a5a58);
+  line-height: 1.5;
+  display: block;
+}
+
+/* The Five Disciplines Grid (2027 Balanced 6-Column Layout - Image 4 Inspiration) */
 .cubeGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: clamp(1.5rem, 2.5vw, 2.25rem);
+}
+
+.cubeCard_0,
+.cubeCard_1,
+.cubeCard_2 {
+  grid-column: span 2;
+}
+
+.cubeCard_3,
+.cubeCard_4 {
+  grid-column: span 3;
 }
 
 .cubeCard {
@@ -393,12 +469,39 @@
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.2s ease;
+  position: relative;
 }
 
 .cubeCard:hover {
   transform: translateY(-4px);
   border-color: rgba(28, 28, 27, 0.2);
   box-shadow: 0 16px 36px -8px rgba(28, 28, 27, 0.08);
+}
+
+.cubeCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.cubeIconBadge {
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  background: rgba(28, 28, 27, 0.04);
+  border: 1px solid rgba(28, 28, 27, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1c1c1b;
+  transition: all 0.25s ease;
+}
+
+.cubeCard:hover .cubeIconBadge {
+  background: #1c1c1b;
+  color: #f9efe7;
+  transform: scale(1.08);
 }
 
 .cubeFaceTag {
@@ -902,6 +1005,15 @@
   .cubeGrid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .cubeCard_0,
+  .cubeCard_1,
+  .cubeCard_2,
+  .cubeCard_3 {
+    grid-column: span 1;
+  }
+  .cubeCard_4 {
+    grid-column: span 2;
+  }
   .timelineGrid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -916,6 +1028,13 @@
   }
   .cubeGrid {
     grid-template-columns: 1fr;
+  }
+  .cubeCard_0,
+  .cubeCard_1,
+  .cubeCard_2,
+  .cubeCard_3,
+  .cubeCard_4 {
+    grid-column: span 1;
   }
   .timelineGrid {
     grid-template-columns: 1fr;

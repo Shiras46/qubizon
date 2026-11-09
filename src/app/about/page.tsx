@@ -12,6 +12,12 @@ import {
   TrendingUp,
   Box,
   Check,
+  Users,
+  Code2,
+  Network,
+  Sparkles,
+  Target,
+  FileText,
 } from "lucide-react";
 import { constructMetadata } from "@/lib/metadata";
 import { SITE_CONFIG, CORE_SERVICES } from "@/lib/constants";
@@ -124,6 +130,8 @@ const CUBE_FACES = [
     href: "/services/content-marketing",
   },
 ];
+
+const CUBE_ICONS = [Code2, Network, Sparkles, Target, FileText];
 
 export default function AboutPage() {
   const jsonLd = {
@@ -247,18 +255,42 @@ export default function AboutPage() {
           {/* Bottom Proof Strip: 4 Modern Cards (Image 3 Inspiration) */}
           <div className={styles.heroStatsGrid}>
             <div className={styles.heroStatCard}>
+              <div className={styles.heroStatHeader}>
+                <div className={styles.statIconBadge}>
+                  <Users size={18} aria-hidden="true" />
+                </div>
+                <span className={styles.statEyebrow}>TEAM ARCHITECTURE</span>
+              </div>
               <p className={styles.statValue}>1 Team</p>
               <p className={styles.statLabel}>Single point of technical and strategic ownership</p>
             </div>
             <div className={styles.heroStatCard}>
+              <div className={styles.heroStatHeader}>
+                <div className={styles.statIconBadge}>
+                  <Layers size={18} aria-hidden="true" />
+                </div>
+                <span className={styles.statEyebrow}>CROSS-DISCIPLINE</span>
+              </div>
               <p className={styles.statValue}>5 Disciplines</p>
               <p className={styles.statLabel}>Web, SEO, Social, Paid Ads, and Content in sync</p>
             </div>
             <div className={styles.heroStatCard}>
+              <div className={styles.heroStatHeader}>
+                <div className={styles.statIconBadge}>
+                  <ShieldCheck size={18} aria-hidden="true" />
+                </div>
+                <span className={styles.statEyebrow}>CLIENT GUARANTEE</span>
+              </div>
               <p className={styles.statValue}>100%</p>
               <p className={styles.statLabel}>Client code, data, and asset ownership guaranteed</p>
             </div>
             <div className={styles.heroStatCard}>
+              <div className={styles.heroStatHeader}>
+                <div className={styles.statIconBadge}>
+                  <CheckCircle2 size={18} aria-hidden="true" />
+                </div>
+                <span className={styles.statEyebrow}>TARGET STANDARDS</span>
+              </div>
               <p className={styles.statValue}>WCAG 2.1 AA</p>
               <p className={styles.statLabel}>Accessibility and Core Web Vitals target standards</p>
             </div>
@@ -317,6 +349,11 @@ export default function AboutPage() {
                   </span>
                 </li>
               </ul>
+              <div className={styles.comparisonFooter}>
+                <span className={styles.warningNote}>
+                  Eliminates multi-vendor finger-pointing and fragmented accountability.
+                </span>
+              </div>
             </div>
 
             <div className={`${styles.comparisonCard} ${styles.comparisonCardUnified}`}>
@@ -354,12 +391,17 @@ export default function AboutPage() {
                   </span>
                 </li>
               </ul>
+              <div className={styles.comparisonFooter}>
+                <a href="#workflow-heading" className={styles.learnMoreLink}>
+                  <span>Explore Our 4-Phase Delivery Cycle &rarr;</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* The Cube Disciplines: Modern 3-Column Card Grid (Image 4 Inspiration) */}
+      {/* The Cube Disciplines: Modern 2027 Balanced Multi-Card Grid (Image 4 Inspiration) */}
       <section className={styles.section} aria-labelledby="cube-heading">
         <div className="container">
           <div className={styles.sectionHeader}>
@@ -374,24 +416,32 @@ export default function AboutPage() {
           </div>
 
           <div className={styles.cubeGrid}>
-            {CUBE_FACES.map((face, idx) => (
-              <article key={idx} className={styles.cubeCard}>
-                <div>
-                  <span className={styles.cubeFaceTag}>{face.face}</span>
-                  <h3 className={styles.cubeTitle}>{face.title}</h3>
-                  <p className={styles.cubeDescription}>{face.description}</p>
-                </div>
-                <div>
-                  <div className={styles.cubeSynergy}>
-                    <strong>Cube Synergy:</strong> {face.synergy}
+            {CUBE_FACES.map((face, idx) => {
+              const IconComp = CUBE_ICONS[idx] || Box;
+              return (
+                <article key={idx} className={`${styles.cubeCard} ${styles[`cubeCard_${idx}`] || ""}`}>
+                  <div>
+                    <div className={styles.cubeCardHeader}>
+                      <span className={styles.cubeFaceTag}>{face.face}</span>
+                      <div className={styles.cubeIconBadge} aria-hidden="true">
+                        <IconComp size={18} />
+                      </div>
+                    </div>
+                    <h3 className={styles.cubeTitle}>{face.title}</h3>
+                    <p className={styles.cubeDescription}>{face.description}</p>
                   </div>
-                  <Link href={face.href} className={styles.cubeLink}>
-                    <span>Explore {face.title}</span>
-                    <ArrowRight size={14} aria-hidden="true" />
-                  </Link>
-                </div>
-              </article>
-            ))}
+                  <div>
+                    <div className={styles.cubeSynergy}>
+                      <strong>Cube Synergy:</strong> {face.synergy}
+                    </div>
+                    <Link href={face.href} className={styles.cubeLink}>
+                      <span>Explore {face.title}</span>
+                      <ArrowRight size={14} aria-hidden="true" />
+                    </Link>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
