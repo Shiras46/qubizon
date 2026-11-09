@@ -2,7 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
-import { ArrowRight, Layers, Users, Clock, Sparkles } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Layers, Users, Clock, Sparkles, Check } from "lucide-react";
 import styles from "./AboutSection.module.css";
 
 const P1_WORDS = [
@@ -141,79 +142,130 @@ export function AboutSection() {
     >
       <div className={styles.container}>
         <div className={styles.aboutStage}>
-          {/* Top Tag: ❖ WHO WE ARE (Image 2 Reference) */}
-          <div className={styles.whoWeAreTag}>
-            <Sparkles size={13} className={styles.tagIcon} aria-hidden="true" />
-            <span>WHO WE ARE</span>
+          {/* Split 2-Column Modern Architecture (Reference Model) */}
+          <div className={styles.splitGrid}>
+            {/* Left Column: Image with Floating Badge */}
+            <div className={styles.imageColumn}>
+              <div className={styles.stickyImageWrap}>
+                <div className={styles.imageFrame}>
+                  <div className={styles.floatingBadge}>
+                    <span className={styles.pulseDot} />
+                    <span>LICENSED REGIONAL &amp; GCC AGENCY NODE / KOZHIKODE &bull; THRISSUR &bull; DUBAI</span>
+                  </div>
+                  <Image
+                    src="/hero-collaboration.jpg"
+                    alt="Qubizon unified digital agency engineering and strategic leadership collaboration"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className={styles.image}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Right Column: Narrative with Scroll-Based Opacity Animation */}
+            <div className={styles.contentColumn}>
+              {/* Category Tag: ❖ WHO WE ARE */}
+              <div className={styles.whoWeAreTag}>
+                <Sparkles size={13} className={styles.tagIcon} aria-hidden="true" />
+                <span>WHO WE ARE</span>
+              </div>
+
+              {/* Progressive Word-by-Word Scroll Reveal Narrative Block */}
+              <div className={styles.narrativeBlock}>
+                {/* Paragraph 1: Word-by-word reveal */}
+                <h2
+                  ref={p1Ref}
+                  id="about-heading"
+                  className={`${styles.narrativeItem} ${styles.narrativePrimary}`}
+                >
+                  {P1_WORDS.map((word, i) => (
+                    <span
+                      key={`p1-${i}`}
+                      ref={(el) => {
+                        p1WordRefs.current[i] = el;
+                      }}
+                      className={styles.word}
+                    >
+                      {word}
+                    </span>
+                  ))}
+                </h2>
+
+                {/* Paragraph 2: Word-by-word reveal */}
+                <p
+                  ref={p2Ref}
+                  className={`${styles.narrativeItem} ${styles.narrativeSecondary}`}
+                >
+                  {P2_WORDS.map((word, i) => (
+                    <span
+                      key={`p2-${i}`}
+                      ref={(el) => {
+                        p2WordRefs.current[i] = el;
+                      }}
+                      className={styles.word}
+                    >
+                      {word}
+                    </span>
+                  ))}
+                </p>
+
+                {/* Paragraph 3: Word-by-word reveal concluding in brand accent */}
+                <p
+                  ref={p3Ref}
+                  className={`${styles.narrativeItem} ${styles.narrativeHighlight}`}
+                >
+                  {P3_WORDS.map((word, i) => (
+                    <span
+                      key={`p3-${i}`}
+                      ref={(el) => {
+                        p3WordRefs.current[i] = el;
+                      }}
+                      className={styles.word}
+                    >
+                      {word}
+                    </span>
+                  ))}
+                  <span
+                    ref={(el) => {
+                      p3WordRefs.current[P3_WORDS.length] = el;
+                    }}
+                    className={`${styles.word} ${styles.brandCalligraphy}`}
+                  >
+                    Qubizon.
+                  </span>
+                </p>
+              </div>
+
+              {/* Action Links & Trust Indicators (Matching Reference Model) */}
+              <div className={styles.actionRow}>
+                <Link href="/about" className={styles.btnPrimary}>
+                  <span>Discover Our Model</span>
+                  <ArrowRight size={14} aria-hidden="true" />
+                </Link>
+                <Link href="/services" className={styles.btnText}>
+                  <span>Explore All Capabilities &rarr;</span>
+                </Link>
+              </div>
+
+              <div className={styles.trustIndicators}>
+                <span className={styles.trustItem}>
+                  <Check size={14} className={styles.trustCheck} aria-hidden="true" />
+                  <span>100% Client IP Ownership</span>
+                </span>
+                <span className={styles.trustItem}>
+                  <Check size={14} className={styles.trustCheck} aria-hidden="true" />
+                  <span>Zero Monolithic Bloat</span>
+                </span>
+                <span className={styles.trustItem}>
+                  <Check size={14} className={styles.trustCheck} aria-hidden="true" />
+                  <span>WCAG 2.1 AA Standards</span>
+                </span>
+              </div>
+            </div>
           </div>
 
-          {/* Progressive Word-by-Word Scroll Reveal Narrative Block */}
-          <div className={styles.narrativeBlock}>
-            {/* Paragraph 1: Word-by-word reveal */}
-            <h2
-              ref={p1Ref}
-              id="about-heading"
-              className={`${styles.narrativeItem} ${styles.narrativePrimary}`}
-            >
-              {P1_WORDS.map((word, i) => (
-                <span
-                  key={`p1-${i}`}
-                  ref={(el) => {
-                    p1WordRefs.current[i] = el;
-                  }}
-                  className={styles.word}
-                >
-                  {word}
-                </span>
-              ))}
-            </h2>
-
-            {/* Paragraph 2: Word-by-word reveal */}
-            <p
-              ref={p2Ref}
-              className={`${styles.narrativeItem} ${styles.narrativeSecondary}`}
-            >
-              {P2_WORDS.map((word, i) => (
-                <span
-                  key={`p2-${i}`}
-                  ref={(el) => {
-                    p2WordRefs.current[i] = el;
-                  }}
-                  className={styles.word}
-                >
-                  {word}
-                </span>
-              ))}
-            </p>
-
-            {/* Paragraph 3: Word-by-word reveal concluding in brand accent */}
-            <p
-              ref={p3Ref}
-              className={`${styles.narrativeItem} ${styles.narrativeHighlight}`}
-            >
-              {P3_WORDS.map((word, i) => (
-                <span
-                  key={`p3-${i}`}
-                  ref={(el) => {
-                    p3WordRefs.current[i] = el;
-                  }}
-                  className={styles.word}
-                >
-                  {word}
-                </span>
-              ))}
-              <span
-                ref={(el) => {
-                  p3WordRefs.current[P3_WORDS.length] = el;
-                }}
-                className={`${styles.word} ${styles.brandCalligraphy}`}
-              >
-                Qubizon.
-              </span>
-            </p>
-          </div>
-
-          {/* Bottom 3 White Boxed Stat Cards (Image 2 Reference) */}
+          {/* Bottom 3 Stat Cards (Integrated Modern Architecture) */}
           <div className={styles.statCardsGrid}>
             {STAT_CARDS.map((item, idx) => {
               const IconComp = item.icon;
@@ -227,17 +279,6 @@ export function AboutSection() {
                 </article>
               );
             })}
-          </div>
-
-          {/* Action Links */}
-          <div className={styles.actionRow}>
-            <Link href="/about" className={styles.btnPrimary}>
-              <span>Discover Our Model</span>
-              <ArrowRight size={16} aria-hidden="true" />
-            </Link>
-            <Link href="/services" className={styles.btnText}>
-              <span>Explore All Capabilities &rarr;</span>
-            </Link>
           </div>
         </div>
       </div>
