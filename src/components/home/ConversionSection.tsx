@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { ArrowRight, MessageSquare, Phone, Mail } from "lucide-react";
 import { ConsultationModal } from "@/components/common/ConsultationModal";
+import { SITE_CONFIG } from "@/lib/constants";
 import styles from "./ConversionSection.module.css";
 
 export function ConversionSection() {
@@ -20,7 +21,7 @@ export function ConversionSection() {
                 <div className={styles.imageFrame}>
                   <Image
                     src="/hero-collaboration.jpg"
-                    alt="Qubizon Engineering & Growth Consultation Desk"
+                    alt="Qubizon Engineering &amp; Growth Consultation Desk"
                     fill
                     sizes="(max-width: 960px) 100vw, 48vw"
                     className={styles.ctaImage}
@@ -28,12 +29,12 @@ export function ConversionSection() {
                   <div className={styles.imageOverlay} />
                   <div className={styles.imageBadge}>
                     <span className={styles.badgeDot} />
-                    <span>Direct Engineering Desk • Kerala, India</span>
+                    <span>Direct Engineering Desk &bull; Kerala &amp; GCC</span>
                   </div>
                 </div>
               </div>
 
-              {/* Right: Architectural Consultation Card (Matching DNOIN Reference Section 7) */}
+              {/* Right: Architectural Consultation Card */}
               <div className={styles.contentColumn}>
                 <p className={styles.sectionBadge}>• LET&apos;S WORK TOGETHER /</p>
                 <h2 id="cta-heading" className={styles.headingHuge}>
@@ -58,28 +59,27 @@ export function ConversionSection() {
                   </button>
 
                   <a
-                    href="https://wa.me/917902911961"
+                    href={`https://wa.me/${SITE_CONFIG.phoneTel.replace(/\+/g, "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.btnOutline}
                   >
+                    <MessageSquare size={13} className={styles.whatsAppIcon} aria-hidden="true" />
                     <span>Chat on WhatsApp</span>
-                    <span className={styles.arrowCircle} aria-hidden="true">
-                      <MessageSquare size={13} />
-                    </span>
+                    <ArrowRight size={12} className={styles.outlineArrow} aria-hidden="true" />
                   </a>
                 </div>
 
                 {/* Direct Reach Channels */}
                 <div className={styles.directChannels}>
-                  <a href="tel:07902911961" className={styles.channelLink}>
-                    <Phone size={14} className={styles.channelIcon} aria-hidden="true" />
-                    <span>079029 11961</span>
+                  <a href={`tel:${SITE_CONFIG.phoneTel}`} className={styles.channelLink}>
+                    <Phone size={13} className={styles.channelIcon} aria-hidden="true" />
+                    <span>{SITE_CONFIG.phone}</span>
                   </a>
                   <span className={styles.channelDivider}>•</span>
-                  <a href="mailto:info@qubizon.com" className={styles.channelLink}>
-                    <Mail size={14} className={styles.channelIcon} aria-hidden="true" />
-                    <span>info@qubizon.com</span>
+                  <a href={`mailto:${SITE_CONFIG.email}`} className={styles.channelLink}>
+                    <Mail size={13} className={styles.channelIcon} aria-hidden="true" />
+                    <span>{SITE_CONFIG.email}</span>
                   </a>
                 </div>
               </div>
