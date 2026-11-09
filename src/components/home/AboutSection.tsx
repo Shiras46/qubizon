@@ -101,17 +101,17 @@ export function AboutSection() {
 
       if (p1Ref.current) {
         const rect1 = p1Ref.current.getBoundingClientRect();
-        updateWordsOpacity(p1WordRefs.current, rect1, vh, 0.88, 0.48, 0.24);
+        updateWordsOpacity(p1WordRefs.current, rect1, vh, 0.88, 0.48, 0.38);
       }
 
       if (p2Ref.current) {
         const rect2 = p2Ref.current.getBoundingClientRect();
-        updateWordsOpacity(p2WordRefs.current, rect2, vh, 0.82, 0.44, 0.18);
+        updateWordsOpacity(p2WordRefs.current, rect2, vh, 0.82, 0.44, 0.38);
       }
 
       if (p3Ref.current) {
         const rect3 = p3Ref.current.getBoundingClientRect();
-        updateWordsOpacity(p3WordRefs.current, rect3, vh, 0.78, 0.40, 0.16);
+        updateWordsOpacity(p3WordRefs.current, rect3, vh, 0.78, 0.40, 0.38);
       }
 
       ticking = false;
