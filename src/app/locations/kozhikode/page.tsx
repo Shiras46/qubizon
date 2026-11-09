@@ -33,18 +33,47 @@ export default function KozhikodeLocationPage() {
         ],
       },
       {
-        "@type": "Service",
+        "@type": "ProfessionalService",
         "@id": `${SITE_CONFIG.domain}/locations/kozhikode#service`,
-        "name": "Digital Marketing & Web Development in Kozhikode",
-        "provider": { "@id": `${SITE_CONFIG.domain}/#organization` },
-        "serviceType": "Web Development and Digital Marketing",
-        "areaServed": {
-          "@type": "City",
-          "name": "Kozhikode",
-          "alternateName": "Calicut",
-          "containedInPlace": { "@type": "AdministrativeArea", "name": "Kerala", "addressCountry": "IN" },
+        "name": "Qubizon Digital Solutions — Kozhikode Hub",
+        "image": `${SITE_CONFIG.domain}/icon.png`,
+        "url": `${SITE_CONFIG.domain}/locations/kozhikode`,
+        "telephone": SITE_CONFIG.phoneTel,
+        "email": SITE_CONFIG.email,
+        "priceRange": "$$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Cyberpark / Mavoor Road Commercial Hub",
+          "addressLocality": "Kozhikode",
+          "addressRegion": "Kerala",
+          "postalCode": "673016",
+          "addressCountry": "IN"
         },
-        "description": "Custom Next.js web application development, technical SEO clustering, performance advertising, and social media marketing for enterprises in Kozhikode, Kerala.",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 11.2588,
+          "longitude": 75.7804
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ],
+        "areaServed": [
+          { "@type": "City", "name": "Kozhikode", "alternateName": "Calicut" },
+          { "@type": "AdministrativeArea", "name": "Malabar" },
+          { "@type": "AdministrativeArea", "name": "Kerala" }
+        ],
+        "sameAs": [
+          SITE_CONFIG.social.linkedin,
+          SITE_CONFIG.social.instagram,
+          "https://clutch.co/profile/qubizon",
+          "https://www.goodfirms.co/company/qubizon"
+        ],
+        "description": "Enterprise Next.js web application development, technical SEO clustering, performance Google Ads, and CRM workflow automation for commercial leaders in Kozhikode and Malabar."
       },
     ],
   };
@@ -126,7 +155,7 @@ export default function KozhikodeLocationPage() {
               Custom React & Next.js platforms built for instantaneous mobile navigation, strict WCAG 2.1 AA accessibility, and maximum sales conversion.
             </p>
             <Link href="/services/web-development" className={styles.cardLink}>
-              Learn more about Web Dev <ChevronRight size={14} aria-hidden="true" />
+              Next.js Web Development Services in Kozhikode <ChevronRight size={14} aria-hidden="true" />
             </Link>
           </div>
 
@@ -137,7 +166,7 @@ export default function KozhikodeLocationPage() {
               Dominate organic search queries in Kozhikode and regional Kerala through semantic schema graphs, keyword clustering, and crawl optimization.
             </p>
             <Link href="/services/seo" className={styles.cardLink}>
-              Explore SEO Framework <ChevronRight size={14} aria-hidden="true" />
+              Technical SEO &amp; Schema Services in Kozhikode <ChevronRight size={14} aria-hidden="true" />
             </Link>
           </div>
 
@@ -148,7 +177,7 @@ export default function KozhikodeLocationPage() {
               Target high-intent buyers across Google Ads and Meta platforms with rigorous negative keyword lists and measurable ROAS tracking.
             </p>
             <Link href="/services/paid-advertising" className={styles.cardLink}>
-              Discover Paid Ads <ChevronRight size={14} aria-hidden="true" />
+              Performance PPC &amp; Google Ads Management <ChevronRight size={14} aria-hidden="true" />
             </Link>
           </div>
 
@@ -159,7 +188,7 @@ export default function KozhikodeLocationPage() {
               Engage Malabar audiences and global buyers with disciplined brand storytelling, thought leadership, and organic distribution.
             </p>
             <Link href="/services/social-media-marketing" className={styles.cardLink}>
-              Explore Social Strategy <ChevronRight size={14} aria-hidden="true" />
+              Social Media Strategy &amp; Executive Distribution <ChevronRight size={14} aria-hidden="true" />
             </Link>
           </div>
         </div>

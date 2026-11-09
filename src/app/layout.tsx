@@ -48,6 +48,9 @@ export default function RootLayout({
         sameAs: [
           SITE_CONFIG.social.linkedin,
           SITE_CONFIG.social.instagram,
+          "https://clutch.co/profile/qubizon",
+          "https://www.goodfirms.co/company/qubizon",
+          "https://www.crunchbase.com/organization/qubizon",
         ],
         slogan: SITE_CONFIG.slogan,
         description: SITE_CONFIG.description,

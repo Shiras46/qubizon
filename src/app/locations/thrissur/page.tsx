@@ -33,18 +33,47 @@ export default function ThrissurLocationPage() {
         ],
       },
       {
-        "@type": "Service",
+        "@type": "ProfessionalService",
         "@id": `${SITE_CONFIG.domain}/locations/thrissur#service`,
-        "name": "Digital Marketing & Web Development in Thrissur",
-        "provider": { "@id": `${SITE_CONFIG.domain}/#organization` },
-        "serviceType": "Web Development and Digital Marketing",
-        "areaServed": {
-          "@type": "City",
-          "name": "Thrissur",
-          "alternateName": "Trichur",
-          "containedInPlace": { "@type": "AdministrativeArea", "name": "Kerala", "addressCountry": "IN" },
+        "name": "Qubizon Digital Solutions — Thrissur Hub",
+        "image": `${SITE_CONFIG.domain}/icon.png`,
+        "url": `${SITE_CONFIG.domain}/locations/thrissur`,
+        "telephone": SITE_CONFIG.phoneTel,
+        "email": SITE_CONFIG.email,
+        "priceRange": "$$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Swaraj Round / City Center Commercial Hub",
+          "addressLocality": "Thrissur",
+          "addressRegion": "Kerala",
+          "postalCode": "680001",
+          "addressCountry": "IN"
         },
-        "description": "Custom Next.js web application development, technical SEO clustering, performance advertising, and social media marketing for commercial enterprises in Thrissur, Kerala.",
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 10.5276,
+          "longitude": 76.2144
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ],
+        "areaServed": [
+          { "@type": "City", "name": "Thrissur", "alternateName": "Trichur" },
+          { "@type": "AdministrativeArea", "name": "Central Kerala" },
+          { "@type": "AdministrativeArea", "name": "Kerala" }
+        ],
+        "sameAs": [
+          SITE_CONFIG.social.linkedin,
+          SITE_CONFIG.social.instagram,
+          "https://clutch.co/profile/qubizon",
+          "https://www.goodfirms.co/company/qubizon"
+        ],
+        "description": "Enterprise Next.js web application development, technical SEO clustering, performance Google Ads, and CRM workflow automation for retail, jewelry, and export brands in Thrissur."
       },
     ],
   };
@@ -126,7 +155,7 @@ export default function ThrissurLocationPage() {
               Sub-second web platforms with server-side rendering, rigorous security, and seamless mobile responsiveness across all devices.
             </p>
             <Link href="/services/web-development" className={styles.cardLink}>
-              Explore Web Development <ChevronRight size={14} aria-hidden="true" />
+              Next.js Web Development Services in Thrissur <ChevronRight size={14} aria-hidden="true" />
             </Link>
           </div>
 
@@ -137,7 +166,7 @@ export default function ThrissurLocationPage() {
               Topical authority clustering and crawl optimization that capture high-value commercial searches in Thrissur and across Kerala.
             </p>
             <Link href="/services/seo" className={styles.cardLink}>
-              Explore SEO Framework <ChevronRight size={14} aria-hidden="true" />
+              Technical SEO &amp; Schema Services in Thrissur <ChevronRight size={14} aria-hidden="true" />
             </Link>
           </div>
 
@@ -148,7 +177,7 @@ export default function ThrissurLocationPage() {
               Targeted Google Ads and paid social campaigns built with continuous conversion tracking, negative keywords, and verified ROAS.
             </p>
             <Link href="/services/paid-advertising" className={styles.cardLink}>
-              Explore Paid Ads <ChevronRight size={14} aria-hidden="true" />
+              Performance PPC &amp; Google Ads in Thrissur <ChevronRight size={14} aria-hidden="true" />
             </Link>
           </div>
 
@@ -159,7 +188,7 @@ export default function ThrissurLocationPage() {
               Professional storytelling, LinkedIn thought leadership, and Instagram community growth for Thrissur commercial brands.
             </p>
             <Link href="/services/social-media-marketing" className={styles.cardLink}>
-              Explore Social Strategy <ChevronRight size={14} aria-hidden="true" />
+              Social Media Strategy &amp; Executive Distribution <ChevronRight size={14} aria-hidden="true" />
             </Link>
           </div>
         </div>
