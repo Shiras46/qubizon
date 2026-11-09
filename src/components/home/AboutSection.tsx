@@ -26,16 +26,19 @@ const STAT_CARDS = [
   {
     icon: Layers,
     stat: "150+",
+    eyebrow: "CONSULTING DEPLOYMENTS",
     label: "Consulting Engagements & Deployments across web architecture, technical SEO, and conversion systems.",
   },
   {
     icon: Users,
     stat: "90%+",
+    eyebrow: "CLIENT RETENTION",
     label: "Client retention rate through rigorous and long-term advisory work for sustainable business scale.",
   },
   {
     icon: Clock,
     stat: "10+",
+    eyebrow: "LEADERSHIP EXPERTISE",
     label: "Years of combined technical leadership supporting business founders and management teams for success.",
   },
 ];
@@ -265,17 +268,20 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* Bottom 3 Stat Cards (Integrated Modern Architecture) */}
+          {/* Bottom 3 Stat Cards (Integrated Modern Architecture - Image 3 Model) */}
           <div className={styles.statCardsGrid}>
             {STAT_CARDS.map((item, idx) => {
               const IconComp = item.icon;
               return (
                 <article key={idx} className={styles.statCard}>
                   <div className={styles.iconBadge}>
-                    <IconComp size={20} aria-hidden="true" />
+                    <IconComp size={22} aria-hidden="true" />
                   </div>
-                  <div className={styles.statNumber}>{item.stat}</div>
-                  <p className={styles.statLabel}>{item.label}</p>
+                  <div className={styles.statContent}>
+                    <div className={styles.statNumber}>{item.stat}</div>
+                    <div className={styles.statEyebrow}>{item.eyebrow}</div>
+                    <p className={styles.statLabel}>{item.label}</p>
+                  </div>
                 </article>
               );
             })}
