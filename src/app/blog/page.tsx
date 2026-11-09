@@ -242,6 +242,114 @@ export default function BlogIndexPage() {
         </div>
       </section>
 
+      {/* Enterprise Engineering Research Framework */}
+      <section style={{ marginTop: "3.5rem", background: "#f8fafc", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • RESEARCH METHODOLOGY &amp; BENCHMARKS /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.5rem, 2.2vw, 2.1rem)", fontWeight: 800, color: "#0a0a0a", marginBottom: "1rem" }}>
+          Enterprise Research Standards &amp; Testing Methodology
+        </h2>
+        <p style={{ fontSize: "0.95rem", lineHeight: 1.7, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+          Our engineering research is conducted across live production environments to deliver actionable technical specifications for commercial decision-makers. We evaluate web performance, search indexation algorithms, and conversion mechanics using industry standard instrumentation.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem", marginBottom: "2rem" }}>
+          <div style={{ background: "#ffffff", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.4rem" }}>
+              CrUX Real-User Performance Profiling
+            </h3>
+            <p style={{ fontSize: "0.85rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              We monitor field performance using the official Chrome User Experience Report (CrUX) and web-vitals JavaScript telemetry, verifying real-world Largest Contentful Paint (LCP) and Interaction to Next Paint (INP) across diverse mobile devices and carrier networks.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.4rem" }}>
+              Google Search Console Log Audits
+            </h3>
+            <p style={{ fontSize: "0.85rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Our technical SEO papers analyze raw web server access logs and Googlebot crawl frequencies to identify crawl budget bottlenecks, unindexed dynamic URLs, and faceted navigation indexing waste across enterprise domains.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.4rem" }}>
+              Server-Side Telemetry Verification
+            </h3>
+            <p style={{ fontSize: "0.85rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              We test conversion telemetry across modern privacy environments—evaluating first-party server containers, Meta Conversions API (CAPI), and Google Tag Manager server-side tagging against strict ad-blocker resistance benchmarks.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.4rem" }}>
+              Algorithmic Conversion Modeling
+            </h3>
+            <p style={{ fontSize: "0.85rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Our growth marketing studies evaluate customer journey friction, headline message match, and automated CRM lead response velocity across diverse consumer and B2B purchasing cycles in India and the GCC.
+            </p>
+          </div>
+        </div>
+
+        <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: "1.25rem", fontSize: "0.85rem", color: "#64748b", lineHeight: 1.6 }}>
+          <strong>Pillar Disciplines in Practice:</strong> Discover how our research translates into production deployments across{" "}
+          <Link href="/services/web-development" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Web Engineering</Link>,{" "}
+          <Link href="/services/seo" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Technical SEO</Link>,{" "}
+          <Link href="/services/paid-advertising" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Performance Media</Link>, and{" "}
+          <Link href="/services/crm" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>CRM Systems</Link>. Explore regional case implementations in{" "}
+          <Link href="/locations/kozhikode" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Kozhikode</Link>,{" "}
+          <Link href="/locations/thrissur" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Thrissur</Link>,{" "}
+          <Link href="/locations/uae" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>UAE</Link>, and{" "}
+          <Link href="/locations/saudi-arabia" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Saudi Arabia</Link>.
+        </div>
+      </section>
+
+      {/* Quarterly Technical Whitepapers & Research Blueprints */}
+      <section style={{ marginTop: "3rem", background: "#ffffff", padding: "2.5rem clamp(1.5rem, 3.5vw, 2.75rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • UPCOMING ENGINEERING WHITEPAPERS /
+        </span>
+        <h3 style={{ fontSize: "clamp(1.3rem, 2vw, 1.75rem)", fontWeight: 800, color: "#0a0a0a", marginBottom: "0.75rem" }}>
+          Quarterly Engineering &amp; Growth Research Publications
+        </h3>
+        <p style={{ fontSize: "0.92rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "840px", marginBottom: "1.75rem" }}>
+          Our engineering lab publishes deep-dive architectural teardowns addressing modern full-stack challenges faced by commercial enterprises in high-competition regional and international search markets.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.25rem" }}>
+          <div style={{ background: "#f8fafc", padding: "1.5rem", borderRadius: "12px", border: "1px solid #e2e8f0" }}>
+            <span style={{ fontSize: "11px", fontWeight: 700, color: "#00488e", textTransform: "uppercase" }}>WHITEPAPER 01</span>
+            <h4 style={{ fontSize: "1rem", fontWeight: 700, color: "#0a0a0a", marginTop: "0.35rem", marginBottom: "0.4rem" }}>
+              Monolithic CMS Deconstruction &amp; Next.js ISR
+            </h4>
+            <p style={{ fontSize: "0.85rem", lineHeight: 1.55, color: "#64748b", margin: 0 }}>
+              Benchmarking sub-second Time to First Byte (TTFB &lt; 150ms), edge caching topologies, and automated WordPress REST API content ingestion pipelines.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.5rem", borderRadius: "12px", border: "1px solid #e2e8f0" }}>
+            <span style={{ fontSize: "11px", fontWeight: 700, color: "#00488e", textTransform: "uppercase" }}>WHITEPAPER 02</span>
+            <h4 style={{ fontSize: "1rem", fontWeight: 700, color: "#0a0a0a", marginTop: "0.35rem", marginBottom: "0.4rem" }}>
+              Entity Graph Modeling for Regional Dominance
+            </h4>
+            <p style={{ fontSize: "0.85rem", lineHeight: 1.55, color: "#64748b", margin: 0 }}>
+              Constructing Schema.org JSON-LD knowledge graphs that establish unambiguous entity authority across Google India, Google.ae, and Google.com.sa SERPs.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.5rem", borderRadius: "12px", border: "1px solid #e2e8f0" }}>
+            <span style={{ fontSize: "11px", fontWeight: 700, color: "#00488e", textTransform: "uppercase" }}>WHITEPAPER 03</span>
+            <h4 style={{ fontSize: "1rem", fontWeight: 700, color: "#0a0a0a", marginTop: "0.35rem", marginBottom: "0.4rem" }}>
+              Server-Side Telemetry &amp; Meta CAPI Integration
+            </h4>
+            <p style={{ fontSize: "0.85rem", lineHeight: 1.55, color: "#64748b", margin: 0 }}>
+              Deploying AWS server-side GTM containers that bypass Safari ITP cookie blocks and sync offline CRM deals with Google Enhanced Conversions.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Editorial Intent & Consultation Banner */}
       <div className={styles.ctaBox} style={{ marginTop: "3.5rem" }}>
         <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "var(--brand-blue)" }}>

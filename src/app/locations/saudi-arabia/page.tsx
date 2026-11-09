@@ -336,6 +336,108 @@ export default function SaudiArabiaLocationPage() {
         </div>
       </section>
 
+      {/* Enterprise SLA, Compliance & Technical Governance Framework */}
+      <section style={{ marginTop: "4rem", background: "#f8fafc", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • SAUDI VISION 2030 &amp; STATUTORY COMPLIANCE /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+          Enterprise Digital Standards for Saudi Arabia Clients
+        </h2>
+        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+          Operating in the largest economy in the Middle East under Saudi Vision 2030 requires engineering excellence. Across Riyadh, Jeddah, Dammam, and NEOM, Qubizon equips enterprise organizations with ZATCA Phase 2 compliant web systems, high-intent Google.com.sa search authority, and high-velocity CRM pipelines.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem", marginBottom: "2.5rem" }}>
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              ZATCA Phase 2 E-Invoicing &amp; PDPL Compliance
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              All our custom e-commerce and billing systems are architected to interface seamlessly with the Zakat, Tax and Customs Authority (ZATCA) Fatoora platform. We generate cryptographic stamps, XML invoices, and QR codes while adhering strictly to the Saudi Personal Data Protection Law (PDPL).
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Mada, Tamara, Tabby &amp; Saudi Payment Rails
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              We integrate native Saudi payment rails—including Mada debit cards, Apple Pay, STC Pay, and leading Buy Now Pay Later (BNPL) platforms like Tamara and Tabby. Transactions execute with sub-second confirmation and bank-grade cryptographic hashing.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Arabic RTL &amp; Google.com.sa Entity Domination
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              We develop native Right-to-Left (RTL) Arabic digital experiences with semantic typography, schema graphs, and deep Saudi search keyword modeling. This captures high-intent searches from Saudi nationals, government procurement teams, and commercial corporate buyers.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Multi-Region Edge Infrastructure in KSA
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              With AWS, Google Cloud, and Oracle Cloud active in the Kingdom (Dammam, Riyadh), our Next.js edge caching ensures sub-second Largest Contentful Paint (LCP &lt; 0.8s) across STC, Mobily, and Zain mobile networks throughout all 13 provinces.
+            </p>
+          </div>
+        </div>
+
+        <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: "1.5rem", fontSize: "0.88rem", color: "#64748b", lineHeight: 1.6 }}>
+          <strong>Related Services in the Kingdom of Saudi Arabia:</strong> Learn how we integrate{" "}
+          <Link href="/services/web-development" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Saudi Web Development</Link>,{" "}
+          <Link href="/services/seo" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Riyadh &amp; Jeddah SEO</Link>,{" "}
+          <Link href="/services/paid-advertising" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>High-ROAS Saudi Google Ads</Link>, and{" "}
+          <Link href="/services/crm" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Automated CRM Systems</Link>. Explore our sector solutions for{" "}
+          <Link href="/industries" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Saudi Real Estate, Retail &amp; Logistics</Link>.
+        </div>
+      </section>
+
+      {/* Saudi Arabia Riyadh & Jeddah Commercial Framework */}
+      <section style={{ marginTop: "3.5rem", background: "#ffffff", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • RIYADH, JEDDAH &amp; EASTERN PROVINCE HUBS /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+          Specialized Digital Architecture for Saudi Arabian Verticals
+        </h2>
+        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+          Under Saudi Vision 2030, corporate digital infrastructure must be scalable, secure, and compliant. We engineer high-performance platforms across the Kingdom&apos;s primary commercial corridors.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem" }}>
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Riyadh Corporate &amp; Government Tenders
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Tailored for enterprise conglomerates and Monsha&apos;at entities. Bilingual Arabic RTL portals, ZATCA Phase 2 cryptographic invoice integration, and enterprise CRM pipelines.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Jeddah &amp; Red Sea Hospitality Scale
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              High-converting direct booking engines, Mada and Apple Pay payment checkouts, and multi-lingual global search optimization attracting pilgrims, business travelers, and regional tourists.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Dammam &amp; Jubail Industrial Supply
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              B2B technical parts catalogs, automated RFQ workflows, supplier verification portals, and high-intent Google search campaigns targeting industrial procurement managers.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Bottom CTA Card */}
       <section style={{ marginTop: "4rem", background: "linear-gradient(135deg, #0b1530 0%, #00488e 100%)", borderRadius: "24px", padding: "clamp(2.5rem, 5vw, 4rem)", color: "#ffffff", textAlign: "center" }}>
         <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#ffbe0b", display: "block", marginBottom: "0.75rem" }}>

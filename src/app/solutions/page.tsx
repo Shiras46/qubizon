@@ -332,6 +332,117 @@ export default function SolutionsPage() {
         </div>
       </section>
 
+      {/* Enterprise SLA, Architecture & Integration Governance Framework */}
+      <section style={{ marginTop: "4rem", background: "#f8fafc", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • ENTERPRISE INTEGRATION BLUEPRINT /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+          Production Architectural Standards &amp; SLA Controls
+        </h2>
+        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+          Every solution engineered by Qubizon is designed for high-availability enterprise environments. We build modular, API-first backends on modern serverless edge infrastructure that seamlessly integrate with your existing ERPs, legacy CRMs, and payment gateways.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem", marginBottom: "2.5rem" }}>
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Event-Driven Webhook Architecture
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              All solution integrations utilize resilient event-driven webhooks with HMAC-SHA256 signature validation and automatic exponential backoff retry algorithms. Whether processing an online lease deposit or a WhatsApp conversational lead, zero events are lost during network degradation.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Statutory E-Invoicing &amp; Tax Compliance
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Our billing and subscription solutions are pre-engineered to generate legally compliant tax invoices matching regional statutory requirements: ZATCA Phase 2 clearance in Saudi Arabia, UAE FTA compliant tax invoices, and Indian GST e-invoices with embedded QR validation.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Zero-Hallucination Enterprise RAG Models
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Our AI chatbot and agent solutions employ strict Retrieval-Augmented Generation (RAG) pipelines over verified internal knowledge bases with deterministic guardrails. Bots never speculate or hallucinate pricing, terms, or sensitive organizational policies.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Data Sovereignty &amp; Sovereign Cloud Hosting
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              We enforce strict data residency compliance by provisioning cloud infrastructure in client-mandated geographic zones: AWS UAE (me-central-1), AWS Bahrain (me-south-1), AWS India (ap-south-1), or Frankfurt (eu-central-1) to ensure full statutory compliance.
+            </p>
+          </div>
+        </div>
+
+        <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: "1.5rem", fontSize: "0.88rem", color: "#64748b", lineHeight: 1.6 }}>
+          <strong>Cross-Discipline Capabilities:</strong> Connect these solutions to our core practices in{" "}
+          <Link href="/services/web-development" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Web Engineering</Link>,{" "}
+          <Link href="/services/seo" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Technical SEO</Link>,{" "}
+          <Link href="/services/paid-advertising" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Paid Advertising</Link>, and{" "}
+          <Link href="/services/crm" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>CRM Systems</Link>. Explore sector implementations in{" "}
+          <Link href="/industries" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Global Enterprise Industries</Link>.
+        </div>
+      </section>
+
+      {/* Production Technology Stack & API Architecture Framework */}
+      <section style={{ marginTop: "3.5rem", background: "#ffffff", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • PRODUCTION TECHNOLOGY STACK /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+          Modern Technology Standards &amp; Enterprise Tooling
+        </h2>
+        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+          We build with open, modern technologies that eliminate proprietary lock-in. Every solution is engineered using modular, type-safe frameworks that scale horizontally across high-concurrency commercial environments.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem" }}>
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Next.js 15 &amp; TypeScript Runtime
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Strict TypeScript compiler type safety, zero client runtime bloat, and sub-second React Server Components compiled directly for global edge content delivery networks.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              PostgreSQL &amp; pgvector Semantic Search
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Enterprise relational persistence paired with pgvector embedding tables, enabling instant semantic document search and zero-hallucination RAG customer support automation.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Meta WhatsApp Business Cloud API v21.0
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Direct integration with Meta Graph APIs, handling webhook verification, interactive message templates, catalog synchronization, and live two-way customer messaging.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              ZATCA, KNET &amp; Regional Financial Gateways
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Pre-configured cryptographic XML and QR generation for Saudi ZATCA Phase 2, native KNET debit switch integration in Kuwait, and BenefitPay mobile payments in Bahrain.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Frequently Asked Questions */}
       <section style={{ marginTop: "4rem" }}>
         <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>

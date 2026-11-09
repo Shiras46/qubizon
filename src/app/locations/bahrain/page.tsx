@@ -19,7 +19,7 @@ import { SITE_CONFIG } from "@/lib/constants";
 import styles from "@/components/locations/LocationPage.module.css";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Web Development & Digital Marketing in Bahrain | Qubizon",
+  title: "Web Development & Marketing in Bahrain | Qubizon",
   description:
     "Next.js web development, technical SEO, high-intent PPC advertising, and CRM automation for high-growth enterprises in Manama and across Bahrain.",
   path: "/locations/bahrain",
@@ -271,6 +271,116 @@ export default function BahrainLocationPage() {
               </div>
             </details>
           ))}
+        </div>
+      </section>
+
+      {/* Enterprise SLA, Compliance & Technical Governance Framework */}
+      <section style={{ marginTop: "4rem", background: "#f8fafc", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • REGULATORY COMPLIANCE &amp; ARCHITECTURAL PROTOCOL /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.6rem, 2.5vw, 2rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+          Enterprise Digital Standards for Bahrain Commercial Clients
+        </h2>
+        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+          Enterprises operating across Manama, Seef, and the Bahrain Financial Harbour require resilient digital platforms that comply with regional data protection laws while delivering superior customer acquisition velocity. Qubizon combines sovereign compliance frameworks with sub-second web engineering.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem", marginBottom: "2.5rem" }}>
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              CBB &amp; Regional Regulatory Alignment
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Our web systems are engineered to meet Central Bank of Bahrain (CBB) regulatory guidelines for digital financial channels, including robust role-based access control (RBAC), end-to-end data encryption, audit trails, and strict HTTP Strict Transport Security (HSTS) headers.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Sub-Second AWS Middle East (me-south-1) Edge
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              With AWS hosting active in the Kingdom of Bahrain (me-south-1), our custom Next.js web applications leverage local edge caching, delivering sub-second Largest Contentful Paint (LCP &lt; 0.8s) across Batelco, stc, and Zain mobile networks.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Bilingual RTL Arabic Search Authority
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              We build bidirectional web architectures with native Right-to-Left (RTL) Arabic typography and localized Google.com.bh entity graphs. This captures high-intent searches from both Bahraini nationals and international expatriate commercial decision-makers.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Unified WhatsApp &amp; CRM Pipeline Integration
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Every lead captured via Google Search advertising or organic search is instantly routed into your sales team&apos;s CRM via official WhatsApp Business API triggers, ensuring immediate response within minutes to maximize high-ticket transaction conversion rates.
+            </p>
+          </div>
+        </div>
+
+        <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: "1.5rem", fontSize: "0.88rem", color: "#64748b", lineHeight: 1.6 }}>
+          <strong>Related Services in the Kingdom of Bahrain:</strong> Learn how we integrate{" "}
+          <Link href="/services/web-development" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Next.js Web Engineering</Link>,{" "}
+          <Link href="/services/seo" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Technical Search Optimization</Link>,{" "}
+          <Link href="/services/paid-advertising" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Performance PPC Advertising</Link>, and{" "}
+          <Link href="/solutions" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Enterprise AI Solutions</Link> for commercial scale.
+        </div>
+      </section>
+
+      {/* Bahrain Key Commercial Sectors Framework */}
+      <section style={{ marginTop: "3.5rem", background: "#ffffff", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • MANAMA &amp; SEEF COMMERCIAL HUBS /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+          Specialized Digital Architecture for Bahrain Verticals
+        </h2>
+        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+          From the financial institutions of Bahrain Financial Harbour to commercial developers in Amwaj Islands and retail conglomerates in Seef, we architect custom digital experiences that drive measurable revenue.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem" }}>
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Fintech &amp; Islamic Banking Channels
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Engineered with BenefitPay mobile wallet APIs, Sharia-compliant product calculators, encrypted customer onboarding forms, and Central Bank of Bahrain data localization controls.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Luxury Real Estate &amp; Island Developments
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Interactive project masterplans, GCC investor acquisition campaigns targeting high-net-worth Saudi and Kuwaiti buyers, and automated WhatsApp lead qualification funnels.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Maritime Logistics &amp; Port Trade
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Custom cargo quotation engines, container tracking status integrations, and King Fahd Causeway B2B trade directories capturing commercial procurement intent.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Healthcare &amp; Medical Tourism Portals
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Patient appointment booking systems compliant with National Health Regulatory Authority (NHRA) standards, featuring dual Arabic/English interfaces, doctor credential directories, and secure tele-consultation lead funnels.
+            </p>
+          </div>
         </div>
       </section>
 

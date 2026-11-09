@@ -301,6 +301,131 @@ export default function ContactPage() {
           </div>
         </section>
 
+        {/* Enterprise SLA, Compliance & Technical Governance Framework */}
+        <section style={{ marginTop: "4rem", marginBottom: "3rem", background: "#f8fafc", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+          <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+            • ENTERPRISE ONBOARDING &amp; GOVERNANCE /
+          </span>
+          <h2 style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+            Enterprise Consultation, RFP Evaluation &amp; Global Security
+          </h2>
+          <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+            Engaging an enterprise digital engineering partner requires trust, legal clarity, and strict information security. Qubizon maintains structured onboarding frameworks that protect client confidentiality and establish clear accountability from initial RFP through production deployment.
+          </p>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem", marginBottom: "2.5rem" }}>
+            <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+                Mutual NDA &amp; IP Protection Protocol
+              </h3>
+              <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                Before inspecting proprietary source repositories, database schemas, or marketing financial models, we execute bilateral Non-Disclosure Agreements (NDAs). All client intellectual property, trade secrets, and analytics data remain 100% your exclusive property.
+              </p>
+            </div>
+
+            <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+                Global Time-Zone Coordination (GST, AST, IST, GMT, EST)
+              </h3>
+              <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                Our engineering teams maintain dedicated synchronous working hours across Gulf Standard Time (UAE/Oman), Arabia Standard Time (Saudi/Qatar/Kuwait/Bahrain), Indian Standard Time, and Western time zones, guaranteeing rapid communication and live sprint reviews without delay.
+              </p>
+            </div>
+
+            <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+                Transparent RFP &amp; Feasibility Scoping
+              </h3>
+              <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                If you have an active RFP or technical requirements specification, our senior architects will deliver a detailed feasibility breakdown within 48 hours, detailing milestone schedules, technical trade-offs, architecture diagrams, and fixed-price sprint investment tiers.
+              </p>
+            </div>
+
+            <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+                Direct Practitioner Access Guarantee
+              </h3>
+              <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                You communicate directly with senior software engineers, technical SEO directors, and media planners via dedicated Slack, Microsoft Teams, or WhatsApp channels. We eliminate bureaucratic account management layers to maintain high operational velocity.
+              </p>
+            </div>
+          </div>
+
+          <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: "1.5rem", fontSize: "0.88rem", color: "#64748b", lineHeight: 1.6 }}>
+            <strong>Explore Our Core Pillars:</strong> Learn more about our disciplines in{" "}
+            <Link href="/services/web-development" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Web Architecture</Link>,{" "}
+            <Link href="/services/seo" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Technical SEO</Link>,{" "}
+            <Link href="/services/paid-advertising" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Paid Media</Link>, and{" "}
+            <Link href="/services/crm" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>CRM Systems</Link>. Review specialized capabilities for{" "}
+            <Link href="/industries" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Enterprise Industries</Link> and{" "}
+            <Link href="/locations" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Global Trade Corridors</Link>.
+          </div>
+        </section>
+
+        {/* Sprint Zero Onboarding Architecture Framework */}
+        <section style={{ marginTop: "3.5rem", marginBottom: "3rem", background: "#ffffff", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+          <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+            • ONBOARDING ROADMAP /
+          </span>
+          <h2 style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+            The 4-Week Sprint Zero Delivery Roadmap
+          </h2>
+          <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+            When partnering with Qubizon, there is zero ambiguity about delivery schedules. Our standardized Sprint Zero framework establishes complete architectural alignment before production code is committed.
+          </p>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "#f8fafc", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+              <span style={{ fontSize: "11px", fontWeight: 800, color: "#00488e", textTransform: "uppercase" }}>WEEK 01</span>
+              <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginTop: "0.35rem", marginBottom: "0.5rem" }}>
+                Architecture &amp; Code Review
+              </h3>
+              <p style={{ fontSize: "0.85rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                We inspect existing Git repositories, Core Web Vitals profiling, hosting configurations, database query performance, and security header compliance.
+              </p>
+            </div>
+
+            <div style={{ background: "#f8fafc", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+              <span style={{ fontSize: "11px", fontWeight: 800, color: "#00488e", textTransform: "uppercase" }}>WEEK 02</span>
+              <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginTop: "0.35rem", marginBottom: "0.5rem" }}>
+                Crawl Budget &amp; Entity Map
+              </h3>
+              <p style={{ fontSize: "0.85rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                We analyze Google Search Console log metrics, build Schema.org knowledge graph blueprints, and audit regional keyword difficulty in target geographies.
+              </p>
+            </div>
+
+            <div style={{ background: "#f8fafc", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+              <span style={{ fontSize: "11px", fontWeight: 800, color: "#00488e", textTransform: "uppercase" }}>WEEK 03</span>
+              <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginTop: "0.35rem", marginBottom: "0.5rem" }}>
+                Server-Side Telemetry Setup
+              </h3>
+              <p style={{ fontSize: "0.85rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                We provision server-side GTM containers on cloud edge, configure first-party conversion endpoints, and install Meta Conversions API (CAPI) webhooks.
+              </p>
+            </div>
+
+            <div style={{ background: "#f8fafc", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+              <span style={{ fontSize: "11px", fontWeight: 800, color: "#00488e", textTransform: "uppercase" }}>WEEK 04</span>
+              <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginTop: "0.35rem", marginBottom: "0.5rem" }}>
+                CRM Ingestion &amp; Go-Live
+              </h3>
+              <p style={{ fontSize: "0.85rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                We connect form triggers to official WhatsApp Business Cloud APIs and HubSpot/Zoho CRMs, verify automated alert latencies, and release to production.
+              </p>
+            </div>
+          </div>
+
+          <div style={{ marginTop: "2rem", background: "#f8fafc", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h4 style={{ fontSize: "1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.35rem" }}>
+              Confidentiality, Mutual NDA &amp; Enterprise Governance
+            </h4>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Every initial technical consultation is conducted under strict professional confidentiality. Upon request, we execute bilateral Non-Disclosure Agreements (NDAs) prior to repository or analytics audit access. All client intellectual property, trade secrets, ad account access, and database credentials remain 100% protected under our standard governance protocols.
+            </p>
+          </div>
+        </section>
+
         {/* Consultation FAQs */}
         <section className={styles.faqSection} aria-labelledby="contact-faq-heading">
           <div className={styles.faqHeader}>

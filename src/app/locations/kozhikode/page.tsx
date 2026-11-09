@@ -6,7 +6,7 @@ import { SITE_CONFIG } from "@/lib/constants";
 import styles from "@/components/locations/LocationPage.module.css";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Digital Marketing & Web Development in Kozhikode | Qubizon",
+  title: "Web Development & Marketing Kozhikode | Qubizon",
   description:
     "Partner with Qubizon for high-performance Next.js web development, technical SEO, and ROI-driven digital marketing tailored for growing businesses in Kozhikode and Malabar.",
   path: "/locations/kozhikode",
@@ -250,6 +250,161 @@ export default function KozhikodeLocationPage() {
               </div>
             </details>
           ))}
+        </div>
+      </section>
+
+      {/* Enterprise SLA, Compliance & Technical Governance Framework */}
+      <section style={{ marginTop: "4rem", background: "#f8fafc", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • MALABAR REGIONAL COMMERCIAL FRAMEWORK /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+          Enterprise Digital Standards for Kozhikode &amp; Malabar Businesses
+        </h2>
+        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+          From technology startups in UL Cyberpark and Government Cyberpark to legacy mercantile houses across SM Street and Valiyangadi, Kozhikode businesses face unprecedented digital opportunities. Qubizon replaces slow WordPress themes with high-performance Next.js 15 web applications and data-driven marketing funnels.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem", marginBottom: "2.5rem" }}>
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              India DPDP Act 2023 &amp; Data Security
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              We build custom web architectures adhering strictly to the Digital Personal Data Protection (DPDP) Act 2023. All form submissions, lead data, and customer identities are handled with encrypted database protocols, secure consent mechanisms, and TLS 1.3 encryption.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Hyper-Local Malabar SEO &amp; Google Maps Visibility
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              We build location-specific Schema.org LocalBusiness graphs for Kozhikode, Mavoor Road, Thondayad, and Hilite City. This unlocks map pack rankings on Google Maps and high-intent local search queries from customers across Calicut and Malappuram.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Gulf NRI Export Corridor Connectivity
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Kozhikode enterprises possess unique commercial ties to the GCC. We optimize international landing pages for high-ticket NRI buyers across the UAE, Saudi Arabia, Qatar, and Kuwait seeking Calicut real estate, specialized medical treatments, and wholesale commercial imports.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Unified WhatsApp API &amp; CRM Funnel Automation
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Every lead generated through Google Ads or social media advertising instantly triggers official WhatsApp Business API confirmations and assigns the prospect to your sales reps inside unified CRM workflows within seconds.
+            </p>
+          </div>
+        </div>
+
+        <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: "1.5rem", fontSize: "0.88rem", color: "#64748b", lineHeight: 1.6 }}>
+          <strong>Related Services in Kozhikode:</strong> Explore our specialized services in{" "}
+          <Link href="/services/web-development" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Next.js Web Development</Link>,{" "}
+          <Link href="/services/seo" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Technical SEO</Link>,{" "}
+          <Link href="/services/paid-advertising" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Performance Google Ads</Link>, and{" "}
+          <Link href="/services/crm" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Automated CRM Workflows</Link>. Review our sector architectures for{" "}
+          <Link href="/industries" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Healthcare, Retail &amp; Manufacturing</Link>.
+        </div>
+      </section>
+
+      {/* Kozhikode Cyberpark & Malabar Trade Framework */}
+      <section style={{ marginTop: "3.5rem", background: "#ffffff", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • CYBERPARK &amp; MALABAR COMMERCIAL HUBS /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+          Specialized Digital Architecture for Kozhikode Verticals
+        </h2>
+        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+          From technology ventures in UL Cyberpark and Government Cyberpark to historic mercantile houses in Valiyangadi, we engineer high-performance platforms tailored to Calicut&apos;s dynamic market.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem" }}>
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Cyberpark SaaS &amp; Tech Startups
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Tailored for product teams scaling globally. Next.js 15 App Router applications, self-hosted font pipelines, international Stripe billing, and developer documentation portals.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              SM Street &amp; Mavoor Road Retail Chains
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Headless e-commerce storefronts engineered for jewelers, textile stores, and retail brands. Sub-second product filtering, UPI checkout, and automated WhatsApp order updates.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Malabar Export &amp; Global Trade Corridors
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              B2B quotation systems, international trade catalogs, and precision Google Ads capturing commercial buyers across Dubai, Abu Dhabi, Doha, and European trading ports.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA Card */}
+      <section style={{ marginTop: "4rem", background: "linear-gradient(135deg, #0b1530 0%, #00488e 100%)", borderRadius: "24px", padding: "clamp(2.5rem, 5vw, 4rem)", color: "#ffffff", textAlign: "center" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#ffbe0b", display: "block", marginBottom: "0.75rem" }}>
+          • PARTNER WITH QUBIZON FOR KOZHIKODE MARKET EXPANSION /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.75rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#ffffff", marginBottom: "1rem" }}>
+          Ready to Out-Engineer Your Competition in Calicut?
+        </h2>
+        <p style={{ fontSize: "1rem", color: "rgba(255, 255, 255, 0.8)", maxWidth: "720px", margin: "0 auto 2rem auto", lineHeight: 1.65 }}>
+          Schedule a technical discovery session with our senior engineering team to inspect your web architecture, Google search rankings, and paid acquisition funnels.
+        </p>
+        <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
+          <Link
+            href="/contact?location=kozhikode"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "14px 32px",
+              background: "#ffbe0b",
+              color: "#0a0a0a",
+              fontWeight: 700,
+              fontSize: "14px",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              textTransform: "uppercase",
+              letterSpacing: "0.04em",
+            }}
+          >
+            <span>Book a Technical Discovery Call</span>
+            <ArrowRight size={16} aria-hidden="true" />
+          </Link>
+          <Link
+            href="/work"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "14px 28px",
+              background: "transparent",
+              color: "#ffffff",
+              border: "1px solid rgba(255, 255, 255, 0.3)",
+              fontWeight: 600,
+              fontSize: "14px",
+              borderRadius: "9999px",
+              textDecoration: "none",
+            }}
+          >
+            <span>Inspect Our Benchmarks</span>
+          </Link>
         </div>
       </section>
     </div>

@@ -498,6 +498,68 @@ export default function AboutPage() {
             </div>
           </div>
 
+          {/* Enterprise Engineering Culture & Operational Governance Framework */}
+          <div style={{ marginTop: "4rem", marginBottom: "3rem", background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: "20px", padding: "clamp(2rem, 4vw, 3rem)" }}>
+            <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+              • ENGINEERING CULTURE &amp; OPERATIONAL GOVERNANCE /
+            </span>
+            <h2 style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.1rem)", fontWeight: 800, color: "#0a0a0a", marginBottom: "1rem" }}>
+              How Our Cross-Functional Squads Deliver Predictable Results
+            </h2>
+            <p style={{ fontSize: "0.95rem", lineHeight: 1.7, color: "#4a5568", maxWidth: "900px", marginBottom: "2rem" }}>
+              At Qubizon, we believe that software engineering and digital marketing should not be segregated into different rooms. Our delivery pods are organized as cross-functional squads containing senior TypeScript engineers, technical SEO analysts, performance media buyers, and conversion copywriters collaborating synchronously on every client initiative.
+            </p>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem", marginBottom: "2rem" }}>
+              <div style={{ background: "#ffffff", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+                  1. Zero Third-Party Vendor Dependencies
+                </h3>
+                <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                  We do not outsource core development or campaign management to white-label contractors. Every line of code, every Google Ads conversion action, and every technical SEO knowledge graph is architected and maintained directly by our in-house engineering team.
+                </p>
+              </div>
+
+              <div style={{ background: "#ffffff", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+                  2. Strict Code Quality &amp; Accessibility Gates
+                </h3>
+                <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                  Every production deployment is subjected to automated continuous integration pipelines verifying strict TypeScript compiler safety, ESLint security rules, and WCAG 2.1 AA accessibility conformance to ensure all digital experiences are resilient and universally usable.
+                </p>
+              </div>
+
+              <div style={{ background: "#ffffff", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+                  3. Transparent Milestone Execution
+                </h3>
+                <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                  We replace vague monthly status reports with transparent sprint retrospectives. Clients receive direct visibility into Git pull request reviews, live preview staging environments, and real-time Google Analytics 4 telemetry dashboards showing verifiable commercial outcomes.
+                </p>
+              </div>
+
+              <div style={{ background: "#ffffff", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+                  4. International Data Sovereignty
+                </h3>
+                <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                  Whether delivering for clients in Kerala or international enterprises across Dubai, Riyadh, London, or New York, we enforce strict compliance with regional data protection frameworks (Indian DPDP Act 2023, European GDPR, UAE Federal Decree-Law No. 45/2021).
+                </p>
+              </div>
+            </div>
+
+            <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: "1.25rem", fontSize: "0.85rem", color: "#64748b", lineHeight: 1.6 }}>
+              <strong>Explore Our Integrated Ecosystem:</strong> Review our core disciplines in{" "}
+              <Link href="/services/web-development" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Web Architecture</Link>,{" "}
+              <Link href="/services/seo" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Technical SEO</Link>,{" "}
+              <Link href="/services/paid-advertising" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Paid Advertising</Link>, and{" "}
+              <Link href="/services/crm" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>CRM Systems</Link>. Explore regional delivery hubs across{" "}
+              <Link href="/locations/uae" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>UAE</Link>,{" "}
+              <Link href="/locations/saudi-arabia" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Saudi Arabia</Link>, and{" "}
+              <Link href="/locations" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Global Corridors</Link>.
+            </div>
+          </div>
+
           {/* Call to Action Banner */}
           <div className={styles.ctaBanner}>
             <h2 className={styles.ctaTitle}>

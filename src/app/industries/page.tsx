@@ -321,6 +321,119 @@ export default function IndustriesPage() {
         </div>
       </section>
 
+      {/* Enterprise SLA, Compliance & Technical Governance Framework */}
+      <section style={{ marginTop: "4rem", background: "#f8fafc", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • SECTOR GOVERNANCE &amp; STATUTORY COMPLIANCE /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+          Industry-Specific Compliance &amp; Architectural Standards
+        </h2>
+        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+          Generic website templates fail when exposed to the specialized legal and operational complexities of specific industry verticals. At Qubizon, we engineer digital platforms that adhere strictly to industry standards, consumer protection laws, and data security mandates.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem", marginBottom: "2.5rem" }}>
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Real Estate RERA &amp; DLD Regulatory Protocols
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Our property platforms natively display required advertising permit numbers, escrow account disclosures, and broker accreditation details matching Dubai Land Department (DLD), RERA India, and regional Gulf municipality regulations.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Healthcare Patient Privacy &amp; Data Security
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Hospital and clinic patient booking portals are engineered with isolated health record databases, encrypted appointment endpoints, and strict access controls complying with NABH guidelines, Indian DPDP Act 2023, and regional health authority frameworks.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Retail PCI-DSS &amp; Statutory E-Invoicing
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Our e-commerce checkouts route all credit card transactions through tokenized PCI-DSS Level 1 payment processors. Invoices are automatically formatted with tax breakdowns adhering to Indian GST, UAE FTA VAT, and Saudi ZATCA Phase 2 guidelines.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              B2B Industrial Supply &amp; Global Trade Schemas
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Manufacturing and logistics portals utilize advanced Schema.org Product, ItemAvailability, and Organization schemas to feed search engines with precise HS codes, export packaging units, and minimum order quantity (MOQ) specifications.
+            </p>
+          </div>
+        </div>
+
+        <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: "1.5rem", fontSize: "0.88rem", color: "#64748b", lineHeight: 1.6 }}>
+          <strong>Explore Cross-Functional Capabilities:</strong> Learn how we integrate{" "}
+          <Link href="/services/web-development" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Web Architecture</Link>,{" "}
+          <Link href="/services/seo" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Technical SEO</Link>,{" "}
+          <Link href="/services/paid-advertising" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Performance Marketing</Link>, and{" "}
+          <Link href="/solutions" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Specialized Solutions</Link> for your vertical. Review regional delivery in{" "}
+          <Link href="/locations/uae" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>UAE</Link>,{" "}
+          <Link href="/locations/saudi-arabia" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Saudi Arabia</Link>, and{" "}
+          <Link href="/locations" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Global Trade Corridors</Link>.
+        </div>
+      </section>
+
+      {/* Sector Architecture & Implementation Methodology Framework */}
+      <section style={{ marginTop: "3.5rem", background: "#ffffff", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • VERTICAL TRANSFORMATION PLAYBOOKS /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+          Cross-Sector Engineering Blueprints &amp; Measurable Deliverables
+        </h2>
+        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+          Every industry presents distinct customer acquisition economics, regulatory requirements, and technical bottlenecks. Our sector squads deploy pre-validated software components that reduce implementation time while ensuring enterprise-grade stability.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem" }}>
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              High-Ticket Real Estate &amp; Construction Portals
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Engineered with interactive SVG masterplan navigators, automated brochure download gating with instant WhatsApp verification, RERA legal disclosures, and seamless HubSpot CRM deal attribution.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Healthcare Networks &amp; Specialized Medical Centers
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Features doctor directory search by clinical specialty, NABH patient data safeguards, multi-language international patient landing pages, and instant Google Calendar appointment synchronization.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Omnichannel Retail &amp; Headless E-Commerce
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Sub-second product catalog filtering, multi-currency pricing (AED, SAR, QAR, KWD, OMR, BHD, INR, USD), automated cart abandonment WhatsApp sequences, and local debit switch integration (KNET, Mada, BenefitPay).
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              B2B Industrial Manufacturing &amp; Global Trade
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              B2B quotation request workflows, bulk order tier calculations, technical specification PDF asset management, and multilingual SEO ranking in international import markets.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Frequently Asked Questions */}
       <section style={{ marginTop: "4rem" }}>
         <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>

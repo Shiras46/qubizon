@@ -177,7 +177,7 @@ export default function PrivacyPage() {
           </p>
         </section>
 
-        <section>
+        <section style={{ marginBottom: "var(--space-10)" }}>
           <h2 style={{ fontSize: "var(--font-size-xl)", fontWeight: 700, color: "var(--color-text-primary)", letterSpacing: "-0.01em", marginBottom: "var(--space-3)" }}>
             8. Your Privacy Rights &amp; Contact Method
           </h2>
@@ -199,6 +199,45 @@ export default function PrivacyPage() {
               <span>{SITE_CONFIG.email}</span>
             </a>
           </div>
+        </section>
+
+        <section style={{ marginBottom: "var(--space-10)" }}>
+          <h2 style={{ fontSize: "var(--font-size-xl)", fontWeight: 700, color: "var(--color-text-primary)", letterSpacing: "-0.01em", marginBottom: "var(--space-3)" }}>
+            9. Cross-Border International Data Governance &amp; GCC Compliance
+          </h2>
+          <p style={{ fontSize: "var(--font-size-sm)", color: "var(--color-text-secondary)", lineHeight: "var(--line-height-relaxed)", marginBottom: "var(--space-4)" }}>
+            As a global digital engineering collective serving enterprises across India, the United Arab Emirates, the Kingdom of Saudi Arabia, Qatar, Kuwait, Bahrain, and the Sultanate of Oman, Qubizon enforces jurisdictional privacy parity:
+          </p>
+          <ul style={{ paddingLeft: "var(--space-6)", fontSize: "var(--font-size-sm)", color: "var(--color-text-secondary)", lineHeight: "var(--line-height-relaxed)", display: "flex", flexDirection: "column", gap: "var(--space-2)" }}>
+            <li><strong>European Union (GDPR):</strong> All data processing adheres to EU Regulation 2016/679 with standard contractual clauses (SCCs) governing cross-border transfers.</li>
+            <li><strong>India (DPDP Act 2023):</strong> Personal data is processed exclusively under lawful consent guidelines with explicit purpose limitation and designated Data Protection Officer oversight.</li>
+            <li><strong>UAE Federal Decree-Law No. 45 of 2021:</strong> Enterprise client databases comply with UAE national data protection mandates and sovereign localization options.</li>
+            <li><strong>Saudi Arabia (PDPL):</strong> Systems handling Saudi resident data strictly comply with the Personal Data Protection Law promulgated by Royal Decree No. M/19.</li>
+          </ul>
+        </section>
+
+        <section style={{ marginBottom: "var(--space-10)" }}>
+          <h2 style={{ fontSize: "var(--font-size-xl)", fontWeight: 700, color: "var(--color-text-primary)", letterSpacing: "-0.01em", marginBottom: "var(--space-3)" }}>
+            10. Third-Party Subprocessor Oversight &amp; Audit Protocols
+          </h2>
+          <p style={{ fontSize: "var(--font-size-sm)", color: "var(--color-text-secondary)", lineHeight: "var(--line-height-relaxed)", marginBottom: "var(--space-4)" }}>
+            We maintain strict vendor risk management protocols. Third-party cloud infrastructure providers utilized for platform hosting, edge routing, and communications (including Amazon Web Services, Cloudflare, Vercel, and Meta WhatsApp Business Cloud API) are audited for SOC 2 Type II, ISO/IEC 27001, and PCI-DSS Level 1 compliance.
+          </p>
+          <p style={{ fontSize: "var(--font-size-sm)", color: "var(--color-text-secondary)", lineHeight: "var(--line-height-relaxed)" }}>
+            We execute formal Data Processing Agreements (DPAs) with every subprocessor, mandating technical encryption standards and immediate 24-hour breach notification obligations.
+          </p>
+        </section>
+
+        <section style={{ marginBottom: "var(--space-10)" }}>
+          <h2 style={{ fontSize: "var(--font-size-xl)", fontWeight: 700, color: "var(--color-text-primary)", letterSpacing: "-0.01em", marginBottom: "var(--space-3)" }}>
+            11. Enterprise Incident Response &amp; Breach Protocol SLA
+          </h2>
+          <p style={{ fontSize: "var(--font-size-sm)", color: "var(--color-text-secondary)", lineHeight: "var(--line-height-relaxed)", marginBottom: "var(--space-4)" }}>
+            In the event of a suspected or confirmed security anomaly affecting customer information, Qubizon activates an automated incident containment protocol within 60 minutes. Affected enterprise stakeholders and statutory authorities are notified in accordance with regulatory timetables (within 72 hours for GDPR and immediate notification under DPDP Act requirements).
+          </p>
+          <p style={{ fontSize: "var(--font-size-sm)", color: "var(--color-text-secondary)", lineHeight: "var(--line-height-relaxed)" }}>
+            For questions regarding our enterprise security posture, please review our <a href="/contact" style={{ color: "var(--brand-blue)", textDecoration: "underline" }}>Enterprise Consultation Portal</a> or review our core <a href="/services/web-development" style={{ color: "var(--brand-blue)", textDecoration: "underline" }}>Web Architecture SLAs</a> and <a href="/services/crm" style={{ color: "var(--brand-blue)", textDecoration: "underline" }}>CRM Governance Protocols</a>.
+          </p>
         </section>
       </div>
     </main>

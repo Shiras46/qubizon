@@ -19,7 +19,7 @@ import { SITE_CONFIG } from "@/lib/constants";
 import styles from "@/components/locations/LocationPage.module.css";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Web Development & Digital Marketing in Oman | Qubizon",
+  title: "Web Development & Marketing in Oman | Qubizon",
   description:
     "Next.js web development, technical SEO, high-intent PPC advertising, and CRM automation for growing enterprises across Muscat, Sohar, and the Sultanate of Oman.",
   path: "/locations/oman",
@@ -327,6 +327,108 @@ export default function OmanLocationPage() {
               </div>
             </details>
           ))}
+        </div>
+      </section>
+
+      {/* Enterprise SLA, Compliance & Technical Governance Framework */}
+      <section style={{ marginTop: "4rem", background: "#f8fafc", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • OMAN VISION 2040 &amp; ARCHITECTURAL PROTOCOL /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+          Enterprise Digital Standards for Oman Commercial Clients
+        </h2>
+        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+          As the Sultanate accelerates economic diversification under Oman Vision 2040, enterprises across Muscat, Sohar Freezone, Duqm, and Salalah require resilient web systems. Qubizon delivers edge-optimized Next.js architecture, compliant local payment gateway integrations, and authoritative Google.com.om search presence.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem", marginBottom: "2.5rem" }}>
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Central Bank of Oman (CBO) &amp; OmanNet Integration
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              We build secure payment workflows natively integrated with OmanNet debit switches and popular Omani digital payment providers (Thawani, Amwal Pay, Bank Muscat payment gateway). All transactions follow Central Bank of Oman data sovereignty mandates with tokenized card storage.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Omantel &amp; Ooredoo Oman Edge Optimization
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Leveraging Middle East cloud edge points of presence, our pre-rendered static HTML and serverless APIs load within 800ms across Omantel and Ooredoo fiber and 5G networks, ensuring superior engagement for B2B procurement portals and commercial customer journeys.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Arabic RTL &amp; Google.com.om Authority Architecture
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              We build bidirectional web architectures with native Arabic Right-to-Left (RTL) typography, structured schema graphs, and localized Oman search intent modeling. This secures organic search dominance across key commercial hubs from Ruwi to the Knowledge Oasis Muscat (KOM).
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              B2B Lead Pipeline &amp; WhatsApp Integration
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              In Oman&apos;s relationship-driven business environment, commercial buyers expect direct communication. Our landing page architectures instantly route prospective leads to your sales reps via automated WhatsApp Business API alerts and CRM deal pipeline triggers.
+            </p>
+          </div>
+        </div>
+
+        <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: "1.5rem", fontSize: "0.88rem", color: "#64748b", lineHeight: 1.6 }}>
+          <strong>Related Services in the Sultanate of Oman:</strong> Learn how we integrate{" "}
+          <Link href="/services/web-development" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Oman Web Development</Link>,{" "}
+          <Link href="/services/seo" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Muscat Technical SEO</Link>,{" "}
+          <Link href="/services/paid-advertising" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Targeted Google Ads</Link>, and{" "}
+          <Link href="/services/crm" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Automated CRM Workflows</Link> for expanding enterprises. View our sector frameworks for{" "}
+          <Link href="/industries" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Oman Logistics &amp; Manufacturing</Link>.
+        </div>
+      </section>
+
+      {/* Oman Key Commercial Sectors Framework */}
+      <section style={{ marginTop: "3.5rem", background: "#ffffff", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • MUSCAT &amp; SOHAR INDUSTRIAL CORRIDORS /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+          Specialized Digital Architecture for Oman Verticals
+        </h2>
+        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+          From enterprise corporate hubs in Ruwi and Al Khuwair to the maritime trade corridors of Sohar and Duqm, our web architectures support the economic diversification of Oman Vision 2040.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem" }}>
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Sohar Freezone B2B Export Portals
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Tailored for industrial manufacturers and bulk material exporters. Automated quotation requests, multi-lingual technical spec downloads, and international Google Ads targeting GCC procurement heads.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Hospitality &amp; Luxury Eco-Resort Booking
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              High-converting direct reservation engines for boutique resorts in Jabal Akhdar, Salalah, and Muscat, integrating OmanNet and international credit card checkouts with zero layout shifts.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Knowledge Oasis Muscat (KOM) Tech &amp; SaaS
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Scalable Next.js frontend applications, self-service subscription customer portals, Central Bank of Oman data privacy compliance, and developer documentation hubs.
+            </p>
+          </div>
         </div>
       </section>
 

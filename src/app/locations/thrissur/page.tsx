@@ -6,7 +6,7 @@ import { SITE_CONFIG } from "@/lib/constants";
 import styles from "@/components/locations/LocationPage.module.css";
 
 export const metadata: Metadata = constructMetadata({
-  title: "Digital Marketing & Web Development in Thrissur | Qubizon",
+  title: "Web Development & Marketing Thrissur | Qubizon",
   description:
     "High-performance website development, technical SEO, and conversion-focused digital marketing engineered for retail, commercial, and enterprise businesses in Thrissur, Kerala.",
   path: "/locations/thrissur",
@@ -250,6 +250,161 @@ export default function ThrissurLocationPage() {
               </div>
             </details>
           ))}
+        </div>
+      </section>
+
+      {/* Enterprise SLA, Compliance & Technical Governance Framework */}
+      <section style={{ marginTop: "4rem", background: "#f8fafc", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • CENTRAL KERALA COMMERCIAL FRAMEWORK /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+          Enterprise Digital Standards for Thrissur Commercial Clients
+        </h2>
+        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+          As the cultural and banking epicenter of Kerala, Thrissur commands a sophisticated financial and retail base. From the bustling jewellery retail hubs of High Road and Kuruppam Road to banking headquarters and healthcare institutions, Qubizon delivers rock-solid web architecture, localized SEO, and omnichannel advertising.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem", marginBottom: "2.5rem" }}>
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Financial Trust Signals &amp; Security Rigor
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              For Thrissur&apos;s financial services and NBFCs, trust is non-negotiable. We implement enterprise security headers (CSP, HSTS, X-Frame-Options), end-to-end TLS 1.3 encryption, and DPDP Act 2023 compliant data governance protocols to safeguard sensitive customer data.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              High-Speed Mobile Showcase for Luxury Retail
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Gold jewelers and luxury retail brands in Thrissur require sub-second image loading and crystal-clear visual catalogs. We build with Next.js image optimization, responsive AVIF formats, and zero layout shift (CLS = 0.00) to keep high-value shoppers engaged.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              NRI Audience Targeting across Gulf Corridors
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Thrissur has a vast expatriate diaspora across Dubai, Abu Dhabi, Doha, and Kuwait. Our precision PPC campaigns and international SEO models connect Thrissur developers, healthcare providers, and jewellers directly with high-intent NRI decision-makers.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Omnichannel CRM &amp; Instant WhatsApp Routing
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Every lead generated through Google Search advertising or organic landing pages triggers official WhatsApp Business API webhooks, alerting your showroom managers and sales reps within seconds to initiate direct consultation.
+            </p>
+          </div>
+        </div>
+
+        <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: "1.5rem", fontSize: "0.88rem", color: "#64748b", lineHeight: 1.6 }}>
+          <strong>Related Services in Thrissur:</strong> Discover our specialized capabilities in{" "}
+          <Link href="/services/web-development" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Next.js Web Development</Link>,{" "}
+          <Link href="/services/seo" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Thrissur Technical SEO</Link>,{" "}
+          <Link href="/services/paid-advertising" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>High-ROAS Google Ads</Link>, and{" "}
+          <Link href="/services/crm" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Automated CRM Workflows</Link>. Explore our industry frameworks for{" "}
+          <Link href="/industries" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Thrissur Banking, Retail &amp; Healthcare</Link>.
+        </div>
+      </section>
+
+      {/* Thrissur Central Kerala Commercial Framework */}
+      <section style={{ marginTop: "3.5rem", background: "#ffffff", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • CENTRAL KERALA BANKING &amp; RETAIL HUBS /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+          Specialized Digital Architecture for Thrissur Verticals
+        </h2>
+        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+          From the commercial banking institutions centered around Round South to gold jewellery retail empires on High Road, our web architectures are built for high financial trust.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem" }}>
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Gold &amp; Jewellery Retail Corridors
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Tailored for premier jewellery showrooms. High-resolution product showcases with zero layout shift, real-time gold rate API feeds, and targeted NRI campaigns across Dubai and Doha.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Banking &amp; NBFC Headquarters
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Engineered with strict Content Security Policy (CSP), TLS 1.3 encryption, DPDP Act 2023 data compliance, and automated loan eligibility consultation workflows.
+            </p>
+          </div>
+
+          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Ayurveda, Medical &amp; Hospital Networks
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Custom patient appointment portals, NABH data compliance, multilingual wellness tourism landing pages, and automated WhatsApp appointment confirmations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom CTA Card */}
+      <section style={{ marginTop: "4rem", background: "linear-gradient(135deg, #0b1530 0%, #00488e 100%)", borderRadius: "24px", padding: "clamp(2.5rem, 5vw, 4rem)", color: "#ffffff", textAlign: "center" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#ffbe0b", display: "block", marginBottom: "0.75rem" }}>
+          • PARTNER WITH QUBIZON FOR THRISSUR MARKET EXPANSION /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.75rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#ffffff", marginBottom: "1rem" }}>
+          Ready to Out-Engineer Your Competition in Thrissur?
+        </h2>
+        <p style={{ fontSize: "1rem", color: "rgba(255, 255, 255, 0.8)", maxWidth: "720px", margin: "0 auto 2rem auto", lineHeight: 1.65 }}>
+          Schedule a technical discovery session with our senior engineering team to inspect your web architecture, Google search rankings, and paid acquisition funnels.
+        </p>
+        <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
+          <Link
+            href="/contact?location=thrissur"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "14px 32px",
+              background: "#ffbe0b",
+              color: "#0a0a0a",
+              fontWeight: 700,
+              fontSize: "14px",
+              borderRadius: "9999px",
+              textDecoration: "none",
+              textTransform: "uppercase",
+              letterSpacing: "0.04em",
+            }}
+          >
+            <span>Book a Technical Discovery Call</span>
+            <ArrowRight size={16} aria-hidden="true" />
+          </Link>
+          <Link
+            href="/work"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "14px 28px",
+              background: "transparent",
+              color: "#ffffff",
+              border: "1px solid rgba(255, 255, 255, 0.3)",
+              fontWeight: 600,
+              fontSize: "14px",
+              borderRadius: "9999px",
+              textDecoration: "none",
+            }}
+          >
+            <span>Inspect Our Benchmarks</span>
+          </Link>
         </div>
       </section>
     </div>

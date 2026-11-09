@@ -23,30 +23,30 @@ export const metadata: Metadata = constructMetadata({
 });
 
 const GLOBAL_COUNTRIES = [
-  { code: "AE", name: "United Arab Emirates", flag: "🇦🇪", href: "/locations/uae", tag: "Enterprise Hub (Dubai & Abu Dhabi)" },
-  { code: "SA", name: "Saudi Arabia", flag: "🇸🇦", href: "/locations/saudi-arabia", tag: "Vision 2030 (Riyadh & Jeddah)" },
-  { code: "QA", name: "Qatar", flag: "🇶🇦", href: "/locations/qatar", tag: "Commercial Corridor (Doha)" },
-  { code: "KW", name: "Kuwait", flag: "🇰🇼", href: "/locations/kuwait", tag: "Retail & KNET (Kuwait City)" },
-  { code: "BH", name: "Bahrain", flag: "🇧🇭", href: "/locations/bahrain", tag: "Fintech & Logistics (Manama)" },
-  { code: "OM", name: "Oman", flag: "🇴🇲", href: "/locations/oman", tag: "Vision 2040 (Muscat & Sohar)" },
-  { code: "IN", name: "India (Kerala HQ)", flag: "🇮🇳", href: "/locations", tag: "Senior Engineering Center (Kozhikode & Thrissur)" },
-  { code: "US", name: "United States", flag: "🇺🇸", href: "/contact?region=usa", tag: "Cross-Border SaaS (NY & CA)" },
-  { code: "GB", name: "United Kingdom", flag: "🇬🇧", href: "/contact?region=uk", tag: "Fintech & B2B Corridors (London)" },
-  { code: "AU", name: "Australia", flag: "🇦🇺", href: "/contact?region=australia", tag: "Growth Marketing (Sydney & Melbourne)" },
-  { code: "SG", name: "Singapore", flag: "🇸🇬", href: "/contact?region=singapore", tag: "APAC Commercial Hub" },
-  { code: "CA", name: "Canada", flag: "🇨🇦", href: "/contact?region=canada", tag: "Tech Innovation (Toronto & Vancouver)" },
-  { code: "DE", name: "Germany", flag: "🇩🇪", href: "/contact?region=germany", tag: "DACH Engineering & GDPR Compliance" },
-  { code: "FR", name: "France", flag: "🇫🇷", href: "/contact?region=france", tag: "European Luxury & Retail" },
-  { code: "NL", name: "Netherlands", flag: "🇳🇱", href: "/contact?region=netherlands", tag: "Logistics & High-Tech Corridor" },
-  { code: "ES", name: "Spain", flag: "🇪🇸", href: "/contact?region=spain", tag: "Southern European Hub" },
-  { code: "NZ", name: "New Zealand", flag: "🇳🇿", href: "/contact?region=new-zealand", tag: "Oceania Business Corridor" },
-  { code: "MY", name: "Malaysia", flag: "🇲🇾", href: "/contact?region=malaysia", tag: "ASEAN Trade & Cloud" },
-  { code: "PH", name: "Philippines", flag: "🇵🇭", href: "/contact?region=philippines", tag: "Digital Services Corridor" },
-  { code: "ID", name: "Indonesia", flag: "🇮🇩", href: "/contact?region=indonesia", tag: "SEA E-Commerce Scale" },
-  { code: "TH", name: "Thailand", flag: "🇹🇭", href: "/contact?region=thailand", tag: "Hospitality & Digital Commerce" },
-  { code: "ZA", name: "South Africa", flag: "🇿🇦", href: "/contact?region=south-africa", tag: "African Financial & Tech Hub" },
-  { code: "NG", name: "Nigeria", flag: "🇳🇬", href: "/contact?region=nigeria", tag: "West African Enterprise Corridor" },
-  { code: "KE", name: "Kenya", flag: "🇰🇪", href: "/contact?region=kenya", tag: "East African Innovation Corridor" },
+  { code: "AE", name: "United Arab Emirates", flag: "🇦🇪", href: "/locations/uae", tag: "Enterprise Hub (Dubai & Abu Dhabi)", desc: "Sub-second Next.js web applications, Dubai Land Department RERA real estate compliance, UAE FTA 5% VAT invoice structures, and bilingual Arabic RTL search optimization." },
+  { code: "SA", name: "Saudi Arabia", flag: "🇸🇦", href: "/locations/saudi-arabia", tag: "Vision 2030 (Riyadh & Jeddah)", desc: "ZATCA Phase 2 e-invoicing compliance, Mada and Apple Pay checkout integration, and Google.com.sa entity optimization tailored to the Saudi Vision 2030 economic transformation." },
+  { code: "QA", name: "Qatar", flag: "🇶🇦", href: "/locations/qatar", tag: "Commercial Corridor (Doha & Lusail)", desc: "Qatar Central Bank compliant payment gateways, sub-second 5G performance across Ooredoo and Vodafone, and luxury hospitality booking platforms in Lusail and West Bay." },
+  { code: "KW", name: "Kuwait", flag: "🇰🇼", href: "/locations/kuwait", tag: "Retail & KNET (Kuwait City)", desc: "Native KNET debit gateway integration, high-ticket retail e-commerce architectures, and automated WhatsApp sales pipelines across Kuwait City, Shuwaikh, and Hawally." },
+  { code: "BH", name: "Bahrain", flag: "🇧🇭", href: "/locations/bahrain", tag: "Fintech & Logistics (Manama)", desc: "Central Bank of Bahrain (CBB) regulatory alignment, local AWS Middle East (me-south-1) edge caching, and BenefitPay mobile wallet checkout integration." },
+  { code: "OM", name: "Oman", flag: "🇴🇲", href: "/locations/oman", tag: "Vision 2040 (Muscat & Sohar)", desc: "OmanNet and Central Bank of Oman payment rails, bilingual Arabic search authority, and B2B industrial export portals aligned with Oman Vision 2040 objectives." },
+  { code: "IN", name: "India (Kerala HQ)", flag: "🇮🇳", href: "/locations", tag: "Senior Engineering Center (Kozhikode & Thrissur)", desc: "Central engineering headquarters providing full-stack Next.js development, technical SEO, precision Google Ads management, and Indian DPDP Act 2023 compliance." },
+  { code: "US", name: "United States", flag: "🇺🇸", href: "/contact?region=usa", tag: "Cross-Border SaaS (NY & CA)", desc: "Sub-second edge rendering across North American CDNs, Stripe billing integration, and high-converting demand generation funnels for US commercial enterprises." },
+  { code: "GB", name: "United Kingdom", flag: "🇬🇧", href: "/contact?region=uk", tag: "Fintech & B2B Corridors (London)", desc: "UK GDPR compliant data architectures, London fintech integrations, and targeted LinkedIn and Google Ads B2B customer acquisition funnels." },
+  { code: "AU", name: "Australia", flag: "🇦🇺", href: "/contact?region=australia", tag: "Growth Marketing (Sydney & Melbourne)", desc: "High-performance web architecture, Privacy Act 1988 data security, and precision Google Ads management for Australian retail and professional services." },
+  { code: "SG", name: "Singapore", flag: "🇸🇬", href: "/contact?region=singapore", tag: "APAC Commercial Hub", desc: "PDPA compliant cloud web systems, sub-second APAC edge routing, and multilingual Southeast Asian commercial lead generation funnels." },
+  { code: "CA", name: "Canada", flag: "🇨🇦", href: "/contact?region=canada", tag: "Tech Innovation (Toronto & Vancouver)", desc: "PIPEDA compliant web applications, bilingual English-French localization, and scalable subscription billing architectures for North American markets." },
+  { code: "DE", name: "Germany", flag: "🇩🇪", href: "/contact?region=germany", tag: "DACH Engineering & GDPR Compliance", desc: "Strict European Union GDPR compliance, German engineering standards, and localized B2B industrial machinery search optimization." },
+  { code: "FR", name: "France", flag: "🇫🇷", href: "/contact?region=france", tag: "European Luxury & Retail", desc: "High-fashion digital storefronts, sub-second European CDN performance, and localized French e-commerce checkout funnels." },
+  { code: "NL", name: "Netherlands", flag: "🇳🇱", href: "/contact?region=netherlands", tag: "Logistics & High-Tech Corridor", desc: "Amsterdam tech corridor integrations, Rotterdam maritime logistics tracking portals, and European data residency compliance." },
+  { code: "ES", name: "Spain", flag: "🇪🇸", href: "/contact?region=spain", tag: "Southern European Hub", desc: "Spanish language search engine optimization, hospitality booking engines, and cross-border digital marketing for Iberian enterprises." },
+  { code: "NZ", name: "New Zealand", flag: "🇳🇿", href: "/contact?region=new-zealand", tag: "Oceania Business Corridor", desc: "Cloud web development, Privacy Act 2020 alignment, and performance PPC advertising for New Zealand commercial enterprises." },
+  { code: "MY", name: "Malaysia", flag: "🇲🇾", href: "/contact?region=malaysia", tag: "ASEAN Trade & Cloud", desc: "Malaysian PDPA compliance, FPX online banking integration, and regional Kuala Lumpur e-commerce growth marketing." },
+  { code: "PH", name: "Philippines", flag: "🇵🇭", href: "/contact?region=philippines", tag: "Digital Services Corridor", desc: "Data Privacy Act 2012 alignment, GCash payment integration, and high-velocity mobile customer acquisition funnels." },
+  { code: "ID", name: "Indonesia", flag: "🇮🇩", href: "/contact?region=indonesia", tag: "SEA E-Commerce Scale", desc: "Indonesian PDP Law compliance, GoPay and OVO integration, and high-concurrency mobile application performance architectures." },
+  { code: "TH", name: "Thailand", flag: "🇹🇭", href: "/contact?region=thailand", tag: "Hospitality & Digital Commerce", desc: "Thai PDPA compliance, PromptPay QR payment integration, and international tourism and medical direct booking platforms." },
+  { code: "ZA", name: "South Africa", flag: "🇿🇦", href: "/contact?region=south-africa", tag: "African Financial & Tech Hub", desc: "POPIA data protection compliance, PayFast and Ozow payment rails, and Johannesburg and Cape Town digital transformation." },
+  { code: "NG", name: "Nigeria", flag: "🇳🇬", href: "/contact?region=nigeria", tag: "West African Enterprise Corridor", desc: "NDPR compliant data systems, Paystack and Flutterwave API integration, and high-velocity fintech lead acquisition funnels." },
+  { code: "KE", name: "Kenya", flag: "🇰🇪", href: "/contact?region=kenya", tag: "East African Innovation Corridor", desc: "Data Protection Act 2019 compliance, M-Pesa mobile money integration, and Nairobi technology hub digital marketing." },
 ];
 
 const LOCATION_FAQS = [
@@ -336,9 +336,88 @@ export default function LocationsIndexPage() {
                 <span style={{ fontSize: "1.25rem" }}>{country.flag}</span>
                 <span style={{ fontWeight: 700, color: "#0a0a0a", fontSize: "0.95rem" }}>{country.name}</span>
               </div>
-              <span style={{ fontSize: "0.78rem", color: "#64748b" }}>{country.tag}</span>
+              <span style={{ fontSize: "0.78rem", color: "#00488e", fontWeight: 700, marginBottom: "4px" }}>{country.tag}</span>
+              <p style={{ fontSize: "0.82rem", color: "#64748b", lineHeight: 1.5, margin: 0 }}>{country.desc}</p>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Cross-Border Delivery Model & International Governance Framework */}
+      <section style={{ marginTop: "4rem", background: "#f8fafc", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
+        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          • CROSS-BORDER ENGINEERING ARCHITECTURE /
+        </span>
+        <h2 style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+          International Delivery Governance &amp; Operating Standards
+        </h2>
+        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+          Delivering enterprise web applications and search dominance across 24 countries requires structured engineering governance. Qubizon combines the technical depth of our India engineering headquarters with regional commercial coordination across the GCC, Europe, and North America.
+        </p>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem", marginBottom: "2.5rem" }}>
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Time-Zone Overlap &amp; Real-Time Sprint Cadence
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Our engineering squads maintain dedicated real-time overlap across Gulf Standard Time (GST), Arabia Standard Time (AST), GMT, and US Eastern Time. Daily asynchronous video updates, shared Git pull request previews, and direct Slack/WhatsApp channels ensure complete transparency without administrative overhead.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Global Data Sovereignty &amp; Privacy Mandates
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              We architect every application around the statutory privacy laws of your jurisdiction. From the European Union General Data Protection Regulation (GDPR) and the Indian DPDP Act 2023 to UAE Federal Decree-Law No. 45/2021 and Saudi Arabia PDPL, data residency and consent controls are engineered directly into the data model.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              100% Unencumbered Intellectual Property
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Under our standard master service agreements, you retain absolute ownership of all proprietary code, database schemas, Figma design systems, Google Ads account histories, and analytics event schemas from day one. We never apply proprietary licensing locks or vendor-hostage clauses.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Sub-Second Global Edge CDN Distribution
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Every client platform is deployed across modern edge cloud networks with automatic multi-zone routing. Whether your customer is browsing from Dubai, Riyadh, London, Singapore, or New York, your pages compile and render in under 800ms with 100% Core Web Vitals compliance.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Multi-Currency &amp; Regional Payment Orchestration
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              We integrate regional and international merchant gateways with automated fraud filtering, including BenefitPay (Bahrain), KNET (Kuwait), Mada and STC Pay (Saudi Arabia), NAPS (Qatar), OmanNet (Oman), Stripe, and CCAvenue (India). Our checkout architectures adhere strictly to PCI-DSS Level 1 compliance with zero sensitive card storage on application servers.
+            </p>
+          </div>
+
+          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              Bilingual Data Sovereignty &amp; Hreflang Indexation
+            </h3>
+            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+              Every international platform engineered by Qubizon enforces strict regional data privacy frameworks (GDPR, UAE PDPL, Saudi PDPL, and India DPDP Act 2023). We deploy canonical hreflang bidirectional mappings across Google, Bing, and Yandex to prevent regional index cannibalization and ensure each country audience sees localized currency, language, and legal disclosures.
+            </p>
+          </div>
+        </div>
+
+        <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: "1.5rem", fontSize: "0.88rem", color: "#64748b", lineHeight: 1.6 }}>
+          <strong>Global Pillar Capabilities:</strong> Discover our unified practices in{" "}
+          <Link href="/services/web-development" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Next.js Web Engineering</Link>,{" "}
+          <Link href="/services/seo" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Technical Search Optimization</Link>,{" "}
+          <Link href="/services/paid-advertising" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Performance Marketing</Link>, and{" "}
+          <Link href="/services/crm" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Omnichannel CRM Automation</Link>. Explore our tailored solutions for{" "}
+          <Link href="/industries" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Global Enterprise Industries</Link>.
         </div>
       </section>
 

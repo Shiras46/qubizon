@@ -225,6 +225,56 @@
   color: rgba(255, 255, 255, 0.2);
 }
 
+/* Global Overview Architectural Block */
+.globalOverview {
+  padding: 2.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.globalOverviewTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffbe0b;
+  margin-bottom: 0.75rem;
+}
+
+.globalOverviewText {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #94a3b8;
+  margin-bottom: 1rem;
+}
+
+.globalOverviewGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.globalOverviewCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.globalOverviewCardTitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 0.4rem;
+}
+
+.globalOverviewCardDesc {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin: 0;
+}
+
 /* Responsive Design */
 @media (max-width: 1100px) {
   .brandRow {

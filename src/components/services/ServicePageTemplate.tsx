@@ -426,6 +426,147 @@ export function ServicePageTemplate(props: ServicePageProps) {
               </p>
             </div>
           </div>
+
+          {/* Deep Architectural Methodology & Sector Integration Framework */}
+          <div style={{ marginTop: "3.5rem", background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: "20px", padding: "clamp(2rem, 4vw, 3rem)" }}>
+            <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+              • DELIVERY RIGOR &amp; MULTI-INDUSTRY INTEGRATION /
+            </span>
+            <h3 style={{ fontSize: "clamp(1.4rem, 2.5vw, 1.85rem)", fontWeight: 800, color: "#0a0a0a", marginBottom: "1rem" }}>
+              Enterprise Cross-Border Delivery &amp; Operational Governance
+            </h3>
+            <p style={{ fontSize: "0.95rem", lineHeight: 1.7, color: "#4a5568", maxWidth: "900px", marginBottom: "2rem" }}>
+              Deploying enterprise software and high-intent growth campaigns across Kerala, the UAE, and international commercial corridors requires absolute architectural discipline. We operate under structured agile frameworks designed to eliminate scope creep, protect user privacy, and ensure predictable return on investment across every business engagement.
+            </p>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem", marginBottom: "2rem" }}>
+              <div style={{ background: "#ffffff", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+                <h4 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+                  1. Discovery &amp; Architectural Sprint Zero
+                </h4>
+                <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                  Before writing production code or allocating advertising budgets, our senior practitioners conduct a deep-dive technical audit. We inspect your existing crawl hierarchy, analyze keyword difficulty and competitor search intent, review database bottlenecks, and define atomic design tokens to ensure complete cross-platform alignment.
+                </p>
+              </div>
+
+              <div style={{ background: "#ffffff", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+                <h4 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+                  2. Two-Week Agile Sprint Cadence
+                </h4>
+                <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                  We engineer in disciplined two-week sprint cycles with live demonstration reviews and shared Git commit logs. Every release increment includes automated type validation, unit test execution, and preview environments—giving your executive stakeholders direct visibility without administrative delays.
+                </p>
+              </div>
+
+              <div style={{ background: "#ffffff", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+                <h4 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+                  3. Edge-First Cloud Infrastructure
+                </h4>
+                <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                  Every web property is distributed across enterprise global content delivery networks with data residency alignment. Assets are cached across AWS regional edge nodes (UAE me-central-1, India ap-south-1, and Frankfurt eu-central-1), achieving sub-second Time to First Byte (TTFB &lt; 200ms) for international audiences.
+                </p>
+              </div>
+
+              <div style={{ background: "#ffffff", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
+                <h4 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+                  4. Regulatory &amp; Statutory Compliance
+                </h4>
+                <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                  Our platforms natively support regional and international compliance mandates. From Indian Digital Personal Data Protection (DPDP) Act 2023 and European GDPR standards to ZATCA Phase 2 e-invoicing for Saudi Arabia and UAE Federal Tax Authority (FTA) invoice structures, compliance is built into the data layer.
+                </p>
+              </div>
+            </div>
+
+            <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: "1.5rem", display: "flex", flexWrap: "wrap", gap: "1.5rem", alignItems: "center", justifyContent: "space-between" }}>
+              <div style={{ fontSize: "0.85rem", color: "#64748b", lineHeight: 1.5, maxWidth: "680px" }}>
+                <strong>Industry Solutions Available:</strong> We provide specialized implementation architectures for{" "}
+                <Link href="/industries" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Real Estate</Link>,{" "}
+                <Link href="/industries" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Healthcare &amp; Hospitals</Link>,{" "}
+                <Link href="/industries" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Retail &amp; E-Commerce</Link>,{" "}
+                <Link href="/industries" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>B2B Manufacturing</Link>,{" "}
+                <Link href="/industries" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Fintech</Link>, and{" "}
+                <Link href="/industries" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Logistics</Link>.
+              </div>
+              <Link
+                href="/industries"
+                style={{
+                  fontSize: "0.85rem",
+                  fontWeight: 700,
+                  color: "#00488e",
+                  textDecoration: "none",
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "4px",
+                }}
+              >
+                <span>View Sector Specializations</span>
+                <ArrowRight size={14} aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Technical Specifications & Implementation Protocols */}
+          <div style={{ marginTop: "3rem", background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "20px", padding: "clamp(2rem, 4vw, 3rem)" }}>
+            <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+              • ARCHITECTURAL BENCHMARKS &amp; SPECIFICATIONS /
+            </span>
+            <h3 style={{ fontSize: "clamp(1.3rem, 2.2vw, 1.75rem)", fontWeight: 800, color: "#0a0a0a", marginBottom: "1rem" }}>
+              Technical Implementation Standards for {props.title}
+            </h3>
+            <p style={{ fontSize: "0.95rem", lineHeight: 1.7, color: "#4a5568", maxWidth: "900px", marginBottom: "2rem" }}>
+              Unlike traditional agencies that treat digital production as cosmetic styling, Qubizon treats every digital channel as a critical piece of enterprise infrastructure. Each deliverable within our {props.title} practice undergoes rigorous code-level and data-level verification before client handover.
+            </p>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem", marginBottom: "2rem" }}>
+              <div style={{ padding: "1.25rem", borderRadius: "12px", background: "#f8fafc", border: "1px solid #edf2f7" }}>
+                <h4 style={{ fontSize: "1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.4rem" }}>
+                  Telemetry &amp; Signal Accuracy
+                </h4>
+                <p style={{ fontSize: "0.85rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                  We implement dual-tagging architectures combining client-side Google Tag Manager with server-side API webhooks. This circumvents client-side tracking loss caused by browser ad-blockers, ITP restrictions, and third-party cookie deprecation, ensuring 99.8% event fidelity into Google Analytics 4 and advertising dashboards.
+                </p>
+              </div>
+
+              <div style={{ padding: "1.25rem", borderRadius: "12px", background: "#f8fafc", border: "1px solid #edf2f7" }}>
+                <h4 style={{ fontSize: "1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.4rem" }}>
+                  Automated Security &amp; Defensive Headers
+                </h4>
+                <p style={{ fontSize: "0.85rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                  Every application routes traffic through strict Content Security Policy (CSP), Strict-Transport-Security (HSTS 2-year preload), X-Content-Type-Options: nosniff, and Referrer-Policy: strict-origin-when-cross-origin. We eliminate third-party script vulnerabilities and protect client brand reputation.
+                </p>
+              </div>
+
+              <div style={{ padding: "1.25rem", borderRadius: "12px", background: "#f8fafc", border: "1px solid #edf2f7" }}>
+                <h4 style={{ fontSize: "1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.4rem" }}>
+                  Dynamic Knowledge Graph Modeling
+                </h4>
+                <p style={{ fontSize: "0.85rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                  We engineer structured JSON-LD schemas validating entity relationships, geographic service areas, author credentials, and service capabilities. This establishes direct factual eligibility for Google Search rich snippets, AI overview citations, and conversational search engines.
+                </p>
+              </div>
+
+              <div style={{ padding: "1.25rem", borderRadius: "12px", background: "#f8fafc", border: "1px solid #edf2f7" }}>
+                <h4 style={{ fontSize: "1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.4rem" }}>
+                  Regional Commercial Optimization
+                </h4>
+                <p style={{ fontSize: "0.85rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                  Our architectures are pre-configured to adapt to the unique business conditions of target markets: sub-second local edge caching in the GCC (UAE, Saudi Arabia, Qatar, Kuwait, Bahrain, Oman), bilingual English and Arabic typographic hierarchies, and deep payment gateway integration (KNET, Mada, BenefitPay, UPI, Stripe).
+                </p>
+              </div>
+            </div>
+
+            <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: "1.25rem", fontSize: "0.85rem", color: "#64748b", lineHeight: 1.6 }}>
+              <strong>Regional Delivery Corridors:</strong> Explore local implementation standards in{" "}
+              <Link href="/locations/uae" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>UAE (Dubai &amp; Abu Dhabi)</Link>,{" "}
+              <Link href="/locations/saudi-arabia" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Saudi Arabia (Riyadh &amp; Jeddah)</Link>,{" "}
+              <Link href="/locations/qatar" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Qatar (Doha &amp; Lusail)</Link>,{" "}
+              <Link href="/locations/kuwait" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Kuwait</Link>,{" "}
+              <Link href="/locations/bahrain" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Bahrain</Link>,{" "}
+              <Link href="/locations/oman" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Oman</Link>,{" "}
+              <Link href="/locations/kozhikode" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Kozhikode</Link>, and{" "}
+              <Link href="/locations/thrissur" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Thrissur</Link>.
+            </div>
+          </div>
         </div>
       </section>
 
