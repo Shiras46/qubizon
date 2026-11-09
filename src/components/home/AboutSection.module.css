@@ -91,12 +91,12 @@
   font-family: var(--font-serif, "Playfair Display", serif);
   font-style: italic;
   font-weight: 700;
-  color: var(--brand-blue, #00488e);
+  color: var(--clr-foreground, #1c1c1b);
   letter-spacing: -0.01em;
 }
 
 /* =========================================================================
-   3 WHITE BOXED STAT CARDS (Image 2 Reference)
+   3 WHITE BOXED STAT CARDS (Image 2 & 3 Reference)
    ========================================================================= */
 .statCardsGrid {
   display: grid;
@@ -108,32 +108,33 @@
 
 .statCard {
   background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 22px;
+  border: 1px solid rgba(28, 28, 27, 0.08);
+  border-radius: 24px;
   padding: 2.25rem 2rem;
-  box-shadow: 0 4px 24px -2px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 20px rgba(28, 28, 27, 0.03);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.2s ease;
   position: relative;
 }
 
 .statCard:hover {
   transform: translateY(-4px);
-  border-color: rgba(0, 72, 142, 0.25);
-  box-shadow: 0 16px 36px -4px rgba(0, 72, 142, 0.1);
+  border-color: rgba(28, 28, 27, 0.2);
+  box-shadow: 0 16px 36px -8px rgba(28, 28, 27, 0.08);
 }
 
 .iconBadge {
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: rgba(0, 72, 142, 0.07);
-  color: var(--brand-blue, #00488e);
+  background: rgba(28, 28, 27, 0.04);
+  color: var(--clr-foreground, #1c1c1b);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1.75rem;
+  border: 1px solid rgba(28, 28, 27, 0.08);
   transition: transform 0.2s ease;
 }
 
@@ -145,14 +146,14 @@
   font-size: clamp(2.75rem, 3.8vw, 4.2rem);
   font-weight: 800;
   letter-spacing: -0.035em;
-  color: var(--clr-foreground, #0a0a0a);
+  color: var(--clr-foreground, #1c1c1b);
   line-height: 1;
   margin-bottom: 0.85rem;
 }
 
 .statLabel {
   font-size: 0.95rem;
-  color: var(--color-text-secondary, #64748b);
+  color: var(--clr-muted, #5a5a58);
   line-height: 1.6;
 }
 
@@ -169,34 +170,36 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #0a0a0a;
-  color: #ffffff !important;
-  font-size: var(--text-sm, 0.875rem);
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  background-color: #1c1c1b;
+  color: #f9efe7 !important;
+  font-family: var(--font-family-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 13px 30px;
+  padding: 12px 28px;
   border-radius: 9999px;
-  border: 1px solid #0a0a0a;
+  border: 1px solid #1c1c1b;
   text-decoration: none;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 14px rgba(28, 28, 27, 0.12);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
 }
 
 .btnPrimary:hover {
-  background-color: transparent;
-  color: #0a0a0a !important;
+  background-color: #000000;
+  color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(28, 28, 27, 0.2);
 }
 
 .btnText {
-  color: var(--brand-blue, #00488e);
-  font-size: var(--text-xs, 0.8125rem);
+  color: var(--clr-foreground, #1c1c1b);
+  font-family: var(--font-family-mono);
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-decoration: none;
   transition: color 0.2s ease, letter-spacing 0.2s ease;
   display: inline-flex;

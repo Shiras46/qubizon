@@ -1,5 +1,6 @@
 /* =========================================================================
-   EDITORIAL ABOUT PAGE (DAVIDE CARUSIO AESTHETIC)
+   EDITORIAL ABOUT PAGE (MODERN SPLIT-HERO & MULTI-CARD ARCHITECTURE)
+   Inspired by Reference Models (Images 1, 2, 3, 4) - Pro Modern Design
    ========================================================================= */
 
 .mainContainer {
@@ -51,16 +52,25 @@
   font-weight: 700;
 }
 
-/* Hero Section */
+/* Hero Section: Modern Split Architecture (Image 2 & 3 Inspiration) */
 .heroSection {
-  padding-top: var(--space-16);
+  padding-top: var(--space-12);
   padding-bottom: var(--space-20);
   border-bottom: 1px solid rgba(28, 28, 27, 0.08);
   background: transparent;
 }
 
-.heroContent {
-  max-width: 960px;
+.heroSplit {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+.heroLeft {
+  display: flex;
+  flex-direction: column;
 }
 
 .badge {
@@ -78,10 +88,11 @@
   letter-spacing: 0.14em;
   margin-bottom: var(--space-6);
   border: 1px solid rgba(28, 28, 27, 0.08);
+  width: fit-content;
 }
 
 .heroTitle {
-  font-size: clamp(2.5rem, 2rem + 2.5vw, 4.2rem);
+  font-size: clamp(2.35rem, 3.8vw, 3.85rem);
   font-weight: 800;
   color: var(--clr-foreground, #1c1c1b);
   line-height: 1.08;
@@ -90,51 +101,161 @@
 }
 
 .heroLead {
-  font-size: var(--font-size-lg);
+  font-size: var(--text-base, 1.05rem);
   color: var(--clr-muted, #5a5a58);
-  line-height: 1.65;
-  margin-bottom: var(--space-10);
-  max-width: 820px;
+  line-height: 1.68;
+  margin-bottom: var(--space-8);
+  max-width: 620px;
 }
 
+.heroActions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.btnPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 2rem;
+  border-radius: 9999px;
+  background-color: var(--clr-foreground, #1c1c1b);
+  color: var(--clr-background, #f9efe7) !important;
+  font-family: var(--font-family-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid #1c1c1b;
+  box-shadow: 0 4px 14px rgba(28, 28, 27, 0.12);
+}
+
+.btnPill:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(28, 28, 27, 0.2);
+}
+
+.trustIndicators {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.trustItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--clr-muted, #5a5a58);
+}
+
+.trustIcon {
+  color: #22c55e;
+  flex-shrink: 0;
+}
+
+/* Right: Visual Frame with Floating Badge (Image 2 & 3 Inspiration) */
+.heroRight {
+  position: relative;
+  width: 100%;
+}
+
+.heroVisualFrame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3.4;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(28, 28, 27, 0.1);
+  box-shadow: 0 20px 48px -12px rgba(28, 28, 27, 0.12);
+  background-color: #1c1c1b;
+}
+
+.heroImage {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.heroVisualFrame:hover .heroImage {
+  transform: scale(1.03);
+}
+
+.floatingBadge {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 2;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(28, 28, 27, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #f9efe7;
+  font-family: var(--font-family-mono);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(249, 239, 231, 0.2);
+}
+
+.emeraldPulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 9999px;
+  background-color: #22c55e;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+}
+
+/* Bottom Proof Strip: 4 Modern Cards (Image 3 Inspiration) */
 .heroStatsGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-6);
-  margin-top: var(--space-8);
 }
 
 .heroStatCard {
   background-color: #ffffff;
   border: 1px solid rgba(28, 28, 27, 0.08);
-  border-radius: 16px;
-  padding: var(--space-6);
-  box-shadow: 0 4px 14px -2px rgba(28, 28, 27, 0.03);
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  border-radius: 20px;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 4px 18px -2px rgba(28, 28, 27, 0.03);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .heroStatCard:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   border-color: rgba(28, 28, 27, 0.2);
+  box-shadow: 0 12px 28px -6px rgba(28, 28, 27, 0.06);
 }
 
 .statValue {
-  font-size: clamp(1.75rem, 1.4rem + 1vw, 2.5rem);
+  font-size: clamp(2rem, 3vw, 2.75rem);
   font-weight: 800;
   color: var(--clr-foreground, #1c1c1b);
-  font-family: var(--font-family-mono);
-  margin-bottom: var(--space-1);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 0.5rem;
 }
 
 .statLabel {
-  font-size: 11px;
-  font-family: var(--font-family-mono);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  font-size: 0.875rem;
   color: var(--clr-muted, #5a5a58);
   line-height: 1.5;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 /* Editorial Content Sections */
@@ -179,28 +300,30 @@
   line-height: 1.65;
 }
 
-/* Problem vs Solution Comparison */
+/* Problem vs Solution Comparison (Image 1 "Our Vision / Our Mission" Inspiration) */
 .comparisonGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-8);
+  gap: clamp(1.75rem, 3.5vw, 2.75rem);
 }
 
 .comparisonCard {
-  border-radius: 20px;
-  padding: var(--space-8);
+  border-radius: 28px;
+  padding: clamp(2.25rem, 4.5vw, 3.5rem);
   border: 1px solid rgba(28, 28, 27, 0.08);
   background: #ffffff;
-  box-shadow: 0 4px 16px rgba(28, 28, 27, 0.03);
+  box-shadow: 0 6px 24px rgba(28, 28, 27, 0.03);
+  display: flex;
+  flex-direction: column;
 }
 
 .comparisonCardFragmented {
-  border-top: 2px solid rgba(28, 28, 27, 0.2);
+  border-top: 3px solid rgba(28, 28, 27, 0.25);
 }
 
 .comparisonCardUnified {
-  border-top: 2px solid #1c1c1b;
-  box-shadow: 0 8px 24px rgba(28, 28, 27, 0.06);
+  border-top: 3px solid #1c1c1b;
+  box-shadow: 0 12px 32px rgba(28, 28, 27, 0.06);
 }
 
 .comparisonHeader {
@@ -208,29 +331,37 @@
   align-items: center;
   gap: var(--space-3);
   margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid rgba(28, 28, 27, 0.08);
 }
 
 .comparisonTitle {
-  font-size: 1.25rem;
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
   font-weight: 800;
   color: var(--clr-foreground, #1c1c1b);
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
 }
 
 .comparisonList {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-5);
+  padding: 0;
+  margin: 0;
 }
 
 .comparisonItem {
   display: flex;
   gap: var(--space-3);
   align-items: flex-start;
-  font-size: var(--font-size-sm);
+  font-size: 0.9375rem;
   color: var(--clr-muted, #5a5a58);
   line-height: 1.65;
+}
+
+.comparisonItem strong {
+  color: var(--clr-foreground, #1c1c1b);
 }
 
 .iconNegative {
@@ -245,22 +376,23 @@
   margin-top: 3px;
 }
 
-/* The Cube Disciplines */
+/* The Five Disciplines Grid (Image 4 "Explore Services" Inspiration) */
 .cubeGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-6);
+  gap: clamp(1.5rem, 2.5vw, 2.25rem);
 }
 
 .cubeCard {
   background-color: #ffffff;
   border: 1px solid rgba(28, 28, 27, 0.08);
-  border-radius: 18px;
-  padding: var(--space-8);
-  box-shadow: 0 4px 16px rgba(28, 28, 27, 0.03);
+  border-radius: 24px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 4px 18px rgba(28, 28, 27, 0.03);
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  justify-content: space-between;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.2s ease;
 }
 
 .cubeCard:hover {
@@ -275,7 +407,7 @@
   font-weight: 700;
   color: var(--clr-foreground, #1c1c1b);
   background-color: rgba(28, 28, 27, 0.04);
-  padding: 4px 12px;
+  padding: 5px 12px;
   border-radius: 9999px;
   align-self: flex-start;
   margin-bottom: var(--space-4);
@@ -301,11 +433,14 @@
 }
 
 .cubeSynergy {
-  padding-top: var(--space-4);
-  border-top: 1px solid rgba(28, 28, 27, 0.08);
+  background-color: #f9efe7;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(28, 28, 27, 0.06);
   font-size: 11px;
   color: var(--clr-muted, #5a5a58);
   line-height: 1.5;
+  margin-bottom: 1.5rem;
 }
 
 .cubeSynergy strong {
@@ -313,21 +448,25 @@
 }
 
 .cubeLink {
-  margin-top: var(--space-4);
   display: inline-flex;
   align-items: center;
-  gap: var(--space-2);
+  justify-content: space-between;
+  padding: 10px 18px;
+  border-radius: 9999px;
+  background-color: #1c1c1b;
+  color: #f9efe7 !important;
   font-family: var(--font-family-mono);
   font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--clr-foreground, #1c1c1b);
   text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .cubeLink:hover {
-  color: #000000;
+  background-color: #000000;
+  transform: translateY(-1px);
 }
 
 /* Client Engagement Lifecycle (Timeline) */
@@ -335,14 +474,13 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-6);
-  position: relative;
 }
 
 .timelineCard {
   background-color: #ffffff;
   border: 1px solid rgba(28, 28, 27, 0.08);
-  border-radius: 18px;
-  padding: var(--space-6);
+  border-radius: 20px;
+  padding: 2rem 1.75rem;
   box-shadow: 0 4px 16px rgba(28, 28, 27, 0.03);
   display: flex;
   flex-direction: column;
@@ -516,11 +654,165 @@
   line-height: 1.65;
 }
 
+/* Clean Modular FAQ Container (Replacing Inline Styles) */
+.faqSectionContainer {
+  margin-top: 4.5rem;
+  margin-bottom: 3.5rem;
+  background: #ffffff;
+  border: 1px solid rgba(28, 28, 27, 0.08);
+  border-radius: 28px;
+  padding: clamp(2rem, 4.5vw, 3.5rem);
+  box-shadow: 0 4px 24px rgba(28, 28, 27, 0.03);
+}
+
+.faqHeaderBlock {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.faqBadge {
+  font-family: var(--font-family-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-muted, #5a5a58);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.faqTitle {
+  font-size: clamp(1.6rem, 2.5vw, 2.25rem);
+  font-weight: 800;
+  color: var(--clr-foreground, #1c1c1b);
+  letter-spacing: -0.03em;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.faqCardItem {
+  background: #fdfaf7;
+  border: 1px solid rgba(28, 28, 27, 0.06);
+  border-radius: 18px;
+  padding: 1.75rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.faqCardItem:hover {
+  transform: translateY(-2px);
+  border-color: rgba(28, 28, 27, 0.18);
+}
+
+.faqCardTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--clr-foreground, #1c1c1b);
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.02em;
+}
+
+.faqCardAnswer {
+  font-size: 0.925rem;
+  color: var(--clr-muted, #5a5a58);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Clean Modular Governance Framework (Replacing Inline Styles) */
+.governanceContainer {
+  margin-top: 4.5rem;
+  margin-bottom: 3.5rem;
+  background: #ffffff;
+  border: 1px solid rgba(28, 28, 27, 0.08);
+  border-radius: 28px;
+  padding: clamp(2rem, 4.5vw, 3.5rem);
+  box-shadow: 0 4px 24px rgba(28, 28, 27, 0.03);
+}
+
+.governanceBadge {
+  font-family: var(--font-family-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--clr-foreground, #1c1c1b);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.governanceTitle {
+  font-size: clamp(1.6rem, 2.5vw, 2.25rem);
+  font-weight: 800;
+  color: var(--clr-foreground, #1c1c1b);
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.governanceLead {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--clr-muted, #5a5a58);
+  max-width: 900px;
+  margin-bottom: 2rem;
+}
+
+.governanceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.governanceItem {
+  background: #fdfaf7;
+  padding: 1.75rem;
+  border-radius: 18px;
+  border: 1px solid rgba(28, 28, 27, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.governanceItem:hover {
+  transform: translateY(-2px);
+}
+
+.governanceItemTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--clr-foreground, #1c1c1b);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.governanceItemText {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--clr-muted, #5a5a58);
+  margin: 0;
+}
+
+.governanceEcosystem {
+  border-top: 1px solid rgba(28, 28, 27, 0.08);
+  padding-top: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--clr-muted, #5a5a58);
+  line-height: 1.65;
+}
+
+.governanceEcosystem a {
+  color: var(--clr-foreground, #1c1c1b);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 /* Call to Action Banner (Obsidian Editorial Stage) */
 .ctaBanner {
   background-color: #1c1c1b;
   border: 1px solid rgba(249, 239, 231, 0.1);
-  border-radius: 24px;
+  border-radius: 28px;
   padding: var(--space-16) var(--space-8);
   color: #f9efe7;
   text-align: center;
@@ -600,6 +892,10 @@
 
 /* Responsive Breakpoints */
 @media (max-width: 1024px) {
+  .heroSplit {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
   .heroStatsGrid {
     grid-template-columns: repeat(2, 1fr);
   }

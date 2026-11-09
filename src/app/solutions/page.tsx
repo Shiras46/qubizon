@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Bot,
   Cpu,
@@ -15,10 +16,11 @@ import {
   Zap,
   Lock,
   Globe2,
+  Check,
 } from "lucide-react";
 import { constructMetadata } from "@/lib/metadata";
 import { SITE_CONFIG } from "@/lib/constants";
-import styles from "@/components/locations/LocationPage.module.css";
+import styles from "@/components/solutions/SolutionsPage.module.css";
 
 export const metadata: Metadata = constructMetadata({
   title: "AI & Development Solutions | Qubizon",
@@ -111,19 +113,58 @@ export default function SolutionsPage() {
         </ol>
       </nav>
 
-      {/* Header */}
+      {/* Header: Modern Split Architecture (Image 2 & 3 Inspiration) */}
       <header className={styles.header}>
-        <div className={styles.regionBadge}>
-          <Sparkles size={15} aria-hidden="true" />
-          <span>ENTERPRISE AI &bull; PLATFORM ENGINEERING &bull; AUTOMATION</span>
-        </div>
-        <h1 className={styles.title}>
-          AI &amp; Development Solutions Engineered for Scale
-        </h1>
-        <p className={styles.subtitle}>
-          Modern commercial enterprises demand software that automates manual workflows, converts incoming demand in seconds, and eliminates operational friction. We engineer purpose-built AI agents, WhatsApp Business ecosystems, subscription APIs, and secure SaaS applications backed by senior engineering discipline.
-        </p>
+        <div className={styles.headerSplit}>
+          <div className={styles.headerLeft}>
+            <div className={styles.regionBadge}>
+              <Sparkles size={14} aria-hidden="true" />
+              <span>ENTERPRISE AI &bull; PLATFORM ENGINEERING &bull; AUTOMATION</span>
+            </div>
+            <h1 className={styles.title}>
+              AI &amp; Development Solutions Engineered for Scale
+            </h1>
+            <p className={styles.subtitle}>
+              Modern commercial enterprises demand software that automates manual workflows, converts incoming demand in seconds, and eliminates operational friction. We engineer purpose-built AI agents, WhatsApp Business ecosystems, subscription APIs, and secure SaaS applications backed by senior engineering discipline.
+            </p>
 
+            <div className={styles.headerActions}>
+              <Link href="/contact?interest=solutions" className={styles.btnPill}>
+                <span>Book a Technical Discovery Call</span>
+                <ArrowRight size={13} aria-hidden="true" />
+              </Link>
+              <div className={styles.trustIndicators}>
+                <span className={styles.trustItem}>
+                  <Check size={14} className={styles.trustIcon} aria-hidden="true" />
+                  <span>Sub-Second Response</span>
+                </span>
+                <span className={styles.trustItem}>
+                  <Check size={14} className={styles.trustIcon} aria-hidden="true" />
+                  <span>Meta-Verified Cloud API</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.headerRight}>
+            <div className={styles.visualFrame}>
+              <div className={styles.floatingBadge}>
+                <span className={styles.emeraldPulse} />
+                <span>ENTERPRISE PLATFORM NODE / HIGH-CONCURRENCY</span>
+              </div>
+              <Image
+                src="/hero-collaboration.jpg"
+                alt="Qubizon enterprise platform engineering and AI solution architecture"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                className={styles.visualImage}
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Proof Strip (Image 3 Inspiration) */}
         <div className={styles.statsStrip}>
           <div className={styles.statCard}>
             <span className={styles.statValue}>Sub-Second</span>
@@ -144,376 +185,378 @@ export default function SolutionsPage() {
         </div>
       </header>
 
-      {/* Solutions Grid */}
-      <section style={{ marginTop: "3.5rem" }}>
-        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+      {/* Solutions Grid (Image 4 Inspiration: Modern 3-Column Cards) */}
+      <section className={styles.solutionsSection}>
+        <span className={styles.sectionBadge}>
           • CORE SOLUTION CAPABILITIES /
         </span>
-        <h2 style={{ fontSize: "clamp(1.75rem, 3vw, 2.25rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1.25rem" }}>
+        <h2 className={styles.sectionTitle}>
           Intelligent Software Platforms That Accelerate Revenue
         </h2>
-        <p style={{ fontSize: "1.05rem", lineHeight: 1.7, color: "#4a5568", maxWidth: "880px", marginBottom: "2.5rem" }}>
+        <p className={styles.sectionLead}>
           From customer-facing generative AI tools to backend recurring billing engines, our solutions are engineered modularly to integrate into your existing tech stack without vendor lock-in.
         </p>
 
         <div className={styles.solutionsGrid}>
           {/* 1. AI Chatbots */}
           <div className={styles.solutionCard}>
-            <Bot size={26} style={{ color: "#00488e", marginBottom: "1rem" }} aria-hidden="true" />
-            <h3 style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: "0.5rem", color: "#0a0a0a" }}>
-              AI Chatbot Development
-            </h3>
-            <p style={{ fontSize: "0.92rem", lineHeight: 1.6, color: "#4a5568", marginBottom: "1rem" }}>
-              Intelligent conversational agents powered by Retrieval-Augmented Generation (RAG). Capable of answering complex customer queries, understanding industry-specific catalogs, and capturing qualified leads 24/7 across web and mobile.
-            </p>
-            <ul style={{ paddingLeft: "1.2rem", fontSize: "0.85rem", color: "#64748b", lineHeight: 1.6 }}>
-              <li>Zero-hallucination RAG document search</li>
-              <li>Multi-lingual support (English, Arabic, Hindi)</li>
-              <li>Direct CRM &amp; ticketing system handoff</li>
-            </ul>
+            <div>
+              <div className={styles.cardIconWrapper}>
+                <Bot size={22} aria-hidden="true" />
+              </div>
+              <h3 className={styles.cardTitle}>
+                AI Chatbot Development
+              </h3>
+              <p className={styles.cardLead}>
+                Intelligent conversational agents powered by Retrieval-Augmented Generation (RAG). Capable of answering complex customer queries, understanding industry-specific catalogs, and capturing qualified leads 24/7 across web and mobile.
+              </p>
+              <ul className={styles.cardBulletList}>
+                <li className={styles.cardBulletItem}>Zero-hallucination RAG document search</li>
+                <li className={styles.cardBulletItem}>Multi-lingual support (English, Arabic, Hindi)</li>
+                <li className={styles.cardBulletItem}>Direct CRM &amp; ticketing system handoff</li>
+              </ul>
+            </div>
+            <Link href="/contact?interest=ai-chatbot" className={styles.cardFooterLink}>
+              <span>Explore AI Chatbot Solutions</span>
+              <ArrowRight size={13} aria-hidden="true" />
+            </Link>
           </div>
 
           {/* 2. AI Agents */}
           <div className={styles.solutionCard}>
-            <Cpu size={26} style={{ color: "#00488e", marginBottom: "1rem" }} aria-hidden="true" />
-            <h3 style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: "0.5rem", color: "#0a0a0a" }}>
-              AI Agent &amp; Workflow Automation
-            </h3>
-            <p style={{ fontSize: "0.92rem", lineHeight: 1.6, color: "#4a5568", marginBottom: "1rem" }}>
-              Autonomous software agents designed to execute multi-step operational workflows. From reading incoming supplier invoices to cross-referencing inventory levels and scheduling executive calendar slots.
-            </p>
-            <ul style={{ paddingLeft: "1.2rem", fontSize: "0.85rem", color: "#64748b", lineHeight: 1.6 }}>
-              <li>Multi-step reasoning &amp; tool invocation</li>
-              <li>Automated document OCR &amp; structured data extraction</li>
-              <li>Human-in-the-loop review checkpoints</li>
-            </ul>
+            <div>
+              <div className={styles.cardIconWrapper}>
+                <Cpu size={22} aria-hidden="true" />
+              </div>
+              <h3 className={styles.cardTitle}>
+                AI Agent &amp; Workflow Automation
+              </h3>
+              <p className={styles.cardLead}>
+                Autonomous software agents designed to execute multi-step operational workflows. From reading incoming supplier invoices to cross-referencing inventory levels and scheduling executive calendar slots.
+              </p>
+              <ul className={styles.cardBulletList}>
+                <li className={styles.cardBulletItem}>Multi-step reasoning &amp; tool invocation</li>
+                <li className={styles.cardBulletItem}>Automated document OCR &amp; structured data extraction</li>
+                <li className={styles.cardBulletItem}>Human-in-the-loop review checkpoints</li>
+              </ul>
+            </div>
+            <Link href="/contact?interest=ai-agents" className={styles.cardFooterLink}>
+              <span>Explore AI Agent Systems</span>
+              <ArrowRight size={13} aria-hidden="true" />
+            </Link>
           </div>
 
           {/* 3. WhatsApp Business API */}
           <div className={styles.solutionCard}>
-            <MessageSquare size={26} style={{ color: "#00488e", marginBottom: "1rem" }} aria-hidden="true" />
-            <h3 style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: "0.5rem", color: "#0a0a0a" }}>
-              WhatsApp Business API Development
-            </h3>
-            <p style={{ fontSize: "0.92rem", lineHeight: 1.6, color: "#4a5568", marginBottom: "1rem" }}>
-              Enterprise WhatsApp Cloud API integration connecting your marketing campaigns directly to verified business chats. Enable automated catalogs, instant appointment bookings, and unified team inbox management.
-            </p>
-            <ul style={{ paddingLeft: "1.2rem", fontSize: "0.85rem", color: "#64748b", lineHeight: 1.6 }}>
-              <li>Meta-verified green tick onboarding assistance</li>
-              <li>Click-to-WhatsApp ad conversion tracking</li>
-              <li>Interactive message buttons &amp; quick-reply bots</li>
-            </ul>
+            <div>
+              <div className={styles.cardIconWrapper}>
+                <MessageSquare size={22} aria-hidden="true" />
+              </div>
+              <h3 className={styles.cardTitle}>
+                WhatsApp Business API Development
+              </h3>
+              <p className={styles.cardLead}>
+                Enterprise WhatsApp Cloud API integration connecting your marketing campaigns directly to verified business chats. Enable automated catalogs, instant appointment bookings, and unified team inbox management.
+              </p>
+              <ul className={styles.cardBulletList}>
+                <li className={styles.cardBulletItem}>Meta-verified green tick onboarding assistance</li>
+                <li className={styles.cardBulletItem}>Click-to-WhatsApp ad conversion tracking</li>
+                <li className={styles.cardBulletItem}>Interactive message buttons &amp; quick-reply bots</li>
+              </ul>
+            </div>
+            <Link href="/contact?interest=whatsapp-api" className={styles.cardFooterLink}>
+              <span>Explore WhatsApp API Integrations</span>
+              <ArrowRight size={13} aria-hidden="true" />
+            </Link>
           </div>
 
           {/* 4. Subscription & Billing API */}
           <div className={styles.solutionCard}>
-            <CreditCard size={26} style={{ color: "#00488e", marginBottom: "1rem" }} aria-hidden="true" />
-            <h3 style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: "0.5rem", color: "#0a0a0a" }}>
-              Subscription &amp; Billing API Architecture
-            </h3>
-            <p style={{ fontSize: "0.92rem", lineHeight: 1.6, color: "#4a5568", marginBottom: "1rem" }}>
-              Custom recurring billing, proration, and subscription tier infrastructure. Engineered with tax compliance algorithms supporting ZATCA Phase 2 (Saudi Arabia), UAE FTA VAT, and Indian GST e-invoicing.
-            </p>
-            <ul style={{ paddingLeft: "1.2rem", fontSize: "0.85rem", color: "#64748b", lineHeight: 1.6 }}>
-              <li>Multi-currency payment gateway routing</li>
-              <li>Automated dunning &amp; smart retry on card failures</li>
-              <li>Self-service customer invoice &amp; plan portal</li>
-            </ul>
+            <div>
+              <div className={styles.cardIconWrapper}>
+                <CreditCard size={22} aria-hidden="true" />
+              </div>
+              <h3 className={styles.cardTitle}>
+                Subscription &amp; Billing API Architecture
+              </h3>
+              <p className={styles.cardLead}>
+                Custom recurring billing, proration, and subscription tier infrastructure. Engineered with tax compliance algorithms supporting ZATCA Phase 2 (Saudi Arabia), UAE FTA VAT, and Indian GST e-invoicing.
+              </p>
+              <ul className={styles.cardBulletList}>
+                <li className={styles.cardBulletItem}>Multi-currency payment gateway routing</li>
+                <li className={styles.cardBulletItem}>Automated dunning &amp; smart retry on card failures</li>
+                <li className={styles.cardBulletItem}>Self-service customer invoice &amp; plan portal</li>
+              </ul>
+            </div>
+            <Link href="/contact?interest=billing-api" className={styles.cardFooterLink}>
+              <span>Explore Billing Infrastructure</span>
+              <ArrowRight size={13} aria-hidden="true" />
+            </Link>
           </div>
 
           {/* 5. GDPR & Data Governance */}
           <div className={styles.solutionCard}>
-            <ShieldCheck size={26} style={{ color: "#00488e", marginBottom: "1rem" }} aria-hidden="true" />
-            <h3 style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: "0.5rem", color: "#0a0a0a" }}>
-              GDPR &amp; Data Compliance Software
-            </h3>
-            <p style={{ fontSize: "0.92rem", lineHeight: 1.6, color: "#4a5568", marginBottom: "1rem" }}>
-              Enterprise data governance engines that automate user consent tracking, cookie banner compliance, data subject access requests (DSAR), and cryptographic anonymization for European and international privacy mandates.
-            </p>
-            <ul style={{ paddingLeft: "1.2rem", fontSize: "0.85rem", color: "#64748b", lineHeight: 1.6 }}>
-              <li>Granular consent audit logs &amp; cookie telemetry</li>
-              <li>Automated right-to-erasure (RTBF) workflows</li>
-              <li>Full alignment with Indian DPDP Act &amp; EU GDPR</li>
-            </ul>
+            <div>
+              <div className={styles.cardIconWrapper}>
+                <ShieldCheck size={22} aria-hidden="true" />
+              </div>
+              <h3 className={styles.cardTitle}>
+                GDPR &amp; Data Compliance Software
+              </h3>
+              <p className={styles.cardLead}>
+                Enterprise data governance engines that automate user consent tracking, cookie banner compliance, data subject access requests (DSAR), and cryptographic anonymization for European and international privacy mandates.
+              </p>
+              <ul className={styles.cardBulletList}>
+                <li className={styles.cardBulletItem}>Granular consent audit logs &amp; cookie telemetry</li>
+                <li className={styles.cardBulletItem}>Automated right-to-erasure (RTBF) workflows</li>
+                <li className={styles.cardBulletItem}>Full alignment with Indian DPDP Act &amp; EU GDPR</li>
+              </ul>
+            </div>
+            <Link href="/contact?interest=gdpr-compliance" className={styles.cardFooterLink}>
+              <span>Explore Compliance Frameworks</span>
+              <ArrowRight size={13} aria-hidden="true" />
+            </Link>
           </div>
 
           {/* 6. Digital Lease & Rental Software */}
           <div className={styles.solutionCard}>
-            <Building size={26} style={{ color: "#00488e", marginBottom: "1rem" }} aria-hidden="true" />
-            <h3 style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: "0.5rem", color: "#0a0a0a" }}>
-              Digital Lease &amp; Rental Management
-            </h3>
-            <p style={{ fontSize: "0.92rem", lineHeight: 1.6, color: "#4a5568", marginBottom: "1rem" }}>
-              End-to-end digital leasing platforms for commercial property developers, vehicle rental fleets, and equipment hire enterprises. Featuring digital signature workflows, automatic deposit reconciliation, and renewal reminders.
-            </p>
-            <ul style={{ paddingLeft: "1.2rem", fontSize: "0.85rem", color: "#64748b", lineHeight: 1.6 }}>
-              <li>Online tenancy agreement &amp; document signing</li>
-              <li>Real-time asset availability calendar</li>
-              <li>Automated security deposit &amp; damage settlement</li>
-            </ul>
+            <div>
+              <div className={styles.cardIconWrapper}>
+                <Building size={22} aria-hidden="true" />
+              </div>
+              <h3 className={styles.cardTitle}>
+                Digital Lease &amp; Rental Management
+              </h3>
+              <p className={styles.cardLead}>
+                End-to-end digital leasing platforms for commercial property developers, vehicle rental fleets, and equipment hire enterprises. Featuring digital signature workflows, automatic deposit reconciliation, and renewal reminders.
+              </p>
+              <ul className={styles.cardBulletList}>
+                <li className={styles.cardBulletItem}>Online tenancy agreement &amp; document signing</li>
+                <li className={styles.cardBulletItem}>Real-time asset availability calendar</li>
+                <li className={styles.cardBulletItem}>Automated security deposit &amp; damage settlement</li>
+              </ul>
+            </div>
+            <Link href="/contact?interest=lease-software" className={styles.cardFooterLink}>
+              <span>Explore Rental &amp; Lease Solutions</span>
+              <ArrowRight size={13} aria-hidden="true" />
+            </Link>
           </div>
 
           {/* 7. WhatsApp Marketing Automation */}
           <div className={styles.solutionCard}>
-            <Send size={26} style={{ color: "#00488e", marginBottom: "1rem" }} aria-hidden="true" />
-            <h3 style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: "0.5rem", color: "#0a0a0a" }}>
-              WhatsApp Marketing &amp; Omnichannel Campaigns
-            </h3>
-            <p style={{ fontSize: "0.92rem", lineHeight: 1.6, color: "#4a5568", marginBottom: "1rem" }}>
-              Targeted promotional broadcast engines with 98%+ open rates. Send personalized offers, seasonal re-engagement messages, and abandoned cart alerts safely within Meta&apos;s commercial messaging policies.
-            </p>
-            <ul style={{ paddingLeft: "1.2rem", fontSize: "0.85rem", color: "#64748b", lineHeight: 1.6 }}>
-              <li>Audience segment filtering &amp; tag clustering</li>
-              <li>A/B testing for messaging templates &amp; media</li>
-              <li>Live conversion attribution back to ad spend</li>
-            </ul>
+            <div>
+              <div className={styles.cardIconWrapper}>
+                <Send size={22} aria-hidden="true" />
+              </div>
+              <h3 className={styles.cardTitle}>
+                WhatsApp Marketing &amp; Omnichannel Campaigns
+              </h3>
+              <p className={styles.cardLead}>
+                Targeted promotional broadcast engines with 98%+ open rates. Send personalized offers, seasonal re-engagement messages, and abandoned cart alerts safely within Meta&apos;s commercial messaging policies.
+              </p>
+              <ul className={styles.cardBulletList}>
+                <li className={styles.cardBulletItem}>Audience segment filtering &amp; tag clustering</li>
+                <li className={styles.cardBulletItem}>A/B testing for messaging templates &amp; media</li>
+                <li className={styles.cardBulletItem}>Live conversion attribution back to ad spend</li>
+              </ul>
+            </div>
+            <Link href="/contact?interest=whatsapp-marketing" className={styles.cardFooterLink}>
+              <span>Explore Broadcast Automation</span>
+              <ArrowRight size={13} aria-hidden="true" />
+            </Link>
           </div>
 
           {/* 8. SaaS MVP Development */}
           <div className={styles.solutionCard}>
-            <Code2 size={26} style={{ color: "#00488e", marginBottom: "1rem" }} aria-hidden="true" />
-            <h3 style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: "0.5rem", color: "#0a0a0a" }}>
-              Custom SaaS MVP Engineering
-            </h3>
-            <p style={{ fontSize: "0.92rem", lineHeight: 1.6, color: "#4a5568", marginBottom: "1rem" }}>
-              Rapid 6-to-12 week full-stack product engineering sprints taking founders and corporate innovation teams from technical blueprint to market release. Engineered in Next.js 15 with scalable serverless infrastructure.
-            </p>
-            <ul style={{ paddingLeft: "1.2rem", fontSize: "0.85rem", color: "#64748b", lineHeight: 1.6 }}>
-              <li>Production-grade auth, RBAC, and multi-tenancy</li>
-              <li>Automated CI/CD pipelines on AWS and Vercel</li>
-              <li>Sub-second database performance with PostgreSQL/Prisma</li>
-            </ul>
+            <div>
+              <div className={styles.cardIconWrapper}>
+                <Code2 size={22} aria-hidden="true" />
+              </div>
+              <h3 className={styles.cardTitle}>
+                Custom SaaS MVP Engineering
+              </h3>
+              <p className={styles.cardLead}>
+                Rapid 6-to-12 week full-stack product engineering sprints taking founders and corporate innovation teams from technical blueprint to market release. Engineered in Next.js 15 with scalable serverless infrastructure.
+              </p>
+              <ul className={styles.cardBulletList}>
+                <li className={styles.cardBulletItem}>Production-grade auth, RBAC, and multi-tenancy</li>
+                <li className={styles.cardBulletItem}>Automated CI/CD pipelines on AWS and Vercel</li>
+                <li className={styles.cardBulletItem}>Sub-second database performance with PostgreSQL/Prisma</li>
+              </ul>
+            </div>
+            <Link href="/contact?interest=saas-mvp" className={styles.cardFooterLink}>
+              <span>Explore MVP Engineering</span>
+              <ArrowRight size={13} aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Engineering Assurance & Methodology */}
-      <section style={{ marginTop: "4rem", background: "#f8fafc", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
-        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
-          • ENGINEERING RIGOR /
+      {/* Engineering Rigor: Modern Vision & Mission Style Cards (Image 1 Inspiration) */}
+      <section className={styles.integrationSection}>
+        <span className={styles.sectionBadge}>
+          • ENGINEERING RIGOR &amp; GOVERNANCE /
         </span>
-        <h2 style={{ fontSize: "clamp(1.6rem, 2.5vw, 2rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+        <h2 className={styles.sectionTitle}>
           The Qubizon Solution Architecture Standard
         </h2>
-        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "820px", marginBottom: "2rem" }}>
+        <p className={styles.sectionLead}>
           Unlike agency prototypes that fail under real commercial loads, every solution we engineer is constructed to withstand high concurrency, stringent security audits, and strict compliance scrutiny.
         </p>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
-          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
-            <Lock size={22} style={{ color: "#00488e", marginBottom: "0.75rem" }} aria-hidden="true" />
-            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
-              Defense-in-Depth Security
-            </h3>
-            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b" }}>
+        <div className={styles.integrationGrid}>
+          <div className={styles.integrationCard}>
+            <div className={styles.cardIconWrapper}>
+              <Lock size={22} aria-hidden="true" />
+            </div>
+            <h3>Defense-in-Depth Security</h3>
+            <p>
               Server-side input sanitization, automated SQL injection prevention, strict rate-limiting, and comprehensive HSTS headers protecting all user data channels.
             </p>
+            <Link href="/contact?interest=security-audit">
+              <span>Inspect Security Protocols</span>
+              <ArrowRight size={13} aria-hidden="true" />
+            </Link>
           </div>
 
-          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
-            <Zap size={22} style={{ color: "#00488e", marginBottom: "0.75rem" }} aria-hidden="true" />
-            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
-              Sub-Second Core Web Vitals
-            </h3>
-            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b" }}>
+          <div className={styles.integrationCard}>
+            <div className={styles.cardIconWrapper}>
+              <Zap size={22} aria-hidden="true" />
+            </div>
+            <h3>Sub-Second Core Web Vitals</h3>
+            <p>
               Every interface is tuned for sub-second Largest Contentful Paint (LCP &lt; 1.0s), zero cumulative layout shifts (CLS = 0.00), and rapid touch responsiveness (INP &lt; 100ms).
             </p>
+            <Link href="/contact?interest=cwv-optimization">
+              <span>Inspect Performance Gates</span>
+              <ArrowRight size={13} aria-hidden="true" />
+            </Link>
           </div>
 
-          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
-            <Globe2 size={22} style={{ color: "#00488e", marginBottom: "0.75rem" }} aria-hidden="true" />
-            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
-              Cross-Border Sovereign Hosting
-            </h3>
-            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b" }}>
+          <div className={styles.integrationCard}>
+            <div className={styles.cardIconWrapper}>
+              <Globe2 size={22} aria-hidden="true" />
+            </div>
+            <h3>Cross-Border Sovereign Hosting</h3>
+            <p>
               Deployments configured for in-region data residency across AWS UAE (me-central-1), AWS Bahrain (me-south-1), AWS India (ap-south-1), and EU servers matching local statutory mandates.
             </p>
+            <Link href="/contact?interest=cloud-residency">
+              <span>Inspect Cloud Residency</span>
+              <ArrowRight size={13} aria-hidden="true" />
+            </Link>
           </div>
-        </div>
-      </section>
 
-      {/* Enterprise SLA, Architecture & Integration Governance Framework */}
-      <section style={{ marginTop: "4rem", background: "#f8fafc", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
-        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
-          • ENTERPRISE INTEGRATION BLUEPRINT /
-        </span>
-        <h2 style={{ fontSize: "clamp(1.6rem, 2.5vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
-          Production Architectural Standards &amp; SLA Controls
-        </h2>
-        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
-          Every solution engineered by Qubizon is designed for high-availability enterprise environments. We build modular, API-first backends on modern serverless edge infrastructure that seamlessly integrate with your existing ERPs, legacy CRMs, and payment gateways.
-        </p>
-
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem", marginBottom: "2.5rem" }}>
-          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
-            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
-              Event-Driven Webhook Architecture
-            </h3>
-            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
-              All solution integrations utilize resilient event-driven webhooks with HMAC-SHA256 signature validation and automatic exponential backoff retry algorithms. Whether processing an online lease deposit or a WhatsApp conversational lead, zero events are lost during network degradation.
+          <div className={styles.integrationCard}>
+            <div className={styles.cardIconWrapper}>
+              <Code2 size={22} aria-hidden="true" />
+            </div>
+            <h3>Event-Driven Webhook Architecture</h3>
+            <p>
+              All solution integrations utilize resilient event-driven webhooks with HMAC-SHA256 signature validation and automatic exponential backoff retry algorithms to guarantee zero dropped transactions.
             </p>
+            <Link href="/contact?interest=api-integration">
+              <span>Inspect Webhook Architecture</span>
+              <ArrowRight size={13} aria-hidden="true" />
+            </Link>
           </div>
-
-          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
-            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
-              Statutory E-Invoicing &amp; Tax Compliance
-            </h3>
-            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
-              Our billing and subscription solutions are pre-engineered to generate legally compliant tax invoices matching regional statutory requirements: ZATCA Phase 2 clearance in Saudi Arabia, UAE FTA compliant tax invoices, and Indian GST e-invoices with embedded QR validation.
-            </p>
-          </div>
-
-          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
-            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
-              Zero-Hallucination Enterprise RAG Models
-            </h3>
-            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
-              Our AI chatbot and agent solutions employ strict Retrieval-Augmented Generation (RAG) pipelines over verified internal knowledge bases with deterministic guardrails. Bots never speculate or hallucinate pricing, terms, or sensitive organizational policies.
-            </p>
-          </div>
-
-          <div style={{ background: "#ffffff", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
-            <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
-              Data Sovereignty &amp; Sovereign Cloud Hosting
-            </h3>
-            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
-              We enforce strict data residency compliance by provisioning cloud infrastructure in client-mandated geographic zones: AWS UAE (me-central-1), AWS Bahrain (me-south-1), AWS India (ap-south-1), or Frankfurt (eu-central-1) to ensure full statutory compliance.
-            </p>
-          </div>
-        </div>
-
-        <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: "1.5rem", fontSize: "0.88rem", color: "#64748b", lineHeight: 1.6 }}>
-          <strong>Cross-Discipline Capabilities:</strong> Connect these solutions to our core practices in{" "}
-          <Link href="/services/web-development" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Web Engineering</Link>,{" "}
-          <Link href="/services/seo" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Technical SEO</Link>,{" "}
-          <Link href="/services/paid-advertising" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Paid Advertising</Link>, and{" "}
-          <Link href="/services/crm" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>CRM Systems</Link>. Explore sector implementations in{" "}
-          <Link href="/industries" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Global Enterprise Industries</Link>.
         </div>
       </section>
 
       {/* Production Technology Stack & API Architecture Framework */}
-      <section style={{ marginTop: "3.5rem", background: "#ffffff", padding: "3rem clamp(1.5rem, 4vw, 3rem)", borderRadius: "20px", border: "1px solid #e2e8f0" }}>
-        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+      <section className={styles.integrationSection}>
+        <span className={styles.sectionBadge}>
           • PRODUCTION TECHNOLOGY STACK /
         </span>
-        <h2 style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.1rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "1rem" }}>
+        <h2 className={styles.sectionTitle}>
           Modern Technology Standards &amp; Enterprise Tooling
         </h2>
-        <p style={{ fontSize: "1rem", lineHeight: 1.65, color: "#4a5568", maxWidth: "860px", marginBottom: "2rem" }}>
+        <p className={styles.sectionLead}>
           We build with open, modern technologies that eliminate proprietary lock-in. Every solution is engineered using modular, type-safe frameworks that scale horizontally across high-concurrency commercial environments.
         </p>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem" }}>
-          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
-            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
-              Next.js 15 &amp; TypeScript Runtime
-            </h3>
-            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+        <div className={styles.integrationGrid}>
+          <div className={styles.integrationCard}>
+            <h3>Next.js 15 &amp; TypeScript Runtime</h3>
+            <p>
               Strict TypeScript compiler type safety, zero client runtime bloat, and sub-second React Server Components compiled directly for global edge content delivery networks.
             </p>
+            <Link href="/services/web-development">
+              <span>Explore Web Architecture</span>
+              <ArrowRight size={13} aria-hidden="true" />
+            </Link>
           </div>
 
-          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
-            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
-              PostgreSQL &amp; pgvector Semantic Search
-            </h3>
-            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+          <div className={styles.integrationCard}>
+            <h3>PostgreSQL &amp; pgvector Semantic Search</h3>
+            <p>
               Enterprise relational persistence paired with pgvector embedding tables, enabling instant semantic document search and zero-hallucination RAG customer support automation.
             </p>
+            <Link href="/contact?interest=pgvector">
+              <span>Explore Vector Databases</span>
+              <ArrowRight size={13} aria-hidden="true" />
+            </Link>
           </div>
 
-          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
-            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
-              Meta WhatsApp Business Cloud API v21.0
-            </h3>
-            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+          <div className={styles.integrationCard}>
+            <h3>Meta WhatsApp Business Cloud API v21.0</h3>
+            <p>
               Direct integration with Meta Graph APIs, handling webhook verification, interactive message templates, catalog synchronization, and live two-way customer messaging.
             </p>
+            <Link href="/contact?interest=whatsapp-cloud-api">
+              <span>Explore WhatsApp API</span>
+              <ArrowRight size={13} aria-hidden="true" />
+            </Link>
           </div>
 
-          <div style={{ background: "#f8fafc", padding: "1.75rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
-            <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
-              ZATCA, KNET &amp; Regional Financial Gateways
-            </h3>
-            <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+          <div className={styles.integrationCard}>
+            <h3>ZATCA, KNET &amp; Regional Financial Gateways</h3>
+            <p>
               Pre-configured cryptographic XML and QR generation for Saudi ZATCA Phase 2, native KNET debit switch integration in Kuwait, and BenefitPay mobile payments in Bahrain.
             </p>
+            <Link href="/contact?interest=regional-gateways">
+              <span>Explore Payment APIs</span>
+              <ArrowRight size={13} aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Frequently Asked Questions */}
-      <section style={{ marginTop: "4rem" }}>
-        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+      <section className={styles.faqsSection}>
+        <span className={styles.sectionBadge}>
           • QUESTIONS &amp; ANSWERS /
         </span>
-        <h2 style={{ fontSize: "clamp(1.6rem, 2.5vw, 2rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#0a0a0a", marginBottom: "2rem" }}>
+        <h2 className={styles.sectionTitle}>
           Frequently Asked Questions on Solution Engineering
         </h2>
-        <div className={styles.faqList}>
+        <div className={styles.faqGrid}>
           {SOLUTIONS_FAQS.map((faq, index) => (
-            <details key={index} className={styles.faqItem}>
-              <summary className={styles.faqQuestion}>
-                <span>{faq.q}</span>
-                <ChevronRight size={18} aria-hidden="true" />
-              </summary>
-              <div className={styles.faqAnswer}>
-                <p>{faq.a}</p>
-              </div>
-            </details>
+            <div key={index} className={styles.faqItem}>
+              <h3 className={styles.faqQuestion}>{faq.q}</h3>
+              <p className={styles.faqAnswer}>{faq.a}</p>
+            </div>
           ))}
         </div>
       </section>
 
-      {/* CTA Card */}
-      <section style={{ marginTop: "4rem", background: "linear-gradient(135deg, #0b1530 0%, #00488e 100%)", borderRadius: "24px", padding: "clamp(2.5rem, 5vw, 4rem)", color: "#ffffff", textAlign: "center" }}>
-        <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#ffbe0b", display: "block", marginBottom: "0.75rem" }}>
+      {/* CTA Card (Obsidian Editorial Stage) */}
+      <section className={styles.ctaBanner}>
+        <span className={styles.sectionBadge} style={{ background: "rgba(249, 239, 231, 0.12)", color: "#f9efe7", borderColor: "rgba(249, 239, 231, 0.2)" }}>
           • ARCHITECT YOUR NEXT SOLUTION WITH QUBIZON /
         </span>
-        <h2 style={{ fontSize: "clamp(1.8rem, 3.5vw, 2.75rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "#ffffff", marginBottom: "1rem" }}>
+        <h2 className={styles.ctaTitle}>
           Ready to Build a High-Converting Digital Solution?
         </h2>
-        <p style={{ fontSize: "1rem", color: "rgba(255, 255, 255, 0.8)", maxWidth: "720px", margin: "0 auto 2rem auto", lineHeight: 1.65 }}>
+        <p className={styles.ctaSubtitle}>
           Schedule a technical discovery session with our senior solution architects. We will inspect your system requirements, integration APIs, and deliver a transparent architectural roadmap.
         </p>
-        <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link
-            href="/contact?interest=solutions"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              padding: "14px 32px",
-              background: "#ffbe0b",
-              color: "#0a0a0a",
-              fontWeight: 700,
-              fontSize: "14px",
-              borderRadius: "9999px",
-              textDecoration: "none",
-              textTransform: "uppercase",
-              letterSpacing: "0.04em",
-            }}
-          >
+        <div className={styles.ctaActions} style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
+          <Link href="/contact?interest=solutions" className={styles.ctaBtn}>
             <span>Book a Technical Discovery Call</span>
-            <ArrowRight size={16} aria-hidden="true" />
+            <ArrowRight size={14} aria-hidden="true" />
           </Link>
-          <Link
-            href="/work"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              padding: "14px 28px",
-              background: "transparent",
-              color: "#ffffff",
-              border: "1px solid rgba(255, 255, 255, 0.3)",
-              fontWeight: 600,
-              fontSize: "14px",
-              borderRadius: "9999px",
-              textDecoration: "none",
-            }}
-          >
+          <Link href="/work" className={styles.ctaBtn} style={{ background: "transparent", color: "#f9efe7", border: "1px solid rgba(249, 239, 231, 0.25)" }}>
             <span>Inspect Our Benchmarks</span>
           </Link>
         </div>
@@ -521,4 +564,3 @@ export default function SolutionsPage() {
     </div>
   );
 }
-

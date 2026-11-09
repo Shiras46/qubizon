@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   ChevronRight,
@@ -10,6 +11,7 @@ import {
   Cpu,
   TrendingUp,
   Box,
+  Check,
 } from "lucide-react";
 import { constructMetadata } from "@/lib/metadata";
 import { SITE_CONFIG, CORE_SERVICES } from "@/lib/constants";
@@ -187,47 +189,84 @@ export default function AboutPage() {
         </nav>
       </div>
 
-      {/* Hero Section */}
+      {/* Hero Section: Modern Split Architecture (Image 2 & 3 Inspiration) */}
       <section className={styles.heroSection} aria-labelledby="about-hero-heading">
         <div className="container">
-          <div className={styles.heroContent}>
-            <span className={styles.badge}>
-              <Box size={14} aria-hidden="true" />
-              Unified Agency Architecture
-            </span>
-            <h1 id="about-hero-heading" className={styles.heroTitle}>
-              A Unified Digital Discipline Engineered to Eliminate <span className="calligraphy">Agency Fragmentation</span>
-            </h1>
-            <p className={styles.heroLead}>
-              {SITE_CONFIG.name} was established around a simple observation: modern businesses waste
-              valuable momentum coordinating between isolated web developers, SEO consultants, ad
-              buyers, and copywriters who never communicate. We unify all five disciplines into one
-              disciplined, accountable partner.
-            </p>
+          <div className={styles.heroSplit}>
+            <div className={styles.heroLeft}>
+              <span className={styles.badge}>
+                <Box size={14} aria-hidden="true" />
+                Unified Agency Architecture
+              </span>
+              <h1 id="about-hero-heading" className={styles.heroTitle}>
+                A Unified Digital Discipline Engineered to Eliminate <span className="calligraphy">Agency Fragmentation</span>
+              </h1>
+              <p className={styles.heroLead}>
+                {SITE_CONFIG.name} was established around a simple observation: modern businesses waste
+                valuable momentum coordinating between isolated web developers, SEO consultants, ad
+                buyers, and copywriters who never communicate. We unify all five disciplines into one
+                disciplined, accountable partner.
+              </p>
 
-            <div className={styles.heroStatsGrid}>
-              <div className={styles.heroStatCard}>
-                <p className={styles.statValue}>1 Team</p>
-                <p className={styles.statLabel}>Single point of technical and strategic ownership</p>
+              <div className={styles.heroActions}>
+                <Link href="/contact" className={styles.btnPill}>
+                  <span>Schedule a Discovery Session</span>
+                  <ArrowRight size={13} aria-hidden="true" />
+                </Link>
+                <div className={styles.trustIndicators}>
+                  <span className={styles.trustItem}>
+                    <Check size={14} className={styles.trustIcon} aria-hidden="true" />
+                    <span>100% Client IP Ownership</span>
+                  </span>
+                  <span className={styles.trustItem}>
+                    <Check size={14} className={styles.trustIcon} aria-hidden="true" />
+                    <span>Zero Monolithic Bloat</span>
+                  </span>
+                </div>
               </div>
-              <div className={styles.heroStatCard}>
-                <p className={styles.statValue}>5 Disciplines</p>
-                <p className={styles.statLabel}>Web, SEO, Social, Paid Ads, and Content in sync</p>
+            </div>
+
+            <div className={styles.heroRight}>
+              <div className={styles.heroVisualFrame}>
+                <div className={styles.floatingBadge}>
+                  <span className={styles.emeraldPulse} />
+                  <span>UNIFIED AGENCY COLLECTIVE / KERALA &amp; GCC</span>
+                </div>
+                <Image
+                  src="/hero-collaboration.jpg"
+                  alt="Qubizon cross-functional digital engineering and strategic marketing team collaboration"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  className={styles.heroImage}
+                />
               </div>
-              <div className={styles.heroStatCard}>
-                <p className={styles.statValue}>100%</p>
-                <p className={styles.statLabel}>Client code, data, and asset ownership guaranteed</p>
-              </div>
-              <div className={styles.heroStatCard}>
-                <p className={styles.statValue}>WCAG 2.1 AA</p>
-                <p className={styles.statLabel}>Accessibility and Core Web Vitals target standards</p>
-              </div>
+            </div>
+          </div>
+
+          {/* Bottom Proof Strip: 4 Modern Cards (Image 3 Inspiration) */}
+          <div className={styles.heroStatsGrid}>
+            <div className={styles.heroStatCard}>
+              <p className={styles.statValue}>1 Team</p>
+              <p className={styles.statLabel}>Single point of technical and strategic ownership</p>
+            </div>
+            <div className={styles.heroStatCard}>
+              <p className={styles.statValue}>5 Disciplines</p>
+              <p className={styles.statLabel}>Web, SEO, Social, Paid Ads, and Content in sync</p>
+            </div>
+            <div className={styles.heroStatCard}>
+              <p className={styles.statValue}>100%</p>
+              <p className={styles.statLabel}>Client code, data, and asset ownership guaranteed</p>
+            </div>
+            <div className={styles.heroStatCard}>
+              <p className={styles.statValue}>WCAG 2.1 AA</p>
+              <p className={styles.statLabel}>Accessibility and Core Web Vitals target standards</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Problem vs Unified Approach */}
+      {/* Problem vs Unified Approach: Modern Vision/Mission Cards (Image 1 Inspiration) */}
       <section className={styles.section} aria-labelledby="problem-heading">
         <div className="container">
           <div className={styles.sectionHeader}>
@@ -320,7 +359,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* The Cube Disciplines */}
+      {/* The Cube Disciplines: Modern 3-Column Card Grid (Image 4 Inspiration) */}
       <section className={styles.section} aria-labelledby="cube-heading">
         <div className="container">
           <div className={styles.sectionHeader}>
@@ -337,16 +376,20 @@ export default function AboutPage() {
           <div className={styles.cubeGrid}>
             {CUBE_FACES.map((face, idx) => (
               <article key={idx} className={styles.cubeCard}>
-                <span className={styles.cubeFaceTag}>{face.face}</span>
-                <h3 className={styles.cubeTitle}>{face.title}</h3>
-                <p className={styles.cubeDescription}>{face.description}</p>
-                <div className={styles.cubeSynergy}>
-                  <strong>Cube Synergy:</strong> {face.synergy}
+                <div>
+                  <span className={styles.cubeFaceTag}>{face.face}</span>
+                  <h3 className={styles.cubeTitle}>{face.title}</h3>
+                  <p className={styles.cubeDescription}>{face.description}</p>
                 </div>
-                <Link href={face.href} className={styles.cubeLink}>
-                  <span>Explore {face.title}</span>
-                  <ArrowRight size={14} aria-hidden="true" />
-                </Link>
+                <div>
+                  <div className={styles.cubeSynergy}>
+                    <strong>Cube Synergy:</strong> {face.synergy}
+                  </div>
+                  <Link href={face.href} className={styles.cubeLink}>
+                    <span>Explore {face.title}</span>
+                    <ArrowRight size={14} aria-hidden="true" />
+                  </Link>
+                </div>
               </article>
             ))}
           </div>
@@ -380,7 +423,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Dark Navy Section: Client Commitments */}
+      {/* Dark Obsidian Section: Client Commitments */}
       <section className={styles.darkSection} aria-labelledby="expectations-heading">
         <div className="container">
           <div className={styles.darkHeader}>
@@ -403,7 +446,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className={styles.expectationCard}>
-              <h3>Clean Documentation & Standards</h3>
+              <h3>Clean Documentation &amp; Standards</h3>
               <p>
                 Every line of code is committed to your repository with clear Git logs. Every strategy is
                 documented in plain language with measurable acceptance criteria.
@@ -448,119 +491,119 @@ export default function AboutPage() {
             })}
           </div>
 
-          {/* About Qubizon Agency FAQs */}
-          <div style={{ marginTop: "4rem", marginBottom: "3rem", background: "rgba(255, 255, 255, 0.9)", border: "1px solid rgba(0, 0, 0, 0.08)", borderRadius: "20px", padding: "clamp(2rem, 4vw, 3rem)" }}>
-            <div style={{ textAlign: "center", marginBottom: "2rem" }}>
-              <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--brand-blue, #00488e)", display: "block", marginBottom: "0.5rem" }}>
+          {/* About Qubizon Agency FAQs (Clean Modular Container) */}
+          <div className={styles.faqSectionContainer}>
+            <div className={styles.faqHeaderBlock}>
+              <span className={styles.faqBadge}>
                 • AGENCY INTEGRATION FAQS /
               </span>
-              <h2 style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.2rem)", fontWeight: 800, color: "var(--clr-foreground, #0a0a0a)", letterSpacing: "-0.02em" }}>
+              <h2 className={styles.faqTitle}>
                 Common Questions About Partnering With Qubizon
               </h2>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.5rem" }}>
-              <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+            <div className={styles.faqGrid}>
+              <div className={styles.faqCardItem}>
+                <h3 className={styles.faqCardTitle}>
                   How does Qubizon differ from a traditional digital marketing agency?
                 </h3>
-                <p style={{ fontSize: "0.925rem", color: "var(--color-text-secondary, #64748b)", lineHeight: 1.6, margin: 0 }}>
+                <p className={styles.faqCardAnswer}>
                   Traditional digital marketing agencies treat web design, SEO, and paid advertising as disconnected silos managed by outsourced freelancers. Qubizon operates as an integrated software and growth collective. Our software engineers build high-performance Next.js architectures that directly empower our technical SEO strategists, while paid campaigns feed real-time CRM pipelines.
                 </p>
               </div>
 
-              <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+              <div className={styles.faqCardItem}>
+                <h3 className={styles.faqCardTitle}>
                   Where are Qubizon’s engineering and strategy teams located?
                 </h3>
-                <p style={{ fontSize: "0.925rem", color: "var(--color-text-secondary, #64748b)", lineHeight: 1.6, margin: 0 }}>
+                <p className={styles.faqCardAnswer}>
                   We are based in Kerala, India, with active regional service hubs across Kozhikode (Calicut) and Thrissur. We partner with fast-growing regional enterprises, healthcare systems, retail chains, and international commercial brands operating across the GCC (UAE, Saudi Arabia, Qatar) and global markets.
                 </p>
               </div>
 
-              <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+              <div className={styles.faqCardItem}>
+                <h3 className={styles.faqCardTitle}>
                   What is Qubizon’s policy on intellectual property and code ownership?
                 </h3>
-                <p style={{ fontSize: "0.925rem", color: "var(--color-text-secondary, #64748b)", lineHeight: 1.6, margin: 0 }}>
+                <p className={styles.faqCardAnswer}>
                   You retain 100% legal ownership of all source code, git repositories, advertising accounts, domain registrations, and analytics data from day one. We never enforce proprietary vendor lock-in or hostage retainer agreements; every system we engineer is built on documented, open-standard technologies.
                 </p>
               </div>
 
-              <div style={{ background: "#ffffff", border: "1px solid rgba(0, 0, 0, 0.06)", borderRadius: "14px", padding: "1.5rem" }}>
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--brand-blue, #00488e)", marginBottom: "0.5rem" }}>
+              <div className={styles.faqCardItem}>
+                <h3 className={styles.faqCardTitle}>
                   How do sprint cycles and communication work during active projects?
                 </h3>
-                <p style={{ fontSize: "0.925rem", color: "var(--color-text-secondary, #64748b)", lineHeight: 1.6, margin: 0 }}>
+                <p className={styles.faqCardAnswer}>
                   We operate in bi-weekly agile delivery sprints with direct practitioner Slack/WhatsApp channels and scheduled review demonstrations. You communicate directly with the software engineers and growth leads executing your project—ensuring rapid iteration without intermediary account management bureaucracy.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Enterprise Engineering Culture & Operational Governance Framework */}
-          <div style={{ marginTop: "4rem", marginBottom: "3rem", background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: "20px", padding: "clamp(2rem, 4vw, 3rem)" }}>
-            <span style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase", color: "#00488e", display: "block", marginBottom: "0.5rem" }}>
+          {/* Enterprise Engineering Culture & Operational Governance Framework (Clean Modular Container) */}
+          <div className={styles.governanceContainer}>
+            <span className={styles.governanceBadge}>
               • ENGINEERING CULTURE &amp; OPERATIONAL GOVERNANCE /
             </span>
-            <h2 style={{ fontSize: "clamp(1.5rem, 2.4vw, 2.1rem)", fontWeight: 800, color: "#0a0a0a", marginBottom: "1rem" }}>
+            <h2 className={styles.governanceTitle}>
               How Our Cross-Functional Squads Deliver Predictable Results
             </h2>
-            <p style={{ fontSize: "0.95rem", lineHeight: 1.7, color: "#4a5568", maxWidth: "900px", marginBottom: "2rem" }}>
+            <p className={styles.governanceLead}>
               At Qubizon, we believe that software engineering and digital marketing should not be segregated into different rooms. Our delivery pods are organized as cross-functional squads containing senior TypeScript engineers, technical SEO analysts, performance media buyers, and conversion copywriters collaborating synchronously on every client initiative.
             </p>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.5rem", marginBottom: "2rem" }}>
-              <div style={{ background: "#ffffff", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+            <div className={styles.governanceGrid}>
+              <div className={styles.governanceItem}>
+                <h3 className={styles.governanceItemTitle}>
                   1. Zero Third-Party Vendor Dependencies
                 </h3>
-                <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                <p className={styles.governanceItemText}>
                   We do not outsource core development or campaign management to white-label contractors. Every line of code, every Google Ads conversion action, and every technical SEO knowledge graph is architected and maintained directly by our in-house engineering team.
                 </p>
               </div>
 
-              <div style={{ background: "#ffffff", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              <div className={styles.governanceItem}>
+                <h3 className={styles.governanceItemTitle}>
                   2. Strict Code Quality &amp; Accessibility Gates
                 </h3>
-                <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                <p className={styles.governanceItemText}>
                   Every production deployment is subjected to automated continuous integration pipelines verifying strict TypeScript compiler safety, ESLint security rules, and WCAG 2.1 AA accessibility conformance to ensure all digital experiences are resilient and universally usable.
                 </p>
               </div>
 
-              <div style={{ background: "#ffffff", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              <div className={styles.governanceItem}>
+                <h3 className={styles.governanceItemTitle}>
                   3. Transparent Milestone Execution
                 </h3>
-                <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                <p className={styles.governanceItemText}>
                   We replace vague monthly status reports with transparent sprint retrospectives. Clients receive direct visibility into Git pull request reviews, live preview staging environments, and real-time Google Analytics 4 telemetry dashboards showing verifiable commercial outcomes.
                 </p>
               </div>
 
-              <div style={{ background: "#ffffff", padding: "1.5rem", borderRadius: "14px", border: "1px solid #e2e8f0" }}>
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0a0a0a", marginBottom: "0.5rem" }}>
+              <div className={styles.governanceItem}>
+                <h3 className={styles.governanceItemTitle}>
                   4. International Data Sovereignty
                 </h3>
-                <p style={{ fontSize: "0.88rem", lineHeight: 1.6, color: "#64748b", margin: 0 }}>
+                <p className={styles.governanceItemText}>
                   Whether delivering for clients in Kerala or international enterprises across Dubai, Riyadh, London, or New York, we enforce strict compliance with regional data protection frameworks (Indian DPDP Act 2023, European GDPR, UAE Federal Decree-Law No. 45/2021).
                 </p>
               </div>
             </div>
 
-            <div style={{ borderTop: "1px solid #e2e8f0", paddingTop: "1.25rem", fontSize: "0.85rem", color: "#64748b", lineHeight: 1.6 }}>
+            <div className={styles.governanceEcosystem}>
               <strong>Explore Our Integrated Ecosystem:</strong> Review our core disciplines in{" "}
-              <Link href="/services/web-development" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Web Architecture</Link>,{" "}
-              <Link href="/services/seo" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Technical SEO</Link>,{" "}
-              <Link href="/services/paid-advertising" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Paid Advertising</Link>, and{" "}
-              <Link href="/services/crm" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>CRM Systems</Link>. Explore regional delivery hubs across{" "}
-              <Link href="/locations/uae" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>UAE</Link>,{" "}
-              <Link href="/locations/saudi-arabia" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Saudi Arabia</Link>, and{" "}
-              <Link href="/locations" style={{ color: "#00488e", fontWeight: 600, textDecoration: "none" }}>Global Corridors</Link>.
+              <Link href="/services/web-development">Web Architecture</Link>,{" "}
+              <Link href="/services/seo">Technical SEO</Link>,{" "}
+              <Link href="/services/paid-advertising">Paid Advertising</Link>, and{" "}
+              <Link href="/services/crm">CRM Systems</Link>. Explore regional delivery hubs across{" "}
+              <Link href="/locations/uae">UAE</Link>,{" "}
+              <Link href="/locations/saudi-arabia">Saudi Arabia</Link>, and{" "}
+              <Link href="/locations">Global Corridors</Link>.
             </div>
           </div>
 
-          {/* Call to Action Banner */}
+          {/* Call to Action Banner (Obsidian Editorial Stage) */}
           <div className={styles.ctaBanner}>
             <h2 className={styles.ctaTitle}>
               Ready for a Unified, Disciplined Digital Partner?
