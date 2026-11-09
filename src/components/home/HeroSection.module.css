@@ -42,8 +42,8 @@
   font-family: var(--font-serif, "Playfair Display", serif);
   font-style: italic;
   font-weight: 400;
-  color: var(--brand-blue, #00488e);
-  letter-spacing: -0.01em;
+  color: var(--clr-foreground, #1c1c1b);
+  letter-spacing: -0.02em;
 }
 
 .lead {
