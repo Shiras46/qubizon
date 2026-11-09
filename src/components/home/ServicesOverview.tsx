@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Code2, Network, Sparkles, Target, FileText } from "lucide-react";
 import styles from "./ServicesOverview.module.css";
 
@@ -248,6 +249,67 @@ export function ServicesOverview() {
               </Link>
             );
           })}
+        </div>
+
+        {/* Mission & Vision Section + Wide Visual Banner (Reference Model Architecture) */}
+        <div className={styles.visionMissionSection}>
+          <div className={styles.visionMissionHeader}>
+            <span className={styles.visionMissionBadge}>• ORGANIZATIONAL PURPOSE &amp; COMMITMENT /</span>
+            <h2 className={styles.visionMissionTitle}>
+              Engineering digital platforms with <span className="calligraphy">unwavering purpose</span>.
+            </h2>
+          </div>
+
+          <div className={styles.visionMissionGrid}>
+            {/* Our Vision Card (Reference Model) */}
+            <article className={styles.visionMissionCard}>
+              <h3 className={styles.cardHead}>Our Vision</h3>
+              <div className={styles.cardParagraphs}>
+                <p className={styles.cardParagraph}>
+                  To establish an unquestioned benchmark for enterprise digital engineering where technical precision, crawl architecture, and commercial storytelling operate as a unified discipline rather than isolated agency silos.
+                </p>
+                <p className={styles.cardParagraph}>
+                  To empower ambitious regional and international enterprises across Kerala, the UAE, and global commercial corridors with high-velocity Next.js web systems, authoritative search indexation, and measurable customer pipeline.
+                </p>
+              </div>
+              <Link href="/about" className={styles.cardLearnMore}>
+                <span>Learn more</span>
+                <ArrowRight size={13} aria-hidden="true" />
+              </Link>
+            </article>
+
+            {/* Our Mission Card (Reference Model) */}
+            <article className={styles.visionMissionCard}>
+              <h3 className={styles.cardHead}>Our Mission</h3>
+              <div className={styles.cardParagraphs}>
+                <p className={styles.cardParagraph}>
+                  To eliminate agency fragmentation and wasted marketing capital by pairing world-class React Server Component engineering with server-side ad telemetry, bespoke CRM pipelines, and search-intent content authority.
+                </p>
+                <p className={styles.cardParagraph}>
+                  Alongside commercial scale, Qubizon guarantees 100% client intellectual property ownership, zero vendor lock-in, and strict WCAG 2.1 AA accessibility standards across every digital asset we deploy.
+                </p>
+              </div>
+              <Link href="/services" className={styles.cardLearnMore}>
+                <span>Learn more</span>
+                <ArrowRight size={13} aria-hidden="true" />
+              </Link>
+            </article>
+          </div>
+
+          {/* Wide Photographic Banner Frame (Matching Reference Model) */}
+          <div className={styles.wideVisualBanner}>
+            <div className={styles.bannerFloatingBadge}>
+              <span className={styles.pulseDot} />
+              <span>UNIFIED AGENCY COLLECTIVE / ARCHITECTURE &bull; SEO &bull; GROWTH &bull; KERALA &amp; GCC</span>
+            </div>
+            <Image
+              src="/hero-collaboration.jpg"
+              alt="Qubizon unified digital agency engineering and strategic leadership collaboration in Kerala and the UAE"
+              fill
+              sizes="(max-width: 1200px) 100vw, 1560px"
+              className={styles.wideBannerImage}
+            />
+          </div>
         </div>
       </div>
     </section>
