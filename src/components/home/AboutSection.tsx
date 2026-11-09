@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Layers, Users, Clock, Sparkles, Check } from "lucide-react";
+import { ArrowRight, Layers, Users, Clock, Plus, Check } from "lucide-react";
 import styles from "./AboutSection.module.css";
 
 const P1_WORDS = [
@@ -145,10 +145,16 @@ export function AboutSection() {
     >
       <div className={styles.container}>
         <div className={styles.aboutStage}>
-          {/* Split 2-Column Modern Architecture (Reference Model) */}
+          {/* Split 2-Column Modern Architecture (Reference Model: Why Choose Right Key Layout) */}
           <div className={styles.splitGrid}>
-            {/* Left Column: Image with Floating Badge */}
+            {/* Left Column: Top Pill Tag + Photographic Card with Floating Badge */}
             <div className={styles.imageColumn}>
+              {/* Category Tag: + WHO WE ARE (Above Image) */}
+              <div className={styles.whoWeAreTag}>
+                <Plus size={13} className={styles.tagIcon} aria-hidden="true" strokeWidth={3} />
+                <span>WHO WE ARE</span>
+              </div>
+
               <div className={styles.stickyImageWrap}>
                 <div className={styles.imageFrame}>
                   <div className={styles.floatingBadge}>
@@ -166,14 +172,8 @@ export function AboutSection() {
               </div>
             </div>
 
-            {/* Right Column: Narrative with Scroll-Based Opacity Animation */}
+            {/* Right Column: High-Impact Narrative with Progressive Scroll Reveal */}
             <div className={styles.contentColumn}>
-              {/* Category Tag: ❖ WHO WE ARE */}
-              <div className={styles.whoWeAreTag}>
-                <Sparkles size={13} className={styles.tagIcon} aria-hidden="true" />
-                <span>WHO WE ARE</span>
-              </div>
-
               {/* Progressive Word-by-Word Scroll Reveal Narrative Block */}
               <div className={styles.narrativeBlock}>
                 {/* Paragraph 1: Word-by-word reveal */}
@@ -240,30 +240,39 @@ export function AboutSection() {
                 </p>
               </div>
 
-              {/* Action Links & Trust Indicators (Matching Reference Model) */}
-              <div className={styles.actionRow}>
+              {/* Action Links & Trust Indicators (Exact Reference Model Row) */}
+              <div className={styles.actionAndTrustRow}>
                 <Link href="/about" className={styles.btnPrimary}>
                   <span>Discover Our Model</span>
                   <ArrowRight size={14} aria-hidden="true" />
                 </Link>
+
+                <div className={styles.trustIndicators}>
+                  <span className={styles.trustItem}>
+                    <span className={styles.checkCircle}>
+                      <Check size={11} strokeWidth={3} aria-hidden="true" />
+                    </span>
+                    <span>100% Client IP Ownership</span>
+                  </span>
+                  <span className={styles.trustItem}>
+                    <span className={styles.checkCircle}>
+                      <Check size={11} strokeWidth={3} aria-hidden="true" />
+                    </span>
+                    <span>Zero Monolithic Bloat</span>
+                  </span>
+                  <span className={styles.trustItem}>
+                    <span className={styles.checkCircle}>
+                      <Check size={11} strokeWidth={3} aria-hidden="true" />
+                    </span>
+                    <span>WCAG 2.1 AA Standards</span>
+                  </span>
+                </div>
+              </div>
+
+              <div className={styles.secondaryLinkRow}>
                 <Link href="/services" className={styles.btnText}>
                   <span>Explore All Capabilities &rarr;</span>
                 </Link>
-              </div>
-
-              <div className={styles.trustIndicators}>
-                <span className={styles.trustItem}>
-                  <Check size={14} className={styles.trustCheck} aria-hidden="true" />
-                  <span>100% Client IP Ownership</span>
-                </span>
-                <span className={styles.trustItem}>
-                  <Check size={14} className={styles.trustCheck} aria-hidden="true" />
-                  <span>Zero Monolithic Bloat</span>
-                </span>
-                <span className={styles.trustItem}>
-                  <Check size={14} className={styles.trustCheck} aria-hidden="true" />
-                  <span>WCAG 2.1 AA Standards</span>
-                </span>
               </div>
             </div>
           </div>
