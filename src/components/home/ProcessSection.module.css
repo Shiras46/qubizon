@@ -1,12 +1,12 @@
 /* =========================================================================
-   CODECAVE-INSPIRED PROCESS COMPONENT (ARCHITECTURAL CANVAS)
+   EDITORIAL PROCESS SECTION (DAVIDE CARUSIO AESTHETIC)
    ========================================================================= */
 
 .processSection {
   padding-top: clamp(5rem, 8vw, 7.5rem);
   padding-bottom: clamp(5rem, 8vw, 7.5rem);
   background-color: transparent;
-  color: var(--clr-foreground, #0a0a0a);
+  color: var(--clr-foreground, #1c1c1b);
   position: relative;
 }
 
@@ -20,86 +20,79 @@
 
 .sectionBadge {
   font-family: var(--font-family-mono, monospace);
-  font-size: clamp(0.6875rem, 0.65rem + 0.2vw, 0.8125rem);
+  font-size: 11px;
   font-weight: 700;
-  color: var(--brand-blue, #00488e);
-  letter-spacing: 0.12em;
+  color: var(--clr-foreground, #1c1c1b);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
+  opacity: 0.7;
 }
 
 .headingLarge {
   font-size: var(--text-huge, clamp(2.2rem, 4.5vw, 3.8rem));
   font-weight: 800;
   letter-spacing: -0.04em;
-  color: var(--clr-foreground, #0a0a0a);
+  color: var(--clr-foreground, #1c1c1b);
   margin-bottom: 1rem;
-  line-height: 1.1;
+  line-height: 1.08;
   max-width: 680px;
 }
 
 .lead {
   font-size: var(--text-base, 1.0625rem);
-  color: var(--clr-muted, #666666);
-  line-height: 1.7;
+  color: var(--clr-muted, #555554);
+  line-height: 1.65;
   max-width: 600px;
 }
 
 .processSteps {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: clamp(1.5rem, 2.5vw, 2.25rem);
-  margin-top: 4rem;
+  gap: clamp(1.25rem, 2vw, 2rem);
+  margin-top: 3.5rem;
 }
 
 .processStep {
   position: relative;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 20px;
+  background: #ffffff;
+  border: 1px solid rgba(28, 28, 27, 0.08);
+  border-radius: 18px;
   padding: 2.25rem 1.75rem;
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(28, 28, 27, 0.03);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
 .processStep:hover {
   transform: translateY(-4px);
-  border-color: rgba(0, 72, 142, 0.25);
-  box-shadow: 0 16px 40px -10px rgba(0, 72, 142, 0.12);
+  box-shadow: 0 16px 36px -8px rgba(28, 28, 27, 0.08);
 }
 
-.stepNum {
-  font-size: clamp(3.5rem, 5vw, 4.5rem);
-  color: rgba(0, 72, 142, 0.08);
-  position: absolute;
-  top: 0.5rem;
-  right: 1.25rem;
-  font-family: var(--font-serif, "Playfair Display", serif);
-  font-style: italic;
+.stepNumber {
+  font-family: var(--font-family-mono, monospace);
+  font-size: 11px;
   font-weight: 700;
-  line-height: 1;
-  pointer-events: none;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-muted, #555554);
+  margin-bottom: 1.25rem;
 }
 
 .stepTitle {
-  font-size: var(--text-xl, clamp(1.2rem, 1.6vw, 1.45rem));
+  font-size: 1.25rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--clr-foreground, #0a0a0a);
-  margin-bottom: 0.85rem;
-  position: relative;
-  z-index: 1;
+  letter-spacing: -0.03em;
+  color: var(--clr-foreground, #1c1c1b);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
 }
 
 .stepDesc {
   font-size: 0.9375rem;
-  color: var(--clr-muted, #666666);
-  line-height: 1.65;
-  position: relative;
-  z-index: 1;
+  color: var(--clr-muted, #555554);
+  line-height: 1.6;
 }
 
 @media (max-width: 1024px) {
@@ -108,9 +101,8 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .processSteps {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
 }

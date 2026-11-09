@@ -1,5 +1,5 @@
 /* =========================================================================
-   CODECAVE-INSPIRED WHY CHOOSE US COMPONENT (WHITE / ARCHITECTURAL CANVAS)
+   EDITORIAL WHY CHOOSE US (DAVIDE CARUSIO AESTHETIC)
    ========================================================================= */
 
 .whySection {
@@ -19,30 +19,31 @@
 
 .sectionBadge {
   font-family: var(--font-family-mono, monospace);
-  font-size: clamp(0.6875rem, 0.65rem + 0.2vw, 0.8125rem);
+  font-size: 11px;
   font-weight: 700;
-  color: var(--brand-blue, #00488E);
-  letter-spacing: 0.12em;
+  color: var(--clr-foreground, #1c1c1b);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
+  opacity: 0.7;
 }
 
 .headingLarge {
   font-size: var(--text-huge, clamp(2.2rem, 4.5vw, 3.8rem));
   font-weight: 800;
   letter-spacing: -0.04em;
-  color: var(--clr-foreground, #0a0a0a);
+  color: var(--clr-foreground, #1c1c1b);
   margin-bottom: 1.25rem;
-  line-height: 1.12;
+  line-height: 1.08;
 }
 
 .lead {
   font-size: var(--text-base, 1.0625rem);
-  color: var(--clr-muted, #666666);
-  line-height: 1.7;
+  color: var(--clr-muted, #555554);
+  line-height: 1.65;
 }
 
-/* 4-Column Metric Stats Grid (Inspired by Image 2 Reference) */
+/* 4-Column Metric Stats Grid */
 .statsGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -50,7 +51,7 @@
   margin-top: 3.5rem;
   margin-bottom: 4.5rem;
   padding-bottom: 4.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(28, 28, 27, 0.1);
 }
 
 .statCard {
@@ -58,87 +59,91 @@
   flex-direction: column;
 }
 
-.statNumber {
-  font-size: clamp(3rem, 5vw, 4.5rem);
+.statValue {
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
   font-weight: 800;
-  line-height: 0.95;
+  color: var(--clr-foreground, #1c1c1b);
+  line-height: 1;
   letter-spacing: -0.04em;
-  margin-bottom: 1rem;
-  color: var(--clr-foreground, #0a0a0a);
-  display: flex;
-  align-items: baseline;
-  gap: 2px;
+  margin-bottom: 0.5rem;
 }
 
-.statUnit {
-  color: var(--brand-blue, #00488e);
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-}
-
-.featurePill {
+.statLabel {
   font-family: var(--font-family-mono, monospace);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
-  color: var(--brand-blue, #00488e);
-  letter-spacing: 0.08em;
-  margin-bottom: 0.75rem;
-}
-
-.statTitle {
-  font-size: 0.9375rem;
-  font-weight: 700;
-  color: var(--clr-foreground, #0a0a0a);
-  margin-bottom: 0.4rem;
-  letter-spacing: -0.01em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-muted, #555554);
+  margin-bottom: 0.5rem;
 }
 
 .statDesc {
-  font-size: 0.8125rem;
-  color: var(--clr-muted, #666666);
+  font-size: 0.9375rem;
+  color: var(--clr-muted, #555554);
   line-height: 1.55;
 }
 
-/* 3-Column Features Grid */
-.featuresGrid {
+/* 3-Column Pillar Feature Grid */
+.pillarsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: clamp(2rem, 4vw, 3.5rem);
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
 }
 
-.feature {
+.pillarCard {
+  background: #ffffff;
+  border: 1px solid rgba(28, 28, 27, 0.08);
+  border-radius: 18px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 20px rgba(28, 28, 27, 0.03);
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
-.featureTitle {
-  font-size: var(--text-xl, clamp(1.3rem, 2vw, 1.65rem));
+.pillarCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -8px rgba(28, 28, 27, 0.08);
+}
+
+.pillarIndex {
+  font-family: var(--font-family-mono, monospace);
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--clr-foreground, #0a0a0a);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-muted, #555554);
+  margin-bottom: 1.5rem;
+}
+
+.pillarTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--clr-foreground, #1c1c1b);
+  line-height: 1.25;
   margin-bottom: 1rem;
 }
 
-.featureDesc {
-  font-size: var(--text-base, 1rem);
-  color: var(--clr-muted, #666666);
-  line-height: 1.7;
+.pillarDesc {
+  font-size: 0.9375rem;
+  color: var(--clr-muted, #555554);
+  line-height: 1.65;
 }
 
-/* Responsive */
 @media (max-width: 960px) {
   .statsGrid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem 1.5rem;
+    gap: 2rem;
+  }
+  .pillarsGrid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 540px) {
   .statsGrid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-
-  .featuresGrid {
     grid-template-columns: 1fr;
   }
 }

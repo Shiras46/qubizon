@@ -14,13 +14,13 @@
   padding-right: var(--container-padding, 1.5rem);
 }
 
-/* Pro-Level White Boxed Stage (Image 2 Reference Standard) */
+/* Davide Carusio Refined White Floating Stage */
 .aboutStage {
-  background-color: #ffffff;
-  color: var(--clr-foreground, #0a0a0a);
-  border-radius: 32px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 20px 60px -20px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.02);
+  background-color: #FFFFFF;
+  color: var(--clr-foreground, #1C1C1B);
+  border-radius: 20px;
+  border: 1px solid rgba(28, 28, 27, 0.08);
+  box-shadow: 0 20px 50px -15px rgba(28, 28, 27, 0.05);
   padding: clamp(3.5rem, 6vw, 5.5rem) clamp(1.75rem, 5vw, 4.5rem);
   position: relative;
   overflow: hidden;
@@ -32,17 +32,17 @@
   align-items: center;
   gap: 8px;
   font-family: var(--font-family-mono, monospace);
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
-  color: var(--brand-blue, #00488e);
-  letter-spacing: 0.12em;
+  color: var(--clr-muted, #5A5A58);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
 
 .tagIcon {
   display: inline-block;
-  color: var(--brand-blue, #00488e);
+  color: var(--clr-muted, #5A5A58);
 }
 
 /* Progressive Scroll-Revealing Narrative Block */

@@ -1,5 +1,5 @@
 /* =========================================================================
-   CODECAVE NAVBAR COMPONENT
+   DAVIDE CARUSIO FLOATING UNDERLAY NAVBAR
    ========================================================================= */
 
 .header {
@@ -7,16 +7,16 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 74px;
+  height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  background-color: rgba(249, 239, 231, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(28, 28, 27, 0.08);
+  transition: all 0.25s ease;
 }
 
 .navContainer {
@@ -24,14 +24,14 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: var(--max-width, 1360px);
+  max-width: var(--container-max-width, 1280px);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 clamp(1.25rem, 4vw, 2.5rem);
 }
 
 @media (min-width: 768px) {
   .navContainer {
-    padding: 0 4%;
+    padding: 0 clamp(1.5rem, 4vw, 2.5rem);
   }
 }
 
@@ -40,37 +40,36 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: var(--clr-foreground, #0a0a0a);
+  color: var(--clr-foreground, #1C1C1B);
   z-index: 1001;
 }
 
 .brandLogo {
-  height: 38px;
+  height: 36px;
   width: auto;
-  max-width: 160px;
+  max-width: 155px;
   object-fit: contain;
   display: block;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .brand:hover .brandLogo {
-  transform: translateY(-1px) scale(1.02);
-  opacity: 0.95;
+  opacity: 0.85;
 }
 
 @media (max-width: 768px) {
   .brandLogo {
-    height: 32px;
-    max-width: 135px;
+    height: 30px;
+    max-width: 130px;
   }
 }
 
 .logoText {
-  font-size: 1.65rem;
-  font-weight: 800;
-  letter-spacing: -0.05em;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
   font-family: var(--font-primary);
-  color: var(--clr-foreground, #0a0a0a);
+  color: var(--clr-foreground, #1C1C1B);
 }
 
 .dot {
@@ -83,7 +82,7 @@
 .navLinks {
   display: flex;
   align-items: center;
-  gap: 2.25rem;
+  gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -97,30 +96,30 @@
 }
 
 .navLink {
-  color: var(--clr-foreground, #0a0a0a);
+  color: var(--clr-foreground, #1C1C1B);
   text-decoration: none;
-  font-size: var(--text-xs, 0.825rem);
+  font-size: 0.84rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: -0.01em;
   position: relative;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease, color 0.2s ease;
   padding: 0.25rem 0;
 }
 
 .navLink:hover {
-  opacity: 0.75;
+  color: #000000;
+  opacity: 0.7;
 }
 
 .navLink::after {
   content: '';
   position: absolute;
-  bottom: -4px;
+  bottom: -2px;
   left: 0;
   width: 0;
   height: 1px;
-  background-color: var(--clr-foreground, #0a0a0a);
-  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: var(--clr-foreground, #1C1C1B);
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .navLink:hover::after {
@@ -136,33 +135,33 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  color: var(--clr-foreground, #0a0a0a);
+  color: var(--clr-foreground, #1C1C1B);
   text-decoration: none;
-  font-size: var(--text-xs, 0.825rem);
+  font-size: 0.84rem;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: -0.01em;
   cursor: pointer;
   background: none;
   border: none;
   padding: 0.25rem 0;
   position: relative;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease, color 0.2s ease;
 }
 
 .dropdownToggle:hover {
-  opacity: 0.75;
+  color: #000000;
+  opacity: 0.7;
 }
 
 .dropdownToggle::after {
   content: '';
   position: absolute;
-  bottom: -4px;
+  bottom: -2px;
   left: 0;
   width: 0;
   height: 1px;
-  background-color: var(--clr-foreground, #0a0a0a);
-  transition: width 0.3s ease;
+  background-color: var(--clr-foreground, #1C1C1B);
+  transition: width 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .dropdownToggle:hover::after {
@@ -184,10 +183,10 @@
   top: calc(100% + 14px);
   left: 50%;
   transform: translateX(-50%);
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.1);
+  background: #FFFFFF;
+  border: 1px solid rgba(28, 28, 27, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 16px 40px -4px rgba(28, 28, 27, 0.08);
   width: 320px;
   padding: 0.75rem;
   display: flex;
@@ -211,25 +210,27 @@
   display: flex;
   flex-direction: column;
   padding: 0.65rem 0.85rem;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.18s ease;
 }
 
 .dropdownItem:hover {
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: rgba(28, 28, 27, 0.04);
 }
 
 .dropdownTitle {
-  font-size: 0.875rem;
+  font-size: 0.86rem;
   font-weight: 600;
-  color: var(--clr-foreground, #0a0a0a);
+  color: var(--clr-foreground, #1C1C1B);
+  letter-spacing: -0.01em;
 }
 
 .dropdownDesc {
-  font-size: 0.75rem;
-  color: var(--clr-muted, #666666);
+  font-size: 0.74rem;
+  color: var(--clr-muted, #5A5A58);
   margin-top: 2px;
+  line-height: 1.4;
 }
 
 .actions {
@@ -243,29 +244,26 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.7rem 1.6rem;
+  padding: 0.65rem 1.4rem;
   border-radius: 9999px;
-  background-color: var(--clr-foreground, #0a0a0a);
-  color: #ffffff !important;
-  font-family: var(--font-primary, "Outfit", sans-serif);
+  background-color: var(--clr-foreground, #1C1C1B);
+  color: #F9EFE7 !important;
+  font-family: var(--font-primary, sans-serif);
   font-weight: 600;
-  font-size: var(--text-xs, 0.8125rem);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
   text-decoration: none;
   cursor: pointer;
-  border: 1px solid var(--clr-foreground, #0a0a0a);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-  margin-left: 1.5rem;
-  white-space: nowrap;
+  border: 1px solid var(--clr-foreground, #1C1C1B);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(28, 28, 27, 0.08);
+  margin-left: 1.25rem;
 }
 
 .ctaButton:hover {
-  background-color: #ffffff;
-  color: var(--clr-foreground, #0a0a0a) !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  background-color: #000000;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(28, 28, 27, 0.14);
 }
 
 .ctaArrowCircle {

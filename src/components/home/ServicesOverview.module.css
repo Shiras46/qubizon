@@ -1,5 +1,5 @@
 /* =========================================================================
-   CODECAVE-INSPIRED SERVICES OVERVIEW COMPONENT
+   EDITORIAL DISCIPLINE SERVICES OVERVIEW (DAVIDE CARUSIO AESTHETIC)
    ========================================================================= */
 
 .servicesSection {
@@ -19,12 +19,13 @@
 
 .sectionBadge {
   font-family: var(--font-family-mono, monospace);
-  font-size: clamp(0.6875rem, 0.65rem + 0.2vw, 0.8125rem);
+  font-size: 11px;
   font-weight: 700;
-  color: var(--brand-blue, #00488e);
-  letter-spacing: 0.12em;
+  color: var(--clr-foreground, #1c1c1b);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
+  opacity: 0.7;
 }
 
 .titleRow {
@@ -39,26 +40,26 @@
   font-size: var(--text-huge, clamp(2.2rem, 4.5vw, 3.8rem));
   font-weight: 800;
   letter-spacing: -0.04em;
-  color: var(--clr-foreground, #0a0a0a);
-  line-height: 1.1;
+  color: var(--clr-foreground, #1c1c1b);
+  line-height: 1.08;
   max-width: 680px;
 }
 
 .lead {
   font-size: var(--text-base, 1.0625rem);
-  color: var(--clr-muted, #666666);
-  line-height: 1.7;
+  color: var(--clr-muted, #555554);
+  line-height: 1.65;
   max-width: 520px;
 }
 
-/* Line-Separated Service List */
+/* Hairline-Separated Editorial Service List */
 .serviceList {
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  border-top: 1px solid rgba(28, 28, 27, 0.1);
 }
 
 .serviceItem {
-  padding: clamp(2.5rem, 4vw, 3.5rem) 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding: clamp(2.25rem, 4vw, 3.25rem) 0;
+  border-bottom: 1px solid rgba(28, 28, 27, 0.1);
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 2.5rem;
@@ -71,7 +72,7 @@
 .serviceItem:hover {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-  background-color: rgba(0, 0, 0, 0.015);
+  background-color: rgba(28, 28, 27, 0.02);
 }
 
 .serviceTitleCol {
@@ -82,23 +83,23 @@
 
 .serviceIndex {
   font-family: var(--font-family-mono, monospace);
-  font-size: var(--text-xs, 0.8125rem);
+  font-size: 11px;
   font-weight: 700;
-  color: var(--brand-blue, #00488e);
-  letter-spacing: 0.1em;
+  color: var(--clr-muted, #555554);
+  letter-spacing: 0.12em;
 }
 
 .serviceTitle {
   font-size: var(--text-xl, clamp(1.4rem, 2.2vw, 1.95rem));
   font-weight: 700;
-  letter-spacing: -0.025em;
-  color: var(--clr-foreground, #0a0a0a);
+  letter-spacing: -0.03em;
+  color: var(--clr-foreground, #1c1c1b);
   line-height: 1.2;
   transition: color 0.2s ease;
 }
 
 .serviceItem:hover .serviceTitle {
-  color: var(--brand-blue, #00488e);
+  color: #000000;
 }
 
 .serviceBodyCol {
@@ -109,8 +110,8 @@
 
 .serviceDesc {
   font-size: var(--text-base, 1.0625rem);
-  color: var(--clr-muted, #666666);
-  line-height: 1.7;
+  color: var(--clr-muted, #555554);
+  line-height: 1.65;
   max-width: 680px;
 }
 
@@ -129,26 +130,27 @@
 }
 
 .serviceTag {
-  font-size: 11px;
+  font-size: 10px;
   font-family: var(--font-family-mono, monospace);
   font-weight: 600;
-  color: var(--clr-foreground, #0a0a0a);
-  background-color: rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  color: var(--clr-foreground, #1c1c1b);
+  background-color: rgba(28, 28, 27, 0.04);
+  border: 1px solid rgba(28, 28, 27, 0.08);
   padding: 4px 12px;
   border-radius: 9999px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .serviceLink {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: var(--text-xs, 0.8125rem);
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--clr-foreground, #0a0a0a);
+  color: var(--clr-foreground, #1c1c1b);
   transition: color 0.2s ease;
 }
 
@@ -156,21 +158,17 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   border-radius: 9999px;
-  background-color: var(--clr-foreground, #0a0a0a);
-  color: #ffffff;
-  transition: transform 0.25s ease;
+  background-color: var(--clr-foreground, #1c1c1b);
+  color: var(--clr-background, #f9efe7);
+  transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
 .serviceItem:hover .arrowCircle {
   transform: translateX(3px);
-  background-color: var(--brand-blue, #00488e);
-}
-
-.serviceItem:hover .serviceLink {
-  color: var(--brand-blue, #00488e);
+  background-color: #000000;
 }
 
 /* Responsive */

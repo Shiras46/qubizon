@@ -1,84 +1,92 @@
 :root {
-  /* Brand Core Palette - Official 3-Color Brand System */
-  --brand-blue: #00488E;
-  --brand-blue-hover: #003D79;
-  --brand-blue-subtle: rgba(0, 72, 142, 0.06);
-  --brand-blue-glow: rgba(0, 72, 142, 0.2);
+  /* =========================================================================
+     DAVIDE CARUSIO LUXURY EDITORIAL DESIGN SYSTEM
+     High-contrast warm stone, deep obsidian, razor-thin hairlines & micro-rhythm
+     ========================================================================= */
 
-  --brand-white: #FFFFFF;
+  /* Primary Editorial Stone & Obsidian Canvas */
+  --clr-background: #F9EFE7;          /* Davide Carusio Signature Warm Stone */
+  --clr-foreground: #1C1C1B;          /* Davide Carusio Deep Obsidian Charcoal */
+  --clr-dark: #1C1C1B;                /* Inverted Dark Section Background */
+  --clr-dark-surface: #252524;        /* Dark Card Surface */
+  --clr-dark-elevated: #2E2E2D;       /* Dark Hover / Modal Surface */
+  --clr-dark-border: rgba(249, 239, 231, 0.08); /* Hairline on Dark */
+  --clr-dark-border-hover: rgba(249, 239, 231, 0.2);
+
+  --clr-stone-surface: #FFFFFF;       /* Crisp White Floating Card */
+  --clr-stone-subtle: #F3E8DF;        /* Soft Tinted Surface */
+  --clr-stone-border: rgba(28, 28, 27, 0.08); /* Hairline on Stone */
+  --clr-stone-border-hover: rgba(28, 28, 27, 0.18);
+
+  --clr-muted: #5A5A58;               /* Refined Warm Gray Text */
+  --clr-muted-dark: #A3A3A0;          /* Muted Text on Dark */
+  --clr-border: rgba(28, 28, 27, 0.08);
+  --clr-border-subtle: rgba(28, 28, 27, 0.05);
+
+  /* Brand Signature Accents */
+  --brand-blue: #00488E;
+  --brand-blue-hover: #00366B;
+  --brand-blue-subtle: rgba(0, 72, 142, 0.08);
+  --brand-blue-glow: rgba(0, 72, 142, 0.2);
 
   --brand-yellow: #FFBE0B;
   --brand-yellow-hover: #EAB00A;
-  --brand-yellow-subtle: rgba(255, 190, 11, 0.12);
-  --brand-yellow-glow: rgba(255, 190, 11, 0.35);
+  --brand-gold: #D4A373;              /* Luxury Champagne Accent */
+  --brand-gold-subtle: rgba(212, 163, 115, 0.12);
 
-  /* Codecave Minimalist Color Palette */
-  --clr-background: #ffffff;
-  --clr-foreground: #0a0a0a;
-  --clr-accent: #00488E;
-  --clr-accent-yellow: #FFBE0B;
-  --clr-accent-red: #FF3B30;
-  --clr-accent-blue: #007AFF;
-  --clr-muted: #666666;
-  --clr-border: rgba(0, 0, 0, 0.1);
-  --clr-border-subtle: rgba(0, 0, 0, 0.06);
-
-  /* Legacy Aliases Standardized to Brand System */
-  --brand-gold: var(--brand-yellow);
-  --brand-gold-hover: var(--brand-yellow-hover);
-  --brand-gold-subtle: var(--brand-yellow-subtle);
+  --clr-accent-emerald: #22C55E;      /* Live Status Dot */
 
   /* Semantic UI Tokens */
-  --color-primary: var(--brand-blue);
-  --color-accent: var(--brand-yellow);
-  --color-accent-text: #0B1530;
+  --color-primary: var(--clr-foreground);
+  --color-accent: var(--brand-blue);
+  --color-accent-gold: var(--brand-gold);
+  --color-accent-text: #FFFFFF;
 
-  /* Clean Pure White Canvas & High-Contrast Dark */
-  --color-bg-base: transparent;
-  --color-bg-surface: rgba(255, 255, 255, 0.85);
-  --color-bg-muted: rgba(248, 250, 252, 0.65);
-  --color-bg-dark: #0a0a0a;
-  --color-bg-dark-surface: #111111;
-  --color-bg-dark-elevated: #1a1a1a;
+  --color-bg-base: var(--clr-background);
+  --color-bg-surface: var(--clr-stone-surface);
+  --color-bg-muted: var(--clr-stone-subtle);
+  --color-bg-dark: var(--clr-dark);
+  --color-bg-dark-surface: var(--clr-dark-surface);
+  --color-bg-dark-elevated: var(--clr-dark-elevated);
 
-  --color-text-primary: #0a0a0a;
-  --color-text-secondary: #475569;
-  --color-text-muted: #666666;
-  --color-text-inverse: #ffffff;
-  --color-text-inverse-muted: #94a3b8;
+  --color-text-primary: var(--clr-foreground);
+  --color-text-secondary: var(--clr-muted);
+  --color-text-muted: #757573;
+  --color-text-inverse: #F9EFE7;
+  --color-text-inverse-muted: var(--clr-muted-dark);
 
-  --color-border-subtle: rgba(0, 0, 0, 0.08);
-  --color-border-default: rgba(0, 0, 0, 0.12);
-  --color-border-dark: rgba(255, 255, 255, 0.12);
-  --color-border-dark-hover: rgba(255, 255, 255, 0.25);
+  --color-border-subtle: var(--clr-border-subtle);
+  --color-border-default: var(--clr-border);
+  --color-border-dark: var(--clr-dark-border);
+  --color-border-dark-hover: var(--clr-dark-border-hover);
 
-  /* Typography Fonts (Codecave: Outfit + Playfair Display) */
-  --font-primary: var(--font-outfit), 'Outfit', -apple-system, sans-serif;
-  --font-heading: var(--font-outfit), 'Outfit', sans-serif;
+  /* Typography Fonts (Editorial Sans + Serif Accent) */
+  --font-primary: var(--font-outfit), 'Geist', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: var(--font-outfit), 'Geist', sans-serif;
   --font-serif: var(--font-serif), 'Playfair Display', serif;
   --font-family-sans: var(--font-primary);
-  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 
-  /* Codecave Fluid Typography Clamps */
-  --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
-  --text-sm: clamp(0.875rem, 0.8rem + 0.38vw, 1rem);
-  --text-base: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
-  --text-lg: clamp(1.125rem, 1rem + 0.63vw, 1.25rem);
-  --text-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
-  --text-2xl: clamp(1.35rem, 1.2rem + 1.2vw, 1.75rem);
-  --text-3xl: clamp(1.75rem, 1.5rem + 2.5vw, 2.5rem);
-  --text-huge: clamp(2.5rem, 2rem + 6vw, 4.5rem);
-  --text-giant: clamp(3.5rem, 2rem + 8vw, 6rem);
+  /* Fluid Editorial Scale */
+  --text-xs: clamp(0.72rem, 0.68rem + 0.2vw, 0.8rem);
+  --text-sm: clamp(0.82rem, 0.78rem + 0.25vw, 0.92rem);
+  --text-base: clamp(0.95rem, 0.9rem + 0.3vw, 1.05rem);
+  --text-lg: clamp(1.08rem, 1rem + 0.4vw, 1.2rem);
+  --text-xl: clamp(1.22rem, 1.12rem + 0.55vw, 1.45rem);
+  --text-2xl: clamp(1.45rem, 1.3rem + 0.9vw, 1.85rem);
+  --text-3xl: clamp(1.85rem, 1.6rem + 1.8vw, 2.6rem);
+  --text-huge: clamp(2.4rem, 2rem + 4.5vw, 4.2rem);
+  --text-giant: clamp(3.2rem, 2.5rem + 6.5vw, 5.6rem);
 
-  --font-size-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
-  --font-size-sm: clamp(0.875rem, 0.84rem + 0.18vw, 0.9375rem);
-  --font-size-base: clamp(1rem, 0.96rem + 0.22vw, 1.0625rem);
-  --font-size-lg: clamp(1.125rem, 1.06rem + 0.35vw, 1.25rem);
-  --font-size-xl: clamp(1.25rem, 1.15rem + 0.5vw, 1.45rem);
-  --font-size-2xl: clamp(1.5rem, 1.35rem + 0.75vw, 1.85rem);
-  --font-size-3xl: clamp(1.875rem, 1.62rem + 1.1vw, 2.35rem);
-  --font-size-4xl: clamp(2.25rem, 1.85rem + 1.8vw, 3rem);
-  --font-size-5xl: clamp(2.85rem, 2.3rem + 3vw, 4.4rem);
+  --font-size-xs: var(--text-xs);
+  --font-size-sm: var(--text-sm);
+  --font-size-base: var(--text-base);
+  --font-size-lg: var(--text-lg);
+  --font-size-xl: var(--text-xl);
+  --font-size-2xl: var(--text-2xl);
+  --font-size-3xl: var(--text-3xl);
+  --font-size-4xl: var(--text-huge);
+  --font-size-5xl: var(--text-giant);
 
   --font-weight-regular: 400;
   --font-weight-medium: 500;
@@ -86,16 +94,18 @@
   --font-weight-bold: 700;
   --font-weight-extrabold: 800;
 
-  --line-height-tight: 1.1;
-  --line-height-snug: 1.25;
-  --line-height-normal: 1.55;
-  --line-height-relaxed: 1.7;
+  --line-height-tight: 1.08;
+  --line-height-snug: 1.22;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.75;
 
-  --letter-spacing-tight: -0.035em;
-  --letter-spacing-snug: -0.015em;
-  --letter-spacing-caps: 0.08em;
+  /* Davide Carusio Precision Negative Tracking */
+  --letter-spacing-tight: -0.04em;
+  --letter-spacing-snug: -0.02em;
+  --letter-spacing-normal: -0.01em;
+  --letter-spacing-caps: 0.1em;
 
-  /* Spacing Rhythm */
+  /* Spacing System */
   --space-1: 0.25rem;  /* 4px */
   --space-2: 0.5rem;   /* 8px */
   --space-3: 0.75rem;  /* 12px */
@@ -111,39 +121,34 @@
   --space-32: 8.5rem;  /* 136px */
 
   /* Layout Containers */
-  --container-max-width: 1240px;
+  --container-max-width: 1280px;
   --container-padding: clamp(1.25rem, 5vw, 2.5rem);
 
-  /* Radii - Refined, controlled geometry */
+  /* Radii - Subtle geometric curves & pill buttons */
   --radius-xs: 0.25rem; /* 4px */
   --radius-sm: 0.375rem; /* 6px */
   --radius-md: 0.625rem; /* 10px */
   --radius-lg: 0.875rem; /* 14px */
-  --radius-xl: 1.25rem;  /* 20px */
-  --radius-2xl: 1.75rem; /* 28px */
-  --radius-3xl: 2.25rem; /* 36px */
-  --radius-4xl: 2.75rem; /* 44px */
+  --radius-xl: 1.125rem; /* 18px */
+  --radius-2xl: 1.5rem;  /* 24px */
   --radius-full: 9999px;
 
-  /* Elevation Shadows (Layered Studio Depth) */
-  --shadow-subtle: 0 1px 2px rgba(11, 21, 48, 0.03);
-  --shadow-sm: 0 1px 3px rgba(11, 21, 48, 0.05), 0 1px 2px rgba(11, 21, 48, 0.03);
-  --shadow-md: 0 4px 12px -2px rgba(11, 21, 48, 0.06), 0 2px 4px -1px rgba(11, 21, 48, 0.04);
-  --shadow-lg: 0 12px 28px -6px rgba(11, 21, 48, 0.08), 0 4px 10px -3px rgba(11, 21, 48, 0.04);
-  --shadow-bento: 0 10px 30px -10px rgba(11, 21, 48, 0.06), 0 2px 6px rgba(11, 21, 48, 0.03);
-  --shadow-bento-hover: 0 20px 40px -12px rgba(0, 72, 142, 0.12), 0 4px 12px rgba(11, 21, 48, 0.05);
-  --shadow-card-hover: 0 20px 40px -12px rgba(0, 72, 142, 0.12), 0 4px 12px -2px rgba(11, 21, 48, 0.05);
-  --shadow-dark-card: 0 12px 32px -8px rgba(0, 0, 0, 0.4);
-  --shadow-glow-blue: 0 0 35px rgba(0, 72, 142, 0.25);
-  --shadow-glow-yellow: 0 0 30px rgba(255, 190, 11, 0.35);
+  /* Elevation Shadows (Soft natural ambient light) */
+  --shadow-subtle: 0 1px 2px rgba(28, 28, 27, 0.03);
+  --shadow-sm: 0 2px 6px -1px rgba(28, 28, 27, 0.04);
+  --shadow-md: 0 6px 16px -2px rgba(28, 28, 27, 0.05);
+  --shadow-lg: 0 16px 36px -6px rgba(28, 28, 27, 0.08);
+  --shadow-bento: 0 8px 24px -8px rgba(28, 28, 27, 0.04);
+  --shadow-bento-hover: 0 20px 45px -12px rgba(28, 28, 27, 0.1);
+  --shadow-dark-card: 0 16px 40px -10px rgba(0, 0, 0, 0.5);
 
-  /* Transitions */
-  --transition-fast: 160ms cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-normal: 260ms cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-spring: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* Micro Transitions */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Z-indices */
-  --z-header: 50;
-  --z-modal: 100;
-  --z-toast: 150;
+  --z-header: 100;
+  --z-modal: 1000;
+  --z-toast: 1500;
 }

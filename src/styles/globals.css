@@ -16,20 +16,42 @@ html {
 
 body {
   font-family: var(--font-primary);
-  background-color: #ffffff;
-  color: #0a0a0a;
-  line-height: 1.6;
+  background-color: var(--clr-background, #F9EFE7);
+  color: var(--clr-foreground, #1C1C1B);
+  line-height: 1.65;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
-  /* Codecave Signature Line Effect: Technical Architectural Grid */
-  background-image: 
-      linear-gradient(to right, rgba(0, 0, 0, 0.12) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.12) 1px, transparent 1px);
-  background-size: 60px 60px;
+  /* Davide Carusio Pure Editorial Stone - Clean, uncluttered, luxury finish */
+  background-image: radial-gradient(rgba(28, 28, 27, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
   background-position: center top;
+}
+
+/* =========================================================================
+   DAVIDE CARUSIO SECTION CONTRAST UTILITIES
+   ========================================================================= */
+.section-dark {
+  background-color: var(--clr-dark, #1C1C1B) !important;
+  color: var(--color-text-inverse, #F9EFE7) !important;
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4 {
+  color: #FFFFFF !important;
+}
+
+.section-dark p {
+  color: #A3A3A0 !important;
+}
+
+.section-stone {
+  background-color: var(--clr-background, #F9EFE7) !important;
+  color: var(--clr-foreground, #1C1C1B) !important;
 }
 
 /* =========================================================================
@@ -207,8 +229,8 @@ body {
 
 /* Custom Studio Selection */
 ::selection {
-  background-color: var(--brand-yellow);
-  color: var(--color-accent-text);
+  background-color: #1C1C1B;
+  color: #F9EFE7;
 }
 
 /* Accessible Keyboard Focus Indicators */

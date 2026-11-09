@@ -1,14 +1,14 @@
 /* =========================================================================
-   QUBIZON ENTERPRISE FOOTER COMPONENT
+   EDITORIAL OBSIDIAN FOOTER (DAVIDE CARUSIO AESTHETIC)
    ========================================================================= */
 
 .footer {
-  background-color: #08080a;
-  color: #ffffff;
+  background-color: #1c1c1b;
+  color: #f9efe7;
   padding: clamp(3.5rem, 6vh, 5.5rem) 5% 2.5rem;
   position: relative;
   z-index: 10;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(249, 239, 231, 0.08);
   font-family: var(--font-primary, "Outfit", sans-serif);
 }
 
@@ -23,7 +23,7 @@
   grid-template-columns: 1.25fr 1fr;
   gap: clamp(2rem, 4vw, 3.5rem);
   padding-bottom: 3rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(249, 239, 231, 0.08);
   align-items: start;
 }
 
@@ -38,12 +38,13 @@
 }
 
 .brandLogo {
-  height: 40px;
+  height: 38px;
   width: auto;
-  max-width: 160px;
+  max-width: 150px;
   object-fit: contain;
   display: block;
   transition: opacity 0.2s ease;
+  filter: brightness(1.2);
 }
 
 .brand:hover .brandLogo {
@@ -54,266 +55,153 @@
   font-family: var(--font-serif, "Playfair Display", serif);
   font-style: italic;
   font-size: clamp(1.15rem, 2vw, 1.35rem);
-  color: #f1f5f9;
+  color: #f9efe7;
   margin-top: 0.75rem;
   margin-bottom: 0.5rem;
 }
 
-.brandSub {
-  font-size: 0.9rem;
-  color: #94a3b8;
+.brandBio {
+  font-size: 0.9375rem;
+  color: rgba(249, 239, 231, 0.65);
   line-height: 1.65;
-  max-width: 620px;
-  margin: 0;
+  max-width: 520px;
 }
 
-/* Contact Cards Grid */
-.contactCards {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+/* Quick Inquiry / Consultation Card */
+.consultationCard {
+  background-color: #252524;
+  border: 1px solid rgba(249, 239, 231, 0.08);
+  border-radius: 18px;
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
-.contactCard {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
-  padding: 0.85rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.contactCard:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.16);
-  transform: translateY(-1px);
-}
-
-.contactIconWrapper {
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.contactCardText {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.contactCardLabel {
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #94a3b8;
-  font-weight: 600;
-}
-
-.contactCardValue {
-  font-size: 0.84rem;
-  color: #ffffff;
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* 5-Column Categorized Architecture */
-.footerLinksGrid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: clamp(1.5rem, 2.5vw, 2.25rem);
-  padding: 3rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.linkCol {
-  display: flex;
-  flex-direction: column;
-}
-
-.linkTitle {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
-  margin-bottom: 1.25rem;
-  color: #ffffff;
+.consultationTitle {
+  font-size: 1.15rem;
   font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #f9efe7;
 }
 
-.footerLink {
+.consultationDesc {
+  font-size: 0.875rem;
+  color: rgba(249, 239, 231, 0.65);
+  line-height: 1.55;
+}
+
+.consultationAction {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  color: #94a3b8;
+  gap: 0.5rem;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #f9efe7;
   text-decoration: none;
-  margin-bottom: 0.7rem;
-  font-size: 0.86rem;
-  line-height: 1.45;
-  transition: color 0.18s ease;
+  width: fit-content;
+  padding: 0.5rem 1.25rem;
+  border-radius: 9999px;
+  background-color: rgba(249, 239, 231, 0.1);
+  border: 1px solid rgba(249, 239, 231, 0.15);
+  transition: all 0.25s ease;
 }
 
-.footerLink:hover {
-  color: #ffffff;
+.consultationAction:hover {
+  background-color: #f9efe7;
+  color: #1c1c1b;
 }
 
-.countryFlag {
-  font-size: 1rem;
-  line-height: 1;
-}
-
-/* Engineering Assurance Strip */
-.assuranceStrip {
+/* Navigation Columns Grid */
+.navGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-  padding: 2rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 0.8rem;
-  color: #94a3b8;
-  line-height: 1.5;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  padding: 3.5rem 0 3rem;
+  border-bottom: 1px solid rgba(249, 239, 231, 0.08);
 }
 
-.assuranceItem strong {
-  color: #e2e8f0;
-  display: block;
-  font-size: 0.82rem;
-  margin-bottom: 0.2rem;
-}
-
-/* Bottom Bar */
-.footerBottom {
+.navCol {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 2rem;
-  font-size: 0.8rem;
-  color: #64748b;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
 }
 
-.copyright {
+.navHeading {
+  font-family: var(--font-family-mono, monospace);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f9efe7;
+  margin-bottom: 1.25rem;
+  opacity: 0.7;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
   margin: 0;
-}
-
-.socialStrip {
   display: flex;
-  align-items: center;
-  gap: 0.85rem;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-.socialLink {
-  color: #94a3b8;
+.navItem a {
+  font-size: 0.9375rem;
+  color: rgba(249, 239, 231, 0.65);
   text-decoration: none;
-  font-size: 0.8rem;
   transition: color 0.2s ease;
 }
 
-.socialLink:hover {
-  color: #ffffff;
+.navItem a:hover {
+  color: #f9efe7;
 }
 
-.dotDivider {
-  color: rgba(255, 255, 255, 0.2);
-}
-
-/* Global Overview Architectural Block */
-.globalOverview {
-  padding: 2.25rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.globalOverviewTitle {
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #ffbe0b;
-  margin-bottom: 0.75rem;
-}
-
-.globalOverviewText {
-  font-size: 0.85rem;
-  line-height: 1.7;
-  color: #94a3b8;
-  margin-bottom: 1rem;
-}
-
-.globalOverviewGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/* Bottom Bar */
+.bottomBar {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 1.25rem;
-  margin-top: 1.25rem;
+  font-size: 0.8125rem;
+  color: rgba(249, 239, 231, 0.45);
 }
 
-.globalOverviewCard {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 12px;
-  padding: 1.25rem;
+.copyright {
+  font-family: var(--font-family-mono, monospace);
+  font-size: 11px;
 }
 
-.globalOverviewCardTitle {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #f1f5f9;
-  margin-bottom: 0.4rem;
+.legalLinks {
+  display: flex;
+  gap: 1.5rem;
 }
 
-.globalOverviewCardDesc {
-  font-size: 0.8rem;
-  line-height: 1.6;
-  color: #94a3b8;
-  margin: 0;
+.legalLinks a {
+  color: rgba(249, 239, 231, 0.45);
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-/* Responsive Design */
-@media (max-width: 1100px) {
+.legalLinks a:hover {
+  color: #f9efe7;
+}
+
+@media (max-width: 960px) {
   .brandRow {
     grid-template-columns: 1fr;
   }
-
-  .footerLinksGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .assuranceStrip {
+  .navGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 768px) {
-  .contactCards {
+@media (max-width: 540px) {
+  .navGrid {
     grid-template-columns: 1fr;
-  }
-
-  .footerLinksGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem 1.5rem;
-  }
-
-  .assuranceStrip {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .footerBottom {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-@media (max-width: 480px) {
-  .footerLinksGrid {
-    grid-template-columns: 1fr;
-    gap: 2.25rem;
   }
 }
