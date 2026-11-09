@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
 import styles from "./FaqSection.module.css";
 
 interface FaqItem {
@@ -61,42 +60,55 @@ export function FaqSection() {
   return (
     <section className={styles.faqSection} id="faq" aria-labelledby="faq-heading">
       <div className={styles.container}>
-        <p className={styles.sectionBadge}>• CLIENT INTELLIGENCE &amp; CLARITY /</p>
-        <h2 id="faq-heading" className={styles.headingLarge}>
-          Frequently Asked <span className="calligraphy">Questions</span>.
-        </h2>
-        <p className={styles.lead}>
-          Direct, transparent answers regarding our architectural standards, technical SEO methodologies,
-          and client engagement processes.
-        </p>
-
-        <div className={styles.faqGrid}>
-          {FAQS.map((faq) => {
-            const isOpen = openIds.includes(faq.id);
-            return (
-              <div key={faq.id} className={styles.faqCard}>
-                <button
-                  type="button"
-                  className={styles.faqTrigger}
-                  onClick={() => toggleFaq(faq.id)}
-                  aria-expanded={isOpen}
-                  aria-controls={`faq-answer-${faq.id}`}
-                >
-                  <span className={styles.faqQuestion}>{faq.question}</span>
-                  <ChevronDown
-                    size={18}
-                    className={`${styles.faqChevron} ${isOpen ? styles.faqChevronOpen : ""}`}
-                    aria-hidden="true"
-                  />
-                </button>
-                {isOpen && (
-                  <div id={`faq-answer-${faq.id}`} className={styles.faqAnswer} role="region">
-                    <p>{faq.answer}</p>
-                  </div>
-                )}
+        <div className={styles.splitLayout}>
+          {/* Left Column: Massive Italic Display "FAQ" (Reference Image 2 Model) */}
+          <div className={styles.faqLeftCol}>
+            <div className={styles.stickyCol}>
+              <h2 id="faq-heading" className={styles.massiveFaq}>
+                FAQ
+              </h2>
+              <div className={styles.faqMetaBlock}>
+                <p className={styles.sectionBadge}>• CLIENT INTELLIGENCE &amp; CLARITY /</p>
+                <p className={styles.lead}>
+                  Direct, transparent answers regarding our architectural standards, technical SEO methodologies,
+                  and client engagement processes.
+                </p>
               </div>
-            );
-          })}
+            </div>
+          </div>
+
+          {/* Right Column: Hairline Accordion List (Reference Image 2 Model) */}
+          <div className={styles.faqRightCol}>
+            <div className={styles.faqList}>
+              {FAQS.map((faq) => {
+                const isOpen = openIds.includes(faq.id);
+                return (
+                  <div key={faq.id} className={styles.faqRow}>
+                    <button
+                      type="button"
+                      className={styles.faqTrigger}
+                      onClick={() => toggleFaq(faq.id)}
+                      aria-expanded={isOpen}
+                      aria-controls={`faq-answer-${faq.id}`}
+                    >
+                      <span
+                        className={`${styles.faqPlusIcon} ${isOpen ? styles.faqPlusOpen : ""}`}
+                        aria-hidden="true"
+                      >
+                        +
+                      </span>
+                      <span className={styles.faqQuestion}>{faq.question}</span>
+                    </button>
+                    {isOpen && (
+                      <div id={`faq-answer-${faq.id}`} className={styles.faqAnswer} role="region">
+                        <p>{faq.answer}</p>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </section>

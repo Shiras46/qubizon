@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/home/HeroSection";
 import { AboutSection } from "@/components/home/AboutSection";
 import { ServicesOverview } from "@/components/home/ServicesOverview";
 import { ProcessSection } from "@/components/home/ProcessSection";
+import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { FaqSection } from "@/components/home/FaqSection";
 import { ConversionSection } from "@/components/home/ConversionSection";
 import { constructMetadata } from "@/lib/metadata";
@@ -192,7 +193,10 @@ export default function HomePage() {
       {/* 4. Execution Process: 4-Step Frosted Methodology Cards */}
       <ProcessSection />
 
-      {/* 7. Frequently Asked Questions: Interactive Accordion with FAQPage Rich Snippet */}
+      {/* 5. Testimonials: Interactive Community Trust Card (Reference Image 1 Model) */}
+      <TestimonialsSection />
+
+      {/* 6. Frequently Asked Questions: Split Layout with Big "FAQ" + Hairline Accordion (Reference Image 2 Model) */}
       <FaqSection />
 
       {/* 8. Closing Call to Action: Framed Architectural Finale Stage ("Let's work Together") */}
