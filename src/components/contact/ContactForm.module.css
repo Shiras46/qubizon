@@ -52,25 +52,25 @@
 }
 
 .stepActive .stepNumber {
-  background-color: #1c1c1b;
-  color: #f9efe7;
-  border-color: #1c1c1b;
-  box-shadow: 0 2px 8px rgba(28, 28, 27, 0.15);
+  background-color: #00488E;
+  color: #FFFFFF;
+  border-color: #00488E;
+  box-shadow: 0 2px 10px rgba(0, 72, 142, 0.25);
 }
 
 .stepActive .stepLabel {
-  color: #1c1c1b;
+  color: #00488E;
   font-weight: 700;
 }
 
 .stepCompleted .stepNumber {
-  background-color: #1c1c1b;
-  color: #f9efe7;
-  border-color: #1c1c1b;
+  background-color: #00488E;
+  color: #FFFFFF;
+  border-color: #00488E;
 }
 
 .stepCompleted .stepLabel {
-  color: #1c1c1b;
+  color: #00488E;
 }
 
 .stepSeparator {
@@ -364,26 +364,27 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  background-color: #1c1c1b;
-  color: #f9efe7 !important;
-  font-family: var(--font-family-mono);
-  font-size: 11px;
+  background-color: #00488E;
+  color: #FFFFFF !important;
+  font-family: var(--font-primary, sans-serif);
+  font-size: 13px;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding: 12px 28px;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  padding: 13px 28px;
   border-radius: 9999px;
   cursor: pointer;
-  border: 1px solid #1c1c1b;
-  box-shadow: 0 4px 14px rgba(28, 28, 27, 0.12);
+  border: 1px solid #00488E;
+  box-shadow: 0 4px 18px rgba(0, 72, 142, 0.25);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btnPrimary:hover:not(:disabled) {
-  background-color: #000000;
+  background-color: #00366B;
+  border-color: #00366B;
   color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(28, 28, 27, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 72, 142, 0.35);
 }
 
 .btnPrimary:disabled {

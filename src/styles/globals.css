@@ -179,17 +179,22 @@ body {
 }
 
 .btn-primary {
-  background-color: var(--clr-foreground);
+  background-color: var(--brand-blue, #00488E);
   color: #ffffff !important;
-  border: 1px solid var(--clr-foreground);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--brand-blue, #00488E);
+  box-shadow: 0 4px 18px rgba(0, 72, 142, 0.25);
+  font-family: var(--font-primary, sans-serif);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: none;
 }
 
 .btn-primary:hover {
-  background-color: transparent;
-  color: var(--clr-foreground) !important;
+  background-color: var(--brand-blue-hover, #00366B);
+  border-color: var(--brand-blue-hover, #00366B);
+  color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 72, 142, 0.35);
 }
 
 .btn-outline {

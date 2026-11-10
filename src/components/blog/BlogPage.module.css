@@ -34,15 +34,18 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  padding: 0.35rem 0.95rem;
-  font-size: 0.75rem;
+  padding: 6px 14px;
+  font-family: var(--font-family-mono);
+  font-size: 11px;
   font-weight: 700;
-  color: #0b1530;
-  background: #f1f4f8;
-  border: 1px solid rgba(11, 21, 48, 0.1);
+  color: #00488E;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 72, 142, 0.22);
+  box-shadow: 0 2px 8px rgba(0, 72, 142, 0.05);
   border-radius: 9999px;
   margin-bottom: var(--space-4);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .title {
@@ -90,15 +93,15 @@
 
 .cardCategory {
   font-family: var(--font-family-mono);
-  font-size: 0.6875rem;
+  font-size: 10px;
   font-weight: 700;
-  color: #0b1530;
+  color: #00488E;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  background-color: #f1f4f8;
-  padding: 0.25rem 0.75rem;
+  letter-spacing: 0.08em;
+  background-color: rgba(0, 72, 142, 0.08);
+  padding: 4px 12px;
   border-radius: 9999px;
-  border: 1px solid rgba(11, 21, 48, 0.08);
+  border: 1px solid rgba(0, 72, 142, 0.18);
   margin-bottom: var(--space-4);
   display: inline-block;
   width: fit-content;
@@ -137,13 +140,13 @@
   gap: var(--space-1);
   font-weight: 700;
   font-size: 0.875rem;
-  color: #0b1530;
+  color: #00488E;
   text-decoration: none;
   transition: all var(--transition-fast);
 }
 
 .card:hover .readMore {
-  color: var(--brand-blue);
+  color: #00366B;
   transform: translateX(4px);
 }
 

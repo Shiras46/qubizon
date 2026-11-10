@@ -299,7 +299,7 @@ export default function AboutPage() {
       </section>
 
       {/* Problem vs Unified Approach: Modern Vision/Mission Cards (Image 1 Inspiration) */}
-      <section className={styles.section} aria-labelledby="problem-heading">
+      <section className={`${styles.section} ${styles.sectionOffwhite}`} aria-labelledby="problem-heading">
         <div className="container">
           <div className={styles.sectionHeader}>
             <p className={styles.sectionBadge}>The Industry Problem</p>
@@ -447,7 +447,7 @@ export default function AboutPage() {
       </section>
 
       {/* Client Lifecycle Timeline */}
-      <section className={styles.section} aria-labelledby="workflow-heading">
+      <section className={`${styles.section} ${styles.sectionOffwhite}`} aria-labelledby="workflow-heading">
         <div className="container">
           <div className={styles.sectionHeader}>
             <p className={styles.sectionBadge}>Working Methodology</p>

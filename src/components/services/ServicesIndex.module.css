@@ -135,9 +135,9 @@
 }
 
 .tabBtnActive {
-  background: #0a0a0a;
+  background: #00488E;
   color: #ffffff !important;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 4px 14px rgba(0, 72, 142, 0.25);
 }
 
 .tabIcon {
@@ -746,24 +746,27 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  background-color: #ffffff;
-  color: #0a0a0a !important;
-  font-weight: 600;
-  font-size: var(--font-size-base);
-  letter-spacing: 0.04em;
-  padding: 12px 28px;
+  background-color: #00488E;
+  color: #FFFFFF !important;
+  font-family: var(--font-primary, sans-serif);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  padding: 13px 28px;
   border-radius: 9999px;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 18px rgba(0, 72, 142, 0.35);
   transition: all 0.3s ease;
-  border: 1px solid #ffffff;
+  border: 1px solid #00488E;
 }
 
 .primaryBtn:hover {
-  background-color: transparent;
+  background-color: #00366B;
+  border-color: #00366B;
   color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 72, 142, 0.45);
 }
 
 .secondaryBtn {
