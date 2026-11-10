@@ -655,6 +655,9 @@ export default function AboutPage() {
 
           {/* Call to Action Banner (Obsidian Editorial Stage) */}
           <div className={styles.ctaBanner}>
+            <span className={styles.darkBadge} style={{ marginBottom: "1.25rem" }}>
+              • PARTNER WITH QUBIZON /
+            </span>
             <h2 className={styles.ctaTitle}>
               Ready for a Unified, Disciplined Digital Partner?
             </h2>

@@ -400,9 +400,9 @@
 }
 
 .outcomesHeader .sectionBadge {
-  color: #f9efe7;
-  background: rgba(249, 239, 231, 0.1);
-  border: 1px solid rgba(249, 239, 231, 0.15);
+  color: #FFBE0B;
+  background: rgba(255, 190, 11, 0.12);
+  border: 1px solid rgba(255, 190, 11, 0.28);
 }
 
 .outcomesHeader .sectionTitle {
@@ -426,7 +426,7 @@
 
 .outcomeCard:hover {
   transform: translateY(-4px);
-  border-color: rgba(249, 239, 231, 0.25);
+  border-color: rgba(255, 190, 11, 0.35);
 }
 
 .outcomeTitle {

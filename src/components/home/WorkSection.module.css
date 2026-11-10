@@ -103,7 +103,7 @@
 }
 
 .tabButton[aria-selected="true"] span {
-  color: var(--brand-yellow);
+  color: #ffffff;
 }
 
 /* Grand Dark Showcase Card (Reference Design) */
@@ -178,9 +178,9 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  padding: 8px 10px 8px 20px;
-  background-color: var(--brand-yellow);
-  color: var(--color-accent-text);
+  padding: 8px 12px 8px 20px;
+  background-color: #00488E;
+  color: #FFFFFF !important;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   border-radius: var(--radius-full);
@@ -188,14 +188,15 @@
   transition: all var(--transition-fast);
   margin-top: var(--space-2);
   align-self: flex-start;
-  box-shadow: 0 4px 14px rgba(255, 190, 11, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 72, 142, 0.35);
+  border: 1px solid #00488E;
 }
 
 .ctaArrowCircleInspect {
   width: 26px;
   height: 26px;
   border-radius: var(--radius-full);
-  background-color: #0b1530;
+  background-color: rgba(255, 255, 255, 0.2);
   color: #ffffff;
   display: inline-flex;
   align-items: center;
@@ -205,13 +206,15 @@
 }
 
 .inspectLink:hover {
-  background-color: var(--brand-yellow-hover);
+  background-color: #00366B;
+  border-color: #00366B;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 190, 11, 0.45);
+  box-shadow: 0 6px 20px rgba(0, 72, 142, 0.45);
 }
 
 .inspectLink:hover .ctaArrowCircleInspect {
   transform: translateX(3px);
+  background-color: rgba(255, 255, 255, 0.35);
 }
 
 /* Center Column: Phone Mockup with Lighting */
@@ -313,7 +316,7 @@
 
 .screenGraphicBox small {
   font-size: 9px;
-  color: var(--brand-yellow);
+  color: rgba(255, 255, 255, 0.85);
   letter-spacing: 0.08em;
   font-weight: var(--font-weight-bold);
 }

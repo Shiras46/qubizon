@@ -338,6 +338,9 @@ export default function CrmPage() {
       {/* Call to Action Banner */}
       <div className="container">
         <div className={styles.ctaBanner}>
+          <span className={styles.ctaBadge} style={{ marginBottom: "1.25rem" }}>
+            • INTEGRATED CRM & WORKFLOWS /
+          </span>
           <h2 className={styles.ctaTitle}>
             Ready to Connect Your Digital Operations?
           </h2>

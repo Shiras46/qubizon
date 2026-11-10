@@ -595,6 +595,9 @@ export function ServicePageTemplate(props: ServicePageProps) {
       <section className={styles.ctaSection} aria-labelledby="cta-heading">
         <div className="container">
           <div className={styles.ctaWrapper}>
+            <span className={styles.sectionBadge} style={{ background: "rgba(255, 190, 11, 0.12)", color: "#FFBE0B", borderColor: "rgba(255, 190, 11, 0.28)", marginBottom: "1.25rem" }}>
+              • PARTNER WITH QUBIZON /
+            </span>
             <h2 id="cta-heading" className={styles.ctaTitle}>
               {props.ctaHeadline}
             </h2>

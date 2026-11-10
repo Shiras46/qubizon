@@ -373,6 +373,9 @@ export default function ServicesPage() {
       {/* Call to Action Banner */}
       <div className="container">
         <div className={styles.ctaBanner}>
+          <span className={styles.ctaBadge} style={{ marginBottom: "1.25rem" }}>
+            • ARCHITECT YOUR DIGITAL CAPABILITIES /
+          </span>
           <h2 className={styles.ctaTitle}>
             Ready for a Unified Digital Platform?
           </h2>

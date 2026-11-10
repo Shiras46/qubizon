@@ -542,7 +542,7 @@ export default function SolutionsPage() {
 
       {/* CTA Card (Obsidian Editorial Stage) */}
       <section className={styles.ctaBanner}>
-        <span className={styles.sectionBadge} style={{ background: "rgba(249, 239, 231, 0.12)", color: "#f9efe7", borderColor: "rgba(249, 239, 231, 0.2)" }}>
+        <span className={styles.sectionBadge} style={{ background: "rgba(255, 190, 11, 0.12)", color: "#FFBE0B", borderColor: "rgba(255, 190, 11, 0.28)" }}>
           • ARCHITECT YOUR NEXT SOLUTION WITH QUBIZON /
         </span>
         <h2 className={styles.ctaTitle}>

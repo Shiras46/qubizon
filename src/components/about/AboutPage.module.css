@@ -159,7 +159,7 @@
 }
 
 .trustIcon {
-  color: #22c55e;
+  color: #00488E;
   flex-shrink: 0;
 }
 
@@ -216,8 +216,8 @@
   width: 7px;
   height: 7px;
   border-radius: 9999px;
-  background-color: #22c55e;
-  box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+  background-color: #FFBE0B;
+  box-shadow: 0 0 8px rgba(255, 190, 11, 0.7);
 }
 
 /* Bottom Proof Strip: 4 Modern Cards (Image 3 Inspiration) */
@@ -669,13 +669,13 @@
   font-family: var(--font-family-mono);
   font-size: 11px;
   font-weight: 700;
-  color: #f9efe7;
+  color: #FFBE0B;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   margin-bottom: var(--space-3);
   display: inline-block;
-  background: rgba(249, 239, 231, 0.1);
-  border: 1px solid rgba(249, 239, 231, 0.15);
+  background: rgba(255, 190, 11, 0.12);
+  border: 1px solid rgba(255, 190, 11, 0.28);
   padding: 4px 14px;
   border-radius: 9999px;
 }
@@ -712,7 +712,7 @@
 
 .expectationCard:hover {
   transform: translateY(-4px);
-  border-color: rgba(249, 239, 231, 0.25);
+  border-color: rgba(255, 190, 11, 0.35);
 }
 
 .expectationCard h3 {
