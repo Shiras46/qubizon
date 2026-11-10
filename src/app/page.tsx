@@ -119,16 +119,7 @@ export default function HomePage() {
                 "@type": "Service",
                 name: "CRM Solutions",
                 description: "Organize customer information, lead tracking, follow-ups, and sales processes to manage customer relationships effectively.",
-                url: `${SITE_CONFIG.domain}/solutions`,
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Custom Software Solutions",
-                description: "Practical digital tools designed around your business needs that support your operations, workflows, and objectives.",
-                url: `${SITE_CONFIG.domain}/solutions`,
+                url: `${SITE_CONFIG.domain}/services/crm`,
               },
             },
           ],

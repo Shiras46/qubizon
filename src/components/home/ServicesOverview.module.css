@@ -57,15 +57,11 @@
   max-width: 520px;
 }
 
-/* 7-Card Grid Architecture (3-Column Balanced Desktop Layout) */
+/* 6-Card Grid Architecture (3-Column Balanced Desktop Layout: 2x3 Grid) */
 .servicesGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(1.5rem, 2.5vw, 2.25rem);
-}
-
-.card_custom-software {
-  grid-column: span 3;
 }
 
 /* Card Container */

@@ -76,16 +76,6 @@ const SERVICES_LIST: ServiceItem[] = [
     href: "/services/crm",
     tags: ["Lead Tracking", "Sales Follow-ups", "Customer Relationships"],
   },
-  {
-    id: "custom-software",
-    number: "07",
-    tagline: "PRACTICAL TOOLS // WORKFLOW AUTOMATION",
-    title: "Custom Software Solutions",
-    description:
-      "Simplify your operations with software designed around your business needs. We help plan and develop practical digital tools that support your workflows and objectives.",
-    href: "/solutions",
-    tags: ["Workflow Automation", "Tailored Tools", "Business Software"],
-  },
 ];
 
 const SERVICE_ICONS: Record<string, typeof Code2> = {
@@ -95,7 +85,6 @@ const SERVICE_ICONS: Record<string, typeof Code2> = {
   seo: Network,
   "social-media": Sparkles,
   crm: Users,
-  "custom-software": Cpu,
 };
 
 function renderServiceVisual(id: string) {
@@ -204,25 +193,6 @@ function renderServiceVisual(id: string) {
           <text x="140" y="157" fill="#10b981" fontSize="8" fontFamily="monospace" textAnchor="middle">ACTIVE CRM SYNC</text>
         </svg>
       );
-    case "custom-software":
-      return (
-        <svg viewBox="0 0 440 220" className={styles.visualSvg} aria-hidden="true" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="440" height="220" fill="#141413" />
-          <path d="M0 40h440M0 80h440M0 120h440M0 160h440M0 200h440M40 0v220M80 0v220M120 0v220M160 0v220M200 0v220M240 0v220M280 0v220M320 0v220M360 0v220M400 0v220" stroke="rgba(249,239,231,0.04)" strokeWidth="1" />
-          <rect x="50" y="50" width="160" height="120" rx="12" fill="#1C1C1B" stroke="rgba(249,239,231,0.15)" strokeWidth="1" />
-          <text x="70" y="75" fill="#00488E" fontSize="10" fontFamily="monospace" fontWeight="700">WORKFLOW API</text>
-          <rect x="70" y="90" width="120" height="6" rx="3" fill="rgba(249,239,231,0.3)" />
-          <rect x="70" y="105" width="90" height="6" rx="3" fill="rgba(249,239,231,0.2)" />
-          <rect x="70" y="125" width="100" height="20" rx="6" fill="rgba(0,72,142,0.2)" stroke="#00488E" strokeWidth="1" />
-          <text x="120" y="139" fill="#00488E" fontSize="9" fontFamily="monospace" textAnchor="middle">EXECUTE</text>
-          <rect x="230" y="50" width="160" height="120" rx="12" fill="#1C1C1B" stroke="rgba(249,239,231,0.15)" strokeWidth="1" />
-          <text x="250" y="75" fill="#FFBE0B" fontSize="10" fontFamily="monospace" fontWeight="700">CUSTOM MODULE</text>
-          <rect x="250" y="90" width="120" height="6" rx="3" fill="rgba(249,239,231,0.3)" />
-          <rect x="250" y="105" width="100" height="6" rx="3" fill="rgba(249,239,231,0.2)" />
-          <rect x="250" y="125" width="110" height="20" rx="6" fill="rgba(255,190,11,0.2)" stroke="#FFBE0B" strokeWidth="1" />
-          <text x="305" y="139" fill="#FFBE0B" fontSize="9" fontFamily="monospace" textAnchor="middle">AUTOMATED</text>
-        </svg>
-      );
     default:
       return null;
   }
@@ -241,12 +211,12 @@ export function ServicesOverview() {
               <span className="calligraphy">Forward</span>.
             </h2>
             <p className={styles.lead}>
-              From digital marketing and web development to graphic design, SEO, social media, CRM, and custom software, we bring the tools and expertise to help your business move forward.
+              From digital marketing and web development to graphic design, SEO, social media, and CRM, we bring the tools and expertise to help your business move forward.
             </p>
           </div>
         </div>
 
-        {/* 7-Card Grid Architecture */}
+        {/* 6-Card Grid Architecture */}
         <div className={styles.servicesGrid}>
           {SERVICES_LIST.map((service) => {
             const IconComp = SERVICE_ICONS[service.id] || Code2;
@@ -346,7 +316,7 @@ export function ServicesOverview() {
           <div className={styles.wideVisualBanner}>
             <div className={styles.bannerFloatingBadge}>
               <span className={styles.pulseDot} />
-              <span>DIGITAL SERVICES &bull; WEB &bull; DESIGN &bull; SEO &bull; SMM &bull; CRM &bull; SOFTWARE</span>
+              <span>DIGITAL SERVICES &bull; WEB &bull; DESIGN &bull; SEO &bull; SMM &bull; CRM</span>
             </div>
             <Image
               src="/hero-collaboration.jpg"

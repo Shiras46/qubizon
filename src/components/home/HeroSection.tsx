@@ -13,7 +13,6 @@ const MARQUEE_ITEMS = [
   "Search Engine Optimization (SEO)",
   "Social Media Marketing (SMM)",
   "CRM Solutions",
-  "Custom Software Solutions",
   "Tailored Business Strategies",
 ];
 
@@ -68,7 +67,7 @@ export function HeroSection() {
             </span>
             <span className={styles.trustBadge}>
               <span className={styles.trustDot} />
-              <span>Web Development &amp; Software</span>
+              <span>Web Development &amp; Modern UI</span>
             </span>
             <span className={styles.trustBadge}>
               <span className={styles.trustDot} />
