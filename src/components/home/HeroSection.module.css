@@ -60,7 +60,7 @@
 
 .lead {
   font-size: var(--text-base, 1.05rem);
-  color: var(--clr-muted, #5A5A58);
+  color: var(--clr-muted, #475569);
   margin-bottom: 2.5rem;
   line-height: 1.68;
   max-width: 580px;
@@ -276,8 +276,8 @@
 
 .hudLabel {
   font-family: var(--font-family-mono, monospace);
-  font-size: 9px;
-  color: var(--clr-muted, #666666);
+  font-size: 9.5px;
+  color: var(--clr-muted, #475569);
   letter-spacing: 0.05em;
   margin-top: 4px;
 }
@@ -287,8 +287,8 @@
   flex-direction: column;
   gap: 2px;
   font-family: var(--font-family-mono, monospace);
-  font-size: 9px;
-  color: var(--clr-muted, #888888);
+  font-size: 9.5px;
+  color: var(--clr-muted, #475569);
   letter-spacing: 0.05em;
   padding-top: 0.75rem;
   border-top: 1px solid rgba(0, 0, 0, 0.06);

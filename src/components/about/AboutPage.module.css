@@ -24,7 +24,7 @@
   font-family: var(--font-family-mono);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
 }
 
 .breadcrumbItem {
@@ -34,7 +34,7 @@
 }
 
 .breadcrumbLink {
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -103,7 +103,7 @@
 
 .heroLead {
   font-size: var(--text-base, 1.05rem);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.68;
   margin-bottom: var(--space-8);
   max-width: 620px;
@@ -155,7 +155,7 @@
   gap: 6px;
   font-size: 12px;
   font-weight: 600;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
 }
 
 .trustIcon {
@@ -274,7 +274,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
 }
 
 .statValue {
@@ -288,7 +288,7 @@
 
 .statLabel {
   font-size: 0.875rem;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.5;
   font-weight: 500;
 }
@@ -341,7 +341,7 @@
 
 .sectionLead {
   font-size: var(--font-size-lg);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
 }
 
@@ -401,7 +401,7 @@
   gap: var(--space-3);
   align-items: flex-start;
   font-size: 0.9375rem;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
 }
 
@@ -448,7 +448,7 @@
 
 .warningNote {
   font-size: 11.5px;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.5;
   display: block;
 }
@@ -541,7 +541,7 @@
 
 .cubeDescription {
   font-size: var(--font-size-sm);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
   margin-bottom: var(--space-4);
   flex-grow: 1;
@@ -553,7 +553,7 @@
   padding: 0.9rem 1rem;
   border: 1px solid rgba(28, 28, 27, 0.06);
   font-size: 11px;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.5;
   margin-bottom: 1.5rem;
 }
@@ -646,7 +646,7 @@
 
 .stepDescription {
   font-size: var(--font-size-sm);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
 }
 
@@ -715,6 +715,9 @@
 }
 
 .expectationCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 22px;
@@ -788,7 +791,7 @@
 
 .valueCard p {
   font-size: var(--font-size-sm);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
 }
 
@@ -814,7 +817,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   display: block;
   margin-bottom: 0.5rem;
 }
@@ -855,7 +858,7 @@
 
 .faqCardAnswer {
   font-size: 0.925rem;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
   margin: 0;
 }
@@ -893,7 +896,7 @@
 .governanceLead {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   max-width: 900px;
   margin-bottom: 2rem;
 }
@@ -928,7 +931,7 @@
 .governanceItemText {
   font-size: 0.88rem;
   line-height: 1.6;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   margin: 0;
 }
 
@@ -936,7 +939,7 @@
   border-top: 1px solid rgba(28, 28, 27, 0.08);
   padding-top: 1.5rem;
   font-size: 0.875rem;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
 }
 

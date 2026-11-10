@@ -23,7 +23,7 @@
   font-family: var(--font-family-mono);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
 }
 
 .breadcrumbItem {
@@ -33,7 +33,7 @@
 }
 
 .breadcrumbLink {
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -92,7 +92,7 @@
 
 .heroLead {
   font-size: var(--font-size-lg);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
   margin-bottom: var(--space-6);
   max-width: 780px;
@@ -103,7 +103,7 @@
   border-radius: 16px;
   padding: var(--space-4) var(--space-5);
   font-size: var(--font-size-sm);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.6;
   box-shadow: 0 4px 16px rgba(28, 28, 27, 0.03);
   border: 1px solid rgba(28, 28, 27, 0.08);
@@ -138,7 +138,7 @@
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   background-color: transparent;
   border: none;
   border-radius: 9999px;
@@ -234,7 +234,7 @@
 .categoryTag {
   font-family: var(--font-family-mono);
   font-size: 10px;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   background-color: transparent;
   padding: 4px 10px;
   border-radius: 9999px;
@@ -282,7 +282,7 @@
 
 .blockText {
   font-size: var(--font-size-sm);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
 }
 
@@ -305,7 +305,7 @@
 
 .demonstrationText {
   font-size: var(--font-size-sm);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
 }
 
@@ -366,7 +366,7 @@
   font-size: 11px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
 }
 
 .statusDot {

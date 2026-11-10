@@ -9,7 +9,7 @@
   font-family: var(--font-family-mono);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
 }
 
 .breadcrumbList {
@@ -21,7 +21,7 @@
 }
 
 .breadcrumbItem a {
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   transition: color 0.2s ease;
   text-decoration: none;
 }
@@ -81,7 +81,7 @@
 
 .heroSummary {
   font-size: var(--font-size-lg);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
   margin-bottom: var(--space-8);
   max-width: 760px;
@@ -226,7 +226,7 @@
 
 .cardLead {
   font-size: var(--font-size-sm);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
   margin-bottom: var(--space-6);
 }
@@ -244,7 +244,7 @@
   align-items: flex-start;
   gap: var(--space-3);
   font-size: var(--font-size-sm);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.6;
 }
 
@@ -291,7 +291,7 @@
 
 .capabilityDescription {
   font-size: var(--font-size-sm);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
   margin-bottom: var(--space-6);
 }
@@ -301,7 +301,7 @@
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   font-weight: 700;
   margin-bottom: var(--space-3);
 }
@@ -385,7 +385,7 @@
 
 .stepDescription {
   font-size: var(--font-size-sm);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
 }
 
@@ -429,6 +429,9 @@
 }
 
 .outcomeCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 22px;
@@ -505,7 +508,7 @@
 
 .connectionText {
   font-size: var(--font-size-sm);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
   margin-bottom: var(--space-4);
 }
@@ -560,7 +563,7 @@
 
 .faqAnswer {
   font-size: var(--font-size-sm);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
 }
 
@@ -675,7 +678,7 @@
 
 .siblingDesc {
   font-size: var(--font-size-xs);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.55;
 }
 

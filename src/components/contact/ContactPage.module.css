@@ -23,7 +23,7 @@
   font-family: var(--font-family-mono);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
 }
 
 .breadcrumbItem {
@@ -33,7 +33,7 @@
 }
 
 .breadcrumbLink {
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -93,7 +93,7 @@
 
 .heroLead {
   font-size: var(--font-size-lg);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
   max-width: 780px;
 }
@@ -142,7 +142,7 @@
 
 .sidebarText {
   font-size: var(--font-size-sm);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
   margin-bottom: var(--space-4);
 }
@@ -176,7 +176,7 @@
   align-items: flex-start;
   gap: var(--space-3);
   font-size: var(--font-size-xs);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.5;
 }
 
@@ -250,7 +250,7 @@
 .faqAnswer {
   padding: 0 var(--space-6) var(--space-5) var(--space-6);
   font-size: var(--font-size-sm);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
   border-top: 1px solid rgba(28, 28, 27, 0.08);
   padding-top: var(--space-4);

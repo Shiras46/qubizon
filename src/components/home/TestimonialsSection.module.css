@@ -57,7 +57,7 @@
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--clr-muted, #5A5A58);
+  color: var(--clr-muted, #475569);
   line-height: 1.6;
 }
 
@@ -164,7 +164,7 @@
 
 .authorRole {
   font-size: 0.85rem;
-  color: var(--clr-muted, #5A5A58);
+  color: var(--clr-muted, #475569);
   line-height: 1.4;
   margin: 0;
 }

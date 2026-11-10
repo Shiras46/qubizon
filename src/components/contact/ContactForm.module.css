@@ -31,7 +31,7 @@
   font-family: var(--font-family-mono);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   font-weight: 600;
 }
 
@@ -91,7 +91,7 @@
 
 .stepDescription {
   font-size: var(--font-size-sm);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
   margin-bottom: var(--space-6);
   max-width: 640px;
@@ -129,7 +129,7 @@
 
 .optionalTag {
   font-size: 10px;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   font-weight: 400;
 }
 
@@ -268,7 +268,7 @@
 .editButton {
   font-family: var(--font-family-mono);
   font-size: 11px;
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   font-weight: 600;
   text-decoration: underline;
   cursor: pointer;
@@ -292,7 +292,7 @@
 }
 
 .reviewLabel {
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
 }
 
 .reviewValue {
@@ -336,7 +336,7 @@
 
 .privacyLabel {
   font-size: var(--font-size-xs);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.5;
 }
 
@@ -466,7 +466,7 @@
 
 .successLead {
   font-size: var(--font-size-base);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   max-width: 540px;
   margin: 0 auto var(--space-6) auto;
   line-height: 1.65;
@@ -510,7 +510,7 @@
   list-style: decimal;
   padding-left: var(--space-4);
   font-size: var(--font-size-sm);
-  color: var(--clr-muted, #5a5a58);
+  color: var(--clr-muted, #475569);
   line-height: 1.65;
 }
 
