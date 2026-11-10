@@ -1,8 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
-import { ArrowRight, Code2, Network, Sparkles, Target, Palette, Users, Cpu } from "lucide-react";
+import { ArrowRight, Code2, Network, Sparkles, Target, Palette, Users } from "lucide-react";
 import styles from "./ServicesOverview.module.css";
 
 interface ServiceItem {
@@ -265,67 +264,6 @@ export function ServicesOverview() {
               </Link>
             );
           })}
-        </div>
-
-        {/* Mission & Vision Section + Wide Visual Banner */}
-        <div className={styles.visionMissionSection}>
-          <div className={styles.visionMissionHeader}>
-            <span className={styles.visionMissionBadge}>• OUR MISSION &amp; VISION /</span>
-            <h2 className={styles.visionMissionTitle}>
-              Empowering businesses with <span className="calligraphy">effective digital solutions</span>.
-            </h2>
-          </div>
-
-          <div className={styles.visionMissionGrid}>
-            {/* Our Mission Card */}
-            <article className={styles.visionMissionCard}>
-              <h3 className={styles.cardHead}>Our Mission</h3>
-              <div className={styles.cardParagraphs}>
-                <p className={styles.cardParagraph}>
-                  Our mission is to empower businesses with effective digital solutions that support growth, improve customer connections, and simplify everyday operations.
-                </p>
-                <p className={styles.cardParagraph}>
-                  We aim to deliver thoughtful service, dependable technology, and work tailored to each client’s goals.
-                </p>
-              </div>
-              <Link href="/about" className={styles.cardLearnMore}>
-                <span>Learn more</span>
-                <ArrowRight size={13} aria-hidden="true" />
-              </Link>
-            </article>
-
-            {/* Our Vision Card */}
-            <article className={styles.visionMissionCard}>
-              <h3 className={styles.cardHead}>Our Vision</h3>
-              <div className={styles.cardParagraphs}>
-                <p className={styles.cardParagraph}>
-                  Our vision is to become a trusted digital partner for businesses seeking to grow and succeed in an ever-changing online world.
-                </p>
-                <p className={styles.cardParagraph}>
-                  We strive to make digital tools and strategies more accessible, useful, and impactful for every business we serve.
-                </p>
-              </div>
-              <Link href="/services" className={styles.cardLearnMore}>
-                <span>Learn more</span>
-                <ArrowRight size={13} aria-hidden="true" />
-              </Link>
-            </article>
-          </div>
-
-          {/* Wide Photographic Banner Frame */}
-          <div className={styles.wideVisualBanner}>
-            <div className={styles.bannerFloatingBadge}>
-              <span className={styles.pulseDot} />
-              <span>DIGITAL SERVICES &bull; WEB &bull; DESIGN &bull; SEO &bull; SMM &bull; CRM</span>
-            </div>
-            <Image
-              src="/hero-collaboration.jpg"
-              alt="Qubizon Digital Solutions team collaboration"
-              fill
-              sizes="(max-width: 1200px) 100vw, 1560px"
-              className={styles.wideBannerImage}
-            />
-          </div>
         </div>
       </div>
     </section>

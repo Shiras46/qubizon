@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Target, Globe, ShieldCheck, Plus, Check } from "lucide-react";
+import { ArrowRight, Plus, Check } from "lucide-react";
 import styles from "./AboutSection.module.css";
 
 const P1_WORDS = [
@@ -24,30 +24,6 @@ const P3_WORDS = [
   "Good", "digital", "work", "starts", "with", "understanding", "your",
   "goals", "and", "challenges.", "We’re", "here", "to", "support", "your",
   "next", "steps", "with"
-];
-
-const STAT_CARDS = [
-  {
-    icon: Target,
-    stat: "OUR MISSION",
-    eyebrow: "EFFECTIVE DIGITAL SOLUTIONS",
-    label:
-      "To empower businesses with effective digital solutions that support growth, improve customer connections, and simplify everyday operations with dependable technology tailored to each client's goals.",
-  },
-  {
-    icon: Globe,
-    stat: "OUR VISION",
-    eyebrow: "TRUSTED DIGITAL PARTNER",
-    label:
-      "To become a trusted digital partner for businesses seeking to grow and succeed in an ever-changing online world, making digital tools and strategies accessible, useful, and impactful.",
-  },
-  {
-    icon: ShieldCheck,
-    stat: "WHY CHOOSE US",
-    eyebrow: "CONNECTED & PRACTICAL",
-    label:
-      "Tailored solutions shaped around your needs, creative and practical thinking with clear purpose, a connected approach across marketing and software, and reliable collaboration.",
-  },
 ];
 
 function updateWordsOpacity(
@@ -286,23 +262,50 @@ export function AboutSection() {
             </div>
           </div>
 
-          {/* Bottom 3 Stat Cards (Integrated Modern Architecture - Image 3 Model) */}
-          <div className={styles.statCardsGrid}>
-            {STAT_CARDS.map((item, idx) => {
-              const IconComp = item.icon;
-              return (
-                <article key={idx} className={styles.statCard}>
-                  <div className={styles.iconBadge}>
-                    <IconComp size={22} aria-hidden="true" />
-                  </div>
-                  <div className={styles.statContent}>
-                    <div className={styles.statNumber}>{item.stat}</div>
-                    <div className={styles.statEyebrow}>{item.eyebrow}</div>
-                    <p className={styles.statLabel}>{item.label}</p>
-                  </div>
-                </article>
-              );
-            })}
+          {/* Our Mission & Vision Section (Reference Image 2 Model) */}
+          <div className={styles.visionMissionSection}>
+            <div className={styles.visionMissionHeader}>
+              <span className={styles.visionMissionBadge}>• OUR MISSION &amp; VISION /</span>
+              <h2 className={styles.visionMissionTitle}>
+                Empowering businesses with <span className="calligraphy">effective digital solutions</span>.
+              </h2>
+            </div>
+
+            <div className={styles.visionMissionGrid}>
+              {/* Our Mission Card */}
+              <article className={styles.visionMissionCard}>
+                <h3 className={styles.cardHead}>Our Mission</h3>
+                <div className={styles.cardParagraphs}>
+                  <p className={styles.cardParagraph}>
+                    Our mission is to empower businesses with effective digital solutions that support growth, improve customer connections, and simplify everyday operations.
+                  </p>
+                  <p className={styles.cardParagraph}>
+                    We aim to deliver thoughtful service, dependable technology, and work tailored to each client’s goals.
+                  </p>
+                </div>
+                <Link href="/about" className={styles.cardLearnMore}>
+                  <span>Learn more</span>
+                  <ArrowRight size={13} aria-hidden="true" />
+                </Link>
+              </article>
+
+              {/* Our Vision Card */}
+              <article className={styles.visionMissionCard}>
+                <h3 className={styles.cardHead}>Our Vision</h3>
+                <div className={styles.cardParagraphs}>
+                  <p className={styles.cardParagraph}>
+                    Our vision is to become a trusted digital partner for businesses seeking to grow and succeed in an ever-changing online world.
+                  </p>
+                  <p className={styles.cardParagraph}>
+                    We strive to make digital tools and strategies more accessible, useful, and impactful for every business we serve.
+                  </p>
+                </div>
+                <Link href="/services" className={styles.cardLearnMore}>
+                  <span>Learn more</span>
+                  <ArrowRight size={13} aria-hidden="true" />
+                </Link>
+              </article>
+            </div>
           </div>
         </div>
       </div>
