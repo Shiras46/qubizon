@@ -12,39 +12,45 @@ interface FaqItem {
 const FAQS: FaqItem[] = [
   {
     id: "faq-1",
-    question: "What makes Qubizon's Next.js web development different?",
+    question: "What services does Qubizon Digital Solutions offer?",
     answer:
-      "We build on the modern Next.js App Router using React Server Components, TypeScript, and edge rendering. Unlike traditional WordPress templates with plugin bloat, our platforms load in sub-second LCP, score 100/100 on Core Web Vitals, and are immune to monolithic CMS security vulnerabilities.",
+      "We offer digital marketing, web development, graphic design, SEO, social media marketing, CRM solutions, and custom software services.",
   },
   {
     id: "faq-2",
-    question: "How does your Technical SEO ensure search indexation in Kerala?",
+    question: "Can I request more than one service?",
     answer:
-      "We design deep Schema.org entity graphs, canonical hierarchies, and automated XML sitemaps that clarify topical relevance to Google and AI search engines. We target high-intent regional searches across Kozhikode, Thrissur, and Kerala with crawl-budget optimized page architecture.",
+      "Yes. You can choose individual services or combine several, such as web development, SEO, and social media marketing, to support a broader digital strategy.",
   },
   {
     id: "faq-3",
-    question: "Can we engage Qubizon for a single discipline?",
+    question: "Do you work with small businesses?",
     answer:
-      "Yes. While our unified cube model delivers compound velocity across disciplines, clients regularly engage us specifically for Next.js App Router engineering, technical SEO crawlability, or performance PPC marketing.",
+      "Yes. We work with businesses at different stages and can discuss solutions suited to your goals, needs, and budget.",
   },
   {
     id: "faq-4",
-    question: "How do you structure code ownership and project onboarding?",
+    question: "Will my website work on mobile devices?",
     answer:
-      "All custom code, design tokens, repository commits, and analytics configurations belong 100% to your organization under standard commercial licensing terms from day one. You retain full administrative control over all digital assets.",
+      "We build websites to be responsive, so they can adapt to different screen sizes, including smartphones, tablets, and desktop computers.",
   },
   {
     id: "faq-5",
-    question: "How do you track PPC return on investment without vanity metrics?",
+    question: "How do I get started?",
     answer:
-      "We install server-side conversion telemetry, Google Tag Manager event tracking, and negative keyword clustering. We track qualified consultation submissions, customer acquisition costs, and verified pipeline revenue rather than vanity impressions.",
+      "Contact us with a brief description of your business and what you need. We’ll discuss your goals and recommend the best next steps.",
   },
   {
     id: "faq-6",
-    question: "What happens after I submit a project inquiry?",
+    question: "How much do your services cost?",
     answer:
-      "A senior engineer or technical strategist reviews your requirements and responds within one business day with an architectural assessment and a direct link to schedule an introductory consultation.",
+      "Pricing depends on the service and the scope of your project. Contact us for a consultation and a quote tailored to your requirements.",
+  },
+  {
+    id: "faq-7",
+    question: "Do you provide support after a project is completed?",
+    answer:
+      "Support options depend on the service and project. Please contact us to discuss the ongoing assistance that may be available for your needs.",
   },
 ];
 
@@ -68,10 +74,9 @@ export function FaqSection() {
                 FAQ
               </h2>
               <div className={styles.faqMetaBlock}>
-                <p className={styles.sectionBadge}>• CLIENT INTELLIGENCE &amp; CLARITY /</p>
+                <p className={styles.sectionBadge}>• FREQUENTLY ASKED QUESTIONS /</p>
                 <p className={styles.lead}>
-                  Direct, transparent answers regarding our architectural standards, technical SEO methodologies,
-                  and client engagement processes.
+                  Direct, transparent answers about our digital marketing, web development, design, and software services.
                 </p>
               </div>
             </div>

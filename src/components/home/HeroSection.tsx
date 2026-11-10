@@ -7,17 +7,14 @@ import { ConsultationModal } from "@/components/common/ConsultationModal";
 import styles from "./HeroSection.module.css";
 
 const MARQUEE_ITEMS = [
-  "Next.js App Router",
-  "Technical SEO",
-  "Schema Entity Graphs",
-  "High-Intent PPC Ads",
-  "Sub-Second Core Web Vitals",
-  "UAE & GCC Growth Hub",
-  "Dubai Enterprise Web",
-  "Social Media Strategy",
-  "Content Authority",
-  "Conversion Rate Optimization",
-  "Kerala Enterprise Growth",
+  "Digital Marketing",
+  "Web Development",
+  "Graphic Design",
+  "Search Engine Optimization (SEO)",
+  "Social Media Marketing (SMM)",
+  "CRM Solutions",
+  "Custom Software Solutions",
+  "Tailored Business Strategies",
 ];
 
 export function HeroSection() {
@@ -28,19 +25,19 @@ export function HeroSection() {
       <section className={styles.hero} id="hero" aria-labelledby="hero-heading">
         <div className={styles.heroContent}>
           <p className={styles.categoryTag}>
-            • DIGITAL ARCHITECTURE &amp; ENGINEERING FOR HIGH-GROWTH ENTERPRISES /
+            • QUBIZON DIGITAL SOLUTIONS // DIGITAL SERVICES &amp; STRATEGY /
           </p>
 
           <h1 id="hero-heading" className={styles.headingHuge}>
-            Transforming Vision into <br />
-            <span className={styles.heroCalligraphy}>Digital Reality</span>.
+            Build a Stronger Online Presence &amp; <br />
+            <span className={styles.heroCalligraphy}>Work More Effectively</span>.
           </h1>
 
           <p className={styles.lead}>
-            Qubizon is a premier digital agency specializing in custom Next.js web architecture,
-            technical search engine optimization, precision paid advertising, and high-impact brand
-            storytelling. We combine engineering precision with creative vision to build high-performance
-            digital systems for ambitious enterprises in Kerala and across the UAE &amp; GCC (Dubai, Abu Dhabi, Sharjah).
+            At Qubizon Digital Solutions, we help businesses build a stronger online presence and work
+            more effectively. From digital marketing and web development to graphic design, SEO, social
+            media, CRM, and custom software, we bring the tools and expertise to help your business
+            move forward.
           </p>
 
           <div className={styles.actionGroup}>
@@ -50,13 +47,13 @@ export function HeroSection() {
               className={styles.btnPrimary}
               aria-haspopup="dialog"
             >
-              <span>Start a Project</span>
+              <span>Get a Free Consultation</span>
               <span className={styles.arrowCircle} aria-hidden="true">
                 <ArrowRight size={13} />
               </span>
             </button>
             <a href="#services" className={styles.btnOutline}>
-              <span>Explore Capabilities</span>
+              <span>Explore Our Services</span>
               <span className={styles.arrowCircle} aria-hidden="true">
                 <ArrowRight size={13} />
               </span>
@@ -67,15 +64,15 @@ export function HeroSection() {
           <div className={styles.trustBadges}>
             <span className={styles.trustBadge}>
               <span className={styles.trustDot} />
-              <span>Next.js 14 App Router</span>
+              <span>Digital Marketing &amp; SEO</span>
             </span>
             <span className={styles.trustBadge}>
               <span className={styles.trustDot} />
-              <span>Sub-Second LCP</span>
+              <span>Web Development &amp; Software</span>
             </span>
             <span className={styles.trustBadge}>
               <span className={styles.trustDot} />
-              <span>Zero Monolithic Bloat</span>
+              <span>Graphic Design &amp; CRM</span>
             </span>
           </div>
         </div>

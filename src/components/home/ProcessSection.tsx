@@ -9,27 +9,27 @@ interface Step {
 const STEPS: Step[] = [
   {
     num: "01",
-    title: "Discovery & Audit",
+    title: "Discover",
     description:
-      "We dive deep into your brand, unit economics, market landscape, technical stack, and competitor search intent to identify high-leverage growth opportunities.",
+      "We learn about your business, your audience, and what you want to achieve.",
   },
   {
     num: "02",
-    title: "Architecture & Design",
+    title: "Plan",
     description:
-      "Our architects map out design systems, responsive wireframes, Schema entity graphs, and conversion paths, iterating until every detail is aligned.",
+      "We recommend suitable services and outline a clear approach for your project.",
   },
   {
     num: "03",
-    title: "Engineering & Sprints",
+    title: "Create",
     description:
-      "We bring the solutions to life with clean, type-safe Next.js code, semantic HTML, accessible micro-interactions, and high-velocity bi-weekly sprints.",
+      "Our team develops your digital solution with care and attention to your requirements.",
   },
   {
     num: "04",
-    title: "Launch & Telemetry",
+    title: "Support and Improve",
     description:
-      "Rigorous pre-release testing ensures a flawless launch, followed by continuous Core Web Vitals telemetry, search indexing, and ROI optimization.",
+      "We help you review your results and identify opportunities to improve over time.",
   },
 ];
 
@@ -37,13 +37,12 @@ export function ProcessSection() {
   return (
     <section className={styles.processSection} id="process" aria-labelledby="process-heading">
       <div className={styles.container}>
-        <p className={styles.sectionBadge}>• WORKING METHODOLOGY /</p>
+        <p className={styles.sectionBadge}>• HOW WE WORK /</p>
         <h2 id="process-heading" className={styles.headingLarge}>
-          Our 4-step execution <span className="calligraphy">blueprint</span>.
+          Our 4-step approach to moving your business <span className="calligraphy">forward</span>.
         </h2>
         <p className={styles.lead}>
-          A disciplined workflow engineered for maximum operational efficiency, technical precision,
-          and verifiable business outcomes.
+          A clear, connected approach engineered to develop practical digital tools that support your workflows and business growth.
         </p>
 
         <div className={styles.processSteps}>

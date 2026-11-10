@@ -72,35 +72,8 @@ export default function HomePage() {
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
-                name: "Website Development & Web Architecture",
-                description: "Custom, high-speed Next.js web platforms with sub-second LCP and strict WCAG 2.1 AA accessibility.",
-                url: `${SITE_CONFIG.domain}/services/web-development`,
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Technical SEO & Schema Entity Modeling",
-                description: "Enterprise crawl optimization, structured data entity graphs, and search-intent architecture.",
-                url: `${SITE_CONFIG.domain}/services/seo`,
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "Social Media Strategy & Brand Narrative",
-                description: "Strategic executive thought leadership and multi-channel asset production.",
-                url: `${SITE_CONFIG.domain}/services/social-media-marketing`,
-              },
-            },
-            {
-              "@type": "Offer",
-              itemOffered: {
-                "@type": "Service",
-                name: "High-Intent Paid Advertising & Telemetry",
-                description: "Precision Google Search and Meta Ads campaigns with server-side conversion telemetry.",
+                name: "Digital Marketing",
+                description: "Strategic digital campaigns designed to improve brand awareness, attract potential customers, and support business growth.",
                 url: `${SITE_CONFIG.domain}/services/paid-advertising`,
               },
             },
@@ -108,9 +81,54 @@ export default function HomePage() {
               "@type": "Offer",
               itemOffered: {
                 "@type": "Service",
-                name: "Content Marketing & Editorial Authority",
-                description: "Search-aligned technical whitepapers, case studies, and topical authority pillars.",
-                url: `${SITE_CONFIG.domain}/services/content-marketing`,
+                name: "Web Development",
+                description: "Responsive, user-friendly websites that present your business professionally and work smoothly across desktop, tablet, and mobile devices.",
+                url: `${SITE_CONFIG.domain}/services/web-development`,
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Graphic Design",
+                description: "Professional design for logos, social media graphics, marketing materials, and digital or print assets reflecting your identity.",
+                url: `${SITE_CONFIG.domain}/services`,
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Search Engine Optimization (SEO)",
+                description: "Improve your website’s visibility in search results, target relevant search terms, and make it easier for customers to find you.",
+                url: `${SITE_CONFIG.domain}/services/seo`,
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Social Media Marketing (SMM)",
+                description: "Content planning, creative posts, audience engagement, and campaign management to keep your brand active on social media.",
+                url: `${SITE_CONFIG.domain}/services/social-media-marketing`,
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "CRM Solutions",
+                description: "Organize customer information, lead tracking, follow-ups, and sales processes to manage customer relationships effectively.",
+                url: `${SITE_CONFIG.domain}/solutions`,
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Custom Software Solutions",
+                description: "Practical digital tools designed around your business needs that support your operations, workflows, and objectives.",
+                url: `${SITE_CONFIG.domain}/solutions`,
               },
             },
           ],
@@ -122,50 +140,58 @@ export default function HomePage() {
         mainEntity: [
           {
             "@type": "Question",
-            name: "What makes Qubizon's Next.js web development different?",
+            name: "What services does Qubizon Digital Solutions offer?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "We build on the modern Next.js App Router using React Server Components, TypeScript, and edge rendering. Unlike traditional WordPress templates with plugin bloat, our platforms load in sub-second LCP, score 100/100 on Core Web Vitals, and are immune to monolithic CMS security vulnerabilities.",
+              text: "We offer digital marketing, web development, graphic design, SEO, social media marketing, CRM solutions, and custom software services.",
             },
           },
           {
             "@type": "Question",
-            name: "How does your Technical SEO ensure search indexation in Kerala?",
+            name: "Can I request more than one service?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "We design deep Schema.org entity graphs, canonical hierarchies, and automated XML sitemaps that clarify topical relevance to Google and AI search engines. We target high-intent regional searches across Kozhikode, Thrissur, and Kerala with crawl-budget optimized page architecture.",
+              text: "Yes. You can choose individual services or combine several, such as web development, SEO, and social media marketing, to support a broader digital strategy.",
             },
           },
           {
             "@type": "Question",
-            name: "Can we engage Qubizon for a single discipline?",
+            name: "Do you work with small businesses?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "Yes. While our unified cube model delivers compound velocity across disciplines, clients regularly engage us specifically for Next.js App Router engineering, technical SEO crawlability, or performance PPC marketing.",
+              text: "Yes. We work with businesses at different stages and can discuss solutions suited to your goals, needs, and budget.",
             },
           },
           {
             "@type": "Question",
-            name: "How do you structure code ownership and project onboarding?",
+            name: "Will my website work on mobile devices?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "All custom code, design tokens, repository commits, and analytics configurations belong 100% to your organization under standard commercial licensing terms from day one. You retain full administrative control over all digital assets.",
+              text: "We build websites to be responsive, so they can adapt to different screen sizes, including smartphones, tablets, and desktop computers.",
             },
           },
           {
             "@type": "Question",
-            name: "How do you track PPC return on investment without vanity metrics?",
+            name: "How do I get started?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "We install server-side conversion telemetry, Google Tag Manager event tracking, and negative keyword clustering. We track qualified consultation submissions, customer acquisition costs, and verified pipeline revenue rather than vanity impressions.",
+              text: "Contact us with a brief description of your business and what you need. We’ll discuss your goals and recommend the best next steps.",
             },
           },
           {
             "@type": "Question",
-            name: "What happens after I submit a project inquiry?",
+            name: "How much do your services cost?",
             acceptedAnswer: {
               "@type": "Answer",
-              text: "A senior engineer or technical strategist reviews your requirements and responds within one business day with an architectural assessment and a direct link to schedule an introductory consultation.",
+              text: "Pricing depends on the service and the scope of your project. Contact us for a consultation and a quote tailored to your requirements.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Do you provide support after a project is completed?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Support options depend on the service and project. Please contact us to discuss the ongoing assistance that may be available for your needs.",
             },
           },
         ],

@@ -3,43 +3,50 @@
 import { useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Layers, Users, Clock, Plus, Check } from "lucide-react";
+import { ArrowRight, Target, Globe, ShieldCheck, Plus, Check } from "lucide-react";
 import styles from "./AboutSection.module.css";
 
 const P1_WORDS = [
-  "We", "work", "with", "founders,", "executives,", "and", "leadership",
-  "teams", "who", "are", "navigating", "market", "evolution,",
-  "operational", "complexity,", "or", "critical", "strategic", "decisions."
+  "Your", "digital", "presence", "is", "often", "the", "first", "way",
+  "customers", "discover", "and", "experience", "your", "business."
 ];
 
 const P2_WORDS = [
-  "At", "some", "point,", "fragmented", "agencies,", "unvetted", "freelancers,",
-  "and", "legacy", "platforms", "stop", "keeping", "up", "and", "start",
-  "telling", "an", "older", "version", "of", "your", "story."
+  "We", "create", "practical,", "creative,", "and", "results-focused",
+  "digital", "solutions", "that", "help", "you", "connect", "with", "your",
+  "audience,", "strengthen", "your", "brand,", "and", "achieve", "your",
+  "business", "goals.", "Whether", "you’re", "starting", "from", "scratch",
+  "or", "ready", "to", "improve", "what", "you", "already", "have,", "our",
+  "team", "is", "here", "to", "help."
 ];
 
 const P3_WORDS = [
-  "That's", "the", "moment", "when", "it's", "time", "to", "build", "with"
+  "Good", "digital", "work", "starts", "with", "understanding", "your",
+  "goals", "and", "challenges.", "We’re", "here", "to", "support", "your",
+  "next", "steps", "with"
 ];
 
 const STAT_CARDS = [
   {
-    icon: Layers,
-    stat: "150+",
-    eyebrow: "CONSULTING DEPLOYMENTS",
-    label: "Consulting Engagements & Deployments across web architecture, technical SEO, and conversion systems.",
+    icon: Target,
+    stat: "OUR MISSION",
+    eyebrow: "EFFECTIVE DIGITAL SOLUTIONS",
+    label:
+      "To empower businesses with effective digital solutions that support growth, improve customer connections, and simplify everyday operations with dependable technology tailored to each client's goals.",
   },
   {
-    icon: Users,
-    stat: "90%+",
-    eyebrow: "CLIENT RETENTION",
-    label: "Client retention rate through rigorous and long-term advisory work for sustainable business scale.",
+    icon: Globe,
+    stat: "OUR VISION",
+    eyebrow: "TRUSTED DIGITAL PARTNER",
+    label:
+      "To become a trusted digital partner for businesses seeking to grow and succeed in an ever-changing online world, making digital tools and strategies accessible, useful, and impactful.",
   },
   {
-    icon: Clock,
-    stat: "10+",
-    eyebrow: "LEADERSHIP EXPERTISE",
-    label: "Years of combined technical leadership supporting business founders and management teams for success.",
+    icon: ShieldCheck,
+    stat: "WHY CHOOSE US",
+    eyebrow: "CONNECTED & PRACTICAL",
+    label:
+      "Tailored solutions shaped around your needs, creative and practical thinking with clear purpose, a connected approach across marketing and software, and reliable collaboration.",
   },
 ];
 
@@ -145,11 +152,11 @@ export function AboutSection() {
     >
       <div className={styles.container}>
         <div className={styles.aboutStage}>
-          {/* Category Tag: + WHO WE ARE (Above Split Grid, Anchoring Left) */}
+          {/* Category Tag: + WELCOME TO QUBIZON (Above Split Grid, Anchoring Left) */}
           <div className={styles.tagWrap}>
             <div className={styles.whoWeAreTag}>
               <Plus size={13} className={styles.tagIcon} aria-hidden="true" strokeWidth={3} />
-              <span>WHO WE ARE</span>
+              <span>WELCOME TO QUBIZON DIGITAL SOLUTIONS</span>
             </div>
           </div>
 
@@ -160,7 +167,7 @@ export function AboutSection() {
               <div className={styles.imageFrame}>
                 <div className={styles.floatingBadge}>
                   <span className={styles.pulseDot} />
-                  <span>LICENSED REGIONAL &amp; GCC AGENCY NODE / KOZHIKODE &bull; THRISSUR &bull; DUBAI</span>
+                  <span>CREATIVE, STRATEGIC &amp; PRACTICAL DIGITAL SOLUTIONS</span>
                 </div>
                 <Image
                   src="/hero-collaboration.jpg"
@@ -244,7 +251,7 @@ export function AboutSection() {
               <div className={styles.bottomArea}>
                 <div className={styles.actionAndTrustRow}>
                   <Link href="/about" className={styles.btnPrimary}>
-                    <span>Discover Our Model</span>
+                    <span>Learn About Us</span>
                     <ArrowRight size={14} aria-hidden="true" />
                   </Link>
 
@@ -253,26 +260,26 @@ export function AboutSection() {
                       <span className={styles.checkCircle}>
                         <Check size={11} strokeWidth={3} aria-hidden="true" />
                       </span>
-                      <span>100% Client IP Ownership</span>
+                      <span>Tailored Solutions</span>
                     </span>
                     <span className={styles.trustItem}>
                       <span className={styles.checkCircle}>
                         <Check size={11} strokeWidth={3} aria-hidden="true" />
                       </span>
-                      <span>Zero Monolithic Bloat</span>
+                      <span>Creative &amp; Practical Thinking</span>
                     </span>
                     <span className={styles.trustItem}>
                       <span className={styles.checkCircle}>
                         <Check size={11} strokeWidth={3} aria-hidden="true" />
                       </span>
-                      <span>WCAG 2.1 AA Standards</span>
+                      <span>Connected Approach</span>
                     </span>
                   </div>
                 </div>
 
                 <div className={styles.secondaryLinkRow}>
                   <Link href="/services" className={styles.btnText}>
-                    <span>Explore All Capabilities &rarr;</span>
+                    <span>Explore Our Services &rarr;</span>
                   </Link>
                 </div>
               </div>

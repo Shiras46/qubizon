@@ -298,6 +298,19 @@
   font-size: 11px;
 }
 
+.sloganTag {
+  margin-top: 1.25rem;
+  font-size: 0.8125rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+.sloganBrand {
+  color: #FFBE0B;
+  font-weight: 700;
+}
+
 /* Responsive */
 @media (max-width: 960px) {
   .ctaGrid {

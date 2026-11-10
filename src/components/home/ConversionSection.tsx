@@ -36,13 +36,13 @@ export function ConversionSection() {
 
               {/* Right: Architectural Consultation Card */}
               <div className={styles.contentColumn}>
-                <p className={styles.sectionBadge}>• LET&apos;S WORK TOGETHER /</p>
+                <p className={styles.sectionBadge}>• LET&apos;S BUILD TOGETHER /</p>
                 <h2 id="cta-heading" className={styles.headingHuge}>
-                  Let&apos;s work <span className="calligraphy">Together</span>.
+                  Let&apos;s Build Something That <span className="calligraphy">Moves Your Business Forward</span>.
                 </h2>
 
                 <p className={styles.lead}>
-                  Ready to transform your vision into market authority? Speak directly with our technical directors in Kozhikode and Thrissur. We review requirements and deliver a verifiable architectural roadmap within one business day.
+                  Looking for a better website, stronger online visibility, professional design, or smarter business tools? Qubizon Digital Solutions is ready to help.
                 </p>
 
                 <div className={styles.actionGroup}>
@@ -52,7 +52,7 @@ export function ConversionSection() {
                     className={styles.btnPrimary}
                     aria-haspopup="dialog"
                   >
-                    <span>Start a Project</span>
+                    <span>Contact Us Today</span>
                     <span className={styles.arrowCircle} aria-hidden="true">
                       <ArrowRight size={13} />
                     </span>
@@ -82,6 +82,11 @@ export function ConversionSection() {
                     <span>{SITE_CONFIG.email}</span>
                   </a>
                 </div>
+
+                {/* Slogan */}
+                <p className={styles.sloganTag}>
+                  <strong className={styles.sloganBrand}>Qubizon Digital Solutions</strong> — Digital marketing. Web development. Creative design. Smarter business solutions.
+                </p>
               </div>
             </div>
           </div>
