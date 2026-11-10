@@ -113,7 +113,7 @@
 
 .faqPlusOpen {
   transform: rotate(45deg);
-  color: #1C1C1B;
+  color: #FFBE0B;
 }
 
 .faqQuestion {
@@ -126,7 +126,11 @@
 }
 
 .faqTrigger:hover .faqQuestion {
-  color: #000000;
+  color: #00488E;
+}
+
+.faqTrigger:hover .faqPlusIcon {
+  color: #00488E;
 }
 
 .faqAnswer {

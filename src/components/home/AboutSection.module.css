@@ -45,19 +45,19 @@
   font-family: var(--font-primary), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 11.5px;
   font-weight: 700;
-  color: #DC2626;
+  color: #00488E;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   background: #FFFFFF;
   padding: 6px 14px;
   border-radius: 9999px;
-  border: 1px solid rgba(220, 38, 38, 0.22);
-  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.05);
+  border: 1px solid rgba(0, 72, 142, 0.22);
+  box-shadow: 0 2px 8px rgba(0, 72, 142, 0.05);
   width: fit-content;
 }
 
 .tagIcon {
-  color: #DC2626;
+  color: #00488E;
   flex-shrink: 0;
 }
 
@@ -127,8 +127,8 @@
   width: 8px;
   height: 8px;
   border-radius: 9999px;
-  background-color: #EF4444;
-  box-shadow: 0 0 10px rgba(239, 68, 68, 0.9);
+  background-color: #FFBE0B;
+  box-shadow: 0 0 10px rgba(255, 190, 11, 0.9);
   flex-shrink: 0;
 }
 
@@ -222,30 +222,32 @@
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  background-color: #111111;
-  color: #FFFFFF !important;
+  background-color: #FFBE0B;
+  color: #002D5A !important;
   font-family: var(--font-primary), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 13.5px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.01em;
   text-transform: none;
   padding: 12px 24px;
   border-radius: 9999px;
-  border: 1px solid #111111;
+  border: 1px solid #FFBE0B;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 14px rgba(255, 190, 11, 0.25);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   flex-shrink: 0;
 }
 
 .btnPrimary:hover {
-  background-color: #000000;
+  background-color: #E6A800;
+  border-color: #E6A800;
+  color: #001F3F !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 22px rgba(255, 190, 11, 0.35);
 }
 
-/* Trust Indicators with Crimson Circular Outline Checks (Reference Model Style) */
+/* Trust Indicators with Primary Blue Outline Checks */
 .trustIndicators {
   display: inline-flex;
   align-items: center;
@@ -268,9 +270,9 @@
   width: 18px;
   height: 18px;
   border-radius: 9999px;
-  border: 1.5px solid #EF4444;
-  background: rgba(239, 68, 68, 0.06);
-  color: #EF4444;
+  border: 1.5px solid #00488E;
+  background: rgba(0, 72, 142, 0.08);
+  color: #00488E;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -284,7 +286,7 @@
 }
 
 .btnText {
-  color: #6B7280;
+  color: #00488E;
   font-family: var(--font-primary), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 12.5px;
   font-weight: 600;
@@ -295,7 +297,7 @@
 }
 
 .btnText:hover {
-  color: #111111;
+  color: #00366B;
 }
 
 /* =========================================================================
@@ -333,13 +335,13 @@
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: #1C1C1B;
-  color: #F9EFE7;
+  background: #00488E;
+  color: #FFBE0B;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(28, 28, 27, 0.12);
+  box-shadow: 0 4px 14px rgba(0, 72, 142, 0.22);
   transition: transform 0.2s ease;
 }
 
@@ -356,7 +358,7 @@
   font-size: clamp(1.85rem, 2.4vw, 2.6rem);
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: var(--clr-foreground, #1c1c1b);
+  color: #00488E;
   line-height: 1;
   margin-bottom: 0.35rem;
 }

@@ -24,23 +24,24 @@
   --clr-border: rgba(28, 28, 27, 0.08);
   --clr-border-subtle: rgba(28, 28, 27, 0.05);
 
-  /* Brand Signature Accents - Davide Carusio Monochromatic Obsidian */
-  --brand-blue: #1C1C1B;
-  --brand-blue-hover: #000000;
-  --brand-blue-subtle: rgba(28, 28, 27, 0.05);
-  --brand-blue-glow: rgba(28, 28, 27, 0.12);
+  /* Brand Signature Accents - Qubizon Core Color System */
+  --brand-blue: #00488E;              /* Primary Blue: Navigation, footer backgrounds, links, service icons */
+  --brand-blue-hover: #00366B;
+  --brand-blue-subtle: rgba(0, 72, 142, 0.08);
+  --brand-blue-glow: rgba(0, 72, 142, 0.2);
 
-  --brand-yellow: #C89D52;            /* Refined Champagne Gold */
-  --brand-yellow-hover: #B88D42;
-  --brand-gold: #C89D52;              /* Luxury Champagne Accent */
-  --brand-gold-subtle: rgba(200, 157, 82, 0.1);
+  --brand-yellow: #FFBE0B;            /* Yellow: Primary CTA, important numbers, active indicators, highlights */
+  --brand-yellow-hover: #E6A800;
+  --brand-yellow-subtle: rgba(255, 190, 11, 0.15);
+  --brand-gold: #FFBE0B;              /* Luxury Yellow Accent */
+  --brand-gold-subtle: rgba(255, 190, 11, 0.15);
 
   --clr-accent-emerald: #22C55E;      /* Live Status Dot */
 
   /* Semantic UI Tokens */
   --color-primary: var(--clr-foreground);
   --color-accent: var(--brand-blue);
-  --color-accent-gold: var(--brand-gold);
+  --color-accent-gold: var(--brand-yellow);
   --color-accent-text: #FFFFFF;
 
   --color-bg-base: var(--clr-background);

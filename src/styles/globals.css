@@ -50,7 +50,7 @@ body {
 }
 
 .section-stone {
-  background-color: var(--clr-background, #F9EFE7) !important;
+  background-color: var(--clr-background, #FFFFFF) !important;
   color: var(--clr-foreground, #1C1C1B) !important;
 }
 
@@ -229,13 +229,13 @@ body {
 
 /* Custom Studio Selection */
 ::selection {
-  background-color: #1C1C1B;
-  color: #F9EFE7;
+  background-color: #00488E;
+  color: #FFFFFF;
 }
 
 /* Accessible Keyboard Focus Indicators */
 :focus-visible {
-  outline: 2px solid var(--brand-blue);
+  outline: 2px solid var(--brand-blue, #00488E);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }

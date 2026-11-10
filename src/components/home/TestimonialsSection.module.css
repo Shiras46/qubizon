@@ -29,7 +29,7 @@
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #60a5fa;
+  color: #00488E;
   margin-bottom: 0.85rem;
   display: block;
 }
@@ -82,13 +82,13 @@
   box-shadow: 0 24px 60px -15px rgba(28, 28, 27, 0.1);
 }
 
-/* 5-Star Row (Reference Pastel Steel Blue Stars) */
+/* 5-Star Row (Yellow Highlights) */
 .starsRow {
   display: flex;
   align-items: center;
   gap: 6px;
   margin-bottom: 1.75rem;
-  color: #93c5fd;
+  color: #FFBE0B;
 }
 
 .starIcon {
@@ -116,8 +116,8 @@
   width: 48px;
   height: 48px;
   border-radius: 9999px;
-  background: #0E0F12;
-  color: #F9EFE7;
+  background: #00488E;
+  color: #FFBE0B;
   font-weight: 800;
   font-size: 1.1rem;
   font-family: var(--font-family-mono, monospace);
@@ -125,7 +125,7 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  box-shadow: 0 4px 12px rgba(28, 28, 27, 0.15);
+  box-shadow: 0 4px 14px rgba(0, 72, 142, 0.25);
 }
 
 .authorInfo {
@@ -173,6 +173,7 @@
 
 .nextBtn:hover {
   background-color: #000000;
+  color: #FFBE0B;
 }
 
 .nextBtn:active {
@@ -187,12 +188,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
 }
 
 .nextBtn:hover .btnIconWrap {
   transform: translate(2px, 2px);
-  background: rgba(249, 239, 231, 0.3);
+  background: rgba(255, 190, 11, 0.25);
+  color: #FFBE0B;
 }
 
 /* Responsive */
