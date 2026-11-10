@@ -253,6 +253,124 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  .reveal-init {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* =========================================================================
+   PRO-LEVEL MOTION & SCROLL REVEAL ARCHITECTURE
+   60fps/120fps GPU compositor accelerated, cubic-bezier(0.16, 1, 0.3, 1)
+   ========================================================================= */
+
+/* 1. Progressive Scroll Reveal */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-init.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 2. Luxury Shimmer Sweep Across Primary Buttons */
+.btn-primary,
+button[class*="btnPrimary"],
+a[class*="btnPrimary"],
+button[class*="primaryBtn"],
+a[class*="primaryBtn"],
+button[class*="ctaBtn"],
+a[class*="ctaBtn"] {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.btn-primary::after,
+button[class*="btnPrimary"]::after,
+a[class*="btnPrimary"]::after,
+button[class*="primaryBtn"]::after,
+a[class*="primaryBtn"]::after,
+button[class*="ctaBtn"]::after,
+a[class*="ctaBtn"]::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  transform: rotate(25deg);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.btn-primary:hover::after,
+button[class*="btnPrimary"]:hover::after,
+a[class*="btnPrimary"]:hover::after,
+button[class*="primaryBtn"]:hover::after,
+a[class*="primaryBtn"]:hover::after,
+button[class*="ctaBtn"]:hover::after,
+a[class*="ctaBtn"]:hover::after {
+  opacity: 1;
+  animation: buttonShimmer 1.1s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+@keyframes buttonShimmer {
+  0% {
+    left: -60%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+
+/* 3. Tactile Card Micro-Interactions & Elevate Effect */
+[class*="statCard"],
+[class*="cubeCard"],
+[class*="outcomeCard"],
+[class*="expectationCard"],
+[class*="workCard"],
+[class*="benchmarkCard"],
+[class*="testimonialCard"] {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  will-change: transform;
+}
+
+/* 4. Active Breathing Indicator Keyframes */
+@keyframes breathingPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 6px rgba(255, 190, 11, 0.7);
+  }
+  50% {
+    transform: scale(1.18);
+    box-shadow: 0 0 14px rgba(255, 190, 11, 0.95);
+  }
+}
+
+[class*="pulseDot"],
+[class*="emeraldPulse"],
+[class*="liveDot"],
+[class*="statusDot"] {
+  animation: breathingPulse 2.8s ease-in-out infinite !important;
+  will-change: transform, box-shadow;
 }
 
 /* Common Layout Utilities */

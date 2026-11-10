@@ -134,6 +134,21 @@
   background: linear-gradient(90deg, transparent, rgba(0, 112, 218, 0.6), transparent);
 }
 
+.caseFadeIn {
+  animation: caseFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes caseFadeIn {
+  from {
+    opacity: 0.35;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Left Column */
 .leftCol {
   display: flex;

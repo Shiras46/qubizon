@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Star, ArrowDownRight } from "lucide-react";
 import styles from "./TestimonialsSection.module.css";
 
@@ -41,15 +41,52 @@ const TESTIMONIALS: Testimonial[] = [
 
 export function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
-  const nextTestimonial = () => {
+  const nextTestimonial = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % TESTIMONIALS.length);
+  }, []);
+
+  const prevTestimonial = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
+  }, []);
+
+  // Pro-level auto-play carousel with pause-on-hover
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      nextTestimonial();
+    }, 6500);
+
+    return () => clearInterval(interval);
+  }, [isPaused, nextTestimonial]);
+
+  // Keyboard navigation for accessibility
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === "ArrowRight") {
+      nextTestimonial();
+    } else if (e.key === "ArrowLeft") {
+      prevTestimonial();
+    }
   };
 
   const active = TESTIMONIALS[currentIndex];
 
   return (
-    <section className={styles.testimonialsSection} id="testimonials" aria-labelledby="testimonials-heading">
+    <section
+      className={styles.testimonialsSection}
+      id="testimonials"
+      aria-labelledby="testimonials-heading"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      onFocus={() => setIsPaused(true)}
+      onBlur={() => setIsPaused(false)}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      aria-roledescription="carousel"
+      aria-label="Client Testimonials Carousel"
+    >
       <div className={styles.container}>
         {/* Section Header (Matching Reference Model) */}
         <div className={styles.headerBlock}>
@@ -64,27 +101,35 @@ export function TestimonialsSection() {
 
         {/* Testimonial Card Frame (Reference Model Architecture) */}
         <div className={styles.cardContainer}>
-          <article className={styles.testimonialCard}>
-            {/* 5-Star Rating (Reference Pastel Steel Blue Stars) */}
-            <div className={styles.starsRow} aria-label="5 out of 5 stars">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={18} className={styles.starIcon} fill="currentColor" aria-hidden="true" />
-              ))}
-            </div>
-
-            {/* Testimonial Quote */}
-            <blockquote className={styles.quoteText}>
-              &ldquo;{active.quote}&rdquo;
-            </blockquote>
-
-            {/* Author Attribution */}
-            <div className={styles.authorRow}>
-              <div className={styles.avatarCircle} aria-hidden="true">
-                <span>{active.initial}</span>
+          <article className={styles.testimonialCard} aria-live="polite">
+            <div key={active.id} className={styles.testimonialContent}>
+              {/* 5-Star Rating (Reference Pastel Steel Blue Stars) */}
+              <div className={styles.starsRow} aria-label="5 out of 5 stars">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    size={18}
+                    className={styles.starIcon}
+                    fill="currentColor"
+                    aria-hidden="true"
+                  />
+                ))}
               </div>
-              <div className={styles.authorInfo}>
-                <h3 className={styles.authorName}>{active.author}</h3>
-                <p className={styles.authorRole}>{active.role}</p>
+
+              {/* Testimonial Quote */}
+              <blockquote className={styles.quoteText}>
+                &ldquo;{active.quote}&rdquo;
+              </blockquote>
+
+              {/* Author Attribution */}
+              <div className={styles.authorRow}>
+                <div className={styles.avatarCircle} aria-hidden="true">
+                  <span>{active.initial}</span>
+                </div>
+                <div className={styles.authorInfo}>
+                  <h3 className={styles.authorName}>{active.author}</h3>
+                  <p className={styles.authorRole}>{active.role}</p>
+                </div>
               </div>
             </div>
 
@@ -101,9 +146,29 @@ export function TestimonialsSection() {
               </span>
             </button>
           </article>
+
+          {/* Interactive Carousel Pagination Dots */}
+          <div
+            className={styles.carouselControls}
+            role="tablist"
+            aria-label="Testimonial Navigation"
+          >
+            {TESTIMONIALS.map((t, idx) => (
+              <button
+                key={t.id}
+                type="button"
+                role="tab"
+                aria-selected={idx === currentIndex}
+                aria-label={`Jump to testimonial ${idx + 1} by ${t.author}`}
+                className={`${styles.carouselDot} ${
+                  idx === currentIndex ? styles.carouselDotActive : ""
+                }`}
+                onClick={() => setCurrentIndex(idx)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 }
-

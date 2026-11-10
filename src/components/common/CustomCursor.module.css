@@ -1,0 +1,120 @@
+/* =========================================================================
+   PRO-LEVEL CUSTOM CURSOR & AMBIENT INTERACTIVE FOLLOWER
+   Tailored to Qubizon Brand Palette (#00488E Primary Blue + #FFBE0B Yellow)
+   Zero input latency, GPU compositor accelerated, 100% accessible
+   ========================================================================= */
+
+.cursorContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 999999;
+  user-select: none;
+}
+
+/* 1. Precise Center Tracking Dot */
+.cursorDot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  margin-top: -3.5px;
+  margin-left: -3.5px;
+  border-radius: 9999px;
+  background-color: #00488E;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform;
+  transition: opacity 0.2s ease, width 0.2s ease, height 0.2s ease, margin 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 0 4px rgba(0, 72, 142, 0.4);
+}
+
+.cursorDotHovered {
+  width: 5px;
+  height: 5px;
+  margin-top: -2.5px;
+  margin-left: -2.5px;
+  background-color: #FFBE0B;
+  box-shadow: 0 0 8px rgba(255, 190, 11, 0.8);
+}
+
+.cursorDotClicking {
+  transform: scale(0.7) !important;
+}
+
+/* 2. Fluid Lag-Free Trailing Follower Aura Ring */
+.cursorRing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
+  margin-left: -16px;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(0, 72, 142, 0.45);
+  background: rgba(0, 72, 142, 0.04);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform;
+  transition: opacity 0.25s ease,
+              border-color 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              width 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              height 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              margin 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Interactive Hover States */
+.cursorRingHovered {
+  width: 56px;
+  height: 56px;
+  margin-top: -28px;
+  margin-left: -28px;
+  border-color: rgba(255, 190, 11, 0.85);
+  background: rgba(255, 190, 11, 0.1);
+  box-shadow: 0 0 24px rgba(255, 190, 11, 0.28);
+}
+
+.cursorRingCard {
+  width: 46px;
+  height: 46px;
+  margin-top: -23px;
+  margin-left: -23px;
+  border-color: rgba(0, 72, 142, 0.55);
+  background: rgba(0, 72, 142, 0.06);
+  box-shadow: 0 0 16px rgba(0, 72, 142, 0.18);
+}
+
+.cursorRingClicking {
+  width: 24px;
+  height: 24px;
+  margin-top: -12px;
+  margin-left: -12px;
+  border-color: #00488E;
+  background: rgba(0, 72, 142, 0.15);
+}
+
+.cursorVisible {
+  opacity: 1;
+}
+
+/* Accessibility & Device Fallbacks */
+@media (pointer: coarse) {
+  .cursorContainer {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursorContainer {
+    display: none !important;
+  }
+}

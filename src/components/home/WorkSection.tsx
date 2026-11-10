@@ -107,7 +107,7 @@ export function WorkSection() {
           className={styles.showcaseCard}
         >
           {/* Left Column: Index, Title, Summary, Action */}
-          <div className={styles.leftCol}>
+          <div key={`left-${activeStudy.id}`} className={`${styles.leftCol} ${styles.caseFadeIn}`}>
             <div className={styles.projectNumberBadge}>
               <span className={styles.dot} aria-hidden="true" />
               <span>{activeStudy.number}</span>
@@ -130,7 +130,7 @@ export function WorkSection() {
           </div>
 
           {/* Center Column: Device Mockup on Pedestal with Ambient Lighting */}
-          <div className={styles.centerCol} aria-hidden="true">
+          <div key={`center-${activeStudy.id}`} className={`${styles.centerCol} ${styles.caseFadeIn}`} aria-hidden="true">
             <div className={styles.pedestalGlow} />
             <div className={styles.deviceFrame}>
               <div className={styles.deviceSpeaker} />
@@ -156,7 +156,7 @@ export function WorkSection() {
           </div>
 
           {/* Right Column: Services Provided & Metrics */}
-          <div className={styles.rightCol}>
+          <div key={`right-${activeStudy.id}`} className={`${styles.rightCol} ${styles.caseFadeIn}`}>
             <div className={styles.servicesBlock}>
               <h4 className={styles.blockHeading}>Services Provided</h4>
               <div className={styles.pillGroup} aria-label="Key Technologies & Targets">

@@ -3,6 +3,8 @@ import { Outfit, Playfair_Display } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { MobileQuickActions } from "@/components/layout/MobileQuickActions";
+import { CustomCursor } from "@/components/common/CustomCursor";
+import { ScrollObserver } from "@/components/common/ScrollObserver";
 import { SITE_CONFIG } from "@/lib/constants";
 import { constructMetadata } from "@/lib/metadata";
 import { AnalyticsScripts } from "@/components/analytics/AnalyticsScripts";
@@ -116,6 +118,8 @@ export default function RootLayout({
         <AnalyticsScripts />
       </head>
       <body className={outfit.className}>
+        <CustomCursor />
+        <ScrollObserver />
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>

@@ -1,6 +1,7 @@
 /* =========================================================================
    TESTIMONIALS SECTION (Reference Image 1 Model)
    Top Tag + Italic Accent Title + Subtitle + Soft Cream Card Frame + Inset Button
+   Fluid Carousel Animation with Auto-Cycle and Interactive Indicators
    ========================================================================= */
 
 .testimonialsSection {
@@ -80,6 +81,22 @@
 .testimonialCard:hover {
   transform: translateY(-3px);
   box-shadow: 0 24px 60px -15px rgba(28, 28, 27, 0.1);
+}
+
+/* Animated Carousel Slide Transition */
+.testimonialContent {
+  animation: testimonialFadeSlide 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes testimonialFadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(10px) scale(0.99);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* 5-Star Row (Yellow Highlights) */
@@ -201,6 +218,37 @@
   color: #FFFFFF;
 }
 
+/* Carousel Pagination Dots */
+.carouselControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1.75rem;
+}
+
+.carouselDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background-color: rgba(0, 72, 142, 0.2);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.carouselDot:hover {
+  background-color: rgba(0, 72, 142, 0.5);
+  transform: scale(1.2);
+}
+
+.carouselDotActive {
+  width: 28px;
+  background-color: #00488E;
+  box-shadow: 0 2px 8px rgba(0, 72, 142, 0.35);
+}
+
 /* Responsive */
 @media (max-width: 640px) {
   .testimonialsSection {
@@ -224,4 +272,3 @@
     font-size: 10px;
   }
 }
-
