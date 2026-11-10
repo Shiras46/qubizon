@@ -255,107 +255,7 @@
 }
 
 /* =========================================================================
-   4. Global Overview & Technical Architecture Grid (12 Cards)
-   ========================================================================= */
-.globalOverview {
-  padding: 2.5rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.globalOverviewTitle {
-  font-size: 0.95rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  color: #FFFFFF;
-  text-transform: uppercase;
-  margin-bottom: 0.85rem;
-  font-family: var(--font-family-mono, monospace);
-  line-height: 1.4;
-}
-
-.globalOverviewText {
-  font-size: 0.85rem;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.78);
-  margin-bottom: 1.75rem;
-  max-width: 1240px;
-}
-
-.globalOverviewGrid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
-
-.globalOverviewCard {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 1.15rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-  transition: all 0.25s ease;
-}
-
-.globalOverviewCard:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
-}
-
-.globalOverviewCardTitle {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  line-height: 1.35;
-}
-
-.globalOverviewCardDesc {
-  font-size: 0.8rem;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.seoInlineLink {
-  color: #FFFFFF;
-  font-weight: 600;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  transition: opacity 0.2s ease;
-}
-
-.seoInlineLink:hover {
-  opacity: 0.8;
-}
-
-/* =========================================================================
-   5. Engineering Standards & Assurance Strip
-   ========================================================================= */
-.assuranceStrip {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  padding: 1.75rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.assuranceItem {
-  font-size: 0.8rem;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.78);
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.assuranceItem strong {
-  color: #FFFFFF;
-  font-weight: 700;
-}
-
-/* =========================================================================
-   6. Footer Bottom Bar
+   4. Footer Bottom Bar
    ========================================================================= */
 .footerBottom {
   padding-top: 1.75rem;
@@ -398,12 +298,6 @@
 /* =========================================================================
    Responsive Breakpoints
    ========================================================================= */
-@media (max-width: 1200px) {
-  .globalOverviewGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media (max-width: 960px) {
   .brandRow {
     grid-template-columns: 1fr;
@@ -414,14 +308,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
-
-  .globalOverviewGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .assuranceStrip {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 @media (max-width: 640px) {
@@ -431,14 +317,6 @@
   }
 
   .contactCards {
-    grid-template-columns: 1fr;
-  }
-
-  .globalOverviewGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .assuranceStrip {
     grid-template-columns: 1fr;
   }
 
