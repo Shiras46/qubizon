@@ -5,7 +5,8 @@
      ========================================================================= */
 
   /* Primary Editorial Stone & Obsidian Canvas */
-  --clr-background: #F9EFE7;          /* Davide Carusio Signature Warm Stone */
+  --clr-background: #FFFFFF;          /* Pure Crisp White Canvas */
+  --clr-offwhite: #F8F8F6;            /* Refined Luxury Off-White */
   --clr-foreground: #1C1C1B;          /* Davide Carusio Deep Obsidian Charcoal */
   --clr-dark: #1C1C1B;                /* Inverted Dark Section Background */
   --clr-dark-surface: #252524;        /* Dark Card Surface */
@@ -14,7 +15,7 @@
   --clr-dark-border-hover: rgba(249, 239, 231, 0.2);
 
   --clr-stone-surface: #FFFFFF;       /* Crisp White Floating Card */
-  --clr-stone-subtle: #F3E8DF;        /* Soft Tinted Surface */
+  --clr-stone-subtle: #F8F8F6;        /* Clean Off-White Tinted Surface */
   --clr-stone-border: rgba(28, 28, 27, 0.08); /* Hairline on Stone */
   --clr-stone-border-hover: rgba(28, 28, 27, 0.18);
 

@@ -6,7 +6,7 @@
 
 .servicesSection {
   padding: clamp(5.5rem, 9vh, 8.5rem) clamp(1.5rem, 5vw, 4.5rem);
-  background-color: var(--clr-background, #F9EFE7);
+  background-color: #FFFFFF;
   position: relative;
   overflow: hidden;
 }

@@ -6,7 +6,7 @@
 .ctaSection {
   padding-top: clamp(4.5rem, 8vh, 7rem);
   padding-bottom: clamp(4.5rem, 8vh, 7rem);
-  background-color: transparent;
+  background-color: #FFFFFF;
   position: relative;
 }
 

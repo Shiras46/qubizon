@@ -5,7 +5,7 @@
 
 .faqSection {
   padding: clamp(5.5rem, 9vh, 8.5rem) clamp(1.5rem, 5vw, 4.5rem);
-  background-color: #FFFFFF;
+  background-color: #F8F8F6;
   position: relative;
   border-top: 1px solid rgba(28, 28, 27, 0.08);
   border-bottom: 1px solid rgba(28, 28, 27, 0.08);

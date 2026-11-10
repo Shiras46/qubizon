@@ -16,7 +16,7 @@ html {
 
 body {
   font-family: var(--font-primary);
-  background-color: var(--clr-background, #F9EFE7);
+  background-color: var(--clr-background, #FFFFFF);
   color: var(--clr-foreground, #1C1C1B);
   line-height: 1.65;
   min-height: 100vh;
@@ -24,8 +24,8 @@ body {
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
-  /* Davide Carusio Pure Editorial Stone - Clean, uncluttered, luxury finish */
-  background-image: radial-gradient(rgba(28, 28, 27, 0.04) 1px, transparent 1px);
+  /* Crisp Architectural Canvas Pattern */
+  background-image: radial-gradient(rgba(28, 28, 27, 0.035) 1px, transparent 1px);
   background-size: 32px 32px;
   background-position: center top;
 }

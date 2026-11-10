@@ -5,9 +5,11 @@
 .processSection {
   padding-top: clamp(5rem, 8vw, 7.5rem);
   padding-bottom: clamp(5rem, 8vw, 7.5rem);
-  background-color: transparent;
+  background-color: #F8F8F6;
   color: var(--clr-foreground, #1c1c1b);
   position: relative;
+  border-top: 1px solid rgba(28, 28, 27, 0.08);
+  border-bottom: 1px solid rgba(28, 28, 27, 0.08);
 }
 
 .container {
