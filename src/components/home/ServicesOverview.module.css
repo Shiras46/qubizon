@@ -195,7 +195,7 @@
 
 .serviceCard:hover .iconCircleBadge {
   background: #00488E;
-  color: #FFBE0B;
+  color: #FFFFFF;
   transform: scale(1.08);
 }
 
@@ -258,7 +258,7 @@
 
 .serviceCard:hover .btnExplore {
   background: #00366B;
-  color: #FFBE0B;
+  color: #FFFFFF;
   transform: translateX(3px);
   box-shadow: 0 8px 24px rgba(0, 72, 142, 0.35);
 }

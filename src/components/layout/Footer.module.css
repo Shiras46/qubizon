@@ -1,5 +1,5 @@
 /* =========================================================================
-   PRIMARY BLUE EDITORIAL FOOTER (#00488E Canvas + #FFBE0B Highlights)
+   PRIMARY BLUE EDITORIAL FOOTER (#00488E Canvas + #FFFFFF Accents)
    ========================================================================= */
 
 .footer {
@@ -100,20 +100,20 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #002D5A;
-  background-color: #FFBE0B;
+  color: #00488E;
+  background-color: #FFFFFF;
   text-decoration: none;
   width: fit-content;
   padding: 0.65rem 1.4rem;
   border-radius: 9999px;
-  border: 1px solid #FFBE0B;
+  border: 1px solid #FFFFFF;
   transition: all 0.25s ease;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 }
 
 .consultationAction:hover {
-  background-color: #FFCF33;
-  color: #001F3F;
+  background-color: #F0F4F8;
+  color: #00366B;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
@@ -160,7 +160,8 @@
 }
 
 .navItem a:hover {
-  color: #FFBE0B;
+  color: #FFFFFF;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
   transform: translateX(2px);
 }
 
@@ -193,7 +194,7 @@
 }
 
 .legalLinks a:hover {
-  color: #FFBE0B;
+  color: #FFFFFF;
 }
 
 @media (max-width: 960px) {

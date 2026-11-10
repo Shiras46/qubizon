@@ -83,7 +83,8 @@
 }
 
 .processStep:hover .stepNumber {
-  color: #FFBE0B;
+  color: #00366B;
+  transform: translateX(2px);
 }
 
 .stepTitle {

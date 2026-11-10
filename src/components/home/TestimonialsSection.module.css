@@ -117,7 +117,7 @@
   height: 48px;
   border-radius: 9999px;
   background: #00488E;
-  color: #FFBE0B;
+  color: #FFFFFF;
   font-weight: 800;
   font-size: 1.1rem;
   font-family: var(--font-family-mono, monospace);
@@ -173,7 +173,7 @@
 
 .nextBtn:hover {
   background-color: #000000;
-  color: #FFBE0B;
+  color: #FFFFFF;
 }
 
 .nextBtn:active {
@@ -193,8 +193,8 @@
 
 .nextBtn:hover .btnIconWrap {
   transform: translate(2px, 2px);
-  background: rgba(255, 190, 11, 0.25);
-  color: #FFBE0B;
+  background: rgba(255, 255, 255, 0.3);
+  color: #FFFFFF;
 }
 
 /* Responsive */
