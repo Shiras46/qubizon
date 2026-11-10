@@ -240,12 +240,24 @@
   flex-shrink: 0;
 }
 
+.btnPrimary span,
+.btnPrimary svg {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
 .btnPrimary:hover {
   background-color: #E6A800;
   border-color: #E6A800;
   color: #FFFFFF !important;
   transform: translateY(-2px);
   box-shadow: 0 8px 22px rgba(255, 190, 11, 0.35);
+}
+
+.btnPrimary:hover span,
+.btnPrimary:hover svg {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
 }
 
 /* Trust Indicators with Primary Blue Outline Checks */

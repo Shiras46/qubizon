@@ -269,6 +269,19 @@
   box-shadow: 0 6px 18px rgba(255, 190, 11, 0.35);
 }
 
+.ctaButton span,
+.ctaButton svg,
+.ctaArrowCircle svg {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+.ctaButton:hover span,
+.ctaButton:hover svg {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
 .ctaArrowCircle {
   display: inline-flex;
   align-items: center;

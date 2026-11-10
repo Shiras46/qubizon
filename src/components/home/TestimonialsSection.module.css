@@ -117,7 +117,7 @@
   height: 48px;
   border-radius: 9999px;
   background: #00488E;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   font-weight: 800;
   font-size: 1.1rem;
   font-family: var(--font-family-mono, monospace);
@@ -126,6 +126,10 @@
   justify-content: center;
   flex-shrink: 0;
   box-shadow: 0 4px 14px rgba(0, 72, 142, 0.25);
+}
+
+.avatarCircle span {
+  color: #FFFFFF !important;
 }
 
 .authorInfo {
