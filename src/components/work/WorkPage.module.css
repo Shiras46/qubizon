@@ -245,12 +245,12 @@
 }
 
 .cardTitle {
-  font-size: clamp(1.75rem, 1.4rem + 1vw, 2.35rem);
+  font-size: var(--font-size-h2, clamp(2.15rem, 1.75rem + 2vw, 3.052rem));
   font-weight: 800;
   color: var(--clr-foreground, #1c1c1b);
-  line-height: 1.15;
-  letter-spacing: -0.035em;
-  margin-bottom: var(--space-6);
+  line-height: var(--line-height-h2, 1.1);
+  letter-spacing: var(--letter-spacing-h2, -0.018em);
+  margin-bottom: var(--space-24px, 1.5rem);
 }
 
 .cardSectionsGrid {
@@ -281,9 +281,10 @@
 }
 
 .blockText {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-p, 1rem);
   color: var(--clr-muted, #475569);
-  line-height: 1.65;
+  line-height: var(--line-height-p, 1.5);
+  letter-spacing: var(--letter-spacing-p, 0);
 }
 
 /* Strategic Decisions & Demonstrations Callout */
@@ -291,22 +292,24 @@
   background: #fdfaf7;
   border: 1px solid rgba(28, 28, 27, 0.08);
   border-radius: 14px;
-  padding: var(--space-6);
-  margin-bottom: var(--space-6);
+  padding: var(--space-24px, 1.5rem);
+  margin-bottom: var(--space-24px, 1.5rem);
 }
 
 .demonstrationTitle {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-h6, 1.25rem);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--letter-spacing-h6, -0.005em);
+  line-height: var(--line-height-h6, 1.4);
   color: var(--clr-foreground, #1c1c1b);
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-8px, 0.5rem);
 }
 
 .demonstrationText {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-p, 1rem);
   color: var(--clr-muted, #475569);
-  line-height: 1.65;
+  line-height: var(--line-height-p, 1.5);
+  letter-spacing: var(--letter-spacing-p, 0);
 }
 
 /* Benchmarks Pill List */

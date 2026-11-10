@@ -694,18 +694,19 @@
 }
 
 .darkTitle {
-  font-size: clamp(2rem, 1.6rem + 1.8vw, 3.25rem);
+  font-size: var(--font-size-h1, clamp(2.65rem, 2.1rem + 3vw, 3.815rem));
   font-weight: 800;
   color: #ffffff;
-  letter-spacing: -0.04em;
-  margin-bottom: var(--space-4);
-  line-height: 1.1;
+  letter-spacing: var(--letter-spacing-h1, -0.02em);
+  margin-bottom: var(--space-16px, 1rem);
+  line-height: var(--line-height-h1, 1.0);
 }
 
 .darkLead {
-  font-size: var(--font-size-base);
+  font-size: var(--font-size-p, 1rem);
   color: #cbd5e1;
-  line-height: 1.65;
+  line-height: var(--line-height-p, 1.5);
+  letter-spacing: var(--letter-spacing-p, 0);
 }
 
 .expectationsGrid {
@@ -739,17 +740,19 @@
 }
 
 .expectationCard h3 {
-  font-size: 1.15rem;
-  font-weight: 800;
+  font-size: var(--font-size-h5, 1.5625rem);
+  font-weight: 700;
   color: #ffffff;
-  margin-bottom: var(--space-3);
-  letter-spacing: -0.025em;
+  margin-bottom: var(--space-8px, 0.5rem);
+  line-height: var(--line-height-h5, 1.35);
+  letter-spacing: var(--letter-spacing-h5, -0.008em);
 }
 
 .expectationCard p {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-p, 1rem);
   color: #cbd5e1;
-  line-height: 1.65;
+  line-height: var(--line-height-p, 1.5);
+  letter-spacing: var(--letter-spacing-p, 0);
 }
 
 /* Values Grid */

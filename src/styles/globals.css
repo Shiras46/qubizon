@@ -16,15 +16,17 @@ html {
 
 body {
   font-family: var(--font-primary);
+  font-size: var(--font-size-p, 1rem); /* Base 16px */
+  line-height: var(--line-height-p, 1.5); /* 150% Line-Height */
+  letter-spacing: var(--letter-spacing-p, 0); /* Default Tracking */
   background-color: var(--clr-background, #FFFFFF);
   color: var(--clr-foreground, #1C1C1B);
-  line-height: 1.65;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow-x: hidden;
-  /* Crisp Architectural Canvas Pattern */
+  /* Crisp Architectural Canvas Pattern (32px = 4x 8pt grid) */
   background-image: radial-gradient(rgba(28, 28, 27, 0.035) 1px, transparent 1px);
   background-size: 32px 32px;
   background-position: center top;
@@ -55,8 +57,81 @@ body {
 }
 
 /* =========================================================================
-   CODECAVE TYPOGRAPHY SYSTEM
+/* =========================================================================
+   CORE TYPOGRAPHY SYSTEM: MAJOR THIRD (1.25), LINE-HEIGHTS, TRACKING & 8PT GRID
+   Rule 1: Base <p> = 16px, Line-Height = 150% (1.5), Tracking = default (0)
+   Rule 2: Major Third (1.25) -> p=16px, h6=20px, h5=25px, h4=31.25px,
+           h3=39.06px, h2=48.83px, h1=61.04px, display=76.29px
+   Rule 3: Line-Heights -> p: 150%, h4: 130%, h2: 110%, h1: 100%
+   Rule 4: Tracking -> p: default, h6: -0.5%, h3: -1.5%, h1: -2%
    ========================================================================= */
+p {
+  font-size: var(--font-size-p, 1rem);
+  line-height: var(--line-height-p, 1.5);
+  letter-spacing: var(--letter-spacing-p, 0);
+  margin-bottom: var(--space-16px, 1rem);
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1, 1.0);
+  letter-spacing: var(--letter-spacing-h1, -0.02em);
+  font-weight: 800;
+  color: var(--clr-foreground, #1C1C1B);
+  margin-bottom: var(--space-24px, 1.5rem);
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2, 1.1);
+  letter-spacing: var(--letter-spacing-h2, -0.018em);
+  font-weight: 800;
+  color: var(--clr-foreground, #1C1C1B);
+  margin-bottom: var(--space-16px, 1rem);
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3, 1.2);
+  letter-spacing: var(--letter-spacing-h3, -0.015em);
+  font-weight: 700;
+  color: var(--clr-foreground, #1C1C1B);
+  margin-bottom: var(--space-16px, 1rem);
+}
+
+h4 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4, 1.3);
+  letter-spacing: var(--letter-spacing-h4, -0.01em);
+  font-weight: 700;
+  color: var(--clr-foreground, #1C1C1B);
+  margin-bottom: var(--space-8px, 0.5rem);
+}
+
+h5 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5, 1.35);
+  letter-spacing: var(--letter-spacing-h5, -0.008em);
+  font-weight: 700;
+  color: var(--clr-foreground, #1C1C1B);
+  margin-bottom: var(--space-8px, 0.5rem);
+}
+
+h6 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h6);
+  line-height: var(--line-height-h6, 1.4);
+  letter-spacing: var(--letter-spacing-h6, -0.005em);
+  font-weight: 700;
+  color: var(--clr-foreground, #1C1C1B);
+  margin-bottom: var(--space-8px, 0.5rem);
+}
+
 .calligraphy {
   font-family: var(--font-serif);
   font-style: italic;
@@ -74,36 +149,37 @@ body {
 
 .heading-giant {
   font-family: var(--font-heading);
-  font-size: var(--text-giant);
-  line-height: 0.95;
+  font-size: var(--font-size-display);
+  line-height: var(--line-height-display, 1.0);
   font-weight: 800;
-  letter-spacing: -0.05em;
+  letter-spacing: var(--letter-spacing-display, -0.025em);
   color: var(--clr-foreground);
 }
 
 .heading-huge {
   font-family: var(--font-heading);
-  font-size: var(--text-huge);
-  line-height: 1.05;
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1, 1.0);
   font-weight: 800;
-  letter-spacing: -0.04em;
+  letter-spacing: var(--letter-spacing-h1, -0.02em);
   color: var(--clr-foreground);
 }
 
 .heading-large {
   font-family: var(--font-heading);
-  font-size: var(--text-3xl);
-  line-height: 1.1;
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2, 1.1);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--letter-spacing-h2, -0.018em);
   color: var(--clr-foreground);
 }
 
 .heading-medium {
   font-family: var(--font-heading);
-  font-size: var(--text-2xl);
-  line-height: 1.3;
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3, 1.2);
   font-weight: 600;
+  letter-spacing: var(--letter-spacing-h3, -0.015em);
   color: var(--clr-foreground);
 }
 
@@ -117,10 +193,12 @@ body {
 }
 
 .lead {
-  font-size: var(--text-lg);
+  font-size: var(--font-size-h6, 1.25rem);
   color: var(--clr-muted);
   max-width: 720px;
-  line-height: 1.6;
+  line-height: var(--line-height-p, 1.5);
+  letter-spacing: var(--letter-spacing-p, 0);
+  margin-bottom: var(--space-32px, 2rem);
 }
 
 /* =========================================================================

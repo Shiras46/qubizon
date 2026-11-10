@@ -277,20 +277,21 @@
 }
 
 .sectionTitle {
-  font-size: clamp(2rem, 3.2vw, 3.25rem);
+  font-size: var(--font-size-h2, clamp(2.15rem, 1.75rem + 2vw, 3.052rem));
   font-weight: 800;
   color: var(--clr-foreground, #1c1c1b);
-  letter-spacing: -0.04em;
-  line-height: 1.1;
-  margin-bottom: var(--space-4);
+  letter-spacing: var(--letter-spacing-h2, -0.018em);
+  line-height: var(--line-height-h2, 1.1);
+  margin-bottom: var(--space-16px, 1rem);
 }
 
 .sectionLead {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-h6, 1.25rem);
   color: var(--clr-muted, #475569);
-  line-height: 1.65;
+  line-height: var(--line-height-p, 1.5);
+  letter-spacing: var(--letter-spacing-p, 0);
   max-width: 860px;
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--space-48px, 3rem);
 }
 
 /* 3-Column Solutions Grid (Image 4 Inspiration) */

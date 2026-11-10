@@ -453,17 +453,19 @@
 }
 
 .outcomeTitle {
-  font-size: 1.15rem;
-  font-weight: 800;
+  font-size: var(--font-size-h5, 1.5625rem);
+  font-weight: 700;
   color: #ffffff;
-  margin-bottom: var(--space-3);
-  letter-spacing: -0.025em;
+  margin-bottom: var(--space-8px, 0.5rem);
+  line-height: var(--line-height-h5, 1.35);
+  letter-spacing: var(--letter-spacing-h5, -0.008em);
 }
 
 .outcomeDescription {
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-p, 1rem);
   color: #cbd5e1;
-  line-height: 1.65;
+  line-height: var(--line-height-p, 1.5);
+  letter-spacing: var(--letter-spacing-p, 0);
 }
 
 /* The Cube Connection Section */

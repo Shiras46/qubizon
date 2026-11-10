@@ -42,11 +42,11 @@
 }
 
 .headingHuge {
-  font-size: var(--text-huge, clamp(2.5rem, 5.5vw, 4.6rem));
+  font-size: var(--font-size-h1, clamp(2.65rem, 2.1rem + 3vw, 3.815rem));
   font-weight: 800;
-  line-height: 1.06;
-  letter-spacing: -0.04em;
-  margin-bottom: 2rem;
+  line-height: var(--line-height-h1, 1.0);
+  letter-spacing: var(--letter-spacing-h1, -0.02em);
+  margin-bottom: var(--space-24px, 1.5rem);
   color: var(--clr-foreground, #1C1C1B);
 }
 
@@ -55,23 +55,24 @@
   font-style: italic;
   font-weight: 400;
   color: var(--clr-foreground, #1c1c1b);
-  letter-spacing: -0.02em;
+  letter-spacing: var(--letter-spacing-h1, -0.02em);
 }
 
 .lead {
-  font-size: var(--text-base, 1.05rem);
+  font-size: var(--font-size-p, 1rem);
   color: var(--clr-muted, #475569);
-  margin-bottom: 2.5rem;
-  line-height: 1.68;
+  margin-bottom: var(--space-32px, 2rem);
+  line-height: var(--line-height-p, 1.5);
+  letter-spacing: var(--letter-spacing-p, 0);
   max-width: 580px;
 }
 
 .actionGroup {
   display: flex;
-  gap: 1.25rem;
+  gap: var(--space-16px, 1rem);
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 2.5rem;
+  margin-bottom: var(--space-32px, 2rem);
 }
 
 .btnPrimary {

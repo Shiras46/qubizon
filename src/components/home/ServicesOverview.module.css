@@ -41,18 +41,19 @@
 }
 
 .headingLarge {
-  font-size: var(--text-huge, clamp(2.2rem, 4vw, 3.8rem));
+  font-size: var(--font-size-h1, clamp(2.65rem, 2.1rem + 3vw, 3.815rem));
   font-weight: 800;
-  letter-spacing: -0.04em;
+  letter-spacing: var(--letter-spacing-h1, -0.02em);
   color: var(--clr-foreground, #1c1c1b);
-  line-height: 1.1;
+  line-height: var(--line-height-h1, 1.0);
   max-width: 720px;
 }
 
 .lead {
-  font-size: var(--text-base, 1.0625rem);
+  font-size: var(--font-size-p, 1rem);
   color: var(--clr-muted, #475569);
-  line-height: 1.65;
+  line-height: var(--line-height-p, 1.5);
+  letter-spacing: var(--letter-spacing-p, 0);
   max-width: 520px;
 }
 
