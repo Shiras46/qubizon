@@ -1,6 +1,6 @@
 /* =========================================================================
    WHO WE ARE SECTION - REFINED LUXURY EDITORIAL ARCHITECTURE
-   Premium Typography, Balanced Font Scales & Exact Reference Alignment
+   Equal Height, Synchronized Top Start & Bottom Alignment
    ========================================================================= */
 
 .aboutSection {
@@ -33,25 +33,11 @@
   position: relative;
 }
 
-/* 2-Column Split Grid (Proportionally Balanced to Match Reference Model) */
-.splitGrid {
-  display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: clamp(2.5rem, 4.5vw, 4.5rem);
-  align-items: start;
-  margin-bottom: clamp(2.5rem, 4.5vh, 4rem);
+/* Category Tag Wrap: Above Split Grid (Anchoring Left Top) */
+.tagWrap {
+  margin-bottom: 1.5rem;
 }
 
-/* Left Column: Pill Badge & Photographic Card */
-.imageColumn {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-/* Category Tag: + WHO WE ARE (Above Image - Crisp Sans Typography) */
 .whoWeAreTag {
   display: inline-flex;
   align-items: center;
@@ -62,7 +48,6 @@
   color: #DC2626;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 1.25rem;
   background: #FFFFFF;
   padding: 6px 14px;
   border-radius: 9999px;
@@ -76,15 +61,27 @@
   flex-shrink: 0;
 }
 
-.stickyImageWrap {
+/* 2-Column Split Grid: Locked to Equal Height & Synchronized Start/End Baselines */
+.splitGrid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: stretch;
+  margin-bottom: clamp(2.5rem, 4.5vh, 4rem);
+}
+
+/* Left Column: Photographic Card Stretching to Match Content Column Exactly */
+.imageColumn {
   position: relative;
   width: 100%;
+  height: 100%;
+  display: flex;
 }
 
 .imageFrame {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3.4;
+  height: 100%;
   min-height: 420px;
   border-radius: 26px;
   overflow: hidden;
@@ -135,11 +132,12 @@
   flex-shrink: 0;
 }
 
-/* Right Column: Display Narrative */
+/* Right Column: High-Impact Narrative Aligned to Top & Bottom of Image */
 .contentColumn {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
+  height: 100%;
 }
 
 /* Progressive Scroll-Revealing Narrative Block */
@@ -147,14 +145,14 @@
   display: flex;
   flex-direction: column;
   gap: 1.15rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 2rem;
 }
 
 .narrativeItem {
   margin: 0;
 }
 
-/* Primary Headline (Clean Editorial Display - Perfectly Scaled & Balanced) */
+/* Primary Headline (Clean Editorial Display - Aligned with Image Top) */
 .narrativePrimary {
   font-family: var(--font-primary), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: clamp(1.65rem, 2.1vw, 2.35rem);
@@ -202,6 +200,13 @@
   color: #111111;
   font-size: 1.1em;
   letter-spacing: -0.01em;
+}
+
+/* Bottom Action & Trust Area Aligned with Bottom of Image */
+.bottomArea {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 /* Unified Action Row & Trust Indicators (Matching Reference Model Layout) */
@@ -274,7 +279,8 @@
 
 /* Secondary Capabilities Link */
 .secondaryLinkRow {
-  margin-top: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 .btnText {
@@ -385,11 +391,23 @@
   .splitGrid {
     grid-template-columns: 1fr;
     gap: 2.25rem;
+    align-items: start;
+  }
+
+  .imageColumn {
+    height: auto;
   }
 
   .imageFrame {
     aspect-ratio: 16 / 10;
     min-height: 340px;
+    height: auto;
+  }
+
+  .contentColumn {
+    height: auto;
+    justify-content: flex-start;
+    gap: 1.75rem;
   }
 
   .actionAndTrustRow {

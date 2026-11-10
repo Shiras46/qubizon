@@ -145,34 +145,34 @@ export function AboutSection() {
     >
       <div className={styles.container}>
         <div className={styles.aboutStage}>
-          {/* Split 2-Column Modern Architecture (Reference Model: Why Choose Right Key Layout) */}
-          <div className={styles.splitGrid}>
-            {/* Left Column: Top Pill Tag + Photographic Card with Floating Badge */}
-            <div className={styles.imageColumn}>
-              {/* Category Tag: + WHO WE ARE (Above Image) */}
-              <div className={styles.whoWeAreTag}>
-                <Plus size={13} className={styles.tagIcon} aria-hidden="true" strokeWidth={3} />
-                <span>WHO WE ARE</span>
-              </div>
+          {/* Category Tag: + WHO WE ARE (Above Split Grid, Anchoring Left) */}
+          <div className={styles.tagWrap}>
+            <div className={styles.whoWeAreTag}>
+              <Plus size={13} className={styles.tagIcon} aria-hidden="true" strokeWidth={3} />
+              <span>WHO WE ARE</span>
+            </div>
+          </div>
 
-              <div className={styles.stickyImageWrap}>
-                <div className={styles.imageFrame}>
-                  <div className={styles.floatingBadge}>
-                    <span className={styles.pulseDot} />
-                    <span>LICENSED REGIONAL &amp; GCC AGENCY NODE / KOZHIKODE &bull; THRISSUR &bull; DUBAI</span>
-                  </div>
-                  <Image
-                    src="/hero-collaboration.jpg"
-                    alt="Qubizon unified digital agency engineering and strategic leadership collaboration"
-                    fill
-                    sizes="(max-width: 1024px) 100vw, 45vw"
-                    className={styles.image}
-                  />
+          {/* Split 2-Column Modern Architecture: Synchronized Top Start & Equal Length */}
+          <div className={styles.splitGrid}>
+            {/* Left Column: Photographic Card with Floating Badge */}
+            <div className={styles.imageColumn}>
+              <div className={styles.imageFrame}>
+                <div className={styles.floatingBadge}>
+                  <span className={styles.pulseDot} />
+                  <span>LICENSED REGIONAL &amp; GCC AGENCY NODE / KOZHIKODE &bull; THRISSUR &bull; DUBAI</span>
                 </div>
+                <Image
+                  src="/hero-collaboration.jpg"
+                  alt="Qubizon unified digital agency engineering and strategic leadership collaboration"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 45vw"
+                  className={styles.image}
+                />
               </div>
             </div>
 
-            {/* Right Column: High-Impact Narrative with Progressive Scroll Reveal */}
+            {/* Right Column: High-Impact Narrative Aligned to Top & Bottom */}
             <div className={styles.contentColumn}>
               {/* Progressive Word-by-Word Scroll Reveal Narrative Block */}
               <div className={styles.narrativeBlock}>
@@ -240,39 +240,41 @@ export function AboutSection() {
                 </p>
               </div>
 
-              {/* Action Links & Trust Indicators (Exact Reference Model Row) */}
-              <div className={styles.actionAndTrustRow}>
-                <Link href="/about" className={styles.btnPrimary}>
-                  <span>Discover Our Model</span>
-                  <ArrowRight size={14} aria-hidden="true" />
-                </Link>
+              {/* Bottom Actions & Trust Indicators Aligned to Image Bottom */}
+              <div className={styles.bottomArea}>
+                <div className={styles.actionAndTrustRow}>
+                  <Link href="/about" className={styles.btnPrimary}>
+                    <span>Discover Our Model</span>
+                    <ArrowRight size={14} aria-hidden="true" />
+                  </Link>
 
-                <div className={styles.trustIndicators}>
-                  <span className={styles.trustItem}>
-                    <span className={styles.checkCircle}>
-                      <Check size={11} strokeWidth={3} aria-hidden="true" />
+                  <div className={styles.trustIndicators}>
+                    <span className={styles.trustItem}>
+                      <span className={styles.checkCircle}>
+                        <Check size={11} strokeWidth={3} aria-hidden="true" />
+                      </span>
+                      <span>100% Client IP Ownership</span>
                     </span>
-                    <span>100% Client IP Ownership</span>
-                  </span>
-                  <span className={styles.trustItem}>
-                    <span className={styles.checkCircle}>
-                      <Check size={11} strokeWidth={3} aria-hidden="true" />
+                    <span className={styles.trustItem}>
+                      <span className={styles.checkCircle}>
+                        <Check size={11} strokeWidth={3} aria-hidden="true" />
+                      </span>
+                      <span>Zero Monolithic Bloat</span>
                     </span>
-                    <span>Zero Monolithic Bloat</span>
-                  </span>
-                  <span className={styles.trustItem}>
-                    <span className={styles.checkCircle}>
-                      <Check size={11} strokeWidth={3} aria-hidden="true" />
+                    <span className={styles.trustItem}>
+                      <span className={styles.checkCircle}>
+                        <Check size={11} strokeWidth={3} aria-hidden="true" />
+                      </span>
+                      <span>WCAG 2.1 AA Standards</span>
                     </span>
-                    <span>WCAG 2.1 AA Standards</span>
-                  </span>
+                  </div>
                 </div>
-              </div>
 
-              <div className={styles.secondaryLinkRow}>
-                <Link href="/services" className={styles.btnText}>
-                  <span>Explore All Capabilities &rarr;</span>
-                </Link>
+                <div className={styles.secondaryLinkRow}>
+                  <Link href="/services" className={styles.btnText}>
+                    <span>Explore All Capabilities &rarr;</span>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
