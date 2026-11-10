@@ -1,11 +1,12 @@
 /* =========================================================================
-   PRIMARY BLUE EDITORIAL FOOTER (#00488E Canvas + #FFFFFF Accents)
+   PRO-LEVEL EDITORIAL FOOTER (Primary Blue #00488E + Pure White #FFFFFF)
+   Fully aligned grid architecture, luxury glass micro-cards & crisp typography
    ========================================================================= */
 
 .footer {
   background-color: #00488E;
   color: #FFFFFF;
-  padding: clamp(3.5rem, 6vh, 5.5rem) 5% 2.5rem;
+  padding: clamp(3.5rem, 5vh, 4.75rem) 5% 2rem;
   position: relative;
   z-index: 10;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
@@ -17,12 +18,14 @@
   margin: 0 auto;
 }
 
-/* Brand & Direct Contact Row */
+/* =========================================================================
+   1. Brand & Direct Contact Row
+   ========================================================================= */
 .brandRow {
   display: grid;
-  grid-template-columns: 1.25fr 1fr;
+  grid-template-columns: 1.15fr 1fr;
   gap: clamp(2rem, 4vw, 3.5rem);
-  padding-bottom: 3rem;
+  padding-bottom: 2.75rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   align-items: start;
 }
@@ -60,114 +63,302 @@
   margin-bottom: 0.5rem;
 }
 
-.brandBio {
-  font-size: 0.9375rem;
+.brandSub {
+  font-size: 0.8875rem;
   color: rgba(255, 255, 255, 0.82);
   line-height: 1.65;
-  max-width: 520px;
+  max-width: 580px;
+  margin: 0;
 }
 
-/* Quick Inquiry / Consultation Card */
-.consultationCard {
-  background-color: #00366B;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 18px;
-  padding: 1.75rem 2rem;
+/* Contact Cards (2x2 Balanced Grid) */
+.contactCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  align-items: stretch;
+}
+
+.contactCard {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+  color: #FFFFFF;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contactCard:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.contactIconWrapper {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.contactCard:hover .contactIconWrapper {
+  transform: scale(1.08);
+}
+
+.contactCardText {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 
-.consultationTitle {
-  font-size: 1.15rem;
+.contactCardLabel {
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: -0.02em;
-  color: #FFFFFF;
-}
-
-.consultationDesc {
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.82);
-  line-height: 1.55;
-}
-
-.consultationAction {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #00488E;
-  background-color: #FFFFFF;
-  text-decoration: none;
-  width: fit-content;
-  padding: 0.65rem 1.4rem;
-  border-radius: 9999px;
-  border: 1px solid #FFFFFF;
-  transition: all 0.25s ease;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 2px;
 }
 
-.consultationAction:hover {
-  background-color: #F0F4F8;
-  color: #00366B;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+.contactCardValue {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Navigation Columns Grid */
-.navGrid {
+/* =========================================================================
+   2. 5-Column Categorized Architecture
+   ========================================================================= */
+.footerLinksGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: clamp(1.5rem, 3vw, 2.5rem);
-  padding: 3.5rem 0 3rem;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(1.25rem, 2.5vw, 2.25rem);
+  padding: 2.75rem 0 2.5rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.navCol {
+.linkCol {
   display: flex;
   flex-direction: column;
+  gap: 0.65rem;
 }
 
-.navHeading {
+.linkTitle {
   font-family: var(--font-family-mono, monospace);
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #FFFFFF;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   opacity: 0.95;
 }
 
-.navList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.navItem a {
-  font-size: 0.9375rem;
+.footerLink {
+  font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.82);
   text-decoration: none;
-  transition: color 0.2s ease, transform 0.2s ease;
+  line-height: 1.45;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
-.navItem a:hover {
+.footerLink:hover {
   color: #FFFFFF;
+  transform: translateX(3px);
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
-  transform: translateX(2px);
 }
 
-/* Bottom Bar */
-.bottomBar {
-  padding-top: 2rem;
+.footerLinkHighlight {
+  font-size: 0.875rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 0.25rem;
+  transition: transform 0.2s ease;
+}
+
+.footerLinkHighlight:hover {
+  transform: translateX(3px);
+}
+
+.countryFlag {
+  margin-right: 4px;
+  font-size: 0.95rem;
+}
+
+/* =========================================================================
+   3. Global 24-Country Corridors Bar
+   ========================================================================= */
+.corridorsBar {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.corridorsTitle {
+  font-family: var(--font-family-mono, monospace);
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.75);
+  display: block;
+  margin-bottom: 0.85rem;
+}
+
+.corridorsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  align-items: center;
+}
+
+.corridorTag {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.2s ease;
+}
+
+.corridorTag:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+/* =========================================================================
+   4. Global Overview & Technical Architecture Grid (12 Cards)
+   ========================================================================= */
+.globalOverview {
+  padding: 2.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.globalOverviewTitle {
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+  font-family: var(--font-family-mono, monospace);
+  line-height: 1.4;
+}
+
+.globalOverviewText {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 1.75rem;
+  max-width: 1240px;
+}
+
+.globalOverviewGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.globalOverviewCard {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.15rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  transition: all 0.25s ease;
+}
+
+.globalOverviewCard:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.globalOverviewCardTitle {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.35;
+}
+
+.globalOverviewCardDesc {
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.seoInlineLink {
+  color: #FFFFFF;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.seoInlineLink:hover {
+  opacity: 0.8;
+}
+
+/* =========================================================================
+   5. Engineering Standards & Assurance Strip
+   ========================================================================= */
+.assuranceStrip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.assuranceItem {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.78);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.assuranceItem strong {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+/* =========================================================================
+   6. Footer Bottom Bar
+   ========================================================================= */
+.footerBottom {
+  padding-top: 1.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -180,34 +371,80 @@
 .copyright {
   font-family: var(--font-family-mono, monospace);
   font-size: 11px;
+  margin: 0;
 }
 
-.legalLinks {
+.socialStrip {
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 1rem;
 }
 
-.legalLinks a {
-  color: rgba(255, 255, 255, 0.65);
+.socialLink {
+  color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
+  font-size: 0.8125rem;
   transition: color 0.2s ease;
 }
 
-.legalLinks a:hover {
+.socialLink:hover {
   color: #FFFFFF;
+}
+
+.dotDivider {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* =========================================================================
+   Responsive Breakpoints
+   ========================================================================= */
+@media (max-width: 1200px) {
+  .globalOverviewGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 960px) {
   .brandRow {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
-  .navGrid {
+
+  .footerLinksGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .globalOverviewGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .assuranceStrip {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 540px) {
-  .navGrid {
+@media (max-width: 640px) {
+  .footerLinksGrid {
     grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .contactCards {
+    grid-template-columns: 1fr;
+  }
+
+  .globalOverviewGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .assuranceStrip {
+    grid-template-columns: 1fr;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
   }
 }

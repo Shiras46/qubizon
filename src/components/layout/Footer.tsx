@@ -82,7 +82,7 @@ export function Footer() {
             </a>
 
             <a href={`mailto:${SITE_CONFIG.email}`} className={styles.contactCard}>
-              <div className={styles.contactIconWrapper} style={{ background: "rgba(255, 190, 11, 0.15)", color: "#ffbe0b" }}>
+              <div className={styles.contactIconWrapper} style={{ background: "rgba(255, 255, 255, 0.15)", color: "#FFFFFF" }}>
                 <Mail size={18} aria-hidden="true" />
               </div>
               <div className={styles.contactCardText}>
@@ -129,7 +129,7 @@ export function Footer() {
             <Link href="/services/web-development#cloud-security" className={styles.footerLink}>
               Cloud &amp; DevOps Engineering
             </Link>
-            <Link href="/services" className={styles.footerLink} style={{ color: "#ffbe0b", fontWeight: 600 }}>
+            <Link href="/services" className={styles.footerLinkHighlight}>
               All Services Overview &rarr;
             </Link>
           </div>
@@ -158,7 +158,7 @@ export function Footer() {
             <Link href="/solutions" className={styles.footerLink}>
               WhatsApp Marketing Engine
             </Link>
-            <Link href="/solutions" className={styles.footerLink} style={{ color: "#ffbe0b", fontWeight: 600 }}>
+            <Link href="/solutions" className={styles.footerLinkHighlight}>
               All AI &amp; Solutions &rarr;
             </Link>
           </div>
@@ -196,7 +196,7 @@ export function Footer() {
             <Link href="/industries" className={styles.footerLink}>
               Automobile Workshops
             </Link>
-            <Link href="/industries" className={styles.footerLink} style={{ color: "#ffbe0b", fontWeight: 600 }}>
+            <Link href="/industries" className={styles.footerLinkHighlight}>
               All 10 Industries &rarr;
             </Link>
           </div>
@@ -222,7 +222,7 @@ export function Footer() {
             <Link href="/locations/oman" className={styles.footerLink}>
               <span className={styles.countryFlag}>🇴🇲</span> Sultanate of Oman
             </Link>
-            <Link href="/locations" className={styles.footerLink} style={{ color: "#ffbe0b", fontWeight: 600 }}>
+            <Link href="/locations" className={styles.footerLinkHighlight}>
               <span className={styles.countryFlag}>🇮🇳</span> India (Kozhikode &bull; Thrissur) &rarr;
             </Link>
           </div>
@@ -248,31 +248,23 @@ export function Footer() {
             <Link href="/locations/uae#e-invoicing" className={styles.footerLink}>
               🇦🇪 UAE FTA Tax Compliance
             </Link>
-            <Link href="/contact" className={styles.footerLink} style={{ color: "#ffbe0b", fontWeight: 600 }}>
+            <Link href="/contact" className={styles.footerLinkHighlight}>
               Schedule Technical Discovery &rarr;
             </Link>
           </div>
         </div>
 
-        {/* Global 24-Country Corridors Bar (Dictode-style) */}
-        <div style={{ padding: "1.75rem 0", borderBottom: "1px solid rgba(255, 255, 255, 0.08)" }}>
-          <span style={{ fontSize: "0.74rem", textTransform: "uppercase", letterSpacing: "0.14em", color: "#94a3b8", display: "block", marginBottom: "0.85rem", fontWeight: 700 }}>
+        {/* Global 24-Country Corridors Bar */}
+        <div className={styles.corridorsBar}>
+          <span className={styles.corridorsTitle}>
             Global Software Development &amp; Marketing Corridors:
           </span>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "8px 16px", alignItems: "center" }}>
+          <div className={styles.corridorsList}>
             {GLOBAL_COUNTRIES.map((country, index) => (
               <Link
                 key={index}
                 href={country.href}
-                style={{
-                  color: "rgba(255, 255, 255, 0.7)",
-                  textDecoration: "none",
-                  fontSize: "0.8rem",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "5px",
-                  transition: "color 0.15s ease",
-                }}
+                className={styles.corridorTag}
               >
                 <span>{country.flag}</span>
                 <span>{country.name}</span>
@@ -401,7 +393,7 @@ export function Footer() {
           </div>
 
           <p className={styles.globalOverviewText} style={{ marginTop: "1.25rem", marginBottom: 0, fontSize: "0.82rem", lineHeight: 1.65 }}>
-            <strong>Specialized Sector Solutions &amp; Software Architecture:</strong> We provide tailored implementations for 10 primary industries: <Link href="/industries" style={{ color: "#ffbe0b" }}>Real Estate &amp; Construction</Link> (RERA &amp; DLD compliance), <Link href="/industries" style={{ color: "#ffbe0b" }}>Healthcare Networks &amp; Hospitals</Link> (patient privacy &amp; NABH alignment), <Link href="/industries" style={{ color: "#ffbe0b" }}>Retail &amp; Headless E-Commerce</Link> (PCI-DSS &amp; multi-currency checkouts), <Link href="/industries" style={{ color: "#ffbe0b" }}>B2B Manufacturing &amp; Industrial Export</Link>, <Link href="/industries" style={{ color: "#ffbe0b" }}>Hospitality &amp; Luxury Resorts</Link>, <Link href="/industries" style={{ color: "#ffbe0b" }}>Fintech &amp; Banking</Link> (CBB &amp; CBK guidelines), <Link href="/industries" style={{ color: "#ffbe0b" }}>Logistics &amp; Transport</Link>, <Link href="/industries" style={{ color: "#ffbe0b" }}>Education &amp; EdTech</Link>, <Link href="/industries" style={{ color: "#ffbe0b" }}>Salons, Spas &amp; Wellness</Link>, and <Link href="/industries" style={{ color: "#ffbe0b" }}>Automobile Workshops</Link>. Explore our 8 enterprise software solutions: <Link href="/solutions" style={{ color: "#ffbe0b" }}>AI Chatbots</Link>, <Link href="/solutions" style={{ color: "#ffbe0b" }}>AI Agent Workflows</Link>, <Link href="/solutions" style={{ color: "#ffbe0b" }}>WhatsApp Cloud API</Link>, <Link href="/solutions" style={{ color: "#ffbe0b" }}>Recurring Billing APIs</Link>, <Link href="/solutions" style={{ color: "#ffbe0b" }}>GDPR &amp; DPDP Software</Link>, <Link href="/solutions" style={{ color: "#ffbe0b" }}>Digital Lease Systems</Link>, and <Link href="/solutions" style={{ color: "#ffbe0b" }}>WhatsApp Marketing Engines</Link>.
+            <strong>Specialized Sector Solutions &amp; Software Architecture:</strong> We provide tailored implementations for 10 primary industries: <Link href="/industries" className={styles.seoInlineLink}>Real Estate &amp; Construction</Link> (RERA &amp; DLD compliance), <Link href="/industries" className={styles.seoInlineLink}>Healthcare Networks &amp; Hospitals</Link> (patient privacy &amp; NABH alignment), <Link href="/industries" className={styles.seoInlineLink}>Retail &amp; Headless E-Commerce</Link> (PCI-DSS &amp; multi-currency checkouts), <Link href="/industries" className={styles.seoInlineLink}>B2B Manufacturing &amp; Industrial Export</Link>, <Link href="/industries" className={styles.seoInlineLink}>Hospitality &amp; Luxury Resorts</Link>, <Link href="/industries" className={styles.seoInlineLink}>Fintech &amp; Banking</Link> (CBB &amp; CBK guidelines), <Link href="/industries" className={styles.seoInlineLink}>Logistics &amp; Transport</Link>, <Link href="/industries" className={styles.seoInlineLink}>Education &amp; EdTech</Link>, <Link href="/industries" className={styles.seoInlineLink}>Salons, Spas &amp; Wellness</Link>, and <Link href="/industries" className={styles.seoInlineLink}>Automobile Workshops</Link>. Explore our 8 enterprise software solutions: <Link href="/solutions" className={styles.seoInlineLink}>AI Chatbots</Link>, <Link href="/solutions" className={styles.seoInlineLink}>AI Agent Workflows</Link>, <Link href="/solutions" className={styles.seoInlineLink}>WhatsApp Cloud API</Link>, <Link href="/solutions" className={styles.seoInlineLink}>Recurring Billing APIs</Link>, <Link href="/solutions" className={styles.seoInlineLink}>GDPR &amp; DPDP Software</Link>, <Link href="/solutions" className={styles.seoInlineLink}>Digital Lease Systems</Link>, and <Link href="/solutions" className={styles.seoInlineLink}>WhatsApp Marketing Engines</Link>.
           </p>
         </div>
 
