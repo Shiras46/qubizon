@@ -222,9 +222,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.65rem;
-  background-color: #FFBE0B;
+  background-color: #00488E;
   color: #FFFFFF !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.22);
   font-family: var(--font-primary), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 13.5px;
   font-weight: 700;
@@ -232,9 +231,9 @@
   text-transform: none;
   padding: 12px 24px;
   border-radius: 9999px;
-  border: 1px solid #FFBE0B;
+  border: 1px solid #00488E;
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(255, 190, 11, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 72, 142, 0.25);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
   flex-shrink: 0;
@@ -247,11 +246,11 @@
 }
 
 .btnPrimary:hover {
-  background-color: #E6A800;
-  border-color: #E6A800;
+  background-color: #00366B;
+  border-color: #00366B;
   color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(255, 190, 11, 0.35);
+  box-shadow: 0 8px 22px rgba(0, 72, 142, 0.35);
 }
 
 .btnPrimary:hover span,
